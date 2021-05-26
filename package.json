@@ -17,6 +17,7 @@
   "bugs": {
     "url": "https://github.com/vdslab/qiita-vis2021/issues"
   },
+  "homepage": "https://elastic-goodall-861525.netlify.app",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
