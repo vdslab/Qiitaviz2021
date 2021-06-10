@@ -42,7 +42,7 @@
         "childNodes": []
     },
     "Docker": {
-        "name": "Docker",
+        "nodeName": "Docker",
         "ID": 7,
         "childNodes": [
             8,
@@ -50,19 +50,19 @@
         ]
     },
     "iOS": {
-        "name": "iOS",
+        "nodeName": "iOS",
         "ID": 8,
         "childNodes": []
     },
     "Java": {
-        "name": "Java",
+        "nodeName": "Java",
         "ID": 9,
         "childNodes": [
             10
         ]
     },
     "Swift": {
-        "name": "Swift",
+        "nodeName": "Swift",
         "ID": 10,
         "childNodes": []
     }

@@ -73,10 +73,10 @@ const Graph = () => {
                 r={r}
                 fill={color}
                 opacity="0.8"
-                key={data["nodeName"]}
+                key={data[key]["nodeName"]}
               />
               <text x = {x} y={y} fontSize="20">
-              data.item["nodeName"]
+              {data[key]["nodeName"]}
               </text>
             </g>
           );
