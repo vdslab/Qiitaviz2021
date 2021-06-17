@@ -62,22 +62,27 @@ class D3DirectedGraph extends Component {
     // console.log("nodes:" + JSON.stringify(nodes));
     // console.log("links" + JSON.stringify(links));
     const node_d3 = this.node;
-    var width = 1000;
-    var height = 1000;
-    var svgheight = 1000,
-      svgwidth = 1000;
-    var simulation = d3.forceSimulation()
+    const margin = {
+      top: 50,
+      bottom: 50,
+      left: 100,
+      right: 100
+    }
+
+    const svgWidth = 1500;
+    const svgHeight = 800;
+    const simulation = d3.forceSimulation()
       .force("collide", d3.forceCollide().radius(function (d) { return d.r; }).iterations(16)) //衝突値の設定 よくわかってない
       .force("link", d3.forceLink().distance((d) => 500).id((d) => d.id))//stength:linkの強さ（元に戻る力 distance: linkの長さ
       .force("charge", d3.forceManyBody().strength(-200))  //引き合う力を設定。
-      .force("center", d3.forceCenter(svgwidth / 2, svgheight / 2))  //描画するときの中心を設定
-      .force("x", d3.forceX().x(svgwidth / 2).strength(0.2))  //x方向に戻る力
-      .force("y", d3.forceY().y(svgheight / 2).strength(0.2)) //y方向に戻る力   
+      .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2))  //描画するときの中心を設定
+      .force("x", d3.forceX().x(svgWidth / 2).strength(0.2))  //x方向に戻る力
+      .force("y", d3.forceY().y(svgHeight / 2).strength(0.2)) //y方向に戻る力   
       ;
-    var svg = d3.select(node_d3)
-      .attr("width", width)
-      .attr("height", height)
-      .attr("viewBox", "0 0 1000 1000");
+    const svg = d3.select(node_d3)
+      .attr("width", svgWidth)
+      .attr("height", svgHeight)
+      .attr("viewBox", `${0} ${0} ${svgWidth} ${svgHeight}`);
     svg.append('defs').append('marker')
       .attr('id', 'arrowhead')
       .attr('viewBox', '-35 -5 10 10')
@@ -91,7 +96,7 @@ class D3DirectedGraph extends Component {
       .attr('d', 'M -35,-5 L -25 ,0 L -35,5')
       .attr('fill', '#999')
       .style('stroke', 'none');
-    var link = svg.append("g")
+    const link = svg.append("g")
       .attr("class", "links  ")
       .selectAll("line")
       .data(links)
@@ -103,7 +108,7 @@ class D3DirectedGraph extends Component {
       .attr('marker-end', 'url(#arrowhead)')
       .attr("id", function (d, i) { return "edgepath" + i });
 
-    var node = svg.append("g")
+    const node = svg.append("g")
       .attr("class", "nodes")
       .selectAll("circle")//nodeはcircleで描画する
       .data(nodes)//nodeの配列
@@ -121,7 +126,7 @@ class D3DirectedGraph extends Component {
 
 
     // nodeのラベル周りの設定
-    var label = svg.selectAll('text')
+    const label = svg.selectAll('text')
       .data(nodes)
       .enter()
       .append('text')
@@ -176,7 +181,7 @@ class D3DirectedGraph extends Component {
   }
   render() {
     this.createDirectedGraph();
-    return <svg class="graph" ref={node => this.node = node}>
+    return <svg className="graph" ref={node => this.node = node}>
     </svg>
   }
 }
