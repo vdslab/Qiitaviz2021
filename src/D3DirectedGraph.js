@@ -10,7 +10,7 @@ function D3DirectedGraph() {
   // デバイスの横、縦幅を取得
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
   const svgWidth = 800;
-  const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1100;
+  const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1000;
 
   const nodeClickHandle = (e) => {
     window.open(
@@ -64,7 +64,7 @@ function D3DirectedGraph() {
       //   d3
       //     .forceY()
       //     .y(svgHeight / 2)
-      //     .strength(0.01)
+      //     .strength(0.2)
       // ); //y方向に戻る力
       simulation
         // forceSimulationの影響下に  desを置く
