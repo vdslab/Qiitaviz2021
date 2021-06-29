@@ -10,7 +10,7 @@ function D3DirectedGraph() {
   // デバイスの横、縦幅を取得
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
   const svgWidth = 800;
-  const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1000;
+  const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1100;
 
   const nodeClickHandle = (e) => {
     window.open(
