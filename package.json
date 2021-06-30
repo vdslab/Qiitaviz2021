@@ -18,6 +18,8 @@
     "url": "https://github.com/vdslab/qiita-vis2021/issues"
   },
   "dependencies": {
+    "bulma": "^0.9.3",
+    "d3": "^7.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
