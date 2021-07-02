@@ -9,9 +9,11 @@ function D3DirectedGraph() {
   const [links, setLinks] = useState([]);
   // デバイスの横、縦幅を取得
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
-  const svgWidth = 800;
+  // const svgWidth = 800;
+  const svgWidth =
+    deviceWidth <= MOBILE_BORDER_SIZE ? deviceWidth * 0.9 : deviceWidth * 0.8;
   const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1100;
-
+  console.log("mobile width" + deviceWidth);
   const nodeClickHandle = (e) => {
     window.open(
       e.currentTarget.dataset.url,
@@ -22,7 +24,7 @@ function D3DirectedGraph() {
 
   useEffect(() => {
     const startSimulation = (nodes, links) => {
-      const linkLen = deviceWidth <= MOBILE_BORDER_SIZE ? 750 : 150;
+      const linkLen = deviceWidth <= MOBILE_BORDER_SIZE ? 150 : 150;
       const simulation = d3
         .forceSimulation()
         .force(
@@ -86,7 +88,7 @@ function D3DirectedGraph() {
         const data = await response.json();
         const nodes = Array();
         const links = Array();
-        const r = deviceWidth <= MOBILE_BORDER_SIZE ? 70 : 35;
+        const r = deviceWidth <= MOBILE_BORDER_SIZE ? 35 : 35;
 
         for (const item of data) {
           nodes.push({
@@ -124,11 +126,16 @@ function D3DirectedGraph() {
   }
 
   return (
-    <div className="container">
+    <div className="">
       <svg
-        className="graph has-background-white"
-        style={{ display: "block", marginLeft: "auto", marginRight: "auto" }}
-        width={deviceWidth <= MOBILE_BORDER_SIZE ? "100%" : svgWidth}
+        className="has-background-white"
+        style={{
+          display: "block",
+          marginLeft: "auto",
+          marginRight: "auto",
+          // padding: "0",
+        }}
+        width={svgWidth}
         height={svgHeight}
         viewBox={`0 0 ${svgWidth} ${svgHeight}`}
       >
@@ -198,7 +205,7 @@ function D3DirectedGraph() {
               key={node.id}
               textAnchor="middle"
               fill="black"
-              fontSize={deviceWidth <= MOBILE_BORDER_SIZE ? "30px" : "15px"}
+              fontSize={deviceWidth <= MOBILE_BORDER_SIZE ? "15px" : "15px"}
               x={node.x}
               y={node.y}
             >
