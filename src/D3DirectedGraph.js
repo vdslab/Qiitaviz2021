@@ -1,64 +1,12 @@
 import * as d3 from "d3";
 import "bulma/css/bulma.css";
 import { useState, useEffect } from "react";
-import { union } from "d3";
-
-class Edge {
-  from;
-  to;
-  cost;
-
-  constructor(from, to, cost) {
-    this.from = from;
-    this.to = to;
-    this.cost = cost;
-  }
-
-}
-
-
-class UnionFind {
-  parent = [];
-
-  constructor(n) {
-    for(let i = 0; i < n; i++) {
-      this.parent.push(i);
-    }
-  }
-
-  root(x) {
-    if(this.parent[x] === x) return x;
-    this.parent[x] = this.root(this.parent[x]);
-    return this.parent[x];
-  }
-
-  unite(x, y) {
-    let rx = this.root(x);
-    let ry = this.root(y);
-    if(rx === ry) return 0;
-    this.parent[rx] = ry;
-  }
-
-  same(x, y) {
-    let rx = this.root(x);
-    let ry = this.root(y);
-
-    if(rx === ry) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-}
-
 function D3DirectedGraph() {
   const MOBILE_BORDER_SIZE = 599;
 
   const [loading, setLoading] = useState(true);
   const [nodes, setNodes] = useState([]);
   const [links, setLinks] = useState([]);
-  const hues = [];
   // デバイスの横、縦幅を取得
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
   const svgWidth = 800;
@@ -73,9 +21,6 @@ function D3DirectedGraph() {
   };
 
   useEffect(() => {
-    for(let i = 0; i < 100; i++) {
-      hues.push(360*Math.random());
-    }
     const startSimulation = (nodes, links) => {
       const linkLen = deviceWidth <= MOBILE_BORDER_SIZE ? 750 : 150;
       const simulation = d3
@@ -87,7 +32,7 @@ function D3DirectedGraph() {
             .radius(function (d) {
               return d.r;
             })
-            .iterations(10)
+            .iterations(16)
         ) //衝突値の設定
         .force(
           "link",
@@ -96,14 +41,14 @@ function D3DirectedGraph() {
             .distance((d) => linkLen)
             .id((d) => d.id)
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
-        .force("charge", d3.forceManyBody().strength(-700)) //引き合う力を設定。
+        .force("charge", d3.forceManyBody().strength(-500)) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
         .force(
           "x",
           d3
             .forceX()
             .x(svgWidth / 2)
-            .strength(0.03)
+            .strength(0.1)
         ); //x方向に戻る力
       // .force(
       //   "r",
@@ -137,66 +82,27 @@ function D3DirectedGraph() {
 
     const startLineChart = async () => {
       const [nodes, links] = await (async () => {
-        const response = await fetch("data/jaccard_data_100.json");
+        const response = await fetch("data/new_data.json");
         const data = await response.json();
-        const res = await fetch("data/difficulty_data_100.json");
-        const diff = await res.json();
-     
-        const es = [];
-        const uf = new UnionFind(100);
         const nodes = Array();
         const links = Array();
-        
-        const r = 15; 
-        //deviceWidth <= MOBILE_BORDER_SIZE ? 70 : 35;
+        const r = deviceWidth <= MOBILE_BORDER_SIZE ? 70 : 35;
 
-        for(let i = 0; i < 100; i++) {
-          for(let j=0; j < 100; j++) {
-            if(i != j) {
-              es.push(new Edge(i, j, data[i]["jaccard"][j]))
-            }
-          }
-        }
-
-        es.sort((a, b) => {
-          return b.cost - a.cost;
-        })
-
-        console.log(es);
-
-        let ID = 1;
         for (const item of data) {
           nodes.push({
-            id: ID, //nodeのindexを標準設定から変更
-            label: item.tag,
-            col: `hsl(${hues[ID-1]}, 100%, 70%)`,
-            //url: item.url,
+            id: item.ID, //nodeのindexを標準設定から変更
+            label: item.nodeName,
+            url: item.url,
             r,
           });
-          ID++;
-        }
 
-
-        for(const item of es) {
-          if(uf.same(item.to, item.from) === false) {
-            uf.unite(item.to, item.from);
-            if(diff[item.to]['difficulty'] <= diff[item.from]['difficulty']) {
-              links.push({
-              source:item.to+1,
-              target:item.from+1
-            });
-            } else {
-              links.push({
-                source:item.from+1,
-                target:item.to+1
+          for (const child of item.childNode) {
+            links.push({
+              source: item.ID,
+              target: child,
             });
           }
-      
         }
-      }
-
-        console.log(links);
-
         return [nodes, links];
       })();
 
@@ -268,16 +174,14 @@ function D3DirectedGraph() {
           })}
         </g>
 
-
         <g className="nodes">
           {nodes.map((node) => {
-            
             return (
               <circle
                 className="node"
                 key={node.id}
                 r={node.r}
-                style={{ fill:node.col}}
+                style={{ fill: "rgb(128, 255, 191)" }}
                 cx={node.x}
                 cy={node.y}
                 data-url={node.url}
