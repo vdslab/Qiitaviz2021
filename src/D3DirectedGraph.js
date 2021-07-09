@@ -261,19 +261,18 @@ function D3DirectedGraph() {
     deviceWidth <= MOBILE_BORDER_SIZE ? deviceWidth * 0.9 : deviceWidth * 0.8;
   const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1100;
   const nodeClickHandle = (e) => {
-    window.open(
-      e.currentTarget.dataset.url,
-      "sampleWin",
-      "width=800,height=800,scrollbars=no,status=no,toolbar=no,location=no,menubar=no,resizable=yes"
-    );
+    //do nothing
   };
   function overHandle(e) {
     const target = e.currentTarget.dataset.name;
     const data = articleData.filter((item) => {
       return item.type == target;
     });
+    const positionX = deviceWidth <= MOBILE_BORDER_SIZE ? "500" : e.pageX;
+    const positionY = e.pageY;
+
     setDisplayArticle(data);
-    setMousePosition([e.pageX, e.pageY]);
+    setMousePosition([positionX, positionY]);
   }
   function outHandle(e) {
     setDisplayArticle([]);
