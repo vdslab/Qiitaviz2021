@@ -307,22 +307,7 @@ function D3DirectedGraph() {
             .x(svgWidth / 2)
             .strength(0.1)
         ); //x方向に戻る力
-      // .force(
-      //   "r",
-      //   d3
-      //     .forceRadial()
-      //     .radius(svgHeight * 0.35)
-      //     .x(svgWidth / 2)
-      //     .y(svgHeight / 2)
-      //     .strength(0.5)
-      // );
-      // .force(
-      //   "y",
-      //   d3
-      //     .forceY()
-      //     .y(svgHeight / 2)
-      //     .strength(0.2)
-      // ); //y方向に戻る力
+
       simulation
         // forceSimulationの影響下に  desを置く
         .nodes(nodes)
