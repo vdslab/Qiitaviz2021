@@ -12,12 +12,11 @@ function App() {
 function Main() {
   return (
     <section className="section has-background-white-bis">
-      <div className="container">
-        <div className="columns is-multiline is-centered">
+      <div className="">
+        <div className="columns is-centered">
           <AreaTab />
           <Search />
         </div>
-
         <D3DirectedGraph />
       </div>
     </section>
