@@ -1,3 +1,5 @@
+/** @format */
+
 import D3DirectedGraph from "./D3DirectedGraph";
 import "bulma/css/bulma.css";
 function App() {
@@ -9,6 +11,7 @@ function App() {
     </div>
   );
 }
+
 function Main() {
   return (
     <section className="section has-background-white-bis">
@@ -22,6 +25,7 @@ function Main() {
     </section>
   );
 }
+
 function Header() {
   return (
     <div className="hero is-small is-primary">
@@ -40,6 +44,7 @@ function Header() {
     </div>
   );
 }
+
 function AreaTab() {
   return (
     <div className="column is-one-fifth">
@@ -76,6 +81,7 @@ function AreaTab() {
     </div>
   );
 }
+
 function Search() {
   return (
     <div className="column is-one-fifth">
@@ -133,6 +139,7 @@ function Navigation() {
     </div>
   );
 }
+
 function Footer() {
   return (
     <footer className="footer has-background-white-ter">
@@ -142,4 +149,5 @@ function Footer() {
     </footer>
   );
 }
+
 export default App;
