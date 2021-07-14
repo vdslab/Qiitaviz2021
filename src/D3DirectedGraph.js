@@ -324,7 +324,6 @@ function D3DirectedGraph() {
       }
     };
 
-    console.log(nodes, links);
     const startLineChart = async () => {
       const [nodes, links] = await (async () => {
         const response = await fetch("./data/ordered_data.json");
@@ -358,9 +357,9 @@ function D3DirectedGraph() {
     // １度だけuseEffect()を実行する
   }, []);
 
-  const arrowEdgeX = -40;
-  const arrowEdgeY = -10;
-  const arrowHeight = 5;
+  const arrowEdgeX = -35;
+  const arrowEdgeY = -5;
+  const arrowHeight = 10;
   const arrowWidth = 14;
   const arrowEdgeEnd = -25;
 
@@ -389,8 +388,8 @@ function D3DirectedGraph() {
               refX="13"
               refY="0"
               orient="auto"
-              markerWidth="5.5"
-              markerHeight="12"
+              markerWidth="13"
+              markerHeight="13"
               xoverflow="visible"
             >
               <path
