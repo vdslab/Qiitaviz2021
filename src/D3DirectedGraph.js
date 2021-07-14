@@ -1,6 +1,8 @@
 import * as d3 from "d3";
 import "bulma/css/bulma.css";
 import { useState, useEffect } from "react";
+import ZoomableSVG from "./ZoomableSVG";
+
 function D3DirectedGraph() {
   // 仮の記事データ
   const articleData = [
@@ -256,7 +258,6 @@ function D3DirectedGraph() {
 
   // デバイスの横、縦幅を取得
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
-  // const svgWidth = 800;
   const svgWidth =
     deviceWidth <= MOBILE_BORDER_SIZE ? deviceWidth * 0.9 : deviceWidth * 0.8;
   const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1100;
@@ -277,9 +278,10 @@ function D3DirectedGraph() {
   function outHandle(e) {
     setDisplayArticle([]);
   }
+
   useEffect(() => {
     const startSimulation = (nodes, links) => {
-      const linkLen = deviceWidth <= MOBILE_BORDER_SIZE ? 150 : 150;
+      const linkLen = 150;
       const simulation = d3
         .forceSimulation()
         .force(
@@ -324,11 +326,11 @@ function D3DirectedGraph() {
 
     const startLineChart = async () => {
       const [nodes, links] = await (async () => {
-        const response = await fetch("ordered_data.json");
+        const response = await fetch("./data/ordered_data.json");
         const data = await response.json();
         const nodes = Array();
         const links = Array();
-        const r = deviceWidth <= MOBILE_BORDER_SIZE ? 35 : 35;
+        const r = 35;
 
         for (const item of data) {
           nodes.push({
@@ -367,95 +369,92 @@ function D3DirectedGraph() {
 
   return (
     <div className="">
-      <svg
-        className="has-background-white"
-        style={{
-          display: "block",
-          marginLeft: "auto",
-          marginRight: "auto",
-          // padding: "0",
-        }}
-        width={svgWidth}
-        height={svgHeight}
-        viewBox={`0 0 ${svgWidth} ${svgHeight}`}
-      >
-        <defs>
-          <marker
-            id="arrowhead"
-            // viewBox="-35 -5 10 10"
-            viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
-            refX="13"
-            refY="0"
-            orient="auto"
-            markerWidth="13"
-            markerHeight="13"
-            xoverflow="visible"
-          >
-            <path
-              // d="M -35,-5 L -25 ,0 L -35,5"
-              d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
-                -1 * arrowEdgeY
-              }`}
-              fill="#999"
-              style={{ stroke: "none" }}
-            ></path>
-          </marker>
-        </defs>
-
-        <g className="links">
-          {links.map((link) => {
-            return (
-              <line
-                key={link.source.id + "-" + link.target.id}
-                stroke="black"
-                strokeWidth="1"
-                className="link"
-                markerEnd="url(#arrowhead)"
-                id="edgepath0"
-                x1={link.source.x}
-                y1={link.source.y}
-                x2={link.target.x}
-                y2={link.target.y}
-              ></line>
-            );
-          })}
-        </g>
-
-        <g className="nodes">
-          {nodes.map((node) => {
-            return (
-              <circle
-                className="node"
-                key={node.id}
-                r={node.r}
-                style={{ fill: "rgb(128, 255, 191)" }}
-                cx={node.x}
-                cy={node.y}
-                data-url={node.url}
-                data-name={node.label}
-                onClick={nodeClickHandle}
-                onMouseEnter={overHandle}
-              ></circle>
-            );
-          })}
-        </g>
-
-        {nodes.map((node) => {
-          return (
-            <text
-              className="node-label"
-              key={node.id}
-              textAnchor="middle"
-              fill="black"
-              fontSize={deviceWidth <= MOBILE_BORDER_SIZE ? "15px" : "15px"}
-              x={node.x}
-              y={node.y}
+      <ZoomableSVG width={svgWidth} height={svgHeight}>
+        <svg
+          className="has-background-white"
+          style={{
+            display: "block",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+          width={svgWidth}
+          height={svgHeight}
+          viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+        >
+          <defs>
+            <marker
+              id="arrowhead"
+              viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
+              refX="13"
+              refY="0"
+              orient="auto"
+              markerWidth="13"
+              markerHeight="13"
+              xoverflow="visible"
             >
-              {node.label}
-            </text>
-          );
-        })}
-      </svg>
+              <path
+                d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
+                  -1 * arrowEdgeY
+                }`}
+                fill="#999"
+                style={{ stroke: "none" }}
+              ></path>
+            </marker>
+          </defs>
+
+          <g className="links">
+            {links.map((link) => {
+              return (
+                <line
+                  key={link.source.id + "-" + link.target.id}
+                  stroke="black"
+                  strokeWidth="1"
+                  className="link"
+                  markerEnd="url(#arrowhead)"
+                  id="edgepath0"
+                  x1={link.source.x}
+                  y1={link.source.y}
+                  x2={link.target.x}
+                  y2={link.target.y}
+                ></line>
+              );
+            })}
+          </g>
+
+          <g className="nodes">
+            {nodes.map((node) => {
+              return (
+                <g className="nodes" key={node.id}>
+                  <circle
+                    className="node"
+                    r={node.r}
+                    style={{ fill: "rgb(128, 255, 191)" }}
+                    cx={node.x}
+                    cy={node.y}
+                    data-url={node.url}
+                    data-name={node.label}
+                    onClick={nodeClickHandle}
+                    onMouseEnter={overHandle}
+                  ></circle>
+
+                  <text
+                    className="node-label"
+                    textAnchor="middle"
+                    fill="black"
+                    fontSize={
+                      deviceWidth <= MOBILE_BORDER_SIZE ? "15px" : "15px"
+                    }
+                    x={node.x}
+                    y={node.y}
+                  >
+                    {node.label}
+                  </text>
+                </g>
+              );
+            })}
+          </g>
+        </svg>
+      </ZoomableSVG>
       <div
         className={displayArticle.length > 0 ? "card show popup" : "card popup"}
         style={{
