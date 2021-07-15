@@ -14,7 +14,10 @@ function App() {
 
 function Main() {
   return (
-    <section className="section has-background-white-bis">
+    <section
+      className="section has-background-white-bis"
+      style={{ minHeight: "1000px" }}
+    >
       <div className="">
         <div className="columns is-centered">
           <AreaTab />
