@@ -300,7 +300,7 @@ function D3DirectedGraph() {
             .distance((d) => linkLen)
             .id((d) => d.id)
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
-        .force("charge", d3.forceManyBody().strength(-500)) //引き合う力を設定。
+        .force("charge", d3.forceManyBody().strength(-1000)) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
         .force(
           "x",
@@ -317,13 +317,11 @@ function D3DirectedGraph() {
         .on("tick", ticked);
       // linkデータをセット
       simulation.force("link").links(links);
-
       function ticked() {
         setNodes(nodes.slice());
         setLinks(links.slice());
       }
     };
-
     const startLineChart = async () => {
       const [nodes, links] = await (async () => {
         const response = await fetch("./data/ordered_data.json");
@@ -370,90 +368,76 @@ function D3DirectedGraph() {
   return (
     <div className="">
       <ZoomableSVG width={svgWidth} height={svgHeight}>
-        <svg
-          className="has-background-white"
-          style={{
-            display: "block",
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-          width={svgWidth}
-          height={svgHeight}
-          viewBox={`0 0 ${svgWidth} ${svgHeight}`}
-        >
-          <defs>
-            <marker
-              id="arrowhead"
-              viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
-              refX="13"
-              refY="0"
-              orient="auto"
-              markerWidth="13"
-              markerHeight="13"
-              xoverflow="visible"
-            >
-              <path
-                d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
-                  -1 * arrowEdgeY
-                }`}
-                fill="#999"
-                style={{ stroke: "none" }}
-              ></path>
-            </marker>
-          </defs>
+        <defs>
+          <marker
+            id="arrowhead"
+            viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
+            refX="13"
+            refY="0"
+            orient="auto"
+            markerWidth="13"
+            markerHeight="13"
+            xoverflow="visible"
+          >
+            <path
+              d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
+                -1 * arrowEdgeY
+              }`}
+              fill="#999"
+              style={{ stroke: "none" }}
+            ></path>
+          </marker>
+        </defs>
 
-          <g className="links">
-            {links.map((link) => {
-              return (
-                <line
-                  key={link.source.id + "-" + link.target.id}
-                  stroke="black"
-                  strokeWidth="1"
-                  className="link"
-                  markerEnd="url(#arrowhead)"
-                  id="edgepath0"
-                  x1={link.source.x}
-                  y1={link.source.y}
-                  x2={link.target.x}
-                  y2={link.target.y}
-                ></line>
-              );
-            })}
-          </g>
+        <g className="links">
+          {links.map((link) => {
+            return (
+              <line
+                key={link.source.id + "-" + link.target.id}
+                stroke="black"
+                strokeWidth="1"
+                className="link"
+                markerEnd="url(#arrowhead)"
+                id="edgepath0"
+                x1={link.source.x}
+                y1={link.source.y}
+                x2={link.target.x}
+                y2={link.target.y}
+              ></line>
+            );
+          })}
+        </g>
 
-          <g className="nodes">
-            {nodes.map((node) => {
-              return (
-                <g className="nodes" key={node.id}>
-                  <circle
-                    className="node"
-                    r={node.r}
-                    style={{ fill: "rgb(128, 255, 191)" }}
-                    cx={node.x}
-                    cy={node.y}
-                    data-url={node.url}
-                    data-name={node.label}
-                    onClick={nodeClickHandle}
-                    onMouseEnter={overHandle}
-                  ></circle>
+        <g className="nodes">
+          {nodes.map((node) => {
+            return (
+              <g className="nodes" key={node.id}>
+                <circle
+                  className="node"
+                  r={node.r}
+                  style={{ fill: "rgb(128, 255, 191)" }}
+                  cx={node.x}
+                  cy={node.y}
+                  data-url={node.url}
+                  data-name={node.label}
+                  onClick={nodeClickHandle}
+                  onMouseEnter={overHandle}
+                ></circle>
 
-                  <text
-                    className="node-label"
-                    textAnchor="middle"
-                    fill="black"
-                    fontSize={
-                      deviceWidth <= MOBILE_BORDER_SIZE ? "15px" : "15px"
-                    }
-                    x={node.x}
-                    y={node.y}
-                  >
-                    {node.label}
-                  </text>
-                </g>
-              );
-            })}
-          </g>
-        </svg>
+                <text
+                  className="node-label"
+                  textAnchor="middle"
+                  fill="black"
+                  fontSize={deviceWidth <= MOBILE_BORDER_SIZE ? "15px" : "15px"}
+                  x={node.x}
+                  y={node.y}
+                >
+                  {node.label}
+                </text>
+              </g>
+            );
+          })}
+        </g>
       </ZoomableSVG>
       <div
         className={displayArticle.length > 0 ? "card show popup" : "card popup"}

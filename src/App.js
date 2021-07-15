@@ -1,5 +1,3 @@
-/** @format */
-
 import D3DirectedGraph from "./D3DirectedGraph";
 import "bulma/css/bulma.css";
 function App() {

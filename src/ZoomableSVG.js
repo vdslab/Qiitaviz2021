@@ -15,9 +15,15 @@ function ZoomableSVG({ children, width, height }) {
     });
     d3.select(svgRef.current).call(zoom);
   }, []);
+
   return (
-    <svg ref={svgRef} width={width} height={height}>
-      <g transform={`translate(${x}, ${y})scale(${k})`}>{children}</g>
+    <svg
+      ref={svgRef}
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
+    >
+      <g transform={`translate(${x},${y})scale(${k})`}>{children}</g>
     </svg>
   );
 }
