@@ -364,7 +364,7 @@ function D3DirectedGraph() {
   const arrowEdgeEnd = -25;
 
   if (loading) {
-    return <div>loading...</div>;
+    return <div></div>;
   }
 
   return (
