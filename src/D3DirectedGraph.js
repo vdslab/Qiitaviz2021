@@ -312,16 +312,21 @@ function D3DirectedGraph() {
 
       simulation
         // forceSimulationの影響下に  desを置く
-        .nodes(nodes)
-        // 時間経過で動かす
-        .on("tick", ticked);
+        .nodes(nodes);
+
+      // 時間経過で動かす
+      // .on("tick", ticked);
       // linkデータをセット
       simulation.force("link").links(links);
+      simulation.tick(300).stop();
 
-      function ticked() {
+      setPositionData();
+
+      function setPositionData() {
         setNodes(nodes.slice());
         setLinks(links.slice());
       }
+      // simulation.tick(300).stop();
     };
 
     const startLineChart = async () => {
