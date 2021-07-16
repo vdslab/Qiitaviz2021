@@ -25,7 +25,7 @@ function Main() {
     >
       <Switch>
         <Route path="/" exact>
-          <div className="">
+          <div>
             <div className="columns is-centered">
               <AreaTab />
               <Search />
@@ -92,9 +92,6 @@ function AreaTab() {
             </a>
             <a href="#" className="dropdown-item">
               Android
-            </a>
-            <a href="#" className="dropdown-item">
-              CS
             </a>
           </div>
         </div>

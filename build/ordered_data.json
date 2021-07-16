@@ -5,8 +5,7 @@
     "ID": 1,
     "childNode": [
       2
-    ],
-    "url": "https://qiita.com/tags/javascript"
+    ]
   },
   {
     "nodeName": "React",
@@ -14,8 +13,7 @@
     "ID": 2,
     "childNode": [
       3
-    ],
-    "url": "https://qiita.com/tags/react"
+    ]
   },
   {
     "nodeName": "Rails",
@@ -23,8 +21,7 @@
     "ID": 3,
     "childNode": [
       4
-    ],
-    "url": "https://qiita.com/tags/rails"
+    ]
   },
   {
     "nodeName": "Ruby",
@@ -32,8 +29,7 @@
     "ID": 4,
     "childNode": [
       5
-    ],
-    "url": "https://qiita.com/tags/ruby"
+    ]
   },
   {
     "nodeName": "HTML",
@@ -41,8 +37,7 @@
     "ID": 5,
     "childNode": [
       6
-    ],
-    "url": "https://qiita.com/tags/html"
+    ]
   },
   {
     "nodeName": "Vue.js",
@@ -50,8 +45,7 @@
     "ID": 6,
     "childNode": [
       7
-    ],
-    "url": "https://qiita.com/tags/vue.js"
+    ]
   },
   {
     "nodeName": "Node.js",
@@ -59,8 +53,7 @@
     "ID": 7,
     "childNode": [
       8
-    ],
-    "url": "https://qiita.com/tags/node.js"
+    ]
   },
   {
     "nodeName": "AWS",
@@ -68,8 +61,7 @@
     "ID": 8,
     "childNode": [
       9
-    ],
-    "url": "https://qiita.com/tags/aws"
+    ]
   },
   {
     "nodeName": "PHP",
@@ -77,8 +69,7 @@
     "ID": 9,
     "childNode": [
       10
-    ],
-    "url": "https://qiita.com/tags/php"
+    ]
   },
   {
     "nodeName": "CSS",
@@ -86,8 +77,7 @@
     "ID": 10,
     "childNode": [
       11
-    ],
-    "url": "https://qiita.com/tags/css"
+    ]
   },
   {
     "nodeName": "Docker",
@@ -95,14 +85,12 @@
     "ID": 11,
     "childNode": [
       12
-    ],
-    "url": "https://qiita.com/tags/docker"
+    ]
   },
   {
     "nodeName": "iOS",
     "diff": 0.05916666666666666,
     "ID": 12,
-    "childNode": [],
-    "url": "https://qiita.com/tags/ios"
+    "childNode": []
   }
 ]
