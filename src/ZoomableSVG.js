@@ -21,9 +21,20 @@ function ZoomableSVG({ children, width, height }) {
       ref={svgRef}
       width={width}
       height={height}
+<<<<<<< HEAD
       viewBox={`0 0 ${width} ${height}`}
     >
       <g transform={`translate(${x},${y})scale(${k})`}>{children}</g>
+=======
+      className="has-background-white"
+      style={{
+        display: "block",
+        marginLeft: "auto",
+        marginRight: "auto",
+      }}
+    >
+      <g transform={`translate(${x}, ${y})scale(${k})`}>{children}</g>
+>>>>>>> master
     </svg>
   );
 }

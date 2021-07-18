@@ -1,25 +1,46 @@
 import D3DirectedGraph from "./D3DirectedGraph";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "bulma/css/bulma.css";
+
 function App() {
   return (
-    <div>
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Main />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
 function Main() {
   return (
-    <section className="section has-background-white-bis">
-      <div className="">
-        <div className="columns is-centered">
-          <AreaTab />
-          <Search />
-        </div>
-        <D3DirectedGraph />
-      </div>
+    <section
+      className="section has-background-white-bis"
+      style={{ minHeight: "1000px" }}
+    >
+      <Switch>
+        <Route path="/" exact>
+          <div>
+            <div className="columns is-centered">
+              <AreaTab />
+              <Search />
+            </div>
+            <D3DirectedGraph />
+          </div>
+        </Route>
+        <Route path="/usage">
+          <div>使い方だよ！</div>
+        </Route>
+        <Route path="/description">
+          <div>このサイトでできることだよ！</div>
+        </Route>
+        <Route path="/references">
+          <div>参考文献だよ！</div>
+        </Route>
+      </Switch>
     </section>
   );
 }
@@ -70,9 +91,6 @@ function AreaTab() {
             <a href="#" className="dropdown-item">
               Android
             </a>
-            <a href="#" className="dropdown-item">
-              CS
-            </a>
           </div>
         </div>
       </div>
@@ -119,18 +137,18 @@ function Navigation() {
         </div>
         <div className="dropdown-menu" id="dropdown-menu" role="menu">
           <div className="dropdown-content">
-            <a href="#" className="dropdown-item">
+            <Link className="dropdown-item" to="/">
               ホーム
-            </a>
-            <a href="#" className="dropdown-item">
+            </Link>
+            <Link className="dropdown-item" to="/usage">
               使い方
-            </a>
-            <a href="#" className="dropdown-item">
+            </Link>
+            <Link className="dropdown-item" to="/description">
               このサイトでできること
-            </a>
-            <a href="#" className="dropdown-item">
+            </Link>
+            <Link className="dropdown-item" to="/references">
               参考文献
-            </a>
+            </Link>
           </div>
         </div>
       </div>
