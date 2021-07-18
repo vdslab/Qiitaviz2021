@@ -16,7 +16,17 @@ function ZoomableSVG({ children, width, height }) {
     d3.select(svgRef.current).call(zoom);
   }, []);
   return (
-    <svg ref={svgRef} width={width} height={height}>
+    <svg
+      ref={svgRef}
+      width={width}
+      height={height}
+      className="has-background-white"
+      style={{
+        display: "block",
+        marginLeft: "auto",
+        marginRight: "auto",
+      }}
+    >
       <g transform={`translate(${x}, ${y})scale(${k})`}>{children}</g>
     </svg>
   );
