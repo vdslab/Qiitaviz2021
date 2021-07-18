@@ -57,14 +57,14 @@ function D3DirectedGraph() {
             .distance((d) => linkLen)
             .id((d) => d.id)
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
-        .force("charge", d3.forceManyBody().strength(-1000)) //引き合う力を設定。
+        .force("charge", d3.forceManyBody().strength(-3500)) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
         .force(
           "x",
           d3
             .forceX()
             .x(svgWidth / 2)
-            .strength(0.1)
+            .strength(0.05)
         ); //x方向に戻る力
 
       simulation
@@ -80,7 +80,7 @@ function D3DirectedGraph() {
     };
     const startLineChart = async () => {
       const [nodes, links] = await (async () => {
-        const response = await fetch("ordered_data.json");
+        const response = await fetch("./data/new_data.json");
         const data = await response.json();
         const nodes = Array();
         const links = Array();
@@ -124,7 +124,7 @@ function D3DirectedGraph() {
   const arrowEdgeEnd = -25;
 
   if (loading) {
-    return <div></div>;
+    return <div>loading...</div>;
   }
 
   return (
