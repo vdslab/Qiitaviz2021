@@ -23,9 +23,7 @@ function D3DirectedGraph() {
 
   function overHandle(e) {
     const target = e.currentTarget.dataset.name;
-    const data = articleData.filter((item) => {
-      return item.type == target;
-    });
+    const data = articleData.filter((item) => item.type == target);
     const positionX = deviceWidth <= MOBILE_BORDER_SIZE ? "500" : e.pageX;
     const positionY = e.pageY;
 
@@ -37,6 +35,14 @@ function D3DirectedGraph() {
   }
 
   useEffect(() => {
+    async function loadArticleData() {
+      const res = await fetch("./data/article_data.json");
+      const data = await res.json();
+
+      setArticleData(data);
+    }
+
+    loadArticleData();
     const startSimulation = (nodes, links) => {
       const linkLen = 150;
       const simulation = d3
@@ -57,15 +63,22 @@ function D3DirectedGraph() {
             .distance((d) => linkLen)
             .id((d) => d.id)
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
-        .force("charge", d3.forceManyBody().strength(-3500)) //引き合う力を設定。
+        .force("charge", d3.forceManyBody().strength(-500)) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
         .force(
           "x",
           d3
             .forceX()
             .x(svgWidth / 2)
-            .strength(0.05)
-        ); //x方向に戻る力
+            .strength(0.0125)
+        ) //x方向に戻る力
+        .force(
+          "y",
+          d3
+            .forceY()
+            .y(svgWidth / 2)
+            .strength(0.001)
+        ); //y方向に戻る力
 
       simulation
         // forceSimulationの影響下にnodesを置く
@@ -103,20 +116,13 @@ function D3DirectedGraph() {
         }
         return [nodes, links];
       })();
-      setArticleData(
-        await (async () => {
-          const response = await fetch("article_data.json");
-          const data = await response.json();
-          return data;
-        })()
-      );
 
       startSimulation(nodes, links);
       setLoading(false);
     };
     startLineChart();
   }, []);
-
+  console.log(articleData);
   const arrowEdgeX = -35;
   const arrowEdgeY = -5;
   const arrowHeight = 10;
