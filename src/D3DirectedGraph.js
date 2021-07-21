@@ -85,9 +85,11 @@ function D3DirectedGraph() {
         const data = await response.json();
         const nodes = Array();
         const links = Array();
-        const r = 35;
 
+        const r = 35;
+        let i = 0;
         for (const item of data) {
+          i++;
           nodes.push({
             id: item.ID, //nodeのindexを標準設定から変更
             label: item.nodeName,
@@ -102,6 +104,7 @@ function D3DirectedGraph() {
             });
           }
         }
+
         return [nodes, links];
       })();
       setArticleData(
