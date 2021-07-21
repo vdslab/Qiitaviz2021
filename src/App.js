@@ -1,7 +1,7 @@
 /** @format */
 
 import D3DirectedGraph from "./D3DirectedGraph";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "bulma/css/bulma.css";
 
