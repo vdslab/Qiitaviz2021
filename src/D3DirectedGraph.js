@@ -2,6 +2,7 @@ import * as d3 from "d3";
 import "bulma/css/bulma.css";
 import { useState, useEffect } from "react";
 import ZoomableSVG from "./ZoomableSVG";
+import Footer from "./components/Footer";
 
 function D3DirectedGraph() {
   // 仮の記事データ
@@ -81,7 +82,7 @@ function D3DirectedGraph() {
 
     const startLineChart = async () => {
       const [nodes, links] = await (async () => {
-        const response = await fetch("ordered_data.json");
+        const response = await fetch("./data/new_data.json");
         const data = await response.json();
         const nodes = Array();
         const links = Array();
@@ -128,107 +129,114 @@ function D3DirectedGraph() {
   const arrowEdgeEnd = -25;
 
   if (loading) {
-    return <div></div>;
+    return <div>loading...</div>;
   }
 
   return (
-    <div>
-      <ZoomableSVG width={svgWidth} height={svgHeight}>
-        <defs>
-          <marker
-            id="arrowhead"
-            viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
-            refX="13"
-            refY="0"
-            orient="auto"
-            markerWidth="13"
-            markerHeight="13"
-            xoverflow="visible"
-          >
-            <path
-              d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
-                -1 * arrowEdgeY
-              }`}
-              fill="#999"
-              style={{ stroke: "none" }}
-            ></path>
-          </marker>
-        </defs>
+    <a>
+      <div className="section has-background-white-bis">
+        <ZoomableSVG width={svgWidth} height={svgHeight}>
+          <defs>
+            <marker
+              id="arrowhead"
+              viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
+              refX="13"
+              refY="0"
+              orient="auto"
+              markerWidth="13"
+              markerHeight="13"
+              xoverflow="visible"
+            >
+              <path
+                d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
+                  -1 * arrowEdgeY
+                }`}
+                fill="#999"
+                style={{ stroke: "none" }}
+              ></path>
+            </marker>
+          </defs>
 
-        <g className="links">
-          {links.map((link) => {
-            return (
-              <line
-                key={link.source.id + "-" + link.target.id}
-                stroke="black"
-                strokeWidth="1"
-                className="link"
-                markerEnd="url(#arrowhead)"
-                id="edgepath0"
-                x1={link.source.x}
-                y1={link.source.y}
-                x2={link.target.x}
-                y2={link.target.y}
-              ></line>
-            );
-          })}
-        </g>
-
-        <g className="nodes">
-          {nodes.map((node) => {
-            return (
-              <g className="nodes" key={node.id}>
-                <circle
-                  className="node"
-                  r={node.r}
-                  style={{ fill: "rgb(128, 255, 191)" }}
-                  cx={node.x}
-                  cy={node.y}
-                  data-url={node.url}
-                  data-name={node.label}
-                  onMouseEnter={overHandle}
-                ></circle>
-
-                <text
-                  className="node-label"
-                  textAnchor="middle"
-                  fill="black"
-                  fontSize={deviceWidth <= MOBILE_BORDER_SIZE ? "15px" : "15px"}
-                  x={node.x}
-                  y={node.y}
-                >
-                  {node.label}
-                </text>
-              </g>
-            );
-          })}
-        </g>
-      </ZoomableSVG>
-      <div
-        className={displayArticle.length > 0 ? "card show popup" : "card popup"}
-        style={{
-          position: "absolute",
-          left: mousePosition[0],
-          top: mousePosition[1],
-        }}
-        onMouseLeave={outHandle}
-      >
-        <div className="card-content">
-          <div className="content">
-            <p>おすすめの記事</p>
-            {displayArticle.map((item, i) => {
+          <g className="links">
+            {links.map((link) => {
               return (
-                <p key={i}>
-                  <a href={item.url} target="_blank">
-                    {item.title}
-                  </a>
-                </p>
+                <line
+                  key={link.source.id + "-" + link.target.id}
+                  stroke="black"
+                  strokeWidth="1"
+                  className="link"
+                  markerEnd="url(#arrowhead)"
+                  id="edgepath0"
+                  x1={link.source.x}
+                  y1={link.source.y}
+                  x2={link.target.x}
+                  y2={link.target.y}
+                ></line>
               );
             })}
+          </g>
+
+          <g className="nodes">
+            {nodes.map((node) => {
+              return (
+                <g className="nodes" key={node.id}>
+                  <circle
+                    className="node"
+                    r={node.r}
+                    style={{ fill: "rgb(128, 255, 191)" }}
+                    cx={node.x}
+                    cy={node.y}
+                    data-url={node.url}
+                    data-name={node.label}
+                    onMouseEnter={overHandle}
+                  ></circle>
+
+                  <text
+                    className="node-label"
+                    textAnchor="middle"
+                    fill="black"
+                    fontSize={
+                      deviceWidth <= MOBILE_BORDER_SIZE ? "15px" : "15px"
+                    }
+                    x={node.x}
+                    y={node.y}
+                  >
+                    {node.label}
+                  </text>
+                </g>
+              );
+            })}
+          </g>
+        </ZoomableSVG>
+        <div
+          className={
+            displayArticle.length > 0 ? "card show popup" : "card popup"
+          }
+          style={{
+            position: "absolute",
+            left: mousePosition[0],
+            top: mousePosition[1],
+          }}
+          onMouseLeave={outHandle}
+        >
+          <div className="card-content">
+            <div className="content">
+              <p>おすすめの記事</p>
+              {displayArticle.map((item, i) => {
+                return (
+                  <p key={i}>
+                    <a href={item.url} target="_blank">
+                      {item.title}
+                    </a>
+                  </p>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </a>
   );
 }
 export default D3DirectedGraph;
