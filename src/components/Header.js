@@ -1,18 +1,19 @@
 import "bulma/css/bulma.css";
-import Navigation from "./Navigation";
-
+import AreaTab from "./AreaTab";
+import Search from "./Search";
 function Header() {
   return (
-    <div className="hero is-small is-primary">
+    <div className="hero is-small is-primary" style={{ height: "10vh" }}>
       <section className="section hero-body">
         <div className="container">
-          <div className="columns">
-            <div className="column is-one-third is-offset-one-third">
-              <h1 className="title is-3 has-text-centered">
-                2021QiitaViz-legends
+          <div className="columns is-mobile">
+            <div className="column is-3-mobile">
+              <h1 className="title is-size-3-desktop is-size-7-mobile has-text-centered">
+                QiitaViz-legends
               </h1>
             </div>
-            <Navigation />
+            <AreaTab />
+            <Search />
           </div>
         </div>
       </section>

@@ -18,8 +18,7 @@ function D3DirectedGraph() {
 
   // デバイスの横幅を取得
   const { innerWidth: deviceWidth } = window;
-  const svgWidth =
-    deviceWidth <= MOBILE_BORDER_SIZE ? deviceWidth * 0.9 : deviceWidth * 0.8;
+  const svgWidth = deviceWidth * 0.66;
   const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1100;
 
   function overHandle(e) {
@@ -88,9 +87,7 @@ function D3DirectedGraph() {
         const links = Array();
 
         const r = 35;
-        let i = 0;
         for (const item of data) {
-          i++;
           nodes.push({
             id: item.ID, //nodeのindexを標準設定から変更
             label: item.nodeName,
@@ -133,8 +130,16 @@ function D3DirectedGraph() {
   }
 
   return (
-    <a>
-      <div className="section has-background-white-bis">
+    <div
+      className="columns is-mobile"
+      style={{
+        height: "80vh",
+        marginRight: "20px",
+        marginLeft: "20px",
+        marginTop: "20px",
+      }}
+    >
+      <div className="column is-8 box" style={{ marginBottom: "0" }}>
         <ZoomableSVG width={svgWidth} height={svgHeight}>
           <defs>
             <marker
@@ -208,35 +213,36 @@ function D3DirectedGraph() {
             })}
           </g>
         </ZoomableSVG>
-        <div
-          className={
-            displayArticle.length > 0 ? "card show popup" : "card popup"
-          }
-          style={{
-            position: "absolute",
-            left: mousePosition[0],
-            top: mousePosition[1],
-          }}
-          onMouseLeave={outHandle}
-        >
-          <div className="card-content">
-            <div className="content">
-              <p>おすすめの記事</p>
-              {displayArticle.map((item, i) => {
-                return (
-                  <p key={i}>
-                    <a href={item.url} target="_blank">
-                      {item.title}
-                    </a>
-                  </p>
-                );
-              })}
-            </div>
+      </div>
+      <div
+        className={displayArticle.length > 0 ? "card show popup" : "card popup"}
+        style={{
+          position: "absolute",
+          left: mousePosition[0],
+          top: mousePosition[1],
+        }}
+        onMouseLeave={outHandle}
+      >
+        <div className="card-content">
+          <div className="content">
+            <p>おすすめの記事</p>
+            {displayArticle.map((item, i) => {
+              return (
+                <p key={i}>
+                  <a href={item.url} target="_blank">
+                    {item.title}
+                  </a>
+                </p>
+              );
+            })}
           </div>
         </div>
       </div>
-      <Footer />
-    </a>
+
+      <div className="column is-4 box">
+        <p>サブビュー</p>
+      </div>
+    </div>
   );
 }
 export default D3DirectedGraph;
