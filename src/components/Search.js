@@ -2,8 +2,8 @@ import "bulma/css/bulma.css";
 
 function Search() {
   return (
-    <div className="column is-one-fifth">
-      <div className="field has-addons" style={{ marginLeft: "0" }}>
+    <div className="column">
+      <div className="field has-addons" style={{}}>
         <div className="control">
           <input
             className="input"

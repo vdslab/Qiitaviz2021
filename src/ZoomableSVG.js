@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
+import { autoType } from "d3";
 
 function ZoomableSVG({ children, width, height }) {
   const svgRef = useRef();
@@ -13,13 +14,14 @@ function ZoomableSVG({ children, width, height }) {
       setX(x);
       setY(y);
     });
+    zoom.scaleExtent([0.5, 2]);
     d3.select(svgRef.current).call(zoom);
   }, []);
   return (
     <svg
       ref={svgRef}
-      width={width}
-      height={height}
+      width={"100%"}
+      height={"100%"}
       className="has-background-white"
       style={{
         display: "block",

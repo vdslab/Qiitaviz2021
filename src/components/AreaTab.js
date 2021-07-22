@@ -2,7 +2,7 @@ import "bulma/css/bulma.css";
 
 function AreaTab() {
   return (
-    <div className="column is-one-fifth">
+    <div className="column is-5-mobile is-2-desktop">
       <div className="dropdown is-hoverable">
         <div className="dropdown-trigger">
           <button
