@@ -31,10 +31,5 @@ function SubViewData({ req }) {
       </div>
     );
   }
-  /*
-  else {
-    return <ShowRecommendArticles displayArticle={displayArticle} />;
-  }
-  */
 }
 export default SubViewData;
