@@ -2,7 +2,7 @@ import * as d3 from "d3";
 import "bulma/css/bulma.css";
 import { useState, useEffect } from "react";
 import ZoomableSVG from "./ZoomableSVG";
-import Footer from "./components/Footer";
+import DisplaySubView from "./components/DisplaySubview";
 
 function D3DirectedGraph() {
   // 仮の記事データ
@@ -14,26 +14,18 @@ function D3DirectedGraph() {
   const [links, setLinks] = useState([]);
   // おすすめ記事
   const [displayArticle, setDisplayArticle] = useState([]);
-  const [mousePosition, setMousePosition] = useState([]);
 
   // デバイスの横幅を取得
   const { innerWidth: deviceWidth } = window;
   const svgWidth = deviceWidth * 0.66;
   const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1100;
 
-  function overHandle(e) {
+  function clickNode(e) {
     const target = e.currentTarget.dataset.name;
     const data = articleData.filter((item) => {
       return item.type == target;
     });
-    const positionX = deviceWidth <= MOBILE_BORDER_SIZE ? "500" : e.pageX;
-    const positionY = e.pageY;
-
     setDisplayArticle(data);
-    setMousePosition([positionX, positionY]);
-  }
-  function outHandle(e) {
-    setDisplayArticle([]);
   }
 
   useEffect(() => {
@@ -112,7 +104,6 @@ function D3DirectedGraph() {
           return data;
         })()
       );
-
       startSimulation(nodes, links);
       setLoading(false);
     };
@@ -193,7 +184,7 @@ function D3DirectedGraph() {
                     cy={node.y}
                     data-url={node.url}
                     data-name={node.label}
-                    onMouseEnter={overHandle}
+                    onClick={clickNode}
                   ></circle>
 
                   <text
@@ -214,34 +205,7 @@ function D3DirectedGraph() {
           </g>
         </ZoomableSVG>
       </div>
-      <div
-        className={displayArticle.length > 0 ? "card show popup" : "card popup"}
-        style={{
-          position: "absolute",
-          left: mousePosition[0],
-          top: mousePosition[1],
-        }}
-        onMouseLeave={outHandle}
-      >
-        <div className="card-content">
-          <div className="content">
-            <p>おすすめの記事</p>
-            {displayArticle.map((item, i) => {
-              return (
-                <p key={i}>
-                  <a href={item.url} target="_blank">
-                    {item.title}
-                  </a>
-                </p>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      <div className="column is-4 box">
-        <p>サブビュー</p>
-      </div>
+      <DisplaySubView displayArticle={displayArticle} />
     </div>
   );
 }
