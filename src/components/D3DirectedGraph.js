@@ -2,13 +2,13 @@ import * as d3 from "d3";
 import "bulma/css/bulma.css";
 import { useState, useEffect } from "react";
 import ZoomableSVG from "./ZoomableSVG";
-import DisplaySubView from "./components/DisplaySubview";
+import DisplaySubView from "./DisplaySubview";
 
-function D3DirectedGraph() {
+function D3DirectedGraph({ clusterDataUrl }) {
   // 仮の記事データ
   const MOBILE_BORDER_SIZE = 599;
-
   const [articleData, setArticleData] = useState([]);
+  const [graphData, setGraphData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [nodes, setNodes] = useState([]);
   const [links, setLinks] = useState([]);
@@ -73,13 +73,16 @@ function D3DirectedGraph() {
 
     const startLineChart = async () => {
       const [nodes, links] = await (async () => {
-        const response = await fetch("./data/new_data.json");
+        const response = await fetch(clusterDataUrl);
         const data = await response.json();
+        setGraphData(data);
+
         const nodes = Array();
         const links = Array();
 
         const r = 35;
-        for (const item of data) {
+        // graphDataで回したいけどなんか空配列でできない、知らん
+        data.map((item) => {
           nodes.push({
             id: item.ID, //nodeのindexを標準設定から変更
             label: item.nodeName,
@@ -93,32 +96,34 @@ function D3DirectedGraph() {
               target: child,
             });
           }
-        }
+        });
+        setArticleData(
+          await (async () => {
+            const response = await fetch(
+              process.env.PUBLIC_URL + "/data/article_data.json"
+            );
+            const data = await response.json();
+            return data;
+          })()
+        );
 
         return [nodes, links];
       })();
-      setArticleData(
-        await (async () => {
-          const response = await fetch("article_data.json");
-          const data = await response.json();
-          return data;
-        })()
-      );
       startSimulation(nodes, links);
       setLoading(false);
     };
     startLineChart();
-  }, []);
+  }, [clusterDataUrl]);
+
+  if (loading) {
+    return <div>loading...</div>;
+  }
 
   const arrowEdgeX = -35;
   const arrowEdgeY = -5;
   const arrowHeight = 10;
   const arrowWidth = 14;
   const arrowEdgeEnd = -25;
-
-  if (loading) {
-    return <div>loading...</div>;
-  }
 
   return (
     <div

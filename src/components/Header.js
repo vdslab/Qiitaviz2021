@@ -1,7 +1,7 @@
 import "bulma/css/bulma.css";
 import AreaTab from "./AreaTab";
 import Search from "./Search";
-function Header() {
+function Header({ setClusterDataUrl }) {
   return (
     <div className="hero is-small is-primary" style={{ height: "10vh" }}>
       <section className="section hero-body">
@@ -12,7 +12,7 @@ function Header() {
                 QiitaViz-legends
               </h1>
             </div>
-            <AreaTab />
+            <AreaTab setClusterDataUrl={setClusterDataUrl} />
             <Search />
           </div>
         </div>
