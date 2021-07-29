@@ -1,7 +1,9 @@
 import "bulma/css/bulma.css";
-
-function SubViewData({ req }) {
-  if (req === "usage") {
+import DisplayRecommendArticles from "./DisplayRecommendArticles";
+function SubViewData({ req, displayArticle }) {
+  if (req === "article") {
+    return <DisplayRecommendArticles displayArticle={displayArticle} />;
+  } else if (req === "usage") {
     return (
       <div>
         <div>
