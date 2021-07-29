@@ -2,6 +2,7 @@ import * as d3 from "d3";
 import "bulma/css/bulma.css";
 import { useState, useEffect } from "react";
 import ZoomableSVG from "./ZoomableSVG";
+import DisplaySubView from "./components/DisplaySubview";
 
 function D3DirectedGraph() {
   // 仮の記事データ
@@ -13,25 +14,18 @@ function D3DirectedGraph() {
   const [links, setLinks] = useState([]);
   // おすすめ記事
   const [displayArticle, setDisplayArticle] = useState([]);
-  const [mousePosition, setMousePosition] = useState([]);
 
   // デバイスの横幅を取得
   const { innerWidth: deviceWidth } = window;
-  const svgWidth =
-    deviceWidth <= MOBILE_BORDER_SIZE ? deviceWidth * 0.9 : deviceWidth * 0.8;
+  const svgWidth = deviceWidth * 0.66;
   const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1100;
 
-  function overHandle(e) {
+  function clickNode(e) {
     const target = e.currentTarget.dataset.name;
-    const data = articleData.filter((item) => item.type == target);
-    const positionX = deviceWidth <= MOBILE_BORDER_SIZE ? "500" : e.pageX;
-    const positionY = e.pageY;
-
+    const data = articleData.filter((item) => {
+      return item.type == target;
+    });
     setDisplayArticle(data);
-    setMousePosition([positionX, positionY]);
-  }
-  function outHandle(e) {
-    setDisplayArticle([]);
   }
 
   useEffect(() => {
@@ -97,8 +91,8 @@ function D3DirectedGraph() {
         const data = await response.json();
         const nodes = Array();
         const links = Array();
-        const r = 35;
 
+        const r = 35;
         for (const item of data) {
           nodes.push({
             id: item.ID, //nodeのindexを標準設定から変更
@@ -114,9 +108,16 @@ function D3DirectedGraph() {
             });
           }
         }
+
         return [nodes, links];
       })();
-
+      setArticleData(
+        await (async () => {
+          const response = await fetch("article_data.json");
+          const data = await response.json();
+          return data;
+        })()
+      );
       startSimulation(nodes, links);
       setLoading(false);
     };
@@ -134,102 +135,91 @@ function D3DirectedGraph() {
   }
 
   return (
-    <div>
-      <ZoomableSVG width={svgWidth} height={svgHeight}>
-        <defs>
-          <marker
-            id="arrowhead"
-            viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
-            refX="13"
-            refY="0"
-            orient="auto"
-            markerWidth="13"
-            markerHeight="13"
-            xoverflow="visible"
-          >
-            <path
-              d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
-                -1 * arrowEdgeY
-              }`}
-              fill="#999"
-              style={{ stroke: "none" }}
-            ></path>
-          </marker>
-        </defs>
+    <div
+      className="columns is-mobile"
+      style={{
+        height: "80vh",
+        marginRight: "20px",
+        marginLeft: "20px",
+        marginTop: "20px",
+      }}
+    >
+      <div className="column is-8 box" style={{ marginBottom: "0" }}>
+        <ZoomableSVG width={svgWidth} height={svgHeight}>
+          <defs>
+            <marker
+              id="arrowhead"
+              viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
+              refX="13"
+              refY="0"
+              orient="auto"
+              markerWidth="13"
+              markerHeight="13"
+              xoverflow="visible"
+            >
+              <path
+                d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
+                  -1 * arrowEdgeY
+                }`}
+                fill="#999"
+                style={{ stroke: "none" }}
+              ></path>
+            </marker>
+          </defs>
 
-        <g className="links">
-          {links.map((link) => {
-            return (
-              <line
-                key={link.source.id + "-" + link.target.id}
-                stroke="black"
-                strokeWidth="1"
-                className="link"
-                markerEnd="url(#arrowhead)"
-                id="edgepath0"
-                x1={link.source.x}
-                y1={link.source.y}
-                x2={link.target.x}
-                y2={link.target.y}
-              ></line>
-            );
-          })}
-        </g>
-
-        <g className="nodes">
-          {nodes.map((node) => {
-            return (
-              <g className="nodes" key={node.id}>
-                <circle
-                  className="node"
-                  r={node.r}
-                  style={{ fill: "rgb(128, 255, 191)" }}
-                  cx={node.x}
-                  cy={node.y}
-                  data-url={node.url}
-                  data-name={node.label}
-                  onMouseEnter={overHandle}
-                ></circle>
-
-                <text
-                  className="node-label"
-                  textAnchor="middle"
-                  fill="black"
-                  fontSize={deviceWidth <= MOBILE_BORDER_SIZE ? "15px" : "15px"}
-                  x={node.x}
-                  y={node.y}
-                >
-                  {node.label}
-                </text>
-              </g>
-            );
-          })}
-        </g>
-      </ZoomableSVG>
-      <div
-        className={displayArticle.length > 0 ? "card show popup" : "card popup"}
-        style={{
-          position: "absolute",
-          left: mousePosition[0],
-          top: mousePosition[1],
-        }}
-        onMouseLeave={outHandle}
-      >
-        <div className="card-content">
-          <div className="content">
-            <p>おすすめの記事</p>
-            {displayArticle.map((item, i) => {
+          <g className="links">
+            {links.map((link) => {
               return (
-                <p key={i}>
-                  <a href={item.url} target="_blank">
-                    {item.title}
-                  </a>
-                </p>
+                <line
+                  key={link.source.id + "-" + link.target.id}
+                  stroke="black"
+                  strokeWidth="1"
+                  className="link"
+                  markerEnd="url(#arrowhead)"
+                  id="edgepath0"
+                  x1={link.source.x}
+                  y1={link.source.y}
+                  x2={link.target.x}
+                  y2={link.target.y}
+                ></line>
               );
             })}
-          </div>
-        </div>
+          </g>
+
+          <g className="nodes">
+            {nodes.map((node) => {
+              return (
+                <g className="nodes" key={node.id}>
+                  <circle
+                    className="node"
+                    r={node.r}
+                    style={{ fill: "rgb(128, 255, 191)" }}
+                    cx={node.x}
+                    cy={node.y}
+                    data-url={node.url}
+                    data-name={node.label}
+                    onClick={clickNode}
+                  ></circle>
+
+                  <text
+                    className="node-label"
+                    textAnchor="middle"
+                    fill="black"
+                    fontSize={
+                      deviceWidth <= MOBILE_BORDER_SIZE ? "15px" : "15px"
+                    }
+                    x={node.x}
+                    y={node.y}
+                  >
+                    {node.label}
+                  </text>
+                </g>
+              );
+            })}
+          </g>
+        </ZoomableSVG>
       </div>
+      <DisplaySubView displayArticle={displayArticle} />
     </div>
   );
 }
