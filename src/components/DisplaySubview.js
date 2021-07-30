@@ -7,8 +7,8 @@ const DisplaySubview = ({ displayArticle }) => {
   const [active, setActive] = useState("usage");
   return (
     <div
-      className="column is-4 box"
-      style={{ paddingLeft: "40px", paddingRight: "40px" }}
+      className="column is-4-desktop is-6-mobile box"
+      style={{ paddingLeft: "40px", paddingRight: "40px", overflowY: "scroll" }}
     >
       <div className="tabs">
         <ul>

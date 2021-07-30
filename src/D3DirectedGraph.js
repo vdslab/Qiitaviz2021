@@ -86,7 +86,6 @@ function D3DirectedGraph() {
             url: item.url,
             r,
           });
-
           for (const child of item.childNode) {
             links.push({
               source: item.ID,
@@ -130,7 +129,10 @@ function D3DirectedGraph() {
         marginTop: "20px",
       }}
     >
-      <div className="column is-8 box" style={{ marginBottom: "0" }}>
+      <div
+        className="column is-8-desktop is-6-mobile box"
+        style={{ marginBottom: "0" }}
+      >
         <ZoomableSVG width={svgWidth} height={svgHeight}>
           <defs>
             <marker
