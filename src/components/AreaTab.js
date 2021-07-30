@@ -2,13 +2,14 @@ import "bulma/css/bulma.css";
 
 function AreaTab() {
   return (
-    <div className="column is-5-mobile is-2-desktop">
+    <div className="column is-2">
       <div className="dropdown is-hoverable">
         <div className="dropdown-trigger">
           <button
             className="button"
             aria-haspopup="true"
             aria-controls="dropdown-menu"
+            style={{ height: "5vh" }}
           >
             <span>領域を選択</span>
             <span className="icon is-small">
