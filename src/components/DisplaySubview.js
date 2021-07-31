@@ -8,7 +8,13 @@ const DisplaySubview = ({ displayArticle }) => {
   return (
     <div
       className="column is-4-desktop is-6-mobile box"
-      style={{ paddingLeft: "40px", paddingRight: "40px", overflowY: "scroll" }}
+      style={{
+        marginLeft: "10px",
+        paddingLeft: "40px",
+        paddingRight: "40px",
+        height: "84vh",
+        overflowY: "scroll",
+      }}
     >
       <div className="tabs">
         <ul>

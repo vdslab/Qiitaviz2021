@@ -2,7 +2,7 @@ import "bulma/css/bulma.css";
 
 function Header() {
   return (
-    <div className="hero is-small is-primary" style={{ height: "10vh" }}>
+    <div className="hero is-small is-primary" style={{ height: "10%" }}>
       <section className="section hero-body">
         <div className="container">
           <div className="columns">

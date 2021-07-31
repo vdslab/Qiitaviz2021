@@ -9,7 +9,6 @@ function AreaTab() {
             className="button"
             aria-haspopup="true"
             aria-controls="dropdown-menu"
-            style={{ height: "5vh" }}
           >
             <span>領域を選択</span>
             <span className="icon is-small">

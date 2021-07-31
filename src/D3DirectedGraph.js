@@ -18,9 +18,10 @@ function D3DirectedGraph() {
   const [displayArticle, setDisplayArticle] = useState([]);
 
   // デバイスの横幅を取得
-  const { innerWidth: deviceWidth } = window;
+  const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
   const svgWidth = deviceWidth * 0.66;
-  const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1100;
+  // const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1100;
+  const svgHeight = deviceHeight * 0.7;
 
   function clickNode(e) {
     const target = e.currentTarget.dataset.name;
@@ -120,7 +121,6 @@ function D3DirectedGraph() {
   if (loading) {
     return <div>loading...</div>;
   }
-
   return (
     <div
       className="columns is-mobile"
@@ -132,13 +132,18 @@ function D3DirectedGraph() {
     >
       <div
         className="column is-8-desktop is-6-mobile box"
-        style={{ marginBottom: "0" }}
+        style={{ height: "84vh" }}
       >
         <div className="columns is-centered">
           <AreaTab />
           <Search />
         </div>
-        <div style={{ height: "77vh" }}>
+        <div
+          style={{
+            height:
+              deviceWidth <= 845 ? deviceHeight * 0.66 : deviceHeight * 0.74,
+          }}
+        >
           <ZoomableSVG width={svgWidth} height={svgHeight}>
             <defs>
               <marker
