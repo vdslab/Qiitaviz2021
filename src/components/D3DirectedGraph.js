@@ -38,7 +38,7 @@ function D3DirectedGraph({ clusterDataUrl }) {
 
     loadArticleData();
     const startSimulation = (nodes, links) => {
-      const linkLen = 150;
+      const linkLen = 60;
       const simulation = d3
         .forceSimulation()
         .force(
@@ -46,32 +46,44 @@ function D3DirectedGraph({ clusterDataUrl }) {
           d3
             .forceCollide()
             .radius(function (d) {
-              return d.r;
+              return d.r * 2;
             })
-            .iterations(16)
+            .iterations(100)
         ) //衝突値の設定
         .force(
           "link",
           d3
             .forceLink()
-            .distance((d) => linkLen)
+            .distance(linkLen)
             .id((d) => d.id)
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
-        .force("charge", d3.forceManyBody().strength(-500)) //引き合う力を設定。
+        //.force("charge", d3.forceManyBody().strength(-400)) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
+        .force(
+          "r",
+          d3
+            .forceRadial()
+            .radius((svgHeight / 2) * 0.7)
+            .x(svgWidth / 2)
+            .y(svgHeight / 2)
+            .strength(0.5)
+        )
         .force(
           "x",
           d3
             .forceX()
             .x(svgWidth / 2)
-            .strength(0.0125)
+            .strength(0.04)
         ) //x方向に戻る力
         .force(
           "y",
           d3
             .forceY()
-            .y(svgWidth / 2)
-            .strength(0.001)
+            .y((d) => {
+              console.log(150 * (d.level + 1), d.label);
+              return 200 * d.level;
+            })
+            .strength(3.2)
         ); //y方向に戻る力
 
       simulation
@@ -81,9 +93,8 @@ function D3DirectedGraph({ clusterDataUrl }) {
       // linkデータをセット
       simulation.force("link").links(links);
       simulation.tick(300).stop();
-
-      setNodes(nodes.slice());
-      setLinks(links.slice());
+      setNodes(nodes);
+      setLinks(links);
     };
     const startLineChart = async () => {
       const [nodes, links] = await (async () => {
@@ -102,6 +113,7 @@ function D3DirectedGraph({ clusterDataUrl }) {
             label: item.nodeName,
             url: item.url,
             r,
+            level: item.level,
           });
 
           for (const child of item.childNode) {
@@ -127,17 +139,13 @@ function D3DirectedGraph({ clusterDataUrl }) {
       setLoading(false);
     };
     startLineChart();
-<<<<<<< HEAD:src/D3DirectedGraph.js
-  }, []);
-  console.log(articleData);
-=======
   }, [clusterDataUrl]);
 
   if (loading) {
     return <div>loading...</div>;
   }
 
->>>>>>> test:src/components/D3DirectedGraph.js
+  console.log(nodes);
   const arrowEdgeX = -35;
   const arrowEdgeY = -5;
   const arrowHeight = 10;
@@ -221,7 +229,7 @@ function D3DirectedGraph({ clusterDataUrl }) {
                     x={node.x}
                     y={node.y}
                   >
-                    {node.label}
+                    {node.label}:{node.level}
                   </text>
                 </g>
               );
