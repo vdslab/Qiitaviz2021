@@ -5,6 +5,7 @@ import ZoomableSVG from "./ZoomableSVG";
 import DisplaySubView from "./components/DisplaySubview";
 import AreaTab from "./components/AreaTab";
 import Search from "./components/Search";
+import DescriptionModal from "./components/DescriptionModal";
 
 function D3DirectedGraph() {
   // 仮の記事データ
@@ -132,16 +133,21 @@ function D3DirectedGraph() {
     >
       <div
         className="column is-8-desktop is-6-mobile box"
-        style={{ height: "84vh" }}
+        style={{ height: "84vh", position: "relative" }}
       >
-        <div className="columns is-centered">
-          <AreaTab />
-          <Search />
+        <div className="columns mt-2" style={{ marginBottom: "0" }}>
+          <div className="column">
+            <DescriptionModal />
+            <div className="columns is-centered">
+              <AreaTab />
+              <Search />
+            </div>
+          </div>
         </div>
         <div
           style={{
             height:
-              deviceWidth <= 845 ? deviceHeight * 0.66 : deviceHeight * 0.74,
+              deviceWidth <= 845 ? deviceHeight * 0.65 : deviceHeight * 0.73,
           }}
         >
           <ZoomableSVG width={svgWidth} height={svgHeight}>

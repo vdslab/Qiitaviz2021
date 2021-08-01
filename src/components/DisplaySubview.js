@@ -16,39 +16,11 @@ const DisplaySubview = ({ displayArticle }) => {
         overflowY: "scroll",
       }}
     >
-      <div className="tabs">
-        <ul>
-          <li className={active === "article" ? "is-active" : ""}>
-            <a
-              onClick={() => {
-                setActive("article");
-              }}
-            >
-              おすすめ記事
-            </a>
-          </li>
-          <li className={active === "usage" ? "is-active" : ""}>
-            <a
-              onClick={() => {
-                setActive("usage");
-              }}
-            >
-              使い方
-            </a>
-          </li>
-          <li className={active === "reference" ? "is-active" : ""}>
-            <a
-              onClick={() => {
-                setActive("reference");
-              }}
-            >
-              参考文献
-            </a>
-          </li>
-        </ul>
+      <div className="">
+        <h2>おすすめ記事</h2>
       </div>
       <div className="content">
-        <SubViewData req={active} displayArticle={displayArticle} />
+        <SubViewData displayArticle={displayArticle} />
       </div>
     </div>
   );
