@@ -56,24 +56,6 @@ function D3DirectedGraph({ clusterDataUrl }) {
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
         .force("charge", d3.forceManyBody().strength()) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
-        /*
-        .force(
-          "r",
-          d3
-            .forceRadial()
-            .radius((svgHeight / 2) * 0.7)
-            .x(svgWidth / 2)
-            .y(svgHeight / 2)
-            .strength(0.7)
-        )
-        .force(
-          "x",
-          d3
-            .forceX()
-            .x(svgWidth / 2)
-            .strength(1)
-        ) //x方向に戻る力
-        */
         .force(
           "y",
           d3
