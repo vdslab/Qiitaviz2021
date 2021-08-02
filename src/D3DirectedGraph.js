@@ -21,7 +21,6 @@ function D3DirectedGraph() {
   // デバイスの横幅を取得
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
   const svgWidth = deviceWidth * 0.66;
-  // const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1100;
   const svgHeight = deviceHeight * 0.7;
 
   function clickNode(e) {
