@@ -38,7 +38,7 @@ function D3DirectedGraph({ clusterDataUrl }) {
 
     loadArticleData();
     const startSimulation = (nodes, links) => {
-      const linkLen = 60;
+      const linkLen = 100;
       const simulation = d3
         .forceSimulation()
         .force(
@@ -46,19 +46,17 @@ function D3DirectedGraph({ clusterDataUrl }) {
           d3
             .forceCollide()
             .radius(function (d) {
-              return d.r * 2;
+              return d.r * 1.5;
             })
-            .iterations(100)
+            .iterations(16)
         ) //衝突値の設定
         .force(
           "link",
-          d3
-            .forceLink()
-            .distance(linkLen)
-            .id((d) => d.id)
+          d3.forceLink().id((d) => d.id)
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
-        //.force("charge", d3.forceManyBody().strength(-400)) //引き合う力を設定。
+        .force("charge", d3.forceManyBody().strength()) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
+        /*
         .force(
           "r",
           d3
@@ -66,24 +64,22 @@ function D3DirectedGraph({ clusterDataUrl }) {
             .radius((svgHeight / 2) * 0.7)
             .x(svgWidth / 2)
             .y(svgHeight / 2)
-            .strength(0.5)
+            .strength(0.7)
         )
         .force(
           "x",
           d3
             .forceX()
             .x(svgWidth / 2)
-            .strength(0.04)
+            .strength(1)
         ) //x方向に戻る力
+        */
         .force(
           "y",
           d3
             .forceY()
-            .y((d) => {
-              console.log(150 * (d.level + 1), d.label);
-              return 200 * d.level;
-            })
-            .strength(3.2)
+            .y((d) => 200 * d.level)
+            .strength(0.5)
         ); //y方向に戻る力
 
       simulation
@@ -145,7 +141,6 @@ function D3DirectedGraph({ clusterDataUrl }) {
     return <div>loading...</div>;
   }
 
-  console.log(nodes);
   const arrowEdgeX = -35;
   const arrowEdgeY = -5;
   const arrowHeight = 10;
