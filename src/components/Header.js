@@ -48,13 +48,31 @@ function Header() {
                 <h2 className="title is-4" style={{ color: "black" }}>
                   参考文献
                 </h2>
-                <p>大川英樹 関亜紀子 技術解説記事の難易度分類による検索支援</p>
                 <p>
-                  山河絵利奈 田島敬史 ウィキペディアを利用した単語の難易度推定
+                  大川英樹,関亜紀子,技術解説記事の難易度分類による検索支援,
+                  日本大学生産工学部学術講演会講演概要(CD-ROM),2018,51st
+                  ,ROMBUNNO.P-13.(online),
+                  <a href="http://www.cit.nihon-u.ac.jp/laboratorydata/kenkyu/kouennkai/reference/No.51/pdf/P-13.pdf">
+                    http://www.cit.nihon-u.ac.jp/laboratorydata/kenkyu/kouennkai/reference/No.51/pdf/P-13.pdf
+                  </a>
+                </p>
+
+                <p>
+                  山河絵利奈,田島敬史,ウィキペディアを利用した単語の難易度推定,DEIMフォーラム2021,2021,F25-2.(online),
+                  <a href="https://proceedings-of-deim.github.io/DEIM2021/papers/F25-2.pdf">
+                    https://proceedings-of-deim.github.io/DEIM2021/papers/F25-2.pdf
+                  </a>
                 </p>
                 <p>
-                  西原陽子 砂山渡 谷内正彦
-                  Webページの難易度と学習順序に基づく情報理解支援システム
+                  西原 陽子,砂山 渡,谷内田 正彦,Web
+                  ページの難易度と学習順序に基づく情報理解支援システム,掲載誌
+                  電子情報通信学会論文誌. D, 情報・システム = The IEICE
+                  transactions on information and systems /
+                  電子情報通信学会,2006, 編 89(9) (通号
+                  417),p.1963-1975.(online),
+                  <a href="https://www.panda.sys.t.u-tokyo.ac.jp/nishihara/pdf/singaku06.pdf">
+                    https://www.panda.sys.t.u-tokyo.ac.jp/nishihara/pdf/singaku06.pdf
+                  </a>
                 </p>
               </section>
               <footer className="modal-card-foot">
