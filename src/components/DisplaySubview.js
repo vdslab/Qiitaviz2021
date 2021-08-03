@@ -4,20 +4,22 @@ import DisplayRecommendArticles from "./DisplayRecommendArticles";
 import SubViewData from "./SubViewData";
 
 const DisplaySubview = ({ displayArticle }) => {
-  const [active, setActive] = useState("usage");
+  const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
+
   return (
     <div
-      className="column is-4-desktop is-6-mobile box"
+      className="column is-3.5-desktop is-12-mobile box"
+      // className="column is-3.5-desktop is-4-mobile box"
       style={{
-        marginLeft: "10px",
-        paddingLeft: "40px",
-        paddingRight: "40px",
-        height: "84vh",
+        paddingLeft: "20px",
+        paddingRight: "20px",
+        height: deviceWidth > 768 ? "84vh" : "22vh",
+        // height: deviceWidth > 768 ? "84vh" : "84vh",
         overflowY: "scroll",
       }}
     >
-      <div className="">
-        <h2>おすすめ記事</h2>
+      <div className="pb-3 pt-3">
+        <h2 className="title is-5 has-text-grey">おすすめ記事</h2>
       </div>
       <div className="content">
         <SubViewData displayArticle={displayArticle} />

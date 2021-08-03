@@ -14,7 +14,10 @@ function DescriptionModal() {
           className="button is-primary is-inverted"
           onClick={showModalHandle}
         >
-          <i class="far  fa-question-circle" style={{ color: "#bfbfbf" }}></i>
+          <i
+            className="far  fa-question-circle"
+            style={{ color: "#bfbfbf" }}
+          ></i>
         </div>
       </div>
       <div className={modalActive ? "modal is-active" : "modal"}>

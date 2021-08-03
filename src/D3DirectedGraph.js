@@ -8,9 +8,6 @@ import Search from "./components/Search";
 import DescriptionModal from "./components/DescriptionModal";
 
 function D3DirectedGraph() {
-  // 仮の記事データ
-  const MOBILE_BORDER_SIZE = 599;
-
   const [articleData, setArticleData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [nodes, setNodes] = useState([]);
@@ -20,8 +17,8 @@ function D3DirectedGraph() {
 
   // デバイスの横幅を取得
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
-  const svgWidth = deviceWidth * 0.66;
-  const svgHeight = deviceHeight * 0.7;
+  const svgWidth = deviceWidth > 768 ? deviceWidth * 0.66 : deviceWidth * 0.9;
+  const svgHeight = deviceWidth > 768 ? deviceHeight * 0.7 : deviceHeight * 0.3;
 
   function clickNode(e) {
     const target = e.currentTarget.dataset.name;
@@ -123,7 +120,7 @@ function D3DirectedGraph() {
   }
   return (
     <div
-      className="columns is-mobile"
+      className="columns is-mobile is-multiline"
       style={{
         marginRight: "20px",
         marginLeft: "20px",
@@ -131,13 +128,20 @@ function D3DirectedGraph() {
       }}
     >
       <div
-        className="column is-8-desktop is-6-mobile box"
-        style={{ height: "84vh", position: "relative" }}
+        className="column is-8-desktop is-12-mobile box"
+        // className="column is-8-desktop is-8-mobile box"
+        style={
+          deviceWidth > 768
+            ? { height: "84vh", position: "relative" }
+            : { height: "60vh", position: "relative" }
+          // ?  { height: "84vh", position: "relative" }
+          // : { height: "84vh", position: "relative" }
+        }
       >
         <div className="columns mt-2" style={{ marginBottom: "0" }}>
           <div className="column">
             <DescriptionModal />
-            <div className="columns is-centered">
+            <div className="columns is-centered is-multiline">
               <AreaTab />
               <Search />
             </div>
@@ -146,7 +150,8 @@ function D3DirectedGraph() {
         <div
           style={{
             height:
-              deviceWidth <= 845 ? deviceHeight * 0.65 : deviceHeight * 0.73,
+              deviceWidth > 768 ? deviceHeight * 0.73 : deviceHeight * 0.4,
+            // deviceWidth > 768 ? deviceHeight * 0.73 : deviceHeight * 0.6,
           }}
         >
           <ZoomableSVG width={svgWidth} height={svgHeight}>
@@ -209,9 +214,7 @@ function D3DirectedGraph() {
                       className="node-label"
                       textAnchor="middle"
                       fill="black"
-                      fontSize={
-                        deviceWidth <= MOBILE_BORDER_SIZE ? "15px" : "15px"
-                      }
+                      fontSize={"15px"}
                       x={node.x}
                       y={node.y}
                     >
