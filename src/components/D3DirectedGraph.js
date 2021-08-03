@@ -29,14 +29,6 @@ function D3DirectedGraph({ clusterDataUrl }) {
   }
 
   useEffect(() => {
-    async function loadArticleData() {
-      const res = await fetch("./data/article_data.json");
-      const data = await res.json();
-
-      setArticleData(data);
-    }
-
-    loadArticleData();
     const startSimulation = (nodes, links) => {
       const linkLen = 100;
       const simulation = d3
@@ -104,7 +96,7 @@ function D3DirectedGraph({ clusterDataUrl }) {
         setArticleData(
           await (async () => {
             const response = await fetch(
-              process.env.PUBLIC_URL + "/data/article_data.json"
+              process.env.PUBLIC_URL + "/data/recommend_data.json"
             );
             const data = await response.json();
             return data;
@@ -122,7 +114,7 @@ function D3DirectedGraph({ clusterDataUrl }) {
   if (loading) {
     return <div>loading...</div>;
   }
-
+  console.log(articleData);
   const arrowEdgeX = -35;
   const arrowEdgeY = -5;
   const arrowHeight = 10;
