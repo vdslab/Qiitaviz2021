@@ -1,8 +1,7 @@
 import "bulma/css/bulma.css";
 import { useState } from "react";
 
-function AreaTab({ setClusterDataUrl }) {
-  const [selectCluster, setSelectCluster] = useState("cluster1");
+function AreaTab({ setClusterDataUrl, selectCluster, setSelectCluster }) {
   const [dropdownActive, setDropdownActive] = useState(false);
 
   const setDataUrl = (url, selectedCluster) => {
