@@ -26,19 +26,34 @@ function DescriptionModal() {
           <header className="modal-card-head">
             <p className="modal-card-title">マップの使い方</p>
           </header>
-          <section className="modal-card-body" style={{ color: "black" }}>
+          <section className="modal-card-body has-text-grey-dark">
             <div>
               <div>
-                <p>領域を選択できる機能</p>
-                ユーザーが気になる領域を選択したら、その領域についてのマップが表示されます
-                フロント バック iOS
-                <p>タグの検索機能</p>
-                タグを検索してそのタグが含まれる領域のマップに遷移します
-                <p>ノードをマウスホバーしたら、Qiitaの記事に飛べる</p>
-                ユーザーのレベルに合わせたタグの記事が表示されます
-                <p>マップ部分</p>
-                マウスでマップの拡大縮小ができる
-                マウスでドラックするとマップを自由に移動できる
+                <h2 className="title has-text-grey-dark is-size-4 mt-2 mb-2">
+                  ①領域選択
+                </h2>
+                <p>
+                  学びたい分野の領域が選択でき、その領域についてのマップに遷移します
+                </p>
+                <h2 className="title has-text-grey-dark is-size-4 mt-2 mb-2">
+                  ②検索機能
+                </h2>
+                <p>
+                  Qiitaタグを検索し、そのタグが含まれる領域のマップに遷移します
+                </p>
+                <h2 className="title has-text-grey-dark is-size-4 mt-2 mb-2">
+                  ③ノード
+                </h2>
+                <p>
+                  ノードをクリックしたら、タグと関連性の高いQiitaの記事が表示されます
+                </p>
+                <h2 className="title has-text-grey-dark is-size-4 mt-2 mb-2">
+                  ④マップ部分{" "}
+                </h2>
+                <p>
+                  マウスでマップの拡大縮小ができます
+                  マウスでドラックするとマップ内を自由に移動できます
+                </p>
               </div>
             </div>
           </section>
