@@ -14,6 +14,7 @@ function D3DirectedGraph() {
   const [loading, setLoading] = useState(true);
   const [nodes, setNodes] = useState([]);
   const [links, setLinks] = useState([]);
+  const [searchTag, setSearchTag] = useState("");
   const [selectCluster, setSelectCluster] = useState("cluster1");
   const [clusterDataUrl, setClusterDataUrl] = useState(
     process.env.PUBLIC_URL + "/data/cluster1_graph_data.json"
@@ -26,8 +27,8 @@ function D3DirectedGraph() {
   const svgWidth = deviceWidth > 768 ? deviceWidth * 0.66 : deviceWidth * 0.9;
   const svgHeight = deviceWidth > 768 ? deviceHeight * 0.7 : deviceHeight * 0.3;
 
-  function clickNode(e, selectedNode) {
-    const target = e.currentTarget.dataset.name;
+  function clickNode(selectedNode) {
+    const target = selectedNode.label;
     const data = articleData.filter((item) => {
       return item.type == target;
     });
@@ -77,14 +78,19 @@ function D3DirectedGraph() {
       simulation.tick(300).stop();
       setNodes(nodes);
       setLinks(links);
+      if (searchTag !== "") {
+        nodes.map((node) => {
+          if (node.label === searchTag) {
+            clickNode(node);
+          }
+        });
+      }
     };
     const startSetGraphData = async () => {
       const [nodes, links] = await (async () => {
         const response1 = await fetch(clusterDataUrl);
         const data = await response1.json();
 
-        setDisplayArticle([]);
-        setSelectChildNodes([]);
         const response2 = await fetch(
           process.env.PUBLIC_URL + "/data/tag_list_data.json"
         );
@@ -127,6 +133,9 @@ function D3DirectedGraph() {
       setLoading(false);
     };
     startSetGraphData();
+    setDisplayArticle([]);
+    setSelectChildNodes([]);
+    setSearchTag("");
   }, [clusterDataUrl]);
 
   if (loading) {
@@ -169,6 +178,7 @@ function D3DirectedGraph() {
                 tagListData={tagListData}
                 setClusterDataUrl={setClusterDataUrl}
                 setSelectCluster={setSelectCluster}
+                setSearchTag={setSearchTag}
               />
             </div>
           </div>
@@ -238,7 +248,7 @@ function D3DirectedGraph() {
                           : "rgb(128, 255, 191)"
                       }
                       strokeWidth="2"
-                      onClick={(e) => clickNode(e, node)}
+                      onClick={() => clickNode(node)}
                     ></circle>
 
                     <text
