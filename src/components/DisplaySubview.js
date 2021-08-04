@@ -4,47 +4,25 @@ import DisplayRecommendArticles from "./DisplayRecommendArticles";
 import SubViewData from "./SubViewData";
 
 const DisplaySubview = ({ displayArticle }) => {
-  const [active, setActive] = useState("usage");
+  const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
+
   return (
     <div
-      className="column is-4 box"
+      className="column is-3.5-desktop is-12-mobile box"
+      // className="column is-3.5-desktop is-4-mobile box"
       style={{
+        paddingLeft: "20px",
+        paddingRight: "20px",
+        height: deviceWidth > 768 ? "84vh" : "22vh",
+        // height: deviceWidth > 768 ? "84vh" : "84vh",
         overflowY: "scroll",
-        float: "left",
       }}
     >
-      <div className="card">
-        <div className="card-content">
-          <div className="content">
-            <footer className="card-footer">
-              <a
-                className="card-footer-item"
-                onClick={() => setActive("usage")}
-              >
-                使い方
-              </a>
-
-              <a
-                className="card-footer-item"
-                onClick={() => setActive("reference")}
-              >
-                参考文献
-              </a>
-            </footer>
-          </div>
-          <div className="card-content">
-            <div className="content">
-              <SubViewData req={active} />
-            </div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-content">
-            <div className="content">
-              <DisplayRecommendArticles displayArticle={displayArticle} />
-            </div>
-          </div>
-        </div>
+      <div className="pb-3 pt-3">
+        <h2 className="title is-5 has-text-grey">おすすめ記事</h2>
+      </div>
+      <div className="content">
+        <SubViewData displayArticle={displayArticle} />
       </div>
     </div>
   );
