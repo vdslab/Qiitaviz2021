@@ -1,7 +1,12 @@
 import "bulma/css/bulma.css";
 import { useState } from "react";
 
-function Search({ tagListData, setClusterDataUrl, setSelectCluster }) {
+function Search({
+  tagListData,
+  setClusterDataUrl,
+  setSelectCluster,
+  setSearchTag,
+}) {
   const handleChange = (e) => {
     setInputTag(e.target.value);
   };
@@ -17,6 +22,7 @@ function Search({ tagListData, setClusterDataUrl, setSelectCluster }) {
         setSelectCluster("cluster" + (i + 1));
       }
     });
+    setSearchTag(inputTag);
     setInputTag("");
   };
   const [inputTag, setInputTag] = useState("");
