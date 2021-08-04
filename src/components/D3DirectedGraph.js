@@ -38,7 +38,7 @@ function D3DirectedGraph() {
 
   useEffect(() => {
     const startSimulation = (nodes, links) => {
-      const linkLen = 80;
+      const linkLen = 20;
       const simulation = d3
         .forceSimulation()
         .force(
@@ -48,21 +48,23 @@ function D3DirectedGraph() {
             .radius(function (d) {
               return d.r * 1.5;
             })
-            .iterations(16)
+            .iterations(64)
         ) //衝突値の設定
         .force(
           "link",
-          d3.forceLink().id((d) => d.id)
-          //.distance(linkLen)
+          d3
+            .forceLink()
+            .id((d) => d.id)
+            .distance(linkLen)
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
-        .force("charge", d3.forceManyBody().strength(-75)) //引き合う力を設定。
+        .force("charge", d3.forceManyBody().strength(-100)) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
         .force(
           "y",
           d3
             .forceY()
-            .y((d) => 250 * (d.level + 1))
-            .strength(0.875)
+            .y((d) => 225 * (d.level + 1))
+            .strength(1.7)
         ); //y方向に戻る力
 
       simulation
@@ -75,7 +77,7 @@ function D3DirectedGraph() {
       setNodes(nodes);
       setLinks(links);
     };
-    const startLineChart = async () => {
+    const startSetGraphData = async () => {
       const [nodes, links] = await (async () => {
         const response = await fetch(clusterDataUrl);
         const data = await response.json();
@@ -87,7 +89,6 @@ function D3DirectedGraph() {
         const links = Array();
 
         const r = 35;
-        // graphDataで回したいけどなんか空配列でできない、知らん
         data.map((item) => {
           nodes.push({
             id: item.ID, //nodeのindexを標準設定から変更
@@ -114,13 +115,12 @@ function D3DirectedGraph() {
             return data;
           })()
         );
-
         return [nodes, links];
       })();
       startSimulation(nodes, links);
       setLoading(false);
     };
-    startLineChart();
+    startSetGraphData();
   }, [clusterDataUrl]);
 
   if (loading) {
