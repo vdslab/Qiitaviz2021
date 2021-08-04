@@ -30,7 +30,7 @@ function D3DirectedGraph({ clusterDataUrl }) {
 
   useEffect(() => {
     const startSimulation = (nodes, links) => {
-      const linkLen = 100;
+      const linkLen = 0;
       const simulation = d3
         .forceSimulation()
         .force(
@@ -40,20 +40,21 @@ function D3DirectedGraph({ clusterDataUrl }) {
             .radius(function (d) {
               return d.r * 1.5;
             })
-            .iterations(16)
+            .iterations(64)
         ) //衝突値の設定
         .force(
           "link",
           d3.forceLink().id((d) => d.id)
+          //.distance(linkLen)
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
-        .force("charge", d3.forceManyBody().strength()) //引き合う力を設定。
+        .force("charge", d3.forceManyBody().strength(0)) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
         .force(
           "y",
           d3
             .forceY()
             .y((d) => 200 * d.level)
-            .strength(0.5)
+            .strength(2)
         ); //y方向に戻る力
 
       simulation
@@ -70,7 +71,9 @@ function D3DirectedGraph({ clusterDataUrl }) {
       const [nodes, links] = await (async () => {
         const response = await fetch(clusterDataUrl);
         const data = await response.json();
+        console.log(graphData);
         setGraphData(data);
+        setDisplayArticle([]);
 
         const nodes = Array();
         const links = Array();
@@ -84,6 +87,7 @@ function D3DirectedGraph({ clusterDataUrl }) {
             url: item.url,
             r,
             level: item.level,
+            diff: item.diff,
           });
 
           for (const child of item.childNode) {
@@ -114,7 +118,7 @@ function D3DirectedGraph({ clusterDataUrl }) {
   if (loading) {
     return <div>loading...</div>;
   }
-  console.log(articleData);
+  console.log(graphData);
   const arrowEdgeX = -35;
   const arrowEdgeY = -5;
   const arrowHeight = 10;
