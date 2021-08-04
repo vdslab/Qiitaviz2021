@@ -2,16 +2,21 @@ import * as d3 from "d3";
 import "bulma/css/bulma.css";
 import { useState, useEffect } from "react";
 import ZoomableSVG from "./ZoomableSVG";
-import DisplaySubView from "./components/DisplaySubview";
-import AreaTab from "./components/AreaTab";
-import Search from "./components/Search";
-import DescriptionModal from "./components/DescriptionModal";
+import DisplaySubView from "./DisplaySubview";
+import AreaTab from "./AreaTab";
+import Search from "./Search";
+import DescriptionModal from "./DescriptionModal";
 
 function D3DirectedGraph() {
   const [articleData, setArticleData] = useState([]);
+  const [graphData, setGraphData] = useState([]);
+  const [selectChildNodes, setSelectChildNodes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [nodes, setNodes] = useState([]);
   const [links, setLinks] = useState([]);
+  const [clusterDataUrl, setClusterDataUrl] = useState(
+    process.env.PUBLIC_URL + "/data/cluster1_graph_data.json"
+  );
   // おすすめ記事
   const [displayArticle, setDisplayArticle] = useState([]);
 
@@ -20,17 +25,20 @@ function D3DirectedGraph() {
   const svgWidth = deviceWidth > 768 ? deviceWidth * 0.66 : deviceWidth * 0.9;
   const svgHeight = deviceWidth > 768 ? deviceHeight * 0.7 : deviceHeight * 0.3;
 
-  function clickNode(e) {
+  function clickNode(e, selectedNode) {
     const target = e.currentTarget.dataset.name;
     const data = articleData.filter((item) => {
       return item.type == target;
     });
     setDisplayArticle(data);
+    const childNodes = selectedNode.childNodes.slice();
+    childNodes.push(selectedNode.id);
+    setSelectChildNodes(childNodes);
   }
 
   useEffect(() => {
     const startSimulation = (nodes, links) => {
-      const linkLen = 150;
+      const linkLen = 20;
       const simulation = d3
         .forceSimulation()
         .force(
@@ -38,26 +46,26 @@ function D3DirectedGraph() {
           d3
             .forceCollide()
             .radius(function (d) {
-              return d.r;
+              return d.r * 1.5;
             })
-            .iterations(16)
+            .iterations(64)
         ) //衝突値の設定
         .force(
           "link",
           d3
             .forceLink()
-            .distance((d) => linkLen)
             .id((d) => d.id)
+            .distance(linkLen)
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
-        .force("charge", d3.forceManyBody().strength(-500)) //引き合う力を設定。
+        .force("charge", d3.forceManyBody().strength(-100)) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
         .force(
-          "x",
+          "y",
           d3
-            .forceX()
-            .x(svgWidth / 2)
-            .strength(0.1)
-        ); //x方向に戻る力
+            .forceY()
+            .y((d) => 225 * (d.level + 1))
+            .strength(1.7)
+        ); //y方向に戻る力
 
       simulation
         // forceSimulationの影響下にnodesを置く
@@ -66,25 +74,30 @@ function D3DirectedGraph() {
       // linkデータをセット
       simulation.force("link").links(links);
       simulation.tick(300).stop();
-
-      setNodes(nodes.slice());
-      setLinks(links.slice());
+      setNodes(nodes);
+      setLinks(links);
     };
-
-    const startLineChart = async () => {
+    const startSetGraphData = async () => {
       const [nodes, links] = await (async () => {
-        const response = await fetch("./data/new_data.json");
+        const response = await fetch(clusterDataUrl);
         const data = await response.json();
+        setGraphData(data);
+        setDisplayArticle([]);
+        setSelectChildNodes([]);
+
         const nodes = Array();
         const links = Array();
 
         const r = 35;
-        for (const item of data) {
+        data.map((item) => {
           nodes.push({
             id: item.ID, //nodeのindexを標準設定から変更
             label: item.nodeName,
             url: item.url,
             r,
+            level: item.level,
+            diff: item.diff,
+            childNodes: item.childNode,
           });
           for (const child of item.childNode) {
             links.push({
@@ -92,22 +105,27 @@ function D3DirectedGraph() {
               target: child,
             });
           }
-        }
-
+        });
+        setArticleData(
+          await (async () => {
+            const response = await fetch(
+              process.env.PUBLIC_URL + "/data/recommend_data.json"
+            );
+            const data = await response.json();
+            return data;
+          })()
+        );
         return [nodes, links];
       })();
-      setArticleData(
-        await (async () => {
-          const response = await fetch("article_data.json");
-          const data = await response.json();
-          return data;
-        })()
-      );
       startSimulation(nodes, links);
       setLoading(false);
     };
-    startLineChart();
-  }, []);
+    startSetGraphData();
+  }, [clusterDataUrl]);
+
+  if (loading) {
+    return <div>loading...</div>;
+  }
 
   const arrowEdgeX = -35;
   const arrowEdgeY = -5;
@@ -115,9 +133,6 @@ function D3DirectedGraph() {
   const arrowWidth = 14;
   const arrowEdgeEnd = -25;
 
-  if (loading) {
-    return <div>loading...</div>;
-  }
   return (
     <div
       className="columns is-mobile is-multiline"
@@ -129,20 +144,17 @@ function D3DirectedGraph() {
     >
       <div
         className="column is-8-desktop is-12-mobile box"
-        // className="column is-8-desktop is-8-mobile box"
         style={
           deviceWidth > 768
             ? { height: "84vh", position: "relative" }
             : { height: "60vh", position: "relative" }
-          // ?  { height: "84vh", position: "relative" }
-          // : { height: "84vh", position: "relative" }
         }
       >
         <div className="columns mt-2" style={{ marginBottom: "0" }}>
           <div className="column">
             <DescriptionModal />
             <div className="columns is-centered is-multiline">
-              <AreaTab />
+              <AreaTab setClusterDataUrl={setClusterDataUrl} />
               <Search />
             </div>
           </div>
@@ -151,7 +163,6 @@ function D3DirectedGraph() {
           style={{
             height:
               deviceWidth > 768 ? deviceHeight * 0.73 : deviceHeight * 0.4,
-            // deviceWidth > 768 ? deviceHeight * 0.73 : deviceHeight * 0.6,
           }}
         >
           <ZoomableSVG width={svgWidth} height={svgHeight}>
@@ -181,7 +192,7 @@ function D3DirectedGraph() {
                 return (
                   <line
                     key={link.source.id + "-" + link.target.id}
-                    stroke="black"
+                    stroke={"black"}
                     strokeWidth="1"
                     className="link"
                     markerEnd="url(#arrowhead)"
@@ -207,7 +218,13 @@ function D3DirectedGraph() {
                       cy={node.y}
                       data-url={node.url}
                       data-name={node.label}
-                      onClick={clickNode}
+                      stroke={
+                        selectChildNodes.includes(node.id)
+                          ? "red"
+                          : "rgb(128, 255, 191)"
+                      }
+                      strokeWidth="2"
+                      onClick={(e) => clickNode(e, node)}
                     ></circle>
 
                     <text
@@ -218,7 +235,7 @@ function D3DirectedGraph() {
                       x={node.x}
                       y={node.y}
                     >
-                      {node.label}
+                      {node.label}:{node.level}
                     </text>
                   </g>
                 );

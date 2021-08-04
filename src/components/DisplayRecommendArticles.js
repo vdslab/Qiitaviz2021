@@ -3,13 +3,15 @@ const DisplayRecommendArticles = ({ displayArticle }) => {
     <div>
       <div>
         {displayArticle.map((item, i) => {
-          return (
-            <p key={i}>
-              <a href={item.url} target="_blank">
-                {item.title}
-              </a>
-            </p>
-          );
+          return item.url.map((url, j) => {
+            return (
+              <p key={j}>
+                <a href={url} terget="_blank">
+                  {item.title[j]}
+                </a>
+              </p>
+            );
+          });
         })}
       </div>
     </div>

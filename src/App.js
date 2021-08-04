@@ -1,4 +1,4 @@
-import D3DirectedGraph from "./D3DirectedGraph";
+import D3DirectedGraph from "./components/D3DirectedGraph";
 import "bulma/css/bulma.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";

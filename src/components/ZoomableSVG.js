@@ -17,6 +17,7 @@ function ZoomableSVG({ children, width, height }) {
     zoom.scaleExtent([0.5, 2]);
     d3.select(svgRef.current).call(zoom);
   }, []);
+
   return (
     <svg
       ref={svgRef}

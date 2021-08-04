@@ -1,6 +1,6 @@
 import "bulma/css/bulma.css";
 import { useState, useEffect } from "react";
-function Header() {
+function Header({ setClusterDataUrl }) {
   const [modalActive, setModalActive] = useState(false);
   const { innerHeight: deviceHeight } = window;
   const showModalHandle = () => {
