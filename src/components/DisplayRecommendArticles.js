@@ -2,7 +2,6 @@ const DisplayRecommendArticles = ({ displayArticle }) => {
   return (
     <div>
       <div>
-        <p>おすすめの記事</p>
         {displayArticle.map((item, i) => {
           console.log(item);
           return item.url.map((url, j) => {

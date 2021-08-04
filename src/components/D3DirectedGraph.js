@@ -2,11 +2,12 @@ import * as d3 from "d3";
 import "bulma/css/bulma.css";
 import { useState, useEffect } from "react";
 import ZoomableSVG from "./ZoomableSVG";
-import DisplaySubView from "./DisplaySubview";
+import DisplaySubView from "./components/DisplaySubview";
+import AreaTab from "./components/AreaTab";
+import Search from "./components/Search";
+import DescriptionModal from "./components/DescriptionModal";
 
-function D3DirectedGraph({ clusterDataUrl }) {
-  // 仮の記事データ
-  const MOBILE_BORDER_SIZE = 599;
+function D3DirectedGraph() {
   const [articleData, setArticleData] = useState([]);
   const [graphData, setGraphData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,9 +17,9 @@ function D3DirectedGraph({ clusterDataUrl }) {
   const [displayArticle, setDisplayArticle] = useState([]);
 
   // デバイスの横幅を取得
-  const { innerWidth: deviceWidth } = window;
-  const svgWidth = deviceWidth * 0.66;
-  const svgHeight = deviceWidth <= MOBILE_BORDER_SIZE ? 1500 : 1100;
+  const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
+  const svgWidth = deviceWidth > 768 ? deviceWidth * 0.66 : deviceWidth * 0.9;
+  const svgHeight = deviceWidth > 768 ? deviceHeight * 0.7 : deviceHeight * 0.3;
 
   function clickNode(e) {
     const target = e.currentTarget.dataset.name;
@@ -89,7 +90,6 @@ function D3DirectedGraph({ clusterDataUrl }) {
             level: item.level,
             diff: item.diff,
           });
-
           for (const child of item.childNode) {
             links.push({
               source: item.ID,
@@ -125,90 +125,117 @@ function D3DirectedGraph({ clusterDataUrl }) {
   const arrowWidth = 14;
   const arrowEdgeEnd = -25;
 
+  if (loading) {
+    return <div>loading...</div>;
+  }
   return (
     <div
-      className="columns is-mobile"
+      className="columns is-mobile is-multiline"
       style={{
-        height: "80vh",
         marginRight: "20px",
         marginLeft: "20px",
         marginTop: "20px",
       }}
     >
-      <div className="column is-8 box" style={{ marginBottom: "0" }}>
-        <ZoomableSVG width={svgWidth} height={svgHeight}>
-          <defs>
-            <marker
-              id="arrowhead"
-              viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
-              refX="13"
-              refY="0"
-              orient="auto"
-              markerWidth="13"
-              markerHeight="13"
-              xoverflow="visible"
-            >
-              <path
-                d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
-                  -1 * arrowEdgeY
-                }`}
-                fill="#999"
-                style={{ stroke: "none" }}
-              ></path>
-            </marker>
-          </defs>
+      <div
+        className="column is-8-desktop is-12-mobile box"
+        // className="column is-8-desktop is-8-mobile box"
+        style={
+          deviceWidth > 768
+            ? { height: "84vh", position: "relative" }
+            : { height: "60vh", position: "relative" }
+          // ?  { height: "84vh", position: "relative" }
+          // : { height: "84vh", position: "relative" }
+        }
+      >
+        <div className="columns mt-2" style={{ marginBottom: "0" }}>
+          <div className="column">
+            <DescriptionModal />
+            <div className="columns is-centered is-multiline">
+              <AreaTab />
+              <Search />
+            </div>
+          </div>
+        </div>
+        <div
+          style={{
+            height:
+              deviceWidth > 768 ? deviceHeight * 0.73 : deviceHeight * 0.4,
+            // deviceWidth > 768 ? deviceHeight * 0.73 : deviceHeight * 0.6,
+          }}
+        >
+          <ZoomableSVG width={svgWidth} height={svgHeight}>
+            <defs>
+              <marker
+                id="arrowhead"
+                viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
+                refX="13"
+                refY="0"
+                orient="auto"
+                markerWidth="13"
+                markerHeight="13"
+                xoverflow="visible"
+              >
+                <path
+                  d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
+                    -1 * arrowEdgeY
+                  }`}
+                  fill="#999"
+                  style={{ stroke: "none" }}
+                ></path>
+              </marker>
+            </defs>
 
-          <g className="links">
-            {links.map((link) => {
-              return (
-                <line
-                  key={link.source.id + "-" + link.target.id}
-                  stroke="black"
-                  strokeWidth="1"
-                  className="link"
-                  markerEnd="url(#arrowhead)"
-                  id="edgepath0"
-                  x1={link.source.x}
-                  y1={link.source.y}
-                  x2={link.target.x}
-                  y2={link.target.y}
-                ></line>
-              );
-            })}
-          </g>
+            <g className="links">
+              {links.map((link) => {
+                return (
+                  <line
+                    key={link.source.id + "-" + link.target.id}
+                    stroke="black"
+                    strokeWidth="1"
+                    className="link"
+                    markerEnd="url(#arrowhead)"
+                    id="edgepath0"
+                    x1={link.source.x}
+                    y1={link.source.y}
+                    x2={link.target.x}
+                    y2={link.target.y}
+                  ></line>
+                );
+              })}
+            </g>
 
-          <g className="nodes">
-            {nodes.map((node) => {
-              return (
-                <g className="nodes" key={node.id}>
-                  <circle
-                    className="node"
-                    r={node.r}
-                    style={{ fill: "rgb(128, 255, 191)" }}
-                    cx={node.x}
-                    cy={node.y}
-                    data-url={node.url}
-                    data-name={node.label}
-                    onClick={clickNode}
-                  ></circle>
+            <g className="nodes">
+              {nodes.map((node) => {
+                return (
+                  <g className="nodes" key={node.id}>
+                    <circle
+                      className="node"
+                      r={node.r}
+                      style={{ fill: "rgb(128, 255, 191)" }}
+                      cx={node.x}
+                      cy={node.y}
+                      data-url={node.url}
+                      data-name={node.label}
+                      onClick={clickNode}
+                    ></circle>
 
-                  <text
-                    className="node-label"
-                    textAnchor="middle"
-                    fill="black"
-                    fontSize={
-                      deviceWidth <= MOBILE_BORDER_SIZE ? "15px" : "15px"
-                    }
-                    x={node.x}
-                    y={node.y}
-                  >
-                    {node.label}:{node.level}
-                  </text>
-                </g>
-              );
-            })}
-          </g>
-        </ZoomableSVG>
+                    <text
+                      className="node-label"
+                      textAnchor="middle"
+                      fill="black"
+                      fontSize={"15px"}
+                      x={node.x}
+                      y={node.y}
+                    >
+                      {node.label}
+                    </text>
+                  </g>
+                );
+              })}
+            </g>
+          </ZoomableSVG>
+        </div>
       </div>
       <DisplaySubView displayArticle={displayArticle} />
     </div>

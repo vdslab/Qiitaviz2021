@@ -7,11 +7,22 @@ function AreaTab({ setClusterDataUrl }) {
     setSelectCluster(selectedCluster);
   };
   const [selectCluster, setSelectCluster] = useState("cluster1");
+  const [dropdownActive, setDropdownActive] = useState(false);
 
   return (
-    <div className="column is-5-mobile is-2-desktop">
-      <div className="dropdown is-hoverable">
-        <div className="dropdown-trigger">
+    <div className="column is-2">
+      <div
+        className={dropdownActive ? "dropdown is-active" : "dropdown"}
+        onClick={() => {
+          setDropdownActive(true);
+        }}
+      >
+        <div
+          className="dropdown-trigger"
+          onBlur={() => {
+            setDropdownActive(false);
+          }}
+        >
           <button
             className="button"
             aria-haspopup="true"

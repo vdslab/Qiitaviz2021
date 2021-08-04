@@ -2,8 +2,8 @@ import "bulma/css/bulma.css";
 
 function Search() {
   return (
-    <div className="column">
-      <div className="field has-addons" style={{}}>
+    <div className="column is-4">
+      <div className="field has-addons">
         <div className="control">
           <input
             className="input"
