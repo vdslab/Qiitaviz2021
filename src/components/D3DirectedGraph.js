@@ -2,10 +2,10 @@ import * as d3 from "d3";
 import "bulma/css/bulma.css";
 import { useState, useEffect } from "react";
 import ZoomableSVG from "./ZoomableSVG";
-import DisplaySubView from "./components/DisplaySubview";
-import AreaTab from "./components/AreaTab";
-import Search from "./components/Search";
-import DescriptionModal from "./components/DescriptionModal";
+import DisplaySubView from "./DisplaySubview";
+import AreaTab from "./AreaTab";
+import Search from "./Search";
+import DescriptionModal from "./DescriptionModal";
 
 function D3DirectedGraph() {
   const [articleData, setArticleData] = useState([]);
@@ -13,6 +13,9 @@ function D3DirectedGraph() {
   const [loading, setLoading] = useState(true);
   const [nodes, setNodes] = useState([]);
   const [links, setLinks] = useState([]);
+  const [clusterDataUrl, setClusterDataUrl] = useState(
+    process.env.PUBLIC_URL + "/data/cluster1_graph_data.json"
+  );
   // おすすめ記事
   const [displayArticle, setDisplayArticle] = useState([]);
 
@@ -72,7 +75,6 @@ function D3DirectedGraph() {
       const [nodes, links] = await (async () => {
         const response = await fetch(clusterDataUrl);
         const data = await response.json();
-        console.log(graphData);
         setGraphData(data);
         setDisplayArticle([]);
 
@@ -118,16 +120,13 @@ function D3DirectedGraph() {
   if (loading) {
     return <div>loading...</div>;
   }
-  console.log(graphData);
+
   const arrowEdgeX = -35;
   const arrowEdgeY = -5;
   const arrowHeight = 10;
   const arrowWidth = 14;
   const arrowEdgeEnd = -25;
 
-  if (loading) {
-    return <div>loading...</div>;
-  }
   return (
     <div
       className="columns is-mobile is-multiline"
@@ -152,7 +151,7 @@ function D3DirectedGraph() {
           <div className="column">
             <DescriptionModal />
             <div className="columns is-centered is-multiline">
-              <AreaTab />
+              <AreaTab setClusterDataUrl={setClusterDataUrl} />
               <Search />
             </div>
           </div>

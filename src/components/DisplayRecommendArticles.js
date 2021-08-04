@@ -3,7 +3,6 @@ const DisplayRecommendArticles = ({ displayArticle }) => {
     <div>
       <div>
         {displayArticle.map((item, i) => {
-          console.log(item);
           return item.url.map((url, j) => {
             return (
               <p key={j}>

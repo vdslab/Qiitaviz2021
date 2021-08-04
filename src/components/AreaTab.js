@@ -2,27 +2,22 @@ import "bulma/css/bulma.css";
 import { useState } from "react";
 
 function AreaTab({ setClusterDataUrl }) {
+  const [selectCluster, setSelectCluster] = useState("cluster1");
+  const [dropdownActive, setDropdownActive] = useState(false);
+
   const setDataUrl = (url, selectedCluster) => {
     setClusterDataUrl(url);
     setSelectCluster(selectedCluster);
   };
-  const [selectCluster, setSelectCluster] = useState("cluster1");
-  const [dropdownActive, setDropdownActive] = useState(false);
-
   return (
     <div className="column is-2">
       <div
         className={dropdownActive ? "dropdown is-active" : "dropdown"}
         onClick={() => {
-          setDropdownActive(true);
+          setDropdownActive(dropdownActive ^ true);
         }}
       >
-        <div
-          className="dropdown-trigger"
-          onBlur={() => {
-            setDropdownActive(false);
-          }}
-        >
+        <div className="dropdown-trigger">
           <button
             className="button"
             aria-haspopup="true"
