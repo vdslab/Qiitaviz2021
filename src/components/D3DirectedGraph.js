@@ -10,6 +10,7 @@ import DescriptionModal from "./DescriptionModal";
 function D3DirectedGraph() {
   const [articleData, setArticleData] = useState([]);
   const [graphData, setGraphData] = useState([]);
+  const [selectChildNodes, setSelectChildNodes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [nodes, setNodes] = useState([]);
   const [links, setLinks] = useState([]);
@@ -24,17 +25,21 @@ function D3DirectedGraph() {
   const svgWidth = deviceWidth > 768 ? deviceWidth * 0.66 : deviceWidth * 0.9;
   const svgHeight = deviceWidth > 768 ? deviceHeight * 0.7 : deviceHeight * 0.3;
 
-  function clickNode(e) {
+  function clickNode(e, selectedNode) {
     const target = e.currentTarget.dataset.name;
     const data = articleData.filter((item) => {
       return item.type == target;
     });
     setDisplayArticle(data);
+    const childNodes = selectedNode.childNodes.slice();
+    childNodes.push(selectedNode.id);
+    setSelectChildNodes(childNodes);
+    console.log(selectedNode.childNodes);
   }
 
   useEffect(() => {
     const startSimulation = (nodes, links) => {
-      const linkLen = 0;
+      const linkLen = 20;
       const simulation = d3
         .forceSimulation()
         .force(
@@ -42,23 +47,26 @@ function D3DirectedGraph() {
           d3
             .forceCollide()
             .radius(function (d) {
-              return d.r * 1.5;
+              return d.r * 1.55;
             })
-            .iterations(64)
+            .iterations(128)
         ) //衝突値の設定
         .force(
           "link",
-          d3.forceLink().id((d) => d.id)
+          d3
+            .forceLink()
+            .id((d) => d.id)
+            .distance(linkLen)
           //.distance(linkLen)
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
-        .force("charge", d3.forceManyBody().strength(0)) //引き合う力を設定。
+        .force("charge", d3.forceManyBody().strength(300)) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
         .force(
           "y",
           d3
             .forceY()
             .y((d) => 200 * d.level)
-            .strength(2)
+            .strength(0.5)
         ); //y方向に戻る力
 
       simulation
@@ -77,6 +85,7 @@ function D3DirectedGraph() {
         const data = await response.json();
         setGraphData(data);
         setDisplayArticle([]);
+        setSelectChildNodes([]);
 
         const nodes = Array();
         const links = Array();
@@ -91,6 +100,7 @@ function D3DirectedGraph() {
             r,
             level: item.level,
             diff: item.diff,
+            childNodes: item.childNode,
           });
           for (const child of item.childNode) {
             links.push({
@@ -138,13 +148,10 @@ function D3DirectedGraph() {
     >
       <div
         className="column is-8-desktop is-12-mobile box"
-        // className="column is-8-desktop is-8-mobile box"
         style={
           deviceWidth > 768
             ? { height: "84vh", position: "relative" }
             : { height: "60vh", position: "relative" }
-          // ?  { height: "84vh", position: "relative" }
-          // : { height: "84vh", position: "relative" }
         }
       >
         <div className="columns mt-2" style={{ marginBottom: "0" }}>
@@ -160,7 +167,6 @@ function D3DirectedGraph() {
           style={{
             height:
               deviceWidth > 768 ? deviceHeight * 0.73 : deviceHeight * 0.4,
-            // deviceWidth > 768 ? deviceHeight * 0.73 : deviceHeight * 0.6,
           }}
         >
           <ZoomableSVG width={svgWidth} height={svgHeight}>
@@ -179,7 +185,7 @@ function D3DirectedGraph() {
                   d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
                     -1 * arrowEdgeY
                   }`}
-                  fill="#999"
+                  //fill="#999"
                   style={{ stroke: "none" }}
                 ></path>
               </marker>
@@ -190,7 +196,7 @@ function D3DirectedGraph() {
                 return (
                   <line
                     key={link.source.id + "-" + link.target.id}
-                    stroke="black"
+                    stroke={"black"}
                     strokeWidth="1"
                     className="link"
                     markerEnd="url(#arrowhead)"
@@ -216,7 +222,13 @@ function D3DirectedGraph() {
                       cy={node.y}
                       data-url={node.url}
                       data-name={node.label}
-                      onClick={clickNode}
+                      stroke={
+                        selectChildNodes.includes(node.id)
+                          ? "red"
+                          : "rgb(128, 255, 191)"
+                      }
+                      strokeWidth="2"
+                      onClick={(e) => clickNode(e, node)}
                     ></circle>
 
                     <text
@@ -227,7 +239,7 @@ function D3DirectedGraph() {
                       x={node.x}
                       y={node.y}
                     >
-                      {node.label}
+                      {node.label}:{node.level}
                     </text>
                   </g>
                 );
