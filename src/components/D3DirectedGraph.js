@@ -34,12 +34,11 @@ function D3DirectedGraph() {
     const childNodes = selectedNode.childNodes.slice();
     childNodes.push(selectedNode.id);
     setSelectChildNodes(childNodes);
-    console.log(selectedNode.childNodes);
   }
 
   useEffect(() => {
     const startSimulation = (nodes, links) => {
-      const linkLen = 20;
+      const linkLen = 80;
       const simulation = d3
         .forceSimulation()
         .force(
@@ -47,26 +46,23 @@ function D3DirectedGraph() {
           d3
             .forceCollide()
             .radius(function (d) {
-              return d.r * 1.55;
+              return d.r * 1.5;
             })
-            .iterations(128)
+            .iterations(16)
         ) //衝突値の設定
         .force(
           "link",
-          d3
-            .forceLink()
-            .id((d) => d.id)
-            .distance(linkLen)
+          d3.forceLink().id((d) => d.id)
           //.distance(linkLen)
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
-        .force("charge", d3.forceManyBody().strength(300)) //引き合う力を設定。
+        .force("charge", d3.forceManyBody().strength(-75)) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
         .force(
           "y",
           d3
             .forceY()
-            .y((d) => 200 * d.level)
-            .strength(0.5)
+            .y((d) => 250 * (d.level + 1))
+            .strength(0.875)
         ); //y方向に戻る力
 
       simulation
@@ -185,7 +181,7 @@ function D3DirectedGraph() {
                   d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
                     -1 * arrowEdgeY
                   }`}
-                  //fill="#999"
+                  fill="#999"
                   style={{ stroke: "none" }}
                 ></path>
               </marker>
