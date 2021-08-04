@@ -235,7 +235,7 @@ function D3DirectedGraph() {
                       x={node.x}
                       y={node.y}
                     >
-                      {node.label}:{node.level}
+                      {node.label}
                     </text>
                   </g>
                 );
