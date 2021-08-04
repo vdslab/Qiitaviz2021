@@ -136,8 +136,7 @@ function D3DirectedGraph() {
     setDisplayArticle([]);
     setSelectChildNodes([]);
     setSearchTag("");
-  }, [clusterDataUrl]);
-
+  }, [clusterDataUrl, searchTag]);
   if (loading) {
     return <div>loading...</div>;
   }
