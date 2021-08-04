@@ -9,11 +9,12 @@ import DescriptionModal from "./DescriptionModal";
 
 function D3DirectedGraph() {
   const [articleData, setArticleData] = useState([]);
-  const [graphData, setGraphData] = useState([]);
+  const [tagListData, setTagListData] = useState([]);
   const [selectChildNodes, setSelectChildNodes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [nodes, setNodes] = useState([]);
   const [links, setLinks] = useState([]);
+  const [selectCluster, setSelectCluster] = useState("cluster1");
   const [clusterDataUrl, setClusterDataUrl] = useState(
     process.env.PUBLIC_URL + "/data/cluster1_graph_data.json"
   );
@@ -79,11 +80,16 @@ function D3DirectedGraph() {
     };
     const startSetGraphData = async () => {
       const [nodes, links] = await (async () => {
-        const response = await fetch(clusterDataUrl);
-        const data = await response.json();
-        setGraphData(data);
+        const response1 = await fetch(clusterDataUrl);
+        const data = await response1.json();
+
         setDisplayArticle([]);
         setSelectChildNodes([]);
+        const response2 = await fetch(
+          process.env.PUBLIC_URL + "/data/tag_list_data.json"
+        );
+        const data2 = await response2.json();
+        setTagListData(data2);
 
         const nodes = Array();
         const links = Array();
@@ -154,8 +160,16 @@ function D3DirectedGraph() {
           <div className="column">
             <DescriptionModal />
             <div className="columns is-centered is-multiline">
-              <AreaTab setClusterDataUrl={setClusterDataUrl} />
-              <Search />
+              <AreaTab
+                setClusterDataUrl={setClusterDataUrl}
+                selectCluster={selectCluster}
+                setSelectCluster={setSelectCluster}
+              />
+              <Search
+                tagListData={tagListData}
+                setClusterDataUrl={setClusterDataUrl}
+                setSelectCluster={setSelectCluster}
+              />
             </div>
           </div>
         </div>
