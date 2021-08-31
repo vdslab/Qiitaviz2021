@@ -1,12 +1,12 @@
 import "bulma/css/bulma.css";
 import { useState } from "react";
 
-function Search({
+const Search = ({
   tagListData,
   setClusterDataUrl,
   setSelectCluster,
   setSearchTag,
-}) {
+}) => {
   const handleChange = (e) => {
     setInputTag(e.target.value);
   };
@@ -44,6 +44,6 @@ function Search({
       </div>
     </div>
   );
-}
+};
 
 export default Search;

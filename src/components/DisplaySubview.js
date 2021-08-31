@@ -1,6 +1,4 @@
 import "bulma/css/bulma.css";
-import { useState } from "react";
-import DisplayRecommendArticles from "./DisplayRecommendArticles";
 import SubViewData from "./SubViewData";
 
 const DisplaySubview = ({ displayArticle }) => {

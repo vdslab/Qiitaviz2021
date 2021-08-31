@@ -19,7 +19,6 @@ function D3DirectedGraph() {
   const [clusterDataUrl, setClusterDataUrl] = useState(
     process.env.PUBLIC_URL + "/data/cluster1_graph_data.json"
   );
-  // おすすめ記事
   const [displayArticle, setDisplayArticle] = useState([]);
 
   // デバイスの横幅を取得
@@ -29,9 +28,7 @@ function D3DirectedGraph() {
 
   function clickNode(selectedNode) {
     const target = selectedNode.label;
-    const data = articleData.filter((item) => {
-      return item.type == target;
-    });
+    const data = articleData.filter((item) => item.type === target);
     setDisplayArticle(data);
     const childNodes = selectedNode.childNodes.slice();
     childNodes.push(selectedNode.id);
@@ -78,30 +75,28 @@ function D3DirectedGraph() {
       simulation.tick(300).stop();
       setNodes(nodes);
       setLinks(links);
-      if (searchTag !== "") {
-        nodes.map((node) => {
-          if (node.label === searchTag) {
-            clickNode(node);
-          }
-        });
-      }
+      nodes.map((node) => {
+        if (node.label === searchTag) {
+          clickNode(node);
+        }
+      });
     };
     const startSetGraphData = async () => {
       const [nodes, links] = await (async () => {
-        const response1 = await fetch(clusterDataUrl);
-        const data = await response1.json();
+        const clusterResponse = await fetch(clusterDataUrl);
+        const clusterData = await clusterResponse.json();
 
-        const response2 = await fetch(
+        const tagResponse = await fetch(
           process.env.PUBLIC_URL + "/data/tag_list_data.json"
         );
-        const data2 = await response2.json();
-        setTagListData(data2);
+        const tagData = await tagResponse.json();
+        setTagListData(tagData);
 
         const nodes = Array();
         const links = Array();
 
         const r = 35;
-        data.map((item) => {
+        clusterData.map((item) => {
           nodes.push({
             id: item.ID, //nodeのindexを標準設定から変更
             label: item.nodeName,
@@ -120,11 +115,11 @@ function D3DirectedGraph() {
         });
         setArticleData(
           await (async () => {
-            const response = await fetch(
+            const articleResponse = await fetch(
               process.env.PUBLIC_URL + "/data/recommend_data.json"
             );
-            const data = await response.json();
-            return data;
+            const articledData = await articleResponse.json();
+            return articleData;
           })()
         );
         return [nodes, links];
