@@ -1,7 +1,11 @@
 import "bulma/css/bulma.css";
+import { displayArticleState } from "../atom";
+import { useRecoilState, useRecoilValue } from "recoil";
 import SubViewData from "./SubViewData";
 
-const DisplaySubview = ({ displayArticle }) => {
+const DisplaySubview = () => {
+  const [displayArticle, setDisplayArticle] =
+    useRecoilState(displayArticleState);
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
 
   return (

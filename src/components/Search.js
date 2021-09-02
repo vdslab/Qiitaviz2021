@@ -1,12 +1,20 @@
 import "bulma/css/bulma.css";
 import { useState } from "react";
+import { useRecoilState, useRecoilValue } from "recoil";
+import {
+  clusterDataUrlState,
+  searchTagState,
+  selectClusterState,
+  tagListDataState,
+} from "../atom";
 
-const Search = ({
-  tagListData,
-  setClusterDataUrl,
-  setSelectCluster,
-  setSearchTag,
-}) => {
+const Search = () => {
+  const [searchTag, setSearchTag] = useRecoilState(searchTagState);
+  const [selectCluster, setSelectCluster] = useRecoilState(selectClusterState);
+  const [tagListData, setTagListData] = useRecoilState(tagListDataState);
+  const [clusterDataUrl, setClusterDataUrl] =
+    useRecoilState(clusterDataUrlState);
+
   const handleChange = (e) => {
     setInputTag(e.target.value);
   };

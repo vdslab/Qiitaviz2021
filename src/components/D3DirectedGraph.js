@@ -6,20 +6,27 @@ import DisplaySubView from "./DisplaySubview";
 import AreaTab from "./AreaTab";
 import Search from "./Search";
 import DescriptionModal from "./DescriptionModal";
+import { useRecoilState, useRecoilValue } from "recoil";
+import {
+  clusterDataUrlState,
+  displayArticleState,
+  searchTagState,
+  tagListDataState,
+} from "../atom";
 
 function D3DirectedGraph() {
   const [articleData, setArticleData] = useState([]);
-  const [tagListData, setTagListData] = useState([]);
   const [selectChildNodes, setSelectChildNodes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [nodes, setNodes] = useState([]);
   const [links, setLinks] = useState([]);
-  const [searchTag, setSearchTag] = useState("");
-  const [selectCluster, setSelectCluster] = useState("cluster1");
-  const [clusterDataUrl, setClusterDataUrl] = useState(
-    process.env.PUBLIC_URL + "/data/cluster1_graph_data.json"
-  );
-  const [displayArticle, setDisplayArticle] = useState([]);
+
+  const [searchTag, setSearchTag] = useRecoilState(searchTagState);
+  const [tagListData, setTagListData] = useRecoilState(tagListDataState);
+  const [clusterDataUrl, setClusterDataUrl] =
+    useRecoilState(clusterDataUrlState);
+  const [displayArticle, setDisplayArticle] =
+    useRecoilState(displayArticleState);
 
   // デバイスの横幅を取得
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
@@ -118,7 +125,7 @@ function D3DirectedGraph() {
             const articleResponse = await fetch(
               process.env.PUBLIC_URL + "/data/recommend_data.json"
             );
-            const articledData = await articleResponse.json();
+            const articleData = await articleResponse.json();
             return articleData;
           })()
         );
@@ -163,17 +170,8 @@ function D3DirectedGraph() {
           <div className="column">
             <DescriptionModal />
             <div className="columns is-centered is-multiline">
-              <AreaTab
-                setClusterDataUrl={setClusterDataUrl}
-                selectCluster={selectCluster}
-                setSelectCluster={setSelectCluster}
-              />
-              <Search
-                tagListData={tagListData}
-                setClusterDataUrl={setClusterDataUrl}
-                setSelectCluster={setSelectCluster}
-                setSearchTag={setSearchTag}
-              />
+              <AreaTab />
+              <Search />
             </div>
           </div>
         </div>
@@ -262,7 +260,7 @@ function D3DirectedGraph() {
           </ZoomableSVG>
         </div>
       </div>
-      <DisplaySubView displayArticle={displayArticle} />
+      <DisplaySubView />
     </div>
   );
 }
