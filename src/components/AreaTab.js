@@ -1,8 +1,13 @@
 import "bulma/css/bulma.css";
 import { useState } from "react";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { clusterDataUrlState, selectClusterState } from "../atom";
 
-function AreaTab({ setClusterDataUrl, selectCluster, setSelectCluster }) {
+function AreaTab() {
   const [dropdownActive, setDropdownActive] = useState(false);
+  const [selectCluster, setSelectCluster] = useRecoilState(selectClusterState);
+  const [clusterDataUrl, setClusterDataUrl] =
+    useRecoilState(clusterDataUrlState);
 
   const setDataUrl = (url, selectedCluster) => {
     setClusterDataUrl(url);
