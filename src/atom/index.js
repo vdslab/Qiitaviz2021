@@ -10,6 +10,26 @@ export const tagListDataState = atom({
   default: [],
 });
 
+export const nodesState = atom({
+  key: "nodesState",
+  default: [],
+});
+
+export const linkssState = atom({
+  key: "linksState",
+  default: [],
+});
+
+export const articleDataState = atom({
+  key: "articleDataState",
+  default: [],
+});
+
+export const selectedChildNodesState = atom({
+  key: "selectedChildNodesState",
+  default: "",
+});
+
 export const searchTagState = atom({
   key: "searchTagState",
   default: "",

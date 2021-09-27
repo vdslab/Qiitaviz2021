@@ -1,25 +1,31 @@
 import * as d3 from "d3";
 import "bulma/css/bulma.css";
 import { useState, useEffect } from "react";
-import ZoomableSVG from "./ZoomableSVG";
+import DisplayDirectedGraph from "./DisplayDirectedGraph";
 import DisplaySubView from "./DisplaySubview";
 import AreaTab from "./AreaTab";
 import Search from "./Search";
 import DescriptionModal from "./DescriptionModal";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
+  articleDataState,
   clusterDataUrlState,
   displayArticleState,
+  linkssState,
+  nodesState,
   searchTagState,
+  selectedChildNodesState,
   tagListDataState,
 } from "../atom";
 
 function D3DirectedGraph() {
-  const [articleData, setArticleData] = useState([]);
-  const [selectChildNodes, setSelectChildNodes] = useState([]);
+  const [articleData, setArticleData] = useRecoilState(articleDataState);
+  const [selectChildNodes, setSelectChildNodes] = useRecoilState(
+    selectedChildNodesState
+  );
   const [loading, setLoading] = useState(true);
-  const [nodes, setNodes] = useState([]);
-  const [links, setLinks] = useState([]);
+  const [nodes, setNodes] = useRecoilState(nodesState);
+  const [links, setLinks] = useRecoilState(linkssState);
 
   const [searchTag, setSearchTag] = useRecoilState(searchTagState);
   const [tagListData, setTagListData] = useRecoilState(tagListDataState);
@@ -33,7 +39,7 @@ function D3DirectedGraph() {
   const svgWidth = deviceWidth > 768 ? deviceWidth * 0.66 : deviceWidth * 0.9;
   const svgHeight = deviceWidth > 768 ? deviceHeight * 0.7 : deviceHeight * 0.3;
 
-  function clickNode(selectedNode) {
+  function searchNode(selectedNode) {
     const target = selectedNode.label;
     const data = articleData.filter((item) => item.type === target);
     setDisplayArticle(data);
@@ -41,7 +47,6 @@ function D3DirectedGraph() {
     childNodes.push(selectedNode.id);
     setSelectChildNodes(childNodes);
   }
-
   useEffect(() => {
     const startSimulation = (nodes, links) => {
       const linkLen = 20;
@@ -84,7 +89,7 @@ function D3DirectedGraph() {
       setLinks(links);
       nodes.map((node) => {
         if (node.label === searchTag) {
-          clickNode(node);
+          searchNode(node);
         }
       });
     };
@@ -139,15 +144,10 @@ function D3DirectedGraph() {
     setSelectChildNodes([]);
     setSearchTag("");
   }, [clusterDataUrl, searchTag]);
+
   if (loading) {
     return <div>loading...</div>;
   }
-
-  const arrowEdgeX = -35;
-  const arrowEdgeY = -5;
-  const arrowHeight = 10;
-  const arrowWidth = 14;
-  const arrowEdgeEnd = -25;
 
   return (
     <div
@@ -181,83 +181,7 @@ function D3DirectedGraph() {
               deviceWidth > 768 ? deviceHeight * 0.73 : deviceHeight * 0.4,
           }}
         >
-          <ZoomableSVG width={svgWidth} height={svgHeight}>
-            <defs>
-              <marker
-                id="arrowhead"
-                viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
-                refX="13"
-                refY="0"
-                orient="auto"
-                markerWidth="13"
-                markerHeight="13"
-                xoverflow="visible"
-              >
-                <path
-                  d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
-                    -1 * arrowEdgeY
-                  }`}
-                  fill="#999"
-                  style={{ stroke: "none" }}
-                ></path>
-              </marker>
-            </defs>
-
-            <g className="links">
-              {links.map((link) => {
-                return (
-                  <line
-                    key={link.source.id + "-" + link.target.id}
-                    stroke={"black"}
-                    strokeWidth="1"
-                    className="link"
-                    markerEnd="url(#arrowhead)"
-                    id="edgepath0"
-                    x1={link.source.x}
-                    y1={link.source.y}
-                    x2={link.target.x}
-                    y2={link.target.y}
-                  ></line>
-                );
-              })}
-            </g>
-
-            <g className="nodes">
-              {nodes.map((node) => {
-                return (
-                  <g className="nodes" key={node.id}>
-                    <circle
-                      className="node"
-                      r={node.r}
-                      style={{ fill: "rgb(128, 255, 191)" }}
-                      cx={node.x}
-                      cy={node.y}
-                      data-url={node.url}
-                      data-name={node.label}
-                      stroke={
-                        selectChildNodes.includes(node.id)
-                          ? "red"
-                          : "rgb(128, 255, 191)"
-                      }
-                      strokeWidth="2"
-                      onClick={() => clickNode(node)}
-                    ></circle>
-
-                    <text
-                      className="node-label"
-                      textAnchor="middle"
-                      fill="black"
-                      fontSize={"15px"}
-                      x={node.x}
-                      y={node.y}
-                    >
-                      {node.label}
-                    </text>
-                  </g>
-                );
-              })}
-            </g>
-          </ZoomableSVG>
+          <DisplayDirectedGraph />
         </div>
       </div>
       <DisplaySubView />

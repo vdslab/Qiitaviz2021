@@ -9,11 +9,11 @@ import {
 } from "../atom";
 
 const Search = () => {
-  const [searchTag, setSearchTag] = useRecoilState(searchTagState);
   const [selectCluster, setSelectCluster] = useRecoilState(selectClusterState);
   const [tagListData, setTagListData] = useRecoilState(tagListDataState);
   const [clusterDataUrl, setClusterDataUrl] =
     useRecoilState(clusterDataUrlState);
+  const [searchTag, setSearchTag] = useRecoilState(searchTagState);
 
   const handleChange = (e) => {
     setInputTag(e.target.value);
