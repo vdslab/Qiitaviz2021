@@ -24,9 +24,9 @@ function D3DirectedGraph() {
     selectedChildNodesState
   );
   const [loading, setLoading] = useState(true);
+
   const [nodes, setNodes] = useRecoilState(nodesState);
   const [links, setLinks] = useRecoilState(linkssState);
-
   const [searchTag, setSearchTag] = useRecoilState(searchTagState);
   const [tagListData, setTagListData] = useRecoilState(tagListDataState);
   const [clusterDataUrl, setClusterDataUrl] =
@@ -103,6 +103,12 @@ function D3DirectedGraph() {
         );
         const tagData = await tagResponse.json();
         setTagListData(tagData);
+        tagData.map((tags) => {
+          tags.map((tag) => {
+            localStorage[tag] =
+              localStorage[tag] === undefined ? 1 : localStorage[tag];
+          });
+        });
 
         const nodes = Array();
         const links = Array();
