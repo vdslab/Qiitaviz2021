@@ -15,15 +15,15 @@ const SelectSkilled = () => {
   const [selectedNodeName, setSelectedNodeName] = useRecoilState(
     selectedNodeNameState
   );
-  console.log(selectedNodeName);
   const [level, setLevel] = useState(localStorage[selectedNodeName]);
   function outHandle() {
     setShowSelectedSkilledCard(false);
     setMousePosition([]);
   }
   function onLevelChange(e) {
+    localStorage[selectedNodeName] = e.target.value;
     setLevel(e.target.value);
-    localStorage[selectedNodeName] = level;
+    setShowSelectedSkilledCard(false);
   }
   return (
     <div
@@ -37,7 +37,7 @@ const SelectSkilled = () => {
     >
       <div className="card-content">
         <div className="content">
-          習熟度を選択 <br />
+          習熟度を選択
           <div className="control">
             <label className="radio">
               {level === "4" ? (
@@ -46,14 +46,14 @@ const SelectSkilled = () => {
                   name="level"
                   value="4"
                   checked
-                  onChange={(e) => onLevelChange(e)}
+                  onClick={(e) => onLevelChange(e)}
                 />
               ) : (
                 <input
                   type="radio"
                   name="level"
                   value="4"
-                  onChange={(e) => onLevelChange(e)}
+                  onClick={(e) => onLevelChange(e)}
                 />
               )}
               マスター
@@ -65,7 +65,7 @@ const SelectSkilled = () => {
                   type="radio"
                   name="level"
                   value="3"
-                  onChange={(e) => onLevelChange(e)}
+                  onClick={(e) => onLevelChange(e)}
                   checked
                 />
               ) : (
@@ -73,7 +73,7 @@ const SelectSkilled = () => {
                   type="radio"
                   name="level"
                   value="3"
-                  onChange={(e) => onLevelChange(e)}
+                  onClick={(e) => onLevelChange(e)}
                 />
               )}
               かなりできる
@@ -85,7 +85,7 @@ const SelectSkilled = () => {
                   type="radio"
                   name="level"
                   value="2"
-                  onChange={(e) => onLevelChange(e)}
+                  onClick={(e) => onLevelChange(e)}
                   checked
                 />
               ) : (
@@ -93,7 +93,7 @@ const SelectSkilled = () => {
                   type="radio"
                   name="level"
                   value="2"
-                  onChange={(e) => onLevelChange(e)}
+                  onClick={(e) => onLevelChange(e)}
                 />
               )}
               そこそこできる
@@ -105,7 +105,7 @@ const SelectSkilled = () => {
                   type="radio"
                   name="level"
                   value="1"
-                  onChange={(e) => onLevelChange(e)}
+                  onClick={(e) => onLevelChange(e)}
                   checked
                 />
               ) : (
@@ -113,7 +113,7 @@ const SelectSkilled = () => {
                   type="radio"
                   name="level"
                   value="1"
-                  onChange={(e) => onLevelChange(e)}
+                  onClick={(e) => onLevelChange(e)}
                 />
               )}
               全然できない
