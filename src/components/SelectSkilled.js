@@ -46,14 +46,14 @@ const SelectSkilled = () => {
                   name="level"
                   value="4"
                   checked
-                  onClick={(e) => onLevelChange(e)}
+                  onChange={(e) => onLevelChange(e)}
                 />
               ) : (
                 <input
                   type="radio"
                   name="level"
                   value="4"
-                  onClick={(e) => onLevelChange(e)}
+                  onChange={(e) => onLevelChange(e)}
                 />
               )}
               マスター
@@ -65,7 +65,7 @@ const SelectSkilled = () => {
                   type="radio"
                   name="level"
                   value="3"
-                  onClick={(e) => onLevelChange(e)}
+                  onChange={(e) => onLevelChange(e)}
                   checked
                 />
               ) : (
@@ -73,7 +73,7 @@ const SelectSkilled = () => {
                   type="radio"
                   name="level"
                   value="3"
-                  onClick={(e) => onLevelChange(e)}
+                  onChange={(e) => onLevelChange(e)}
                 />
               )}
               かなりできる
@@ -85,7 +85,7 @@ const SelectSkilled = () => {
                   type="radio"
                   name="level"
                   value="2"
-                  onClick={(e) => onLevelChange(e)}
+                  onChange={(e) => onLevelChange(e)}
                   checked
                 />
               ) : (
@@ -93,7 +93,7 @@ const SelectSkilled = () => {
                   type="radio"
                   name="level"
                   value="2"
-                  onClick={(e) => onLevelChange(e)}
+                  onChange={(e) => onLevelChange(e)}
                 />
               )}
               そこそこできる
@@ -105,7 +105,7 @@ const SelectSkilled = () => {
                   type="radio"
                   name="level"
                   value="1"
-                  onClick={(e) => onLevelChange(e)}
+                  onChange={(e) => onLevelChange(e)}
                   checked
                 />
               ) : (
@@ -113,7 +113,7 @@ const SelectSkilled = () => {
                   type="radio"
                   name="level"
                   value="1"
-                  onClick={(e) => onLevelChange(e)}
+                  onChange={(e) => onLevelChange(e)}
                 />
               )}
               全然できない
