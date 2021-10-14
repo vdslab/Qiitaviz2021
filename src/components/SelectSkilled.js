@@ -15,15 +15,15 @@ const SelectSkilled = () => {
   const [selectedNodeName, setSelectedNodeName] = useRecoilState(
     selectedNodeNameState
   );
-  console.log(selectedNodeName);
   const [level, setLevel] = useState(localStorage[selectedNodeName]);
   function outHandle() {
     setShowSelectedSkilledCard(false);
     setMousePosition([]);
   }
   function onLevelChange(e) {
+    localStorage[selectedNodeName] = e.target.value;
     setLevel(e.target.value);
-    localStorage[selectedNodeName] = level;
+    setShowSelectedSkilledCard(false);
   }
   return (
     <div
@@ -37,7 +37,7 @@ const SelectSkilled = () => {
     >
       <div className="card-content">
         <div className="content">
-          習熟度を選択 <br />
+          習熟度を選択
           <div className="control">
             <label className="radio">
               {level === "4" ? (
