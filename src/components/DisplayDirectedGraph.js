@@ -37,7 +37,11 @@ function D3DirectedGraph() {
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
   const svgWidth = deviceWidth > 768 ? deviceWidth * 0.66 : deviceWidth * 0.9;
   const svgHeight = deviceWidth > 768 ? deviceHeight * 0.7 : deviceHeight * 0.3;
-  const color_list = ["rgb(128, 255, 191)", "red", "yellow", "blue"];
+  const color_list = [
+    "rgb(255, 255, 255)",
+    "rgb(255, 255, 205)",
+    "rgb(128, 255, 191)",
+  ];
 
   function clickNode(event, selectedNode) {
     const target = selectedNode.label;
@@ -111,11 +115,7 @@ function D3DirectedGraph() {
                   cy={node.y}
                   data-url={node.url}
                   data-name={node.label}
-                  stroke={
-                    selectChildNodes.includes(node.id)
-                      ? "red"
-                      : localStorage[node.label]
-                  }
+                  stroke={selectChildNodes.includes(node.id) ? "red" : "black"}
                   strokeWidth="2"
                   onClick={(e) => clickNode(e, node)}
                 ></circle>
