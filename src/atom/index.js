@@ -45,17 +45,7 @@ export const displayArticleState = atom({
   default: [],
 });
 
-export const mousePositionState = atom({
-  key: "mousePositionState",
-  default: [0, 0],
-});
-
-export const showSelectedSkilledCardState = atom({
-  key: "showSelectedSkilledCardState",
-  default: false,
-});
-
-export const selectedNodeNameState = atom({
-  key: "selectedNodeNameState",
+export const preClickNodeState = atom({
+  key: "preClickNodeState",
   default: "",
 });

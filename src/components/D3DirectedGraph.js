@@ -5,6 +5,7 @@ import DisplayDirectedGraph from "./DisplayDirectedGraph";
 import DisplaySubView from "./DisplaySubview";
 import AreaTab from "./AreaTab";
 import Search from "./Search";
+import ColorLabel from "./ColorLabel";
 import DescriptionModal from "./DescriptionModal";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
@@ -13,6 +14,7 @@ import {
   displayArticleState,
   linkssState,
   nodesState,
+  preClickNodeState,
   searchTagState,
   selectedChildNodesState,
   tagListDataState,
@@ -23,6 +25,7 @@ function D3DirectedGraph() {
   const [selectChildNodes, setSelectChildNodes] = useRecoilState(
     selectedChildNodesState
   );
+  const [preClickNode, setPreClickNode] = useRecoilState(preClickNodeState);
   const [loading, setLoading] = useState(true);
 
   const [nodes, setNodes] = useRecoilState(nodesState);
@@ -103,12 +106,21 @@ function D3DirectedGraph() {
         );
         const tagData = await tagResponse.json();
         setTagListData(tagData);
+
+        const wordsData =
+          localStorage["wordsData"] === undefined
+            ? {}
+            : JSON.parse(localStorage["wordsData"]);
         tagData.map((tags) => {
           tags.map((tag) => {
-            localStorage[tag] =
-              localStorage[tag] === undefined ? 1 : localStorage[tag];
+            wordsData[tag] =
+              tag in wordsData
+                ? wordsData[tag]
+                : { clickCount: 0, clickFlag: false };
           });
         });
+
+        localStorage["wordsData"] = JSON.stringify(wordsData);
 
         const nodes = Array();
         const links = Array();
@@ -149,6 +161,7 @@ function D3DirectedGraph() {
     setDisplayArticle([]);
     setSelectChildNodes([]);
     setSearchTag("");
+    setPreClickNode("");
   }, [clusterDataUrl, searchTag]);
 
   if (loading) {
@@ -178,6 +191,7 @@ function D3DirectedGraph() {
             <div className="columns is-centered is-multiline">
               <AreaTab />
               <Search />
+              <ColorLabel />
             </div>
           </div>
         </div>

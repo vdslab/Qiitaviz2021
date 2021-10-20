@@ -40,26 +40,6 @@ const SelectSkilled = () => {
           習熟度を選択
           <div className="control">
             <label className="radio">
-              {level === "4" ? (
-                <input
-                  type="radio"
-                  name="level"
-                  value="4"
-                  checked
-                  onChange={(e) => onLevelChange(e)}
-                />
-              ) : (
-                <input
-                  type="radio"
-                  name="level"
-                  value="4"
-                  onChange={(e) => onLevelChange(e)}
-                />
-              )}
-              マスター
-            </label>
-            <br />
-            <label className="radio">
               {level === "3" ? (
                 <input
                   type="radio"
