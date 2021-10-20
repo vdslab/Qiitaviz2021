@@ -1,13 +1,18 @@
 import "bulma/css/bulma.css";
 import { useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { clusterDataUrlState, selectClusterState } from "../atom";
+import {
+  clusterDataUrlState,
+  selectClusterState,
+  selectSystemState,
+} from "../atom";
 
 function AreaTab() {
   const [dropdownActive, setDropdownActive] = useState(false);
   const [selectCluster, setSelectCluster] = useRecoilState(selectClusterState);
   const [clusterDataUrl, setClusterDataUrl] =
     useRecoilState(clusterDataUrlState);
+  const [selectSystem, setSelecteSystem] = useRecoilState(selectSystemState);
 
   const setDataUrl = (url, selectedCluster) => {
     setClusterDataUrl(url);
@@ -39,7 +44,10 @@ function AreaTab() {
               className="dropdown-item"
               onClick={() =>
                 setDataUrl(
-                  process.env.PUBLIC_URL + "/data/cluster1_graph_data.json",
+                  process.env.PUBLIC_URL +
+                    "/data/" +
+                    selectSystem +
+                    "/cluster1_graph_data.json",
                   "cluster1"
                 )
               }
@@ -50,7 +58,10 @@ function AreaTab() {
               className="dropdown-item"
               onClick={() =>
                 setDataUrl(
-                  process.env.PUBLIC_URL + "/data/cluster2_graph_data.json",
+                  process.env.PUBLIC_URL +
+                    "/data/" +
+                    selectSystem +
+                    "/cluster2_graph_data.json",
                   "cluster2"
                 )
               }
@@ -61,7 +72,10 @@ function AreaTab() {
               className="dropdown-item"
               onClick={() =>
                 setDataUrl(
-                  process.env.PUBLIC_URL + "/data/cluster3_graph_data.json",
+                  process.env.PUBLIC_URL +
+                    "/data/" +
+                    selectSystem +
+                    "/cluster3_graph_data.json",
                   "cluster3"
                 )
               }
@@ -72,7 +86,10 @@ function AreaTab() {
               className="dropdown-item"
               onClick={() =>
                 setDataUrl(
-                  process.env.PUBLIC_URL + "/data/cluster4_graph_data.json",
+                  process.env.PUBLIC_URL +
+                    "/data/" +
+                    selectSystem +
+                    "/cluster4_graph_data.json",
                   "cluster4"
                 )
               }

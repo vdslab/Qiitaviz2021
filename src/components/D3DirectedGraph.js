@@ -7,6 +7,7 @@ import AreaTab from "./AreaTab";
 import Search from "./Search";
 import ColorLabel from "./ColorLabel";
 import DescriptionModal from "./DescriptionModal";
+import SelectedSystemTab from "./SelectSystemTab";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
   articleDataState,
@@ -17,6 +18,7 @@ import {
   preClickNodeState,
   searchTagState,
   selectedChildNodesState,
+  selectSystemState,
   tagListDataState,
 } from "../atom";
 
@@ -25,6 +27,7 @@ function D3DirectedGraph() {
   const [selectChildNodes, setSelectChildNodes] = useRecoilState(
     selectedChildNodesState
   );
+  const [selectSystem, setSelectSystem] = useRecoilState(selectSystemState);
   const [preClickNode, setPreClickNode] = useRecoilState(preClickNodeState);
   const [loading, setLoading] = useState(true);
 
@@ -162,7 +165,7 @@ function D3DirectedGraph() {
     setSelectChildNodes([]);
     setSearchTag("");
     setPreClickNode("");
-  }, [clusterDataUrl, searchTag]);
+  }, [clusterDataUrl, searchTag, selectSystem]);
 
   if (loading) {
     return <div>loading...</div>;
@@ -189,6 +192,7 @@ function D3DirectedGraph() {
           <div className="column">
             <DescriptionModal />
             <div className="columns is-centered is-multiline">
+              <SelectedSystemTab />
               <AreaTab />
               <Search />
               <ColorLabel />

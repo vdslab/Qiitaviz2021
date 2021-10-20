@@ -49,3 +49,8 @@ export const preClickNodeState = atom({
   key: "preClickNodeState",
   default: "",
 });
+
+export const selectSystemState = atom({
+  key: "selectState",
+  default: "system1",
+});
