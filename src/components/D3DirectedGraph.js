@@ -5,6 +5,7 @@ import DisplayDirectedGraph from "./DisplayDirectedGraph";
 import DisplaySubView from "./DisplaySubview";
 import AreaTab from "./AreaTab";
 import Search from "./Search";
+import ColorLabel from "./ColorLabel";
 import DescriptionModal from "./DescriptionModal";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
@@ -190,6 +191,7 @@ function D3DirectedGraph() {
             <div className="columns is-centered is-multiline">
               <AreaTab />
               <Search />
+              <ColorLabel />
             </div>
           </div>
         </div>
