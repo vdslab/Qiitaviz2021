@@ -1,4 +1,5 @@
 import "bulma/css/bulma.css";
+import { cluster } from "d3-hierarchy";
 import { useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
@@ -14,24 +15,41 @@ const Search = () => {
   const [clusterDataUrl, setClusterDataUrl] =
     useRecoilState(clusterDataUrlState);
   const [searchTag, setSearchTag] = useRecoilState(searchTagState);
-
+  const [clusterCandidates, setClusterCandidates] = useState([]);
+  const [panelFlag, setPanelFlag] = useState(false);
+  const [applicableFlag, setApplicableFlag] = useState(false);
   const handleChange = (e) => {
+    setClusterCandidates([]);
+    setPanelFlag(false);
+    setApplicableFlag(false);
     setInputTag(e.target.value);
+  };
+  const clickClusterInfomation = (data) => {
+    setPanelFlag(false);
+    setSelectCluster(data[0]);
+    setClusterDataUrl(data[1]);
   };
   const handleClick = (inputTag) => {
     tagListData.map((data, i) => {
       if (data.includes(inputTag)) {
-        setClusterDataUrl(
+        clusterCandidates.push([
+          "cluster" + (i + 1),
           process.env.PUBLIC_URL +
             "/data/cluster" +
             (i + 1) +
-            "_graph_data.json"
-        );
-        setSelectCluster("cluster" + (i + 1));
+            "_graph_data.json",
+        ]);
       }
     });
+    setClusterDataUrl(clusterCandidates);
     setSearchTag(inputTag);
-    setInputTag("");
+    if (clusterCandidates.length) {
+      console.log(clusterCandidates.length);
+      setInputTag("");
+      setPanelFlag(true);
+    } else {
+      setApplicableFlag(true);
+    }
   };
   const [inputTag, setInputTag] = useState("");
 
@@ -50,6 +68,27 @@ const Search = () => {
           <i className="fa fa-search"></i>検索
         </a>
       </div>
+      {panelFlag && ( //該当するクラスターがあった場合
+        <nav className="panel">
+          <p className="panel-heading">検索結果</p>
+          {clusterCandidates.map((data) => {
+            return (
+              <a
+                className="panel-block is-active"
+                onClick={() => clickClusterInfomation(data)}
+                key={data}
+              >
+                {data[0]}
+              </a>
+            );
+          })}
+        </nav>
+      )}
+      {applicableFlag && ( //該当するクラスターがなかった場合
+        <nav className="panel is-danger">
+          <p className="panel-heading">該当なし</p>
+        </nav>
+      )}
     </div>
   );
 };
