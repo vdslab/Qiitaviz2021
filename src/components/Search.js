@@ -26,6 +26,7 @@ const Search = () => {
   };
   const clickClusterInfomation = (data) => {
     setPanelFlag(false);
+    setClusterCandidates([]);
     setSelectCluster(data[0]);
     setClusterDataUrl(data[1]);
   };
@@ -68,27 +69,41 @@ const Search = () => {
           <i className="fa fa-search"></i>検索
         </a>
       </div>
-      {panelFlag && ( //該当するクラスターがあった場合
-        <nav className="panel">
-          <p className="panel-heading">検索結果</p>
+      {applicableFlag && ( //該当するクラスターがなかった場合
+        <p class="help is-danger">該当なし</p>
+      )}
+      <a className={"dropdown is-active"}>
+        <a className="dropdown-menu" id="dropdown-menu" role="menu">
           {clusterCandidates.map((data) => {
             return (
-              <a
-                className="panel-block is-active"
-                onClick={() => clickClusterInfomation(data)}
-                key={data}
-              >
-                {data[0]}
-              </a>
+              <div className="dropdown-content">
+                <a
+                  className="dropdown-item"
+                  onClick={() => clickClusterInfomation(data)}
+                >
+                  {data[0]}
+                </a>
+              </div>
             );
           })}
-        </nav>
-      )}
-      {applicableFlag && ( //該当するクラスターがなかった場合
-        <nav className="panel is-danger">
-          <p className="panel-heading">該当なし</p>
-        </nav>
-      )}
+        </a>
+      </a>
+      {/*
+      <nav className="panel">
+        <p className="panel-heading ">検索結果</p>
+        {clusterCandidates.map((data) => {
+          return (
+            <a
+              className="panel-block is-active"
+              onClick={() => clickClusterInfomation(data)}
+              key={data}
+            >
+              {data[0]}
+            </a>
+          );
+        })}
+      </nav>
+      */}
     </div>
   );
 };
