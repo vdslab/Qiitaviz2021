@@ -45,7 +45,6 @@ const Search = () => {
     setClusterDataUrl(clusterCandidates);
     setSearchTag(inputTag);
     if (clusterCandidates.length) {
-      console.log(clusterCandidates.length);
       setInputTag("");
       setPanelFlag(true);
     } else {
@@ -53,7 +52,6 @@ const Search = () => {
     }
   };
   const [inputTag, setInputTag] = useState("");
-
   return (
     <div className="column is-4">
       <div className="field has-addons">
@@ -65,29 +63,34 @@ const Search = () => {
           value={inputTag}
           onChange={(e) => handleChange(e)}
         />
-        <a className="button is-success" onClick={() => handleClick(inputTag)}>
+        <a
+          className="button is-success has-dropdown"
+          onClick={() => handleClick(inputTag)}
+        >
           <i className="fa fa-search"></i>検索
         </a>
       </div>
       {applicableFlag && ( //該当するクラスターがなかった場合
-        <p class="help is-danger">該当なし</p>
+        <p className="help is-danger">該当なし</p>
       )}
-      <a className={"dropdown is-active"}>
-        <a className="dropdown-menu" id="dropdown-menu" role="menu">
-          {clusterCandidates.map((data) => {
-            return (
-              <div className="dropdown-content">
-                <a
-                  className="dropdown-item"
-                  onClick={() => clickClusterInfomation(data)}
-                >
-                  {data[0]}
-                </a>
-              </div>
-            );
-          })}
-        </a>
-      </a>
+      <div className={"dropdown is-active"}>
+        <div className="dropdown-menu" id="dropdown-menu" role="menu">
+          {clusterCandidates.length >= 1 && (
+            <div className="dropdown-content">
+              {clusterCandidates.map((data) => {
+                return (
+                  <a
+                    className="dropdown-item"
+                    onClick={() => clickClusterInfomation(data)}
+                  >
+                    {data[0]}
+                  </a>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </div>
       {/*
       <nav className="panel">
         <p className="panel-heading ">検索結果</p>
