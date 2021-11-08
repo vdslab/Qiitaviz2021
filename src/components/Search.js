@@ -17,11 +17,11 @@ const Search = () => {
   const [searchTag, setSearchTag] = useRecoilState(searchTagState);
   const [clusterCandidates, setClusterCandidates] = useState([]);
   const [panelFlag, setPanelFlag] = useState(false);
-  const [applicableFlag, setApplicableFlag] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("　");
   const handleChange = (e) => {
     setClusterCandidates([]);
     setPanelFlag(false);
-    setApplicableFlag(false);
+    setErrorMessage("　");
     setInputTag(e.target.value);
   };
   const clickClusterInfomation = (data) => {
@@ -48,9 +48,10 @@ const Search = () => {
       setInputTag("");
       setPanelFlag(true);
     } else {
-      setApplicableFlag(true);
+      setErrorMessage("該当なし");
     }
   };
+  console.log(errorMessage, errorMessage !== "");
   const [inputTag, setInputTag] = useState("");
   return (
     <div className="column is-4">
@@ -65,14 +66,20 @@ const Search = () => {
         />
         <a
           className="button is-success has-dropdown"
+          list="search"
           onClick={() => handleClick(inputTag)}
         >
           <i className="fa fa-search"></i>検索
         </a>
       </div>
-      {applicableFlag && ( //該当するクラスターがなかった場合
-        <p className="help is-danger">該当なし</p>
-      )}
+      <p
+        className="help is-danger"
+        style={{
+          visibility: errorMessage === "　" ? "hidden" : "visible",
+        }}
+      >
+        {errorMessage}
+      </p>
       <div className={"dropdown is-active"}>
         <div className="dropdown-menu" id="dropdown-menu" role="menu">
           {clusterCandidates.length >= 1 && (
@@ -91,22 +98,6 @@ const Search = () => {
           )}
         </div>
       </div>
-      {/*
-      <nav className="panel">
-        <p className="panel-heading ">検索結果</p>
-        {clusterCandidates.map((data) => {
-          return (
-            <a
-              className="panel-block is-active"
-              onClick={() => clickClusterInfomation(data)}
-              key={data}
-            >
-              {data[0]}
-            </a>
-          );
-        })}
-      </nav>
-      */}
     </div>
   );
 };
