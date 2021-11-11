@@ -202,7 +202,7 @@ function D3DirectedGraph() {
         <div
           style={{
             height:
-              deviceWidth > 768 ? deviceHeight * 0.665 : deviceHeight * 0.4,
+              deviceWidth > 768 ? deviceHeight * 0.687 : deviceHeight * 0.4,
           }}
         >
           <DisplayDirectedGraph />
