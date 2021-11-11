@@ -33,15 +33,7 @@ const Search = () => {
     setSelectCluster(data[0]);
     setClusterDataUrl(data[1]);
     setInputTag("");
-
-    const target = selectedNode.label;
-    setSelectTagData([target, selectedNode.url]);
-    const data = articleData.filter((item) => item.type === target);
-    setDisplayArticle(data);
-    const childNodes = selectedNode.childNodes.slice();
-    childNodes.push(selectedNode.id);
-    setSelectChildNodes(childNodes);
-    setClickCount(wordsData[target]["clickCount"]);
+    setSearchTag(inputTag);
   };
 
   const handleClick = (inputTag) => {
