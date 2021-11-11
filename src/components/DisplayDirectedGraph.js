@@ -9,6 +9,7 @@ import {
   articleDataState,
   selectedChildNodesState,
   preClickNodeState,
+  selectTagDataState,
 } from "../atom";
 import { useState } from "react";
 
@@ -36,9 +37,10 @@ function D3DirectedGraph() {
     "rgb(128, 255, 191)",
   ];
   const wordsData = JSON.parse(localStorage["wordsData"]);
-
+  const [selectTagData, setSelectTagData] = useRecoilState(selectTagDataState);
   function clickNode(selectedNode) {
     const target = selectedNode.label;
+    setSelectTagData([target, selectedNode.url]);
     const data = articleData.filter((item) => item.type === target);
     setDisplayArticle(data);
     const childNodes = selectedNode.childNodes.slice();
