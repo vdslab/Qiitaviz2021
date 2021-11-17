@@ -1,4 +1,5 @@
 import "bulma/css/bulma.css";
+import { cluster } from "d3-hierarchy";
 import { useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
@@ -14,26 +15,47 @@ const Search = () => {
   const [clusterDataUrl, setClusterDataUrl] =
     useRecoilState(clusterDataUrlState);
   const [searchTag, setSearchTag] = useRecoilState(searchTagState);
+  const [clusterCandidates, setClusterCandidates] = useState([]);
+  const [panelFlag, setPanelFlag] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("　");
+  const [inputTag, setInputTag] = useState("");
 
   const handleChange = (e) => {
+    setClusterCandidates([]);
+    setPanelFlag(false);
+    setErrorMessage("　");
     setInputTag(e.target.value);
   };
+
+  const clickClusterInfomation = (data) => {
+    setPanelFlag(false);
+    setClusterCandidates([]);
+    setSelectCluster(data[0]);
+    setClusterDataUrl(data[1]);
+    setInputTag("");
+    setSearchTag(inputTag);
+  };
+
   const handleClick = (inputTag) => {
     tagListData.map((data, i) => {
       if (data.includes(inputTag)) {
-        setClusterDataUrl(
+        clusterCandidates.push([
+          "cluster" + (i + 1),
           process.env.PUBLIC_URL +
             "/data/cluster" +
             (i + 1) +
-            "_graph_data.json"
-        );
-        setSelectCluster("cluster" + (i + 1));
+            "_graph_data.json",
+        ]);
       }
     });
+    setClusterDataUrl(clusterCandidates);
     setSearchTag(inputTag);
-    setInputTag("");
+    if (clusterCandidates.length) {
+      setPanelFlag(true);
+    } else {
+      setErrorMessage("該当なし");
+    }
   };
-  const [inputTag, setInputTag] = useState("");
 
   return (
     <div className="column is-4">
@@ -46,9 +68,40 @@ const Search = () => {
           value={inputTag}
           onChange={(e) => handleChange(e)}
         />
-        <a className="button is-success" onClick={() => handleClick(inputTag)}>
+        <a
+          className="button is-success"
+          list="search"
+          onClick={() => handleClick(inputTag)}
+        >
           <i className="fa fa-search"></i>検索
         </a>
+      </div>
+      <div className="dropdown is-active">
+        <div className="dropdown-menu" id="dropdown-menu" role="menu">
+          {clusterCandidates.length >= 1 && (
+            <div className="dropdown-content">
+              {clusterCandidates.map((data) => {
+                return (
+                  <a
+                    className="dropdown-item"
+                    onClick={() => clickClusterInfomation(data)}
+                    key={data[0]}
+                  >
+                    {data[0]}
+                  </a>
+                );
+              })}
+            </div>
+          )}
+          <p
+            className="help is-danger"
+            style={{
+              visibility: errorMessage === "　" ? "hidden" : "visible",
+            }}
+          >
+            {errorMessage}
+          </p>
+        </div>
       </div>
     </div>
   );
