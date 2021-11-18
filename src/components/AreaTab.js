@@ -1,4 +1,5 @@
 import "bulma/css/bulma.css";
+import { cluster } from "d3-hierarchy";
 import { useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
@@ -18,6 +19,7 @@ function AreaTab() {
     setClusterDataUrl(url);
     setSelectCluster(selectedCluster);
   };
+
   return (
     <div className="column is-2">
       <div
@@ -95,6 +97,20 @@ function AreaTab() {
               }
             >
               cluster4
+            </a>
+            <a
+              className="dropdown-item"
+              onClick={() =>
+                setDataUrl(
+                  process.env.PUBLIC_URL +
+                    "/data/" +
+                    selectSystem +
+                    "/cluster5_graph_data.json",
+                  "cluster5"
+                )
+              }
+            >
+              cluster5
             </a>
           </div>
         </div>

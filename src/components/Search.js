@@ -6,6 +6,8 @@ import {
   clusterDataUrlState,
   searchTagState,
   selectClusterState,
+  selectSystemState,
+  selectTagDataState,
   tagListDataState,
 } from "../atom";
 
@@ -14,11 +16,13 @@ const Search = () => {
   const [tagListData, setTagListData] = useRecoilState(tagListDataState);
   const [clusterDataUrl, setClusterDataUrl] =
     useRecoilState(clusterDataUrlState);
+  const [selectTagData, setSelectTagData] = useRecoilState(selectTagDataState);
   const [searchTag, setSearchTag] = useRecoilState(searchTagState);
   const [clusterCandidates, setClusterCandidates] = useState([]);
   const [panelFlag, setPanelFlag] = useState(false);
   const [errorMessage, setErrorMessage] = useState("　");
   const [inputTag, setInputTag] = useState("");
+  const [selectSystem, setSelectSystem] = useRecoilState(selectSystemState);
 
   const handleChange = (e) => {
     setClusterCandidates([]);
@@ -28,10 +32,16 @@ const Search = () => {
   };
 
   const clickClusterInfomation = (data) => {
+    const tagUrl =
+      inputTag[0] === "#"
+        ? "https://qiita.com/tags/%23" + inputTag.substr(1).toLowerCase()
+        : "https://qiita.com/tags/" + inputTag.toLowerCase();
     setPanelFlag(false);
     setClusterCandidates([]);
     setSelectCluster(data[0]);
     setClusterDataUrl(data[1]);
+    setSelectTagData([inputTag, tagUrl]);
+    console.log(inputTag, selectTagData);
     setInputTag("");
     setSearchTag(inputTag);
   };
@@ -42,7 +52,9 @@ const Search = () => {
         clusterCandidates.push([
           "cluster" + (i + 1),
           process.env.PUBLIC_URL +
-            "/data/cluster" +
+            "/data/" +
+            selectSystem +
+            "/cluster" +
             (i + 1) +
             "_graph_data.json",
         ]);
