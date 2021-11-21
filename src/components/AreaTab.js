@@ -98,20 +98,6 @@ function AreaTab() {
             >
               cluster4
             </a>
-            <a
-              className="dropdown-item"
-              onClick={() =>
-                setDataUrl(
-                  process.env.PUBLIC_URL +
-                    "/data/" +
-                    selectSystem +
-                    "/cluster5_graph_data.json",
-                  "cluster5"
-                )
-              }
-            >
-              cluster5
-            </a>
           </div>
         </div>
       </div>
