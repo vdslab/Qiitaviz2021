@@ -37,7 +37,7 @@ export const searchTagState = atom({
 
 export const selectClusterState = atom({
   key: "selectClusterState",
-  default: "cluster1",
+  default: "アプリケーション開発",
 });
 
 export const displayArticleState = atom({
