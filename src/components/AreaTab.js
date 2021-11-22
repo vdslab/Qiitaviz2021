@@ -50,7 +50,7 @@ function AreaTab() {
                     "/data/" +
                     selectSystem +
                     "/cluster1_graph_data.json",
-                  "cluster1"
+                  "アプリケーション開発"
                 )
               }
             >
@@ -64,7 +64,7 @@ function AreaTab() {
                     "/data/" +
                     selectSystem +
                     "/cluster2_graph_data.json",
-                  "cluster2"
+                  "フロントエンド"
                 )
               }
             >
@@ -78,7 +78,7 @@ function AreaTab() {
                     "/data/" +
                     selectSystem +
                     "/cluster3_graph_data.json",
-                  "cluster3"
+                  "データサイエンス"
                 )
               }
             >
@@ -92,7 +92,7 @@ function AreaTab() {
                     "/data/" +
                     selectSystem +
                     "/cluster4_graph_data.json",
-                  "cluster4"
+                  "開発環境"
                 )
               }
             >
