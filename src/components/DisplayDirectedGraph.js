@@ -31,6 +31,7 @@ function D3DirectedGraph() {
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
   const svgWidth = deviceWidth > 768 ? deviceWidth * 0.66 : deviceWidth * 0.9;
   const svgHeight = deviceWidth > 768 ? deviceHeight * 0.7 : deviceHeight * 0.3;
+  // 星の色にしてほしい
   const colorList = [
     "rgb(255, 255, 255)",
     "rgb(255, 255, 205)",
@@ -38,6 +39,7 @@ function D3DirectedGraph() {
   ];
   const wordsData = JSON.parse(localStorage["wordsData"]);
   const [selectTagData, setSelectTagData] = useRecoilState(selectTagDataState);
+  // これを参考に星をクリックしたときに色を変えられるようにしてほしい
   function clickNode(selectedNode) {
     const target = selectedNode.label;
     setSelectTagData([target, selectedNode.url]);
@@ -46,6 +48,7 @@ function D3DirectedGraph() {
     const childNodes = selectedNode.childNodes.slice();
     childNodes.push(selectedNode.id);
     setSelectChildNodes(childNodes);
+    // 多分この辺を切り取って使う、読んでください
     setClickCount(wordsData[target]["clickCount"]);
     // 直前にクリックしたノードと同じか判定
     if (preClickNode !== target) {
