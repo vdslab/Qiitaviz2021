@@ -117,7 +117,7 @@ function D3DirectedGraph() {
         tagData.map((tags) => {
           tags.map((tag) => {
             wordsData[tag] =
-              tag in wordsData
+              wordsData[tag] !== undefined
                 ? wordsData[tag]
                 : { clickCount: 0, clickFlag: false };
           });

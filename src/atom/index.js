@@ -2,7 +2,7 @@ import { atom } from "recoil";
 
 export const clusterDataUrlState = atom({
   key: "clusterDataUrlState",
-  default: process.env.PUBLIC_URL + "/data/cluster1_graph_data.json",
+  default: process.env.PUBLIC_URL + "/data/system1/cluster1_graph_data.json",
 });
 
 export const tagListDataState = atom({
