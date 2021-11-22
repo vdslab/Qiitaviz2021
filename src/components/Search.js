@@ -45,12 +45,17 @@ const Search = () => {
     setInputTag("");
     setSearchTag(inputTag);
   };
-
+  const areaName = [
+    "アプリケーション開発",
+    "フロントエンド",
+    "データサイエンス",
+    "開発環境",
+  ];
   const handleClick = (inputTag) => {
     tagListData.map((data, i) => {
       if (data.includes(inputTag)) {
         clusterCandidates.push([
-          "cluster" + (i + 1),
+          areaName[i],
           process.env.PUBLIC_URL +
             "/data/" +
             selectSystem +
