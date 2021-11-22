@@ -54,7 +54,7 @@ function AreaTab() {
                 )
               }
             >
-              cluster1
+              アプリケーション開発
             </a>
             <a
               className="dropdown-item"
@@ -68,7 +68,7 @@ function AreaTab() {
                 )
               }
             >
-              cluster2
+              フロントエンド
             </a>
             <a
               className="dropdown-item"
@@ -82,7 +82,7 @@ function AreaTab() {
                 )
               }
             >
-              cluster3
+              データサイエンス
             </a>
             <a
               className="dropdown-item"
@@ -96,7 +96,7 @@ function AreaTab() {
                 )
               }
             >
-              cluster4
+              開発環境
             </a>
           </div>
         </div>
