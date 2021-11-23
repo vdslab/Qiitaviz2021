@@ -1,99 +1,783 @@
 [
   {
-    "nodeName": "Python",
-    "diff": 38.36309523809523,
-    "ID": 1,
-    "url": "https://qiita.com/tags/python",
+    "nodeName": "どう書く",
+    "diff": 10.642857142857142,
+    "ID": 117,
+    "url": "https://qiita.com/tags/どう書く",
     "childNode": [
-      93
+      63
     ],
-    "level": 4
+    "level": 0,
+    "color_group": 0
   },
   {
-    "nodeName": "iOS",
-    "diff": 38.20833333333333,
-    "ID": 2,
-    "url": "https://qiita.com/tags/ios",
+    "nodeName": "scikit-learn",
+    "diff": 11.470238095238095,
+    "ID": 121,
+    "url": "https://qiita.com/tags/scikit-learn",
+    "childNode": [
+      86,
+      158
+    ],
+    "level": 1,
+    "color_group": 0
+  },
+  {
+    "nodeName": "Spark",
+    "diff": 13.125,
+    "ID": 155,
+    "url": "https://qiita.com/tags/spark",
+    "childNode": [
+      111,
+      50
+    ],
+    "level": 2,
+    "color_group": 0
+  },
+  {
+    "nodeName": "勉強会",
+    "diff": 14.327380952380949,
+    "ID": 128,
+    "url": "https://qiita.com/tags/勉強会",
+    "childNode": [
+      11
+    ],
+    "level": 2,
+    "color_group": 0
+  },
+  {
+    "nodeName": "スクレイピング",
+    "diff": 14.386904761904766,
+    "ID": 80,
+    "url": "https://qiita.com/tags/スクレイピング",
+    "childNode": [
+      29,
+      41,
+      64
+    ],
+    "level": 0,
+    "color_group": 0
+  },
+  {
+    "nodeName": "数学",
+    "diff": 14.398809523809526,
+    "ID": 48,
+    "url": "https://qiita.com/tags/数学",
+    "childNode": [
+      6
+    ],
+    "level": 0,
+    "color_group": 0
+  },
+  {
+    "nodeName": "自動化",
+    "diff": 14.833333333333332,
+    "ID": 151,
+    "url": "https://qiita.com/tags/自動化",
+    "childNode": [
+      106
+    ],
+    "level": 0,
+    "color_group": 0
+  },
+  {
+    "nodeName": "processing",
+    "diff": 14.88690476190476,
+    "ID": 143,
+    "url": "https://qiita.com/tags/processing",
+    "childNode": [
+      109
+    ],
+    "level": 0,
+    "color_group": 0
+  },
+  {
+    "nodeName": "matlab",
+    "diff": 15.041666666666666,
+    "ID": 134,
+    "url": "https://qiita.com/tags/matlab",
+    "childNode": [
+      9
+    ],
+    "level": 2,
+    "color_group": 0
+  },
+  {
+    "nodeName": "pandas",
+    "diff": 15.095238095238095,
+    "ID": 43,
+    "url": "https://qiita.com/tags/pandas",
+    "childNode": [
+      75,
+      72
+    ],
+    "level": 2,
+    "color_group": 0
+  },
+  {
+    "nodeName": "ディープラーニング",
+    "diff": 15.119047619047619,
+    "ID": 133,
+    "url": "https://qiita.com/tags/ディープラーニング",
+    "childNode": [
+      93,
+      129
+    ],
+    "level": 4,
+    "color_group": 0
+  },
+  {
+    "nodeName": "ActiveRecord",
+    "diff": 15.196428571428571,
+    "ID": 148,
+    "url": "https://qiita.com/tags/activerecord",
+    "childNode": [
+      16,
+      141
+    ],
+    "level": 1,
+    "color_group": 0
+  },
+  {
+    "nodeName": "SoftLayer",
+    "diff": 15.214285714285715,
+    "ID": 159,
+    "url": "https://qiita.com/tags/softlayer",
+    "childNode": [
+      137
+    ],
+    "level": 1,
+    "color_group": 0
+  },
+  {
+    "nodeName": "DDD",
+    "diff": 15.226190476190473,
+    "ID": 161,
+    "url": "https://qiita.com/tags/ddd",
+    "childNode": [
+      99
+    ],
+    "level": 1,
+    "color_group": 0
+  },
+  {
+    "nodeName": "正規表現",
+    "diff": 15.36904761904762,
+    "ID": 83,
+    "url": "https://qiita.com/tags/正規表現",
+    "childNode": [
+      35
+    ],
+    "level": 1,
+    "color_group": 0
+  },
+  {
+    "nodeName": "資格",
+    "diff": 15.404761904761902,
+    "ID": 132,
+    "url": "https://qiita.com/tags/資格",
+    "childNode": [
+      27
+    ],
+    "level": 2,
+    "color_group": 0
+  },
+  {
+    "nodeName": "SSL",
+    "diff": 15.434523809523807,
+    "ID": 101,
+    "url": "https://qiita.com/tags/ssl",
+    "childNode": [
+      52
+    ],
+    "level": 1,
+    "color_group": 0
+  },
+  {
+    "nodeName": "CTF",
+    "diff": 15.43452380952381,
+    "ID": 116,
+    "url": "https://qiita.com/tags/ctf",
+    "childNode": [
+      96,
+      38,
+      152
+    ],
+    "level": 1,
+    "color_group": 0
+  },
+  {
+    "nodeName": "Excel",
+    "diff": 15.595238095238095,
+    "ID": 27,
+    "url": "https://qiita.com/tags/excel",
+    "childNode": [
+      36,
+      81,
+      1,
+      130,
+      126
+    ],
+    "level": 3,
+    "color_group": 0
+  },
+  {
+    "nodeName": "android開発",
+    "diff": 15.595238095238095,
+    "ID": 146,
+    "url": "https://qiita.com/tags/android開発",
+    "childNode": [
+      14
+    ],
+    "level": 3,
+    "color_group": 0
+  },
+  {
+    "nodeName": "numpy",
+    "diff": 15.797619047619047,
+    "ID": 66,
+    "url": "https://qiita.com/tags/numpy",
+    "childNode": [
+      104,
+      42
+    ],
+    "level": 1,
+    "color_group": 0
+  },
+  {
+    "nodeName": "oraclecloud",
+    "diff": 15.851190476190474,
+    "ID": 145,
+    "url": "https://qiita.com/tags/oraclecloud",
+    "childNode": [
+      99
+    ],
+    "level": 1,
+    "color_group": 0
+  },
+  {
+    "nodeName": "オブジェクト指向",
+    "diff": 16.13095238095238,
+    "ID": 82,
+    "url": "https://qiita.com/tags/オブジェクト指向",
+    "childNode": [
+      46
+    ],
+    "level": 0,
+    "color_group": 0
+  },
+  {
+    "nodeName": ".netcore",
+    "diff": 16.142857142857142,
+    "ID": 168,
+    "url": "https://qiita.com/tags/.netcore",
+    "childNode": [
+      18
+    ],
+    "level": 4,
+    "color_group": 0
+  },
+  {
+    "nodeName": "Alexa",
+    "diff": 16.369047619047617,
+    "ID": 139,
+    "url": "https://qiita.com/tags/alexa",
+    "childNode": [
+      17
+    ],
+    "level": 3,
+    "color_group": 0
+  },
+  {
+    "nodeName": "Swift4",
+    "diff": 16.42261904761905,
+    "ID": 162,
+    "url": "https://qiita.com/tags/swift4",
+    "childNode": [
+      88,
+      76
+    ],
+    "level": 2,
+    "color_group": 0
+  },
+  {
+    "nodeName": "oci",
+    "diff": 16.50595238095238,
+    "ID": 154,
+    "url": "https://qiita.com/tags/oci",
+    "childNode": [
+      25
+    ],
+    "level": 3,
+    "color_group": 0
+  },
+  {
+    "nodeName": "UI",
+    "diff": 16.630952380952383,
+    "ID": 111,
+    "url": "https://qiita.com/tags/ui",
+    "childNode": [
+      70
+    ],
+    "level": 3,
+    "color_group": 0
+  },
+  {
+    "nodeName": "画像処理",
+    "diff": 16.892857142857142,
+    "ID": 86,
+    "url": "https://qiita.com/tags/画像処理",
+    "childNode": [
+      79,
+      11
+    ],
+    "level": 2,
+    "color_group": 0
+  },
+  {
+    "nodeName": "zabbix",
+    "diff": 17.071428571428577,
+    "ID": 136,
+    "url": "https://qiita.com/tags/zabbix",
+    "childNode": [
+      5
+    ],
+    "level": 3,
+    "color_group": 0
+  },
+  {
+    "nodeName": "Dart",
+    "diff": 17.095238095238095,
+    "ID": 70,
+    "url": "https://qiita.com/tags/dart",
+    "childNode": [
+      57
+    ],
+    "level": 4,
+    "color_group": 0
+  },
+  {
+    "nodeName": "spring",
+    "diff": 17.2797619047619,
+    "ID": 75,
+    "url": "https://qiita.com/tags/spring",
+    "childNode": [
+      21
+    ],
+    "level": 3,
+    "color_group": 0
+  },
+  {
+    "nodeName": "SQLServer",
+    "diff": 17.44047619047619,
+    "ID": 102,
+    "url": "https://qiita.com/tags/sqlserver",
+    "childNode": [
+      4
+    ],
+    "level": 3,
+    "color_group": 0
+  },
+  {
+    "nodeName": "統計学",
+    "diff": 17.78571428571429,
+    "ID": 97,
+    "url": "https://qiita.com/tags/統計学",
+    "childNode": [
+      65
+    ],
+    "level": 0,
+    "color_group": 0
+  },
+  {
+    "nodeName": "AtCoder",
+    "diff": 17.85119047619047,
+    "ID": 30,
+    "url": "https://qiita.com/tags/atcoder",
+    "childNode": [
+      16,
+      78
+    ],
+    "level": 1,
+    "color_group": 1
+  },
+  {
+    "nodeName": "R",
+    "diff": 18.119047619047617,
+    "ID": 21,
+    "url": "https://qiita.com/tags/r",
+    "childNode": [
+      2
+    ],
+    "level": 4,
+    "color_group": 1
+  },
+  {
+    "nodeName": "SwiftUI",
+    "diff": 18.124999999999996,
+    "ID": 135,
+    "url": "https://qiita.com/tags/swiftui",
+    "childNode": [
+      72
+    ],
+    "level": 2,
+    "color_group": 1
+  },
+  {
+    "nodeName": "pip",
+    "diff": 18.279761904761905,
+    "ID": 157,
+    "url": "https://qiita.com/tags/pip",
+    "childNode": [
+      50
+    ],
+    "level": 2,
+    "color_group": 1
+  },
+  {
+    "nodeName": "ExcelVBA",
+    "diff": 18.416666666666664,
+    "ID": 150,
+    "url": "https://qiita.com/tags/excelvba",
+    "childNode": [
+      20
+    ],
+    "level": 4,
+    "color_group": 1
+  },
+  {
+    "nodeName": "CSV",
+    "diff": 18.863095238095237,
+    "ID": 96,
+    "url": "https://qiita.com/tags/csv",
     "childNode": [],
-    "level": 5
+    "level": 2,
+    "color_group": 1
   },
   {
-    "nodeName": "Java",
-    "diff": 42.11309523809524,
-    "ID": 3,
-    "url": "https://qiita.com/tags/java",
+    "nodeName": "#migrated",
+    "diff": 18.886904761904766,
+    "ID": 23,
+    "url": "https://qiita.com/tags/%23migrated",
+    "childNode": [
+      47,
+      6,
+      7
+    ],
+    "level": 0,
+    "color_group": 1
+  },
+  {
+    "nodeName": "テスト",
+    "diff": 18.886904761904766,
+    "ID": 89,
+    "url": "https://qiita.com/tags/テスト",
+    "childNode": [
+      46
+    ],
+    "level": 0,
+    "color_group": 1
+  },
+  {
+    "nodeName": "gradle",
+    "diff": 19.416666666666664,
+    "ID": 84,
+    "url": "https://qiita.com/tags/gradle",
+    "childNode": [
+      12
+    ],
+    "level": 3,
+    "color_group": 1
+  },
+  {
+    "nodeName": "アルゴリズム",
+    "diff": 19.71428571428571,
+    "ID": 51,
+    "url": "https://qiita.com/tags/アルゴリズム",
+    "childNode": [
+      130
+    ],
+    "level": 3,
+    "color_group": 1
+  },
+  {
+    "nodeName": "Ethereum",
+    "diff": 19.726190476190478,
+    "ID": 95,
+    "url": "https://qiita.com/tags/ethereum",
+    "childNode": [
+      64
+    ],
+    "level": 0,
+    "color_group": 1
+  },
+  {
+    "nodeName": "matplotlib",
+    "diff": 19.738095238095237,
+    "ID": 68,
+    "url": "https://qiita.com/tags/matplotlib",
+    "childNode": [
+      39,
+      119
+    ],
+    "level": 1,
+    "color_group": 1
+  },
+  {
+    "nodeName": "raspbian",
+    "diff": 20.136904761904756,
+    "ID": 129,
+    "url": "https://qiita.com/tags/raspbian",
+    "childNode": [
+      167
+    ],
+    "level": 5,
+    "color_group": 1
+  },
+  {
+    "nodeName": "Keras",
+    "diff": 20.160714285714285,
+    "ID": 57,
+    "url": "https://qiita.com/tags/keras",
     "childNode": [],
-    "level": 5
+    "level": 5,
+    "color_group": 1
   },
   {
-    "nodeName": "Swift",
-    "diff": 37.55952380952381,
-    "ID": 4,
-    "url": "https://qiita.com/tags/swift",
+    "nodeName": "自然言語処理",
+    "diff": 20.434523809523803,
+    "ID": 63,
+    "url": "https://qiita.com/tags/自然言語処理",
     "childNode": [
-      3
+      7
     ],
-    "level": 4
+    "level": 0,
+    "color_group": 1
   },
   {
-    "nodeName": "Android",
-    "diff": 38.7797619047619,
-    "ID": 5,
-    "url": "https://qiita.com/tags/android",
-    "childNode": [
-      54
-    ],
-    "level": 4
-  },
-  {
-    "nodeName": "Python3",
-    "diff": 30.464285714285715,
-    "ID": 6,
-    "url": "https://qiita.com/tags/python3",
-    "childNode": [
-      24
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "C#",
-    "diff": 28.330357142857146,
-    "ID": 7,
-    "url": "https://qiita.com/tags/c#",
+    "nodeName": "ネットワーク",
+    "diff": 20.529761904761905,
+    "ID": 125,
+    "url": "https://qiita.com/tags/ネットワーク",
     "childNode": [
       42
     ],
-    "level": 1
+    "level": 1,
+    "color_group": 1
   },
   {
-    "nodeName": "Unity",
-    "diff": 34.77380952380952,
-    "ID": 8,
-    "url": "https://qiita.com/tags/unity",
+    "nodeName": "LaTeX",
+    "diff": 20.541666666666664,
+    "ID": 113,
+    "url": "https://qiita.com/tags/latex",
     "childNode": [
-      12
+      59,
+      36
     ],
-    "level": 3
+    "level": 3,
+    "color_group": 1
   },
   {
-    "nodeName": "Go",
-    "diff": 35.73214285714286,
-    "ID": 9,
-    "url": "https://qiita.com/tags/go",
+    "nodeName": "error",
+    "diff": 20.541666666666664,
+    "ID": 140,
+    "url": "https://qiita.com/tags/error",
     "childNode": [
-      12
+      19
     ],
-    "level": 3
+    "level": 0,
+    "color_group": 1
   },
   {
-    "nodeName": "機械学習",
-    "diff": 28.11904761904762,
-    "ID": 10,
-    "url": "https://qiita.com/tags/機械学習",
+    "nodeName": "Julia",
+    "diff": 20.91071428571429,
+    "ID": 126,
+    "url": "https://qiita.com/tags/julia",
+    "childNode": [],
+    "level": 4,
+    "color_group": 1
+  },
+  {
+    "nodeName": "設計",
+    "diff": 21.086309523809526,
+    "ID": 165,
+    "url": "https://qiita.com/tags/設計",
     "childNode": [
-      8
+      77
     ],
-    "level": 2
+    "level": 2,
+    "color_group": 1
+  },
+  {
+    "nodeName": "Maven",
+    "diff": 21.142857142857142,
+    "ID": 158,
+    "url": "https://qiita.com/tags/maven",
+    "childNode": [],
+    "level": 2,
+    "color_group": 1
+  },
+  {
+    "nodeName": "Perl",
+    "diff": 21.261904761904766,
+    "ID": 71,
+    "url": "https://qiita.com/tags/perl",
+    "childNode": [
+      9
+    ],
+    "level": 2,
+    "color_group": 1
+  },
+  {
+    "nodeName": "LINEmessagingAPI",
+    "diff": 21.351190476190478,
+    "ID": 163,
+    "url": "https://qiita.com/tags/linemessagingapi",
+    "childNode": [
+      110,
+      4
+    ],
+    "level": 3,
+    "color_group": 1
+  },
+  {
+    "nodeName": "gcp",
+    "diff": 21.416666666666664,
+    "ID": 29,
+    "url": "https://qiita.com/tags/gcp",
+    "childNode": [
+      55
+    ],
+    "level": 1,
+    "color_group": 1
+  },
+  {
+    "nodeName": "GoogleSpreadSheet",
+    "diff": 21.43452380952381,
+    "ID": 110,
+    "url": "https://qiita.com/tags/googlespreadsheet",
+    "childNode": [],
+    "level": 4,
+    "color_group": 1
+  },
+  {
+    "nodeName": "PDF",
+    "diff": 21.69047619047619,
+    "ID": 167,
+    "url": "https://qiita.com/tags/pdf",
+    "childNode": [],
+    "level": 6,
+    "color_group": 1
+  },
+  {
+    "nodeName": "Elixir",
+    "diff": 21.7797619047619,
+    "ID": 46,
+    "url": "https://qiita.com/tags/elixir",
+    "childNode": [
+      35
+    ],
+    "level": 1,
+    "color_group": 1
+  },
+  {
+    "nodeName": "Anaconda",
+    "diff": 22.089285714285715,
+    "ID": 87,
+    "url": "https://qiita.com/tags/anaconda",
+    "childNode": [
+      85
+    ],
+    "level": 1,
+    "color_group": 1
+  },
+  {
+    "nodeName": "Objective-C",
+    "diff": 22.166666666666668,
+    "ID": 22,
+    "url": "https://qiita.com/tags/objective-c",
+    "childNode": [
+      7
+    ],
+    "level": 0,
+    "color_group": 1
+  },
+  {
+    "nodeName": "ROS",
+    "diff": 22.517857142857142,
+    "ID": 90,
+    "url": "https://qiita.com/tags/ros",
+    "childNode": [
+      47
+    ],
+    "level": 0,
+    "color_group": 1
+  },
+  {
+    "nodeName": "NLP",
+    "diff": 22.547619047619044,
+    "ID": 137,
+    "url": "https://qiita.com/tags/nlp",
+    "childNode": [
+      69
+    ],
+    "level": 2,
+    "color_group": 1
+  },
+  {
+    "nodeName": "BigQuery",
+    "diff": 22.61309523809524,
+    "ID": 104,
+    "url": "https://qiita.com/tags/bigquery",
+    "childNode": [],
+    "level": 2,
+    "color_group": 1
+  },
+  {
+    "nodeName": "電子工作",
+    "diff": 22.654761904761898,
+    "ID": 103,
+    "url": "https://qiita.com/tags/電子工作",
+    "childNode": [
+      85,
+      100
+    ],
+    "level": 1,
+    "color_group": 1
+  },
+  {
+    "nodeName": "C言語",
+    "diff": 22.720238095238095,
+    "ID": 164,
+    "url": "https://qiita.com/tags/c言語",
+    "childNode": [
+      6
+    ],
+    "level": 0,
+    "color_group": 1
+  },
+  {
+    "nodeName": "Qiita",
+    "diff": 22.73214285714286,
+    "ID": 45,
+    "url": "https://qiita.com/tags/qiita",
+    "childNode": [
+      124
+    ],
+    "level": 0,
+    "color_group": 2
+  },
+  {
+    "nodeName": "Salesforce",
+    "diff": 22.744047619047617,
+    "ID": 58,
+    "url": "https://qiita.com/tags/salesforce",
+    "childNode": [
+      7,
+      73
+    ],
+    "level": 0,
+    "color_group": 2
   },
   {
     "nodeName": "C++",
@@ -108,139 +792,389 @@
       149,
       147
     ],
-    "level": 3
+    "level": 3,
+    "color_group": 2
   },
   {
-    "nodeName": "Xcode",
-    "diff": 39.5,
-    "ID": 12,
-    "url": "https://qiita.com/tags/xcode",
-    "childNode": [],
-    "level": 4
-  },
-  {
-    "nodeName": "RaspberryPi",
-    "diff": 81.65476190476191,
-    "ID": 13,
-    "url": "https://qiita.com/tags/raspberrypi",
-    "childNode": [],
-    "level": 3
-  },
-  {
-    "nodeName": "DeepLearning",
-    "diff": 32.41666666666667,
-    "ID": 14,
-    "url": "https://qiita.com/tags/deeplearning",
+    "nodeName": "深層学習",
+    "diff": 23.178571428571423,
+    "ID": 94,
+    "url": "https://qiita.com/tags/深層学習",
     "childNode": [
-      2,
-      54
+      5
     ],
-    "level": 4
+    "level": 3,
+    "color_group": 2
   },
   {
-    "nodeName": "Kotlin",
-    "diff": 32.5654761904762,
-    "ID": 15,
-    "url": "https://qiita.com/tags/kotlin",
+    "nodeName": "競技プログラミング",
+    "diff": 23.28571428571429,
+    "ID": 40,
+    "url": "https://qiita.com/tags/競技プログラミング",
+    "childNode": [
+      12
+    ],
+    "level": 3,
+    "color_group": 2
+  },
+  {
+    "nodeName": "node-red",
+    "diff": 23.291666666666668,
+    "ID": 109,
+    "url": "https://qiita.com/tags/node-red",
+    "childNode": [
+      100
+    ],
+    "level": 1,
+    "color_group": 2
+  },
+  {
+    "nodeName": "bot",
+    "diff": 23.29166666666667,
+    "ID": 141,
+    "url": "https://qiita.com/tags/bot",
+    "childNode": [],
+    "level": 2,
+    "color_group": 2
+  },
+  {
+    "nodeName": "UE4",
+    "diff": 23.363095238095237,
+    "ID": 92,
+    "url": "https://qiita.com/tags/ue4",
+    "childNode": [],
+    "level": 4,
+    "color_group": 2
+  },
+  {
+    "nodeName": "google",
+    "diff": 23.38095238095238,
+    "ID": 85,
+    "url": "https://qiita.com/tags/google",
+    "childNode": [
+      69
+    ],
+    "level": 2,
+    "color_group": 2
+  },
+  {
+    "nodeName": "devise",
+    "diff": 23.601190476190478,
+    "ID": 120,
+    "url": "https://qiita.com/tags/devise",
+    "childNode": [
+      38
+    ],
+    "level": 1,
+    "color_group": 2
+  },
+  {
+    "nodeName": "Database",
+    "diff": 23.60714285714286,
+    "ID": 114,
+    "url": "https://qiita.com/tags/database",
+    "childNode": [
+      50
+    ],
+    "level": 2,
+    "color_group": 2
+  },
+  {
+    "nodeName": "gas",
+    "diff": 23.624999999999996,
+    "ID": 56,
+    "url": "https://qiita.com/tags/gas",
+    "childNode": [
+      59
+    ],
+    "level": 3,
+    "color_group": 2
+  },
+  {
+    "nodeName": "TechEnglish",
+    "diff": 23.821428571428573,
+    "ID": 153,
+    "url": "https://qiita.com/tags/techenglish",
+    "childNode": [
+      5
+    ],
+    "level": 3,
+    "color_group": 2
+  },
+  {
+    "nodeName": "ポエム",
+    "diff": 23.863095238095237,
+    "ID": 36,
+    "url": "https://qiita.com/tags/ポエム",
+    "childNode": [],
+    "level": 4,
+    "color_group": 2
+  },
+  {
+    "nodeName": "cppBuilder",
+    "diff": 23.875,
+    "ID": 131,
+    "url": "https://qiita.com/tags/cppbuilder",
+    "childNode": [
+      93
+    ],
+    "level": 4,
+    "color_group": 2
+  },
+  {
+    "nodeName": "デザインパターン",
+    "diff": 23.97619047619047,
+    "ID": 119,
+    "url": "https://qiita.com/tags/デザインパターン",
+    "childNode": [],
+    "level": 2,
+    "color_group": 2
+  },
+  {
+    "nodeName": "RPA",
+    "diff": 24.148809523809522,
+    "ID": 98,
+    "url": "https://qiita.com/tags/rpa",
+    "childNode": [
+      14
+    ],
+    "level": 3,
+    "color_group": 2
+  },
+  {
+    "nodeName": "Redis",
+    "diff": 24.404761904761905,
+    "ID": 108,
+    "url": "https://qiita.com/tags/redis",
+    "childNode": [
+      31
+    ],
+    "level": 2,
+    "color_group": 2
+  },
+  {
+    "nodeName": "Blockchain",
+    "diff": 24.410714285714285,
+    "ID": 74,
+    "url": "https://qiita.com/tags/blockchain",
+    "childNode": [
+      65
+    ],
+    "level": 0,
+    "color_group": 2
+  },
+  {
+    "nodeName": "データベース",
+    "diff": 24.476190476190474,
+    "ID": 160,
+    "url": "https://qiita.com/tags/データベース",
+    "childNode": [
+      6
+    ],
+    "level": 0,
+    "color_group": 2
+  },
+  {
+    "nodeName": "DB",
+    "diff": 24.809523809523814,
+    "ID": 99,
+    "url": "https://qiita.com/tags/db",
+    "childNode": [
+      9
+    ],
+    "level": 2,
+    "color_group": 2
+  },
+  {
+    "nodeName": "Selenium",
+    "diff": 24.952380952380953,
+    "ID": 60,
+    "url": "https://qiita.com/tags/selenium",
+    "childNode": [
+      5
+    ],
+    "level": 3,
+    "color_group": 2
+  },
+  {
+    "nodeName": "ゲーム制作",
+    "diff": 25.208333333333332,
+    "ID": 105,
+    "url": "https://qiita.com/tags/ゲーム制作",
+    "childNode": [
+      44
+    ],
+    "level": 1,
+    "color_group": 2
+  },
+  {
+    "nodeName": "Fluentd",
+    "diff": 25.446428571428573,
+    "ID": 152,
+    "url": "https://qiita.com/tags/fluentd",
+    "childNode": [],
+    "level": 2,
+    "color_group": 2
+  },
+  {
+    "nodeName": "Microsoft",
+    "diff": 25.648809523809522,
+    "ID": 142,
+    "url": "https://qiita.com/tags/microsoft",
+    "childNode": [
+      41
+    ],
+    "level": 0,
+    "color_group": 2
+  },
+  {
+    "nodeName": "Flask",
+    "diff": 25.76190476190476,
+    "ID": 81,
+    "url": "https://qiita.com/tags/flask",
+    "childNode": [],
+    "level": 4,
+    "color_group": 2
+  },
+  {
+    "nodeName": "WPF",
+    "diff": 26.15476190476191,
+    "ID": 106,
+    "url": "https://qiita.com/tags/wpf",
+    "childNode": [
+      19
+    ],
+    "level": 0,
+    "color_group": 2
+  },
+  {
+    "nodeName": "エンジニア",
+    "diff": 26.184523809523817,
+    "ID": 149,
+    "url": "https://qiita.com/tags/エンジニア",
+    "childNode": [],
+    "level": 4,
+    "color_group": 2
+  },
+  {
+    "nodeName": "mecab",
+    "diff": 26.2202380952381,
+    "ID": 156,
+    "url": "https://qiita.com/tags/mecab",
+    "childNode": [
+      122,
+      130
+    ],
+    "level": 3,
+    "color_group": 2
+  },
+  {
+    "nodeName": "Redmine",
+    "diff": 26.46428571428572,
+    "ID": 100,
+    "url": "https://qiita.com/tags/redmine",
+    "childNode": [],
+    "level": 2,
+    "color_group": 2
+  },
+  {
+    "nodeName": "java8",
+    "diff": 26.48214285714286,
+    "ID": 107,
+    "url": "https://qiita.com/tags/java8",
+    "childNode": [
+      76
+    ],
+    "level": 2,
+    "color_group": 2
+  },
+  {
+    "nodeName": "iPhone",
+    "diff": 26.7797619047619,
+    "ID": 49,
+    "url": "https://qiita.com/tags/iphone",
     "childNode": [
       1
     ],
-    "level": 3
+    "level": 3,
+    "color_group": 2
   },
   {
-    "nodeName": "Azure",
-    "diff": 35.3154761904762,
-    "ID": 16,
-    "url": "https://qiita.com/tags/azure",
-    "childNode": [],
-    "level": 2
-  },
-  {
-    "nodeName": "kubernetes",
-    "diff": 34.541666666666664,
-    "ID": 17,
-    "url": "https://qiita.com/tags/kubernetes",
+    "nodeName": ".net",
+    "diff": 26.803571428571427,
+    "ID": 72,
+    "url": "https://qiita.com/tags/.net",
     "childNode": [
-      18
+      12
     ],
-    "level": 4
+    "level": 3,
+    "color_group": 2
   },
   {
-    "nodeName": "Vim",
-    "diff": 38.041666666666664,
-    "ID": 18,
-    "url": "https://qiita.com/tags/vim",
-    "childNode": [],
-    "level": 5
-  },
-  {
-    "nodeName": "SQL",
-    "diff": 34.22023809523809,
-    "ID": 19,
-    "url": "https://qiita.com/tags/sql",
+    "nodeName": "spring-boot",
+    "diff": 27.380952380952376,
+    "ID": 47,
+    "url": "https://qiita.com/tags/spring-boot",
     "childNode": [
-      44,
-      39
+      53
     ],
-    "level": 1
+    "level": 1,
+    "color_group": 2
   },
   {
-    "nodeName": "Django",
-    "diff": 33.16666666666667,
-    "ID": 20,
-    "url": "https://qiita.com/tags/django",
-    "childNode": [],
-    "level": 5
-  },
-  {
-    "nodeName": "R",
-    "diff": 18.119047619047617,
-    "ID": 21,
-    "url": "https://qiita.com/tags/r",
+    "nodeName": "データ分析",
+    "diff": 27.583333333333332,
+    "ID": 65,
+    "url": "https://qiita.com/tags/データ分析",
     "childNode": [
-      2
+      33
     ],
-    "level": 4
+    "level": 1,
+    "color_group": 3
   },
   {
-    "nodeName": "Objective-C",
-    "diff": 22.166666666666668,
-    "ID": 22,
-    "url": "https://qiita.com/tags/objective-c",
+    "nodeName": "Flutter",
+    "diff": 27.88095238095238,
+    "ID": 33,
+    "url": "https://qiita.com/tags/flutter",
     "childNode": [
-      7
+      13
     ],
-    "level": 0
+    "level": 2,
+    "color_group": 3
   },
   {
-    "nodeName": "#migrated",
-    "diff": 18.886904761904766,
-    "ID": 23,
-    "url": "https://qiita.com/tags/%23migrated",
+    "nodeName": "機械学習",
+    "diff": 28.11904761904762,
+    "ID": 10,
+    "url": "https://qiita.com/tags/機械学習",
     "childNode": [
-      47,
-      6,
-      7
+      8
     ],
-    "level": 0
+    "level": 2,
+    "color_group": 3
   },
   {
-    "nodeName": "Slack",
-    "diff": 32.61309523809524,
-    "ID": 24,
-    "url": "https://qiita.com/tags/slack",
-    "childNode": [],
-    "level": 2
-  },
-  {
-    "nodeName": "TensorFlow",
-    "diff": 33.857142857142854,
-    "ID": 25,
-    "url": "https://qiita.com/tags/tensorflow",
+    "nodeName": "Unity3D",
+    "diff": 28.267857142857146,
+    "ID": 88,
+    "url": "https://qiita.com/tags/unity3d",
     "childNode": [
-      2
+      122
     ],
-    "level": 4
+    "level": 3,
+    "color_group": 3
+  },
+  {
+    "nodeName": "C#",
+    "diff": 28.330357142857146,
+    "ID": 7,
+    "url": "https://qiita.com/tags/c#",
+    "childNode": [
+      42
+    ],
+    "level": 1,
+    "color_group": 3
   },
   {
     "nodeName": "C",
@@ -252,897 +1186,8 @@
       2,
       112
     ],
-    "level": 4
-  },
-  {
-    "nodeName": "Excel",
-    "diff": 15.595238095238095,
-    "ID": 27,
-    "url": "https://qiita.com/tags/excel",
-    "childNode": [
-      36,
-      81,
-      1,
-      130,
-      126
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "IoT",
-    "diff": 34.23214285714286,
-    "ID": 28,
-    "url": "https://qiita.com/tags/iot",
-    "childNode": [],
-    "level": 4
-  },
-  {
-    "nodeName": "gcp",
-    "diff": 21.416666666666664,
-    "ID": 29,
-    "url": "https://qiita.com/tags/gcp",
-    "childNode": [
-      55
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "AtCoder",
-    "diff": 17.85119047619047,
-    "ID": 30,
-    "url": "https://qiita.com/tags/atcoder",
-    "childNode": [
-      16,
-      78
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "GoogleAppsScript",
-    "diff": 32.02380952380952,
-    "ID": 31,
-    "url": "https://qiita.com/tags/googleappsscript",
-    "childNode": [
-      25,
-      67
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "Scala",
-    "diff": 31.684523809523803,
-    "ID": 32,
-    "url": "https://qiita.com/tags/scala",
-    "childNode": [
-      8
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "Flutter",
-    "diff": 27.88095238095238,
-    "ID": 33,
-    "url": "https://qiita.com/tags/flutter",
-    "childNode": [
-      13
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "Arduino",
-    "diff": 35.50595238095238,
-    "ID": 34,
-    "url": "https://qiita.com/tags/arduino",
-    "childNode": [
-      13,
-      166
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "OpenCV",
-    "diff": 52.19642857142858,
-    "ID": 35,
-    "url": "https://qiita.com/tags/opencv",
-    "childNode": [
-      13
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "ポエム",
-    "diff": 23.863095238095237,
-    "ID": 36,
-    "url": "https://qiita.com/tags/ポエム",
-    "childNode": [],
-    "level": 4
-  },
-  {
-    "nodeName": "PowerShell",
-    "diff": 31.958333333333332,
-    "ID": 37,
-    "url": "https://qiita.com/tags/powershell",
-    "childNode": [
-      2
-    ],
-    "level": 4
-  },
-  {
-    "nodeName": "MachineLearning",
-    "diff": 30.422619047619047,
-    "ID": 38,
-    "url": "https://qiita.com/tags/machinelearning",
-    "childNode": [
-      31
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "AndroidStudio",
-    "diff": 34.61904761904762,
-    "ID": 39,
-    "url": "https://qiita.com/tags/androidstudio",
-    "childNode": [
-      13
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "競技プログラミング",
-    "diff": 23.28571428571429,
-    "ID": 40,
-    "url": "https://qiita.com/tags/競技プログラミング",
-    "childNode": [
-      12
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "Rust",
-    "diff": 34.523809523809526,
-    "ID": 41,
-    "url": "https://qiita.com/tags/rust",
-    "childNode": [],
-    "level": 1
-  },
-  {
-    "nodeName": "oracle",
-    "diff": 33.601190476190474,
-    "ID": 42,
-    "url": "https://qiita.com/tags/oracle",
-    "childNode": [],
-    "level": 2
-  },
-  {
-    "nodeName": "pandas",
-    "diff": 15.095238095238095,
-    "ID": 43,
-    "url": "https://qiita.com/tags/pandas",
-    "childNode": [
-      75,
-      72
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "VBA",
-    "diff": 39.166666666666664,
-    "ID": 44,
-    "url": "https://qiita.com/tags/vba",
-    "childNode": [],
-    "level": 2
-  },
-  {
-    "nodeName": "Qiita",
-    "diff": 22.73214285714286,
-    "ID": 45,
-    "url": "https://qiita.com/tags/qiita",
-    "childNode": [
-      124
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "Elixir",
-    "diff": 21.7797619047619,
-    "ID": 46,
-    "url": "https://qiita.com/tags/elixir",
-    "childNode": [
-      35
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "spring-boot",
-    "diff": 27.380952380952376,
-    "ID": 47,
-    "url": "https://qiita.com/tags/spring-boot",
-    "childNode": [
-      53
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "数学",
-    "diff": 14.398809523809526,
-    "ID": 48,
-    "url": "https://qiita.com/tags/数学",
-    "childNode": [
-      6
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "iPhone",
-    "diff": 26.7797619047619,
-    "ID": 49,
-    "url": "https://qiita.com/tags/iphone",
-    "childNode": [
-      1
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "RSpec",
-    "diff": 32.95833333333333,
-    "ID": 50,
-    "url": "https://qiita.com/tags/rspec",
-    "childNode": [
-      4
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "アルゴリズム",
-    "diff": 19.71428571428571,
-    "ID": 51,
-    "url": "https://qiita.com/tags/アルゴリズム",
-    "childNode": [
-      130
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "GoogleCloudPlatform",
-    "diff": 28.41071428571428,
-    "ID": 52,
-    "url": "https://qiita.com/tags/googlecloudplatform",
-    "childNode": [
-      8
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "Emacs",
-    "diff": 30.916666666666675,
-    "ID": 53,
-    "url": "https://qiita.com/tags/emacs",
-    "childNode": [
-      50
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "Twitter",
-    "diff": 41.59523809523811,
-    "ID": 54,
-    "url": "https://qiita.com/tags/twitter",
-    "childNode": [],
-    "level": 5
-  },
-  {
-    "nodeName": "Haskell",
-    "diff": 28.410714285714292,
-    "ID": 55,
-    "url": "https://qiita.com/tags/haskell",
-    "childNode": [
-      166
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "gas",
-    "diff": 23.624999999999996,
-    "ID": 56,
-    "url": "https://qiita.com/tags/gas",
-    "childNode": [
-      59
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "Keras",
-    "diff": 20.160714285714285,
-    "ID": 57,
-    "url": "https://qiita.com/tags/keras",
-    "childNode": [],
-    "level": 5
-  },
-  {
-    "nodeName": "Salesforce",
-    "diff": 22.744047619047617,
-    "ID": 58,
-    "url": "https://qiita.com/tags/salesforce",
-    "childNode": [
-      7,
-      73
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "Elasticsearch",
-    "diff": 32.273809523809526,
-    "ID": 59,
-    "url": "https://qiita.com/tags/elasticsearch",
-    "childNode": [],
-    "level": 4
-  },
-  {
-    "nodeName": "Selenium",
-    "diff": 24.952380952380953,
-    "ID": 60,
-    "url": "https://qiita.com/tags/selenium",
-    "childNode": [
-      5
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "VisualStudio",
-    "diff": 32.642857142857146,
-    "ID": 61,
-    "url": "https://qiita.com/tags/visualstudio",
-    "childNode": [],
-    "level": 5
-  },
-  {
-    "nodeName": "ibmcloud",
-    "diff": 30.60119047619048,
-    "ID": 62,
-    "url": "https://qiita.com/tags/ibmcloud",
-    "childNode": [
-      28
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "自然言語処理",
-    "diff": 20.434523809523803,
-    "ID": 63,
-    "url": "https://qiita.com/tags/自然言語処理",
-    "childNode": [
-      7
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "Jupyter",
-    "diff": 33.541666666666664,
-    "ID": 64,
-    "url": "https://qiita.com/tags/jupyter",
-    "childNode": [],
-    "level": 1
-  },
-  {
-    "nodeName": "データ分析",
-    "diff": 27.583333333333332,
-    "ID": 65,
-    "url": "https://qiita.com/tags/データ分析",
-    "childNode": [
-      33
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "numpy",
-    "diff": 15.797619047619047,
-    "ID": 66,
-    "url": "https://qiita.com/tags/numpy",
-    "childNode": [
-      104,
-      42
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "AI",
-    "diff": 45.79761904761904,
-    "ID": 67,
-    "url": "https://qiita.com/tags/ai",
-    "childNode": [],
-    "level": 4
-  },
-  {
-    "nodeName": "matplotlib",
-    "diff": 19.738095238095237,
-    "ID": 68,
-    "url": "https://qiita.com/tags/matplotlib",
-    "childNode": [
-      39,
-      119
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "Eclipse",
-    "diff": 31.940476190476186,
-    "ID": 69,
-    "url": "https://qiita.com/tags/eclipse",
-    "childNode": [
-      28
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "Dart",
-    "diff": 17.095238095238095,
-    "ID": 70,
-    "url": "https://qiita.com/tags/dart",
-    "childNode": [
-      57
-    ],
-    "level": 4
-  },
-  {
-    "nodeName": "Perl",
-    "diff": 21.261904761904766,
-    "ID": 71,
-    "url": "https://qiita.com/tags/perl",
-    "childNode": [
-      9
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": ".net",
-    "diff": 26.803571428571427,
-    "ID": 72,
-    "url": "https://qiita.com/tags/.net",
-    "childNode": [
-      12
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "Jenkins",
-    "diff": 34.20833333333333,
-    "ID": 73,
-    "url": "https://qiita.com/tags/jenkins",
-    "childNode": [
-      35
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "Blockchain",
-    "diff": 24.410714285714285,
-    "ID": 74,
-    "url": "https://qiita.com/tags/blockchain",
-    "childNode": [
-      65
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "spring",
-    "diff": 17.2797619047619,
-    "ID": 75,
-    "url": "https://qiita.com/tags/spring",
-    "childNode": [
-      21
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "MongoDB",
-    "diff": 29.595238095238095,
-    "ID": 76,
-    "url": "https://qiita.com/tags/mongodb",
-    "childNode": [],
-    "level": 3
-  },
-  {
-    "nodeName": "メモ",
-    "diff": 31.45833333333334,
-    "ID": 77,
-    "url": "https://qiita.com/tags/メモ",
-    "childNode": [
-      28,
-      1
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "ATOM",
-    "diff": 30.04761904761905,
-    "ID": 78,
-    "url": "https://qiita.com/tags/atom",
-    "childNode": [
-      13
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "linebot",
-    "diff": 37.86904761904761,
-    "ID": 79,
-    "url": "https://qiita.com/tags/linebot",
-    "childNode": [],
-    "level": 3
-  },
-  {
-    "nodeName": "スクレイピング",
-    "diff": 14.386904761904766,
-    "ID": 80,
-    "url": "https://qiita.com/tags/スクレイピング",
-    "childNode": [
-      29,
-      41,
-      64
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "Flask",
-    "diff": 25.76190476190476,
-    "ID": 81,
-    "url": "https://qiita.com/tags/flask",
-    "childNode": [],
-    "level": 4
-  },
-  {
-    "nodeName": "オブジェクト指向",
-    "diff": 16.13095238095238,
-    "ID": 82,
-    "url": "https://qiita.com/tags/オブジェクト指向",
-    "childNode": [
-      46
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "正規表現",
-    "diff": 15.36904761904762,
-    "ID": 83,
-    "url": "https://qiita.com/tags/正規表現",
-    "childNode": [
-      35
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "gradle",
-    "diff": 19.416666666666664,
-    "ID": 84,
-    "url": "https://qiita.com/tags/gradle",
-    "childNode": [
-      12
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "google",
-    "diff": 23.38095238095238,
-    "ID": 85,
-    "url": "https://qiita.com/tags/google",
-    "childNode": [
-      69
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "画像処理",
-    "diff": 16.892857142857142,
-    "ID": 86,
-    "url": "https://qiita.com/tags/画像処理",
-    "childNode": [
-      79,
-      11
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "Anaconda",
-    "diff": 22.089285714285715,
-    "ID": 87,
-    "url": "https://qiita.com/tags/anaconda",
-    "childNode": [
-      85
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "Unity3D",
-    "diff": 28.267857142857146,
-    "ID": 88,
-    "url": "https://qiita.com/tags/unity3d",
-    "childNode": [
-      122
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "テスト",
-    "diff": 18.886904761904766,
-    "ID": 89,
-    "url": "https://qiita.com/tags/テスト",
-    "childNode": [
-      46
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "ROS",
-    "diff": 22.517857142857142,
-    "ID": 90,
-    "url": "https://qiita.com/tags/ros",
-    "childNode": [
-      47
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "IntelliJ",
-    "diff": 28.69642857142857,
-    "ID": 91,
-    "url": "https://qiita.com/tags/intellij",
-    "childNode": [
-      76
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "UE4",
-    "diff": 23.363095238095237,
-    "ID": 92,
-    "url": "https://qiita.com/tags/ue4",
-    "childNode": [],
-    "level": 4
-  },
-  {
-    "nodeName": "PyTorch",
-    "diff": 44.523809523809526,
-    "ID": 93,
-    "url": "https://qiita.com/tags/pytorch",
-    "childNode": [],
-    "level": 5
-  },
-  {
-    "nodeName": "深層学習",
-    "diff": 23.178571428571423,
-    "ID": 94,
-    "url": "https://qiita.com/tags/深層学習",
-    "childNode": [
-      5
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "Ethereum",
-    "diff": 19.726190476190478,
-    "ID": 95,
-    "url": "https://qiita.com/tags/ethereum",
-    "childNode": [
-      64
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "CSV",
-    "diff": 18.863095238095237,
-    "ID": 96,
-    "url": "https://qiita.com/tags/csv",
-    "childNode": [],
-    "level": 2
-  },
-  {
-    "nodeName": "統計学",
-    "diff": 17.78571428571429,
-    "ID": 97,
-    "url": "https://qiita.com/tags/統計学",
-    "childNode": [
-      65
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "RPA",
-    "diff": 24.148809523809522,
-    "ID": 98,
-    "url": "https://qiita.com/tags/rpa",
-    "childNode": [
-      14
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "DB",
-    "diff": 24.809523809523814,
-    "ID": 99,
-    "url": "https://qiita.com/tags/db",
-    "childNode": [
-      9
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "Redmine",
-    "diff": 26.46428571428572,
-    "ID": 100,
-    "url": "https://qiita.com/tags/redmine",
-    "childNode": [],
-    "level": 2
-  },
-  {
-    "nodeName": "SSL",
-    "diff": 15.434523809523807,
-    "ID": 101,
-    "url": "https://qiita.com/tags/ssl",
-    "childNode": [
-      52
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "SQLServer",
-    "diff": 17.44047619047619,
-    "ID": 102,
-    "url": "https://qiita.com/tags/sqlserver",
-    "childNode": [
-      4
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "電子工作",
-    "diff": 22.654761904761898,
-    "ID": 103,
-    "url": "https://qiita.com/tags/電子工作",
-    "childNode": [
-      85,
-      100
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "BigQuery",
-    "diff": 22.61309523809524,
-    "ID": 104,
-    "url": "https://qiita.com/tags/bigquery",
-    "childNode": [],
-    "level": 2
-  },
-  {
-    "nodeName": "ゲーム制作",
-    "diff": 25.208333333333332,
-    "ID": 105,
-    "url": "https://qiita.com/tags/ゲーム制作",
-    "childNode": [
-      44
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "WPF",
-    "diff": 26.15476190476191,
-    "ID": 106,
-    "url": "https://qiita.com/tags/wpf",
-    "childNode": [
-      19
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "java8",
-    "diff": 26.48214285714286,
-    "ID": 107,
-    "url": "https://qiita.com/tags/java8",
-    "childNode": [
-      76
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "Redis",
-    "diff": 24.404761904761905,
-    "ID": 108,
-    "url": "https://qiita.com/tags/redis",
-    "childNode": [
-      31
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "node-red",
-    "diff": 23.291666666666668,
-    "ID": 109,
-    "url": "https://qiita.com/tags/node-red",
-    "childNode": [
-      100
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "GoogleSpreadSheet",
-    "diff": 21.43452380952381,
-    "ID": 110,
-    "url": "https://qiita.com/tags/googlespreadsheet",
-    "childNode": [],
-    "level": 4
-  },
-  {
-    "nodeName": "UI",
-    "diff": 16.630952380952383,
-    "ID": 111,
-    "url": "https://qiita.com/tags/ui",
-    "childNode": [
-      70
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "vmware",
-    "diff": 31.952380952380956,
-    "ID": 112,
-    "url": "https://qiita.com/tags/vmware",
-    "childNode": [
-      127
-    ],
-    "level": 5
-  },
-  {
-    "nodeName": "LaTeX",
-    "diff": 20.541666666666664,
-    "ID": 113,
-    "url": "https://qiita.com/tags/latex",
-    "childNode": [
-      59,
-      36
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "Database",
-    "diff": 23.60714285714286,
-    "ID": 114,
-    "url": "https://qiita.com/tags/database",
-    "childNode": [
-      50
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "VR",
-    "diff": 30.273809523809522,
-    "ID": 115,
-    "url": "https://qiita.com/tags/vr",
-    "childNode": [
-      61,
-      20
-    ],
-    "level": 4
-  },
-  {
-    "nodeName": "CTF",
-    "diff": 15.43452380952381,
-    "ID": 116,
-    "url": "https://qiita.com/tags/ctf",
-    "childNode": [
-      96,
-      38,
-      152
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "どう書く",
-    "diff": 10.642857142857142,
-    "ID": 117,
-    "url": "https://qiita.com/tags/どう書く",
-    "childNode": [
-      63
-    ],
-    "level": 0
+    "level": 4,
+    "color_group": 3
   },
   {
     "nodeName": "Kaggle",
@@ -1152,36 +1197,41 @@
     "childNode": [
       25
     ],
-    "level": 3
+    "level": 3,
+    "color_group": 3
   },
   {
-    "nodeName": "デザインパターン",
-    "diff": 23.97619047619047,
-    "ID": 119,
-    "url": "https://qiita.com/tags/デザインパターン",
-    "childNode": [],
-    "level": 2
-  },
-  {
-    "nodeName": "devise",
-    "diff": 23.601190476190478,
-    "ID": 120,
-    "url": "https://qiita.com/tags/devise",
+    "nodeName": "GoogleCloudPlatform",
+    "diff": 28.41071428571428,
+    "ID": 52,
+    "url": "https://qiita.com/tags/googlecloudplatform",
     "childNode": [
-      38
+      8
     ],
-    "level": 1
+    "level": 2,
+    "color_group": 3
   },
   {
-    "nodeName": "scikit-learn",
-    "diff": 11.470238095238095,
-    "ID": 121,
-    "url": "https://qiita.com/tags/scikit-learn",
+    "nodeName": "Haskell",
+    "diff": 28.410714285714292,
+    "ID": 55,
+    "url": "https://qiita.com/tags/haskell",
     "childNode": [
-      86,
-      158
+      166
     ],
-    "level": 1
+    "level": 2,
+    "color_group": 3
+  },
+  {
+    "nodeName": "IntelliJ",
+    "diff": 28.69642857142857,
+    "ID": 91,
+    "url": "https://qiita.com/tags/intellij",
+    "childNode": [
+      76
+    ],
+    "level": 2,
+    "color_group": 3
   },
   {
     "nodeName": "Line",
@@ -1189,7 +1239,8 @@
     "ID": 122,
     "url": "https://qiita.com/tags/line",
     "childNode": [],
-    "level": 4
+    "level": 4,
+    "color_group": 3
   },
   {
     "nodeName": "chef",
@@ -1200,7 +1251,37 @@
       17,
       28
     ],
-    "level": 3
+    "level": 3,
+    "color_group": 3
+  },
+  {
+    "nodeName": "MongoDB",
+    "diff": 29.595238095238095,
+    "ID": 76,
+    "url": "https://qiita.com/tags/mongodb",
+    "childNode": [],
+    "level": 3,
+    "color_group": 3
+  },
+  {
+    "nodeName": "FPGA",
+    "diff": 29.7797619047619,
+    "ID": 130,
+    "url": "https://qiita.com/tags/fpga",
+    "childNode": [],
+    "level": 4,
+    "color_group": 3
+  },
+  {
+    "nodeName": "ATOM",
+    "diff": 30.04761904761905,
+    "ID": 78,
+    "url": "https://qiita.com/tags/atom",
+    "childNode": [
+      13
+    ],
+    "level": 2,
+    "color_group": 3
   },
   {
     "nodeName": "Xamarin",
@@ -1210,132 +1291,53 @@
     "childNode": [
       39
     ],
-    "level": 1
+    "level": 1,
+    "color_group": 3
   },
   {
-    "nodeName": "ネットワーク",
-    "diff": 20.529761904761905,
-    "ID": 125,
-    "url": "https://qiita.com/tags/ネットワーク",
+    "nodeName": "VR",
+    "diff": 30.273809523809522,
+    "ID": 115,
+    "url": "https://qiita.com/tags/vr",
     "childNode": [
-      42
+      61,
+      20
     ],
-    "level": 1
+    "level": 4,
+    "color_group": 3
   },
   {
-    "nodeName": "Julia",
-    "diff": 20.91071428571429,
-    "ID": 126,
-    "url": "https://qiita.com/tags/julia",
-    "childNode": [],
-    "level": 4
-  },
-  {
-    "nodeName": "ESP32",
-    "diff": 32.291666666666664,
-    "ID": 127,
-    "url": "https://qiita.com/tags/esp32",
-    "childNode": [],
-    "level": 6
-  },
-  {
-    "nodeName": "勉強会",
-    "diff": 14.327380952380949,
-    "ID": 128,
-    "url": "https://qiita.com/tags/勉強会",
+    "nodeName": "MachineLearning",
+    "diff": 30.422619047619047,
+    "ID": 38,
+    "url": "https://qiita.com/tags/machinelearning",
     "childNode": [
-      11
+      31
     ],
-    "level": 2
+    "level": 2,
+    "color_group": 3
   },
   {
-    "nodeName": "raspbian",
-    "diff": 20.136904761904756,
-    "ID": 129,
-    "url": "https://qiita.com/tags/raspbian",
+    "nodeName": "Python3",
+    "diff": 30.464285714285715,
+    "ID": 6,
+    "url": "https://qiita.com/tags/python3",
     "childNode": [
-      167
+      24
     ],
-    "level": 5
+    "level": 1,
+    "color_group": 3
   },
   {
-    "nodeName": "FPGA",
-    "diff": 29.7797619047619,
-    "ID": 130,
-    "url": "https://qiita.com/tags/fpga",
-    "childNode": [],
-    "level": 4
-  },
-  {
-    "nodeName": "cppBuilder",
-    "diff": 23.875,
-    "ID": 131,
-    "url": "https://qiita.com/tags/cppbuilder",
+    "nodeName": "ibmcloud",
+    "diff": 30.60119047619048,
+    "ID": 62,
+    "url": "https://qiita.com/tags/ibmcloud",
     "childNode": [
-      93
+      28
     ],
-    "level": 4
-  },
-  {
-    "nodeName": "資格",
-    "diff": 15.404761904761902,
-    "ID": 132,
-    "url": "https://qiita.com/tags/資格",
-    "childNode": [
-      27
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "ディープラーニング",
-    "diff": 15.119047619047619,
-    "ID": 133,
-    "url": "https://qiita.com/tags/ディープラーニング",
-    "childNode": [
-      93,
-      129
-    ],
-    "level": 4
-  },
-  {
-    "nodeName": "matlab",
-    "diff": 15.041666666666666,
-    "ID": 134,
-    "url": "https://qiita.com/tags/matlab",
-    "childNode": [
-      9
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "SwiftUI",
-    "diff": 18.124999999999996,
-    "ID": 135,
-    "url": "https://qiita.com/tags/swiftui",
-    "childNode": [
-      72
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "zabbix",
-    "diff": 17.071428571428577,
-    "ID": 136,
-    "url": "https://qiita.com/tags/zabbix",
-    "childNode": [
-      5
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "NLP",
-    "diff": 22.547619047619044,
-    "ID": 137,
-    "url": "https://qiita.com/tags/nlp",
-    "childNode": [
-      69
-    ],
-    "level": 2
+    "level": 3,
+    "color_group": 3
   },
   {
     "nodeName": "Chainer",
@@ -1345,55 +1347,19 @@
     "childNode": [
       13
     ],
-    "level": 2
+    "level": 2,
+    "color_group": 3
   },
   {
-    "nodeName": "Alexa",
-    "diff": 16.369047619047617,
-    "ID": 139,
-    "url": "https://qiita.com/tags/alexa",
+    "nodeName": "Emacs",
+    "diff": 30.916666666666675,
+    "ID": 53,
+    "url": "https://qiita.com/tags/emacs",
     "childNode": [
-      17
+      50
     ],
-    "level": 3
-  },
-  {
-    "nodeName": "error",
-    "diff": 20.541666666666664,
-    "ID": 140,
-    "url": "https://qiita.com/tags/error",
-    "childNode": [
-      19
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "bot",
-    "diff": 23.29166666666667,
-    "ID": 141,
-    "url": "https://qiita.com/tags/bot",
-    "childNode": [],
-    "level": 2
-  },
-  {
-    "nodeName": "Microsoft",
-    "diff": 25.648809523809522,
-    "ID": 142,
-    "url": "https://qiita.com/tags/microsoft",
-    "childNode": [
-      41
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "processing",
-    "diff": 14.88690476190476,
-    "ID": 143,
-    "url": "https://qiita.com/tags/processing",
-    "childNode": [
-      109
-    ],
-    "level": 0
+    "level": 2,
+    "color_group": 3
   },
   {
     "nodeName": "TwitterAPI",
@@ -1403,214 +1369,404 @@
     "childNode": [
       3
     ],
-    "level": 4
+    "level": 4,
+    "color_group": 3
   },
   {
-    "nodeName": "oraclecloud",
-    "diff": 15.851190476190474,
-    "ID": 145,
-    "url": "https://qiita.com/tags/oraclecloud",
+    "nodeName": "メモ",
+    "diff": 31.45833333333334,
+    "ID": 77,
+    "url": "https://qiita.com/tags/メモ",
     "childNode": [
-      99
+      28,
+      1
     ],
-    "level": 1
+    "level": 3,
+    "color_group": 3
   },
   {
-    "nodeName": "android開発",
-    "diff": 15.595238095238095,
-    "ID": 146,
-    "url": "https://qiita.com/tags/android開発",
+    "nodeName": "Scala",
+    "diff": 31.684523809523803,
+    "ID": 32,
+    "url": "https://qiita.com/tags/scala",
     "childNode": [
-      14
+      8
     ],
-    "level": 3
+    "level": 2,
+    "color_group": 3
   },
   {
-    "nodeName": "Raspberrypi3",
-    "diff": 245.3214285714286,
-    "ID": 147,
-    "url": "https://qiita.com/tags/raspberrypi3",
+    "nodeName": "Eclipse",
+    "diff": 31.940476190476186,
+    "ID": 69,
+    "url": "https://qiita.com/tags/eclipse",
+    "childNode": [
+      28
+    ],
+    "level": 3,
+    "color_group": 3
+  },
+  {
+    "nodeName": "vmware",
+    "diff": 31.952380952380956,
+    "ID": 112,
+    "url": "https://qiita.com/tags/vmware",
+    "childNode": [
+      127
+    ],
+    "level": 5,
+    "color_group": 3
+  },
+  {
+    "nodeName": "PowerShell",
+    "diff": 31.958333333333332,
+    "ID": 37,
+    "url": "https://qiita.com/tags/powershell",
+    "childNode": [
+      2
+    ],
+    "level": 4,
+    "color_group": 3
+  },
+  {
+    "nodeName": "GoogleAppsScript",
+    "diff": 32.02380952380952,
+    "ID": 31,
+    "url": "https://qiita.com/tags/googleappsscript",
+    "childNode": [
+      25,
+      67
+    ],
+    "level": 3,
+    "color_group": 3
+  },
+  {
+    "nodeName": "Elasticsearch",
+    "diff": 32.273809523809526,
+    "ID": 59,
+    "url": "https://qiita.com/tags/elasticsearch",
     "childNode": [],
-    "level": 4
+    "level": 4,
+    "color_group": 3
   },
   {
-    "nodeName": "ActiveRecord",
-    "diff": 15.196428571428571,
-    "ID": 148,
-    "url": "https://qiita.com/tags/activerecord",
-    "childNode": [
-      16,
-      141
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "エンジニア",
-    "diff": 26.184523809523817,
-    "ID": 149,
-    "url": "https://qiita.com/tags/エンジニア",
+    "nodeName": "ESP32",
+    "diff": 32.291666666666664,
+    "ID": 127,
+    "url": "https://qiita.com/tags/esp32",
     "childNode": [],
-    "level": 4
+    "level": 6,
+    "color_group": 3
   },
   {
-    "nodeName": "ExcelVBA",
-    "diff": 18.416666666666664,
-    "ID": 150,
-    "url": "https://qiita.com/tags/excelvba",
+    "nodeName": "DeepLearning",
+    "diff": 32.41666666666667,
+    "ID": 14,
+    "url": "https://qiita.com/tags/deeplearning",
     "childNode": [
-      20
+      2,
+      54
     ],
-    "level": 4
+    "level": 4,
+    "color_group": 3
   },
   {
-    "nodeName": "自動化",
-    "diff": 14.833333333333332,
-    "ID": 151,
-    "url": "https://qiita.com/tags/自動化",
+    "nodeName": "Kotlin",
+    "diff": 32.5654761904762,
+    "ID": 15,
+    "url": "https://qiita.com/tags/kotlin",
     "childNode": [
-      106
+      1
     ],
-    "level": 0
+    "level": 3,
+    "color_group": 3
   },
   {
-    "nodeName": "Fluentd",
-    "diff": 25.446428571428573,
-    "ID": 152,
-    "url": "https://qiita.com/tags/fluentd",
+    "nodeName": "Slack",
+    "diff": 32.61309523809524,
+    "ID": 24,
+    "url": "https://qiita.com/tags/slack",
     "childNode": [],
-    "level": 2
+    "level": 2,
+    "color_group": 3
   },
   {
-    "nodeName": "TechEnglish",
-    "diff": 23.821428571428573,
-    "ID": 153,
-    "url": "https://qiita.com/tags/techenglish",
-    "childNode": [
-      5
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "oci",
-    "diff": 16.50595238095238,
-    "ID": 154,
-    "url": "https://qiita.com/tags/oci",
-    "childNode": [
-      25
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "Spark",
-    "diff": 13.125,
-    "ID": 155,
-    "url": "https://qiita.com/tags/spark",
-    "childNode": [
-      111,
-      50
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "mecab",
-    "diff": 26.2202380952381,
-    "ID": 156,
-    "url": "https://qiita.com/tags/mecab",
-    "childNode": [
-      122,
-      130
-    ],
-    "level": 3
-  },
-  {
-    "nodeName": "pip",
-    "diff": 18.279761904761905,
-    "ID": 157,
-    "url": "https://qiita.com/tags/pip",
-    "childNode": [
-      50
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "Maven",
-    "diff": 21.142857142857142,
-    "ID": 158,
-    "url": "https://qiita.com/tags/maven",
+    "nodeName": "VisualStudio",
+    "diff": 32.642857142857146,
+    "ID": 61,
+    "url": "https://qiita.com/tags/visualstudio",
     "childNode": [],
-    "level": 2
+    "level": 5,
+    "color_group": 4
   },
   {
-    "nodeName": "SoftLayer",
-    "diff": 15.214285714285715,
-    "ID": 159,
-    "url": "https://qiita.com/tags/softlayer",
+    "nodeName": "RSpec",
+    "diff": 32.95833333333333,
+    "ID": 50,
+    "url": "https://qiita.com/tags/rspec",
     "childNode": [
-      137
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "データベース",
-    "diff": 24.476190476190474,
-    "ID": 160,
-    "url": "https://qiita.com/tags/データベース",
-    "childNode": [
-      6
-    ],
-    "level": 0
-  },
-  {
-    "nodeName": "DDD",
-    "diff": 15.226190476190473,
-    "ID": 161,
-    "url": "https://qiita.com/tags/ddd",
-    "childNode": [
-      99
-    ],
-    "level": 1
-  },
-  {
-    "nodeName": "Swift4",
-    "diff": 16.42261904761905,
-    "ID": 162,
-    "url": "https://qiita.com/tags/swift4",
-    "childNode": [
-      88,
-      76
-    ],
-    "level": 2
-  },
-  {
-    "nodeName": "LINEmessagingAPI",
-    "diff": 21.351190476190478,
-    "ID": 163,
-    "url": "https://qiita.com/tags/linemessagingapi",
-    "childNode": [
-      110,
       4
     ],
-    "level": 3
+    "level": 3,
+    "color_group": 4
   },
   {
-    "nodeName": "C言語",
-    "diff": 22.720238095238095,
-    "ID": 164,
-    "url": "https://qiita.com/tags/c言語",
-    "childNode": [
-      6
-    ],
-    "level": 0
+    "nodeName": "Django",
+    "diff": 33.16666666666667,
+    "ID": 20,
+    "url": "https://qiita.com/tags/django",
+    "childNode": [],
+    "level": 5,
+    "color_group": 4
   },
   {
-    "nodeName": "設計",
-    "diff": 21.086309523809526,
-    "ID": 165,
-    "url": "https://qiita.com/tags/設計",
+    "nodeName": "Jupyter",
+    "diff": 33.541666666666664,
+    "ID": 64,
+    "url": "https://qiita.com/tags/jupyter",
+    "childNode": [],
+    "level": 1,
+    "color_group": 4
+  },
+  {
+    "nodeName": "oracle",
+    "diff": 33.601190476190474,
+    "ID": 42,
+    "url": "https://qiita.com/tags/oracle",
+    "childNode": [],
+    "level": 2,
+    "color_group": 4
+  },
+  {
+    "nodeName": "TensorFlow",
+    "diff": 33.857142857142854,
+    "ID": 25,
+    "url": "https://qiita.com/tags/tensorflow",
     "childNode": [
-      77
+      2
     ],
-    "level": 2
+    "level": 4,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Jenkins",
+    "diff": 34.20833333333333,
+    "ID": 73,
+    "url": "https://qiita.com/tags/jenkins",
+    "childNode": [
+      35
+    ],
+    "level": 1,
+    "color_group": 4
+  },
+  {
+    "nodeName": "SQL",
+    "diff": 34.22023809523809,
+    "ID": 19,
+    "url": "https://qiita.com/tags/sql",
+    "childNode": [
+      44,
+      39
+    ],
+    "level": 1,
+    "color_group": 4
+  },
+  {
+    "nodeName": "IoT",
+    "diff": 34.23214285714286,
+    "ID": 28,
+    "url": "https://qiita.com/tags/iot",
+    "childNode": [],
+    "level": 4,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Rust",
+    "diff": 34.523809523809526,
+    "ID": 41,
+    "url": "https://qiita.com/tags/rust",
+    "childNode": [],
+    "level": 1,
+    "color_group": 4
+  },
+  {
+    "nodeName": "kubernetes",
+    "diff": 34.541666666666664,
+    "ID": 17,
+    "url": "https://qiita.com/tags/kubernetes",
+    "childNode": [
+      18
+    ],
+    "level": 4,
+    "color_group": 4
+  },
+  {
+    "nodeName": "AndroidStudio",
+    "diff": 34.61904761904762,
+    "ID": 39,
+    "url": "https://qiita.com/tags/androidstudio",
+    "childNode": [
+      13
+    ],
+    "level": 2,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Unity",
+    "diff": 34.77380952380952,
+    "ID": 8,
+    "url": "https://qiita.com/tags/unity",
+    "childNode": [
+      12
+    ],
+    "level": 3,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Azure",
+    "diff": 35.3154761904762,
+    "ID": 16,
+    "url": "https://qiita.com/tags/azure",
+    "childNode": [],
+    "level": 2,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Arduino",
+    "diff": 35.50595238095238,
+    "ID": 34,
+    "url": "https://qiita.com/tags/arduino",
+    "childNode": [
+      13,
+      166
+    ],
+    "level": 2,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Go",
+    "diff": 35.73214285714286,
+    "ID": 9,
+    "url": "https://qiita.com/tags/go",
+    "childNode": [
+      12
+    ],
+    "level": 3,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Swift",
+    "diff": 37.55952380952381,
+    "ID": 4,
+    "url": "https://qiita.com/tags/swift",
+    "childNode": [
+      3
+    ],
+    "level": 4,
+    "color_group": 4
+  },
+  {
+    "nodeName": "linebot",
+    "diff": 37.86904761904761,
+    "ID": 79,
+    "url": "https://qiita.com/tags/linebot",
+    "childNode": [],
+    "level": 3,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Vim",
+    "diff": 38.041666666666664,
+    "ID": 18,
+    "url": "https://qiita.com/tags/vim",
+    "childNode": [],
+    "level": 5,
+    "color_group": 4
+  },
+  {
+    "nodeName": "iOS",
+    "diff": 38.20833333333333,
+    "ID": 2,
+    "url": "https://qiita.com/tags/ios",
+    "childNode": [],
+    "level": 5,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Python",
+    "diff": 38.36309523809523,
+    "ID": 1,
+    "url": "https://qiita.com/tags/python",
+    "childNode": [
+      93
+    ],
+    "level": 4,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Android",
+    "diff": 38.7797619047619,
+    "ID": 5,
+    "url": "https://qiita.com/tags/android",
+    "childNode": [
+      54
+    ],
+    "level": 4,
+    "color_group": 4
+  },
+  {
+    "nodeName": "VBA",
+    "diff": 39.166666666666664,
+    "ID": 44,
+    "url": "https://qiita.com/tags/vba",
+    "childNode": [],
+    "level": 2,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Xcode",
+    "diff": 39.5,
+    "ID": 12,
+    "url": "https://qiita.com/tags/xcode",
+    "childNode": [],
+    "level": 4,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Twitter",
+    "diff": 41.59523809523811,
+    "ID": 54,
+    "url": "https://qiita.com/tags/twitter",
+    "childNode": [],
+    "level": 5,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Java",
+    "diff": 42.11309523809524,
+    "ID": 3,
+    "url": "https://qiita.com/tags/java",
+    "childNode": [],
+    "level": 5,
+    "color_group": 4
+  },
+  {
+    "nodeName": "PyTorch",
+    "diff": 44.523809523809526,
+    "ID": 93,
+    "url": "https://qiita.com/tags/pytorch",
+    "childNode": [],
+    "level": 5,
+    "color_group": 4
+  },
+  {
+    "nodeName": "AI",
+    "diff": 45.79761904761904,
+    "ID": 67,
+    "url": "https://qiita.com/tags/ai",
+    "childNode": [],
+    "level": 4,
+    "color_group": 4
   },
   {
     "nodeName": "SQLite3",
@@ -1618,24 +1774,36 @@
     "ID": 166,
     "url": "https://qiita.com/tags/sqlite3",
     "childNode": [],
-    "level": 3
+    "level": 3,
+    "color_group": 4
   },
   {
-    "nodeName": "PDF",
-    "diff": 21.69047619047619,
-    "ID": 167,
-    "url": "https://qiita.com/tags/pdf",
-    "childNode": [],
-    "level": 6
-  },
-  {
-    "nodeName": ".netcore",
-    "diff": 16.142857142857142,
-    "ID": 168,
-    "url": "https://qiita.com/tags/.netcore",
+    "nodeName": "OpenCV",
+    "diff": 52.19642857142858,
+    "ID": 35,
+    "url": "https://qiita.com/tags/opencv",
     "childNode": [
-      18
+      13
     ],
-    "level": 4
+    "level": 2,
+    "color_group": 4
+  },
+  {
+    "nodeName": "RaspberryPi",
+    "diff": 81.65476190476191,
+    "ID": 13,
+    "url": "https://qiita.com/tags/raspberrypi",
+    "childNode": [],
+    "level": 3,
+    "color_group": 4
+  },
+  {
+    "nodeName": "Raspberrypi3",
+    "diff": 245.3214285714286,
+    "ID": 147,
+    "url": "https://qiita.com/tags/raspberrypi3",
+    "childNode": [],
+    "level": 4,
+    "color_group": 4
   }
 ]
