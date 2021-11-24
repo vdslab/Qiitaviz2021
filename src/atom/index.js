@@ -51,10 +51,14 @@ export const preClickNodeState = atom({
 });
 
 export const selectSystemState = atom({
-  key: "selectState",
+  key: "selectSystemState",
   default: "system1",
 });
 
+export const selectClusterFileState = atom({
+  key: "selectClusterFileState",
+  default: "/cluster1_graph_data.json",
+});
 export const selectTagDataState = atom({
   hey: "selectTagDataState",
   default: [],

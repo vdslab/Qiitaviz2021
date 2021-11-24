@@ -1,14 +1,26 @@
 import "bulma/css/bulma.css";
 import { useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { selectSystemState } from "../atom";
+import {
+  clusterDataUrlState,
+  selectClusterFileState,
+  selectSystemState,
+} from "../atom";
 
 function SelectedSystemTab() {
   const [dropdownActive, setDropdownActive] = useState(false);
   const [selectSystem, setSelectSystem] = useRecoilState(selectSystemState);
+  const [clusterDataUrl, setClusterDataUrl] =
+    useRecoilState(clusterDataUrlState);
+  const [selectClusterFile, setSelectClusterFile] = useRecoilState(
+    selectClusterFileState
+  );
 
   const setDataUrl = (selectedSystem) => {
     setSelectSystem(selectedSystem);
+    setClusterDataUrl(
+      process.env.PUBLIC_URL + "/data/" + selectedSystem + selectClusterFile
+    );
   };
   return (
     <div className="column is-2">
@@ -38,9 +50,6 @@ function SelectedSystemTab() {
             </a>
             <a className="dropdown-item" onClick={() => setDataUrl("system2")}>
               システム2
-            </a>
-            <a className="dropdown-item" onClick={() => setDataUrl("system3")}>
-              システム3
             </a>
           </div>
         </div>
