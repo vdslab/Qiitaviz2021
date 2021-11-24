@@ -14,8 +14,10 @@ function SubViewData() {
             return (
               <p key={j}>
                 <a href={url} terget="_blank">
-                  {item.title[j]}
+                  {item["title"][j]}
                 </a>
+                <br />
+                投稿日:{item["created_at"][j]}
               </p>
             );
           });
