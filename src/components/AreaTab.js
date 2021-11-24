@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
   clusterDataUrlState,
+  selectClusterFileState,
   selectClusterState,
   selectSystemState,
 } from "../atom";
@@ -14,9 +15,15 @@ function AreaTab() {
   const [clusterDataUrl, setClusterDataUrl] =
     useRecoilState(clusterDataUrlState);
   const [selectSystem, setSelecteSystem] = useRecoilState(selectSystemState);
+  const [selectClusterFile, setSelectClusterFile] = useRecoilState(
+    selectClusterFileState
+  );
 
-  const setDataUrl = (url, selectedCluster) => {
-    setClusterDataUrl(url);
+  const setDataUrl = (filePath, selectedCluster) => {
+    setSelectClusterFile(filePath);
+    setClusterDataUrl(
+      process.env.PUBLIC_URL + "/data/" + selectSystem + filePath
+    );
     setSelectCluster(selectedCluster);
   };
 
@@ -46,13 +53,7 @@ function AreaTab() {
             <a
               className="dropdown-item"
               onClick={() =>
-                setDataUrl(
-                  process.env.PUBLIC_URL +
-                    "/data/" +
-                    selectSystem +
-                    "/cluster1_graph_data.json",
-                  "アプリケーション開発"
-                )
+                setDataUrl("/cluster1_graph_data.json", "アプリケーション開発")
               }
             >
               アプリケーション開発
@@ -60,13 +61,7 @@ function AreaTab() {
             <a
               className="dropdown-item"
               onClick={() =>
-                setDataUrl(
-                  process.env.PUBLIC_URL +
-                    "/data/" +
-                    selectSystem +
-                    "/cluster2_graph_data.json",
-                  "フロントエンド"
-                )
+                setDataUrl("/cluster2_graph_data.json", "フロントエンド")
               }
             >
               フロントエンド
@@ -74,13 +69,7 @@ function AreaTab() {
             <a
               className="dropdown-item"
               onClick={() =>
-                setDataUrl(
-                  process.env.PUBLIC_URL +
-                    "/data/" +
-                    selectSystem +
-                    "/cluster3_graph_data.json",
-                  "データサイエンス"
-                )
+                setDataUrl("/cluster3_graph_data.json", "データサイエンス")
               }
             >
               データサイエンス
@@ -88,13 +77,7 @@ function AreaTab() {
             <a
               className="dropdown-item"
               onClick={() =>
-                setDataUrl(
-                  process.env.PUBLIC_URL +
-                    "/data/" +
-                    selectSystem +
-                    "/cluster4_graph_data.json",
-                  "開発環境"
-                )
+                setDataUrl("/cluster4_graph_data.json", "開発環境")
               }
             >
               開発環境
