@@ -17,6 +17,7 @@ function SelectedSystemTab() {
         onClick={() => {
           setDropdownActive(dropdownActive ^ true);
         }}
+        onMouseLeave={() => setDropdownActive(false)}
       >
         <div className="dropdown-trigger">
           <button

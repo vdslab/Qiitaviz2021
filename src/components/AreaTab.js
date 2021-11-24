@@ -27,6 +27,7 @@ function AreaTab() {
         onClick={() => {
           setDropdownActive(dropdownActive ^ true);
         }}
+        onMouseLeave={() => setDropdownActive(false)}
       >
         <div className="dropdown-trigger">
           <button
