@@ -53,7 +53,7 @@ const Search = () => {
   ];
   const handleClick = (inputTag) => {
     tagListData.map((data, i) => {
-      if (data.includes(inputTag)) {
+      if (data.includes(inputTag) && Object.isExtensible(clusterCandidates)) {
         clusterCandidates.push([
           areaName[i],
           process.env.PUBLIC_URL +
