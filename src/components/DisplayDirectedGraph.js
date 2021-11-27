@@ -35,10 +35,18 @@ function D3DirectedGraph() {
   const colorList = [
     "rgb(255, 255, 255)",
     "rgb(255, 255, 205)",
-    "rgb(128, 255, 191)",
+    "rgb(255, 255, 0)",
   ];
   const wordsData = JSON.parse(localStorage["wordsData"]);
+  if (preClickNode !== "") {
+    console.log(
+      parseInt(wordsData[preClickNode]["clickCount"]) % 3 === 0,
+      wordsData[preClickNode]["clickCount"]
+    );
+    console.log(colorList[parseInt(wordsData[preClickNode]["clickCount"]) % 3]);
+  }
   const [selectTagData, setSelectTagData] = useRecoilState(selectTagDataState);
+
   // これを参考に星をクリックしたときに色を変えられるようにしてほしい
   function clickNode(selectedNode) {
     const target = selectedNode.label;
@@ -66,6 +74,23 @@ function D3DirectedGraph() {
     localStorage["wordsData"] = JSON.stringify(wordsData);
   }
 
+  function clickStar(selectedNode) {
+    const target = selectedNode.label;
+    // 多分この辺を切り取って使う、読んでください
+    setClickCount(wordsData[target]["clickCount"]);
+    // 直前にクリックしたノードと同じか判定
+    if (preClickNode !== target) {
+      setPreClickNode(target);
+      wordsData[target]["clickFlag"];
+    } else {
+      // 同じノードを二回以上連続でクリックしたときに色を変える
+      wordsData[target]["clickCount"] =
+        parseInt(wordsData[target]["clickCount"]) + 1;
+      setClickCount(wordsData[target]["clickCount"]);
+    }
+
+    localStorage["wordsData"] = JSON.stringify(wordsData);
+  }
   const arrowEdgeX = -35;
   const arrowEdgeY = -5;
   const arrowHeight = 10;
@@ -120,11 +145,7 @@ function D3DirectedGraph() {
               <circle
                 className="node"
                 r={node.r}
-                style={{
-                  fill: colorList[
-                    parseInt(wordsData[node.label]["clickCount"]) % 3
-                  ],
-                }}
+                fill="#7fffd4"
                 cx={node.x}
                 cy={node.y}
                 data-url={node.url}
@@ -133,7 +154,68 @@ function D3DirectedGraph() {
                 strokeWidth="2"
                 onClick={() => clickNode(node)}
               ></circle>
-
+              <g>
+                <polygon
+                  id="star1"
+                  className="star"
+                  strokeWidth="1"
+                  points={
+                    node.x +
+                    42 +
+                    "," +
+                    (node.y - 25) +
+                    " " +
+                    (node.x + 44) +
+                    "," +
+                    (node.y - 20) +
+                    " " +
+                    (node.x + 49) +
+                    "," +
+                    (node.y - 20) +
+                    " " +
+                    (node.x + 46) +
+                    "," +
+                    (node.y - 17) +
+                    " " +
+                    (node.x + 47) +
+                    "," +
+                    (node.y - 11) +
+                    " " +
+                    (node.x + 42) +
+                    "," +
+                    (node.y - 14) +
+                    " " +
+                    (node.x + 37) +
+                    "," +
+                    (node.y - 11) +
+                    " " +
+                    (node.x + 38) +
+                    "," +
+                    (node.y - 17) +
+                    " " +
+                    (node.x + 35) +
+                    "," +
+                    (node.y - 20) +
+                    " " +
+                    (node.x + 40) +
+                    "," +
+                    (node.y - 20)
+                  }
+                  fill={
+                    colorList[parseInt(wordsData[node.label]["clickCount"]) % 3]
+                  }
+                  stroke={
+                    /*
+                    parseInt(wordsData[node.label]["clickCount"]) % 3 === 0
+                      ? "black"
+                      : colorList[
+                          parseInt(wordsData[node.label]["clickCount"]) % 3
+                        ]*/
+                    "rgb(0, 0, 0"
+                  }
+                  onClick={() => clickStar(node)}
+                />
+              </g>
               <text
                 className="node-label"
                 textAnchor="middle"
