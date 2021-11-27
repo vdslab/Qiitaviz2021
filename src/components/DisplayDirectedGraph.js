@@ -156,7 +156,6 @@ function D3DirectedGraph() {
               ></circle>
               <g>
                 <polygon
-                  id="star1"
                   className="star"
                   strokeWidth="1"
                   points={
@@ -204,15 +203,7 @@ function D3DirectedGraph() {
                   fill={
                     colorList[parseInt(wordsData[node.label]["clickCount"]) % 3]
                   }
-                  stroke={
-                    /*
-                    parseInt(wordsData[node.label]["clickCount"]) % 3 === 0
-                      ? "black"
-                      : colorList[
-                          parseInt(wordsData[node.label]["clickCount"]) % 3
-                        ]*/
-                    "rgb(0, 0, 0"
-                  }
+                  stroke="black"
                   onClick={() => clickStar(node)}
                 />
               </g>
