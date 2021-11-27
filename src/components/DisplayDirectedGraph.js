@@ -38,13 +38,6 @@ function D3DirectedGraph() {
     "rgb(255, 255, 0)",
   ];
   const wordsData = JSON.parse(localStorage["wordsData"]);
-  if (preClickNode !== "") {
-    console.log(
-      parseInt(wordsData[preClickNode]["clickCount"]) % 3 === 0,
-      wordsData[preClickNode]["clickCount"]
-    );
-    console.log(colorList[parseInt(wordsData[preClickNode]["clickCount"]) % 3]);
-  }
   const [selectTagData, setSelectTagData] = useRecoilState(selectTagDataState);
 
   // これを参考に星をクリックしたときに色を変えられるようにしてほしい
