@@ -2,35 +2,43 @@ const ColorLabel = () => {
   return (
     <svg width={"84"} height={"55"}>
       <g>
-        <circle
-          r={4}
-          cx={10}
-          cy={17}
-          style={{ fill: "rgb(128, 255, 191)" }}
+        <polygon
+          className="star"
+          strokeWidth="1"
+          points="8,10 10,15 15,15 12,18
+                  13,24 8,21 3,24 4,18
+                  1,15 6,15"
+          fill="rgb(255, 255, 0)"
           stroke="black"
+          onClick={() => clickStar(node)}
         />
-        <circle
-          r={4}
-          cx={10}
-          cy={32}
-          style={{ fill: "rgb(255, 255, 205)" }}
+        <polygon
+          className="star"
+          strokeWidth="1"
+          points="8,25 10,30 15,30 12,33
+                  13,39 8,36 3,39 4,33
+                  1,30 6,30"
+          fill="rgb(255, 255, 205)"
           stroke="black"
+          onClick={() => clickStar(node)}
         />
-        <circle
-          r={4}
-          cx={10}
-          cy={47}
-          style={{ fill: "rgb(255, 255, 255)" }}
+        <polygon
+          className="star"
+          strokeWidth="1"
+          points="8,40 10,45 15,45 12,48
+          13,54 8,51 3,54 4,48
+          1,45 6,45"
+          fill="rgb(255, 255, 255)"
           stroke="black"
+          onClick={() => clickStar(node)}
         />
-
-        <text textAnchor="middle" fill="black" fontSize={"10px"} x={35} y={21}>
+        <text textAnchor="middle" fill="black" fontSize={"10px"} x={36} y={21}>
           マスター
         </text>
-        <text textAnchor="middle" fill="black" fontSize={"10px"} x={49} y={36}>
+        <text textAnchor="middle" fill="black" fontSize={"10px"} x={50} y={37}>
           そこそこできる
         </text>
-        <text textAnchor="middle" fill="black" fontSize={"10px"} x={45} y={50}>
+        <text textAnchor="middle" fill="black" fontSize={"10px"} x={46} y={52}>
           全然できない
         </text>
       </g>
