@@ -32,10 +32,17 @@ function D3DirectedGraph() {
   const svgWidth = deviceWidth > 768 ? deviceWidth * 0.66 : deviceWidth * 0.9;
   const svgHeight = deviceWidth > 768 ? deviceHeight * 0.7 : deviceHeight * 0.3;
   // 星の色にしてほしい
-  const colorList = [
+  const starColorList = [
     "rgb(255, 255, 255)",
     "rgb(255, 255, 205)",
     "rgb(255, 255, 0)",
+  ];
+  const nodeColorList = [
+    "rgb(173, 255, 47)",
+    "rgb(124, 252, 0)",
+    "rgb(152, 251, 152)",
+    "rgb(60, 179, 113)",
+    "rgb(0, 128, 0)",
   ];
   const wordsData = JSON.parse(localStorage["wordsData"]);
   const [selectTagData, setSelectTagData] = useRecoilState(selectTagDataState);
@@ -49,34 +56,18 @@ function D3DirectedGraph() {
     const childNodes = selectedNode.childNodes.slice();
     childNodes.push(selectedNode.id);
     setSelectChildNodes(childNodes);
-    // 多分この辺を切り取って使う、読んでください
-    setClickCount(wordsData[target]["clickCount"]);
-    // 直前にクリックしたノードと同じか判定
-    if (preClickNode !== target) {
-      if (preClickNode !== "") {
-        wordsData[preClickNode]["clickFlag"] = false;
-      }
-      setPreClickNode(target);
-      wordsData[target]["clickFlag"] = true;
-    } else {
-      // 同じノードを二回以上連続でクリックしたときに色を変える
-      wordsData[target]["clickCount"] =
-        parseInt(wordsData[target]["clickCount"]) + 1;
-      setClickCount(wordsData[target]["clickCount"]);
-    }
     localStorage["wordsData"] = JSON.stringify(wordsData);
   }
 
   function clickStar(selectedNode) {
     const target = selectedNode.label;
-    // 多分この辺を切り取って使う、読んでください
+
     setClickCount(wordsData[target]["clickCount"]);
-    // 直前にクリックしたノードと同じか判定
     if (preClickNode !== target) {
       setPreClickNode(target);
       wordsData[target]["clickFlag"];
     } else {
-      // 同じノードを二回以上連続でクリックしたときに色を変える
+      // 同じ星を二回以上連続でクリックしたときに色を変える
       wordsData[target]["clickCount"] =
         parseInt(wordsData[target]["clickCount"]) + 1;
       setClickCount(wordsData[target]["clickCount"]);
@@ -138,7 +129,7 @@ function D3DirectedGraph() {
               <circle
                 className="node"
                 r={node.r}
-                fill="#7fffd4"
+                fill={nodeColorList[node.colorGroup]}
                 cx={node.x}
                 cy={node.y}
                 data-url={node.url}
@@ -194,7 +185,9 @@ function D3DirectedGraph() {
                     (node.y - 20)
                   }
                   fill={
-                    colorList[parseInt(wordsData[node.label]["clickCount"]) % 3]
+                    starColorList[
+                      parseInt(wordsData[node.label]["clickCount"]) % 3
+                    ]
                   }
                   stroke="black"
                   onClick={() => clickStar(node)}

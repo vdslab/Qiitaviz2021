@@ -138,6 +138,7 @@ function D3DirectedGraph() {
             level: item.level,
             diff: item.diff,
             childNodes: item.childNode,
+            colorGroup: item.color_group,
           });
           for (const child of item.childNode) {
             links.push({
