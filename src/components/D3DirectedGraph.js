@@ -13,6 +13,7 @@ import {
   articleDataState,
   clusterDataUrlState,
   displayArticleState,
+  edgeWeightDataState,
   linkssState,
   nodesState,
   preClickNodeState,
@@ -27,6 +28,7 @@ function D3DirectedGraph() {
   const [selectChildNodes, setSelectChildNodes] = useRecoilState(
     selectedChildNodesState
   );
+  const [edgeWeight, setEdgeWeight] = useRecoilState(edgeWeightDataState);
   const [selectSystem, setSelectSystem] = useRecoilState(selectSystemState);
   const [preClickNode, setPreClickNode] = useRecoilState(preClickNodeState);
   const [loading, setLoading] = useState(true);
@@ -54,6 +56,7 @@ function D3DirectedGraph() {
     setSelectChildNodes(childNodes);
   }
   useEffect(() => {
+    setLoading(true);
     const startSimulation = (nodes, links) => {
       const linkLen = 20;
       const simulation = d3
@@ -103,6 +106,11 @@ function D3DirectedGraph() {
       const [nodes, links] = await (async () => {
         const clusterResponse = await fetch(clusterDataUrl);
         const clusterData = await clusterResponse.json();
+
+        let edgeDataUrl = clusterDataUrl.replace("graph", "edge");
+        const edgeResponse = await fetch(edgeDataUrl);
+        const edgeData = await edgeResponse.json();
+        setEdgeWeight(edgeData);
 
         const tagResponse = await fetch(
           process.env.PUBLIC_URL + "/data/tag_list_data.json"
@@ -169,9 +177,8 @@ function D3DirectedGraph() {
   }, [clusterDataUrl, searchTag, selectSystem]);
 
   if (loading) {
-    return <div>loading...</div>;
+    return <div>グラフ描画中...</div>;
   }
-
   return (
     <div
       className="columns is-mobile is-multiline"

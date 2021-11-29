@@ -10,6 +10,7 @@ import {
   selectedChildNodesState,
   preClickNodeState,
   selectTagDataState,
+  edgeWeightDataState,
 } from "../atom";
 import { useState } from "react";
 
@@ -19,7 +20,7 @@ function D3DirectedGraph() {
   const [selectChildNodes, setSelectChildNodes] = useRecoilState(
     selectedChildNodesState
   );
-
+  const [edgeWeight, setEdgeWeight] = useRecoilState(edgeWeightDataState);
   const [nodes, setNodes] = useRecoilState(nodesState);
   const [links, setLinks] = useRecoilState(linkssState);
 
@@ -80,7 +81,7 @@ function D3DirectedGraph() {
   const arrowHeight = 10;
   const arrowWidth = 14;
   const arrowEdgeEnd = -25;
-  console.log(links);
+  console.log(edgeWeight);
   return (
     <ZoomableSVG width={svgWidth} height={svgHeight}>
       <defs>
@@ -93,6 +94,7 @@ function D3DirectedGraph() {
           markerWidth="13"
           markerHeight="13"
           xoverflow="visible"
+          markerUnits="userSpaceOnUse"
         >
           <path
             d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
@@ -110,7 +112,7 @@ function D3DirectedGraph() {
             <line
               key={link.source.id + "-" + link.target.id}
               stroke={"black"}
-              strokeWidth="1"
+              strokeWidth={edgeWeight[link.source.label][link.target.label] * 2}
               className="link"
               markerEnd="url(#arrowhead)"
               id="edgepath0"
