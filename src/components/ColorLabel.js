@@ -10,7 +10,6 @@ const ColorLabel = () => {
                   1,15 6,15"
           fill="rgb(255, 255, 0)"
           stroke="black"
-          onClick={() => clickStar(node)}
         />
         <polygon
           className="star"
@@ -20,7 +19,6 @@ const ColorLabel = () => {
                   1,30 6,30"
           fill="rgb(255, 255, 205)"
           stroke="black"
-          onClick={() => clickStar(node)}
         />
         <polygon
           className="star"
@@ -30,7 +28,6 @@ const ColorLabel = () => {
           1,45 6,45"
           fill="rgb(255, 255, 255)"
           stroke="black"
-          onClick={() => clickStar(node)}
         />
         <text textAnchor="middle" fill="black" fontSize={"10px"} x={36} y={21}>
           マスター
