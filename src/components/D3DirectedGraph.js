@@ -107,7 +107,8 @@ function D3DirectedGraph() {
         const clusterResponse = await fetch(clusterDataUrl);
         const clusterData = await clusterResponse.json();
 
-        let edgeDataUrl = clusterDataUrl.replace("graph", "edge");
+        const edgeDataUrl = clusterDataUrl.replace("graph", "edge");
+        console.log(edgeDataUrl);
         const edgeResponse = await fetch(edgeDataUrl);
         const edgeData = await edgeResponse.json();
         setEdgeWeight(edgeData);

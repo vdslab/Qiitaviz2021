@@ -59,7 +59,8 @@ function D3DirectedGraph() {
     setSelectChildNodes(childNodes);
     localStorage["wordsData"] = JSON.stringify(wordsData);
   }
-
+  console.log(edgeWeight);
+  console.log(displayArticle);
   function clickStar(selectedNode) {
     const target = selectedNode.label;
 
@@ -81,7 +82,6 @@ function D3DirectedGraph() {
   const arrowHeight = 10;
   const arrowWidth = 14;
   const arrowEdgeEnd = -25;
-  console.log(edgeWeight);
   return (
     <ZoomableSVG width={svgWidth} height={svgHeight}>
       <defs>
@@ -202,7 +202,7 @@ function D3DirectedGraph() {
                 fill="black"
                 fontSize={"15px"}
                 x={node.x}
-                y={node.y}
+                y={node.y + 4}
               >
                 {node.label}
               </text>

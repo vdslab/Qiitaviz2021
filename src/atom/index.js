@@ -61,11 +61,11 @@ export const selectClusterFileState = atom({
 });
 
 export const selectTagDataState = atom({
-  hey: "selectTagDataState",
+  key: "selectTagDataState",
   default: [],
 });
 
 export const edgeWeightDataState = atom({
-  hey: "edgeWeightDataState",
+  key: "edgeWeightDataState",
   default: [],
 });
