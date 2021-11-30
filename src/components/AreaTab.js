@@ -28,7 +28,7 @@ function AreaTab() {
   };
 
   return (
-    <div className="column is-2">
+    <div className="column is-3">
       <div
         className={dropdownActive ? "dropdown is-active" : "dropdown"}
         onClick={() => {
