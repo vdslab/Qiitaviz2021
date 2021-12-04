@@ -39,11 +39,11 @@ function D3DirectedGraph() {
     "rgb(255, 255, 0)",
   ];
   const nodeColorList = [
-    "rgb(173, 255, 47)",
-    "rgb(124, 252, 0)",
-    "rgb(152, 251, 152)",
-    "rgb(60, 179, 113)",
-    "rgb(0, 128, 0)",
+    "rgb(255, 240, 130)",
+    "rgb(255, 215, 0)",
+    "rgb(255, 165, 0)",
+    "rgb(255, 106, 0)",
+    "rgb(240, 60, 25)",
   ];
   const wordsData = JSON.parse(localStorage["wordsData"]);
   const [selectTagData, setSelectTagData] = useRecoilState(selectTagDataState);
@@ -147,45 +147,45 @@ function D3DirectedGraph() {
                   strokeWidth="1"
                   points={
                     node.x +
-                    42 +
+                    44 +
                     "," +
-                    (node.y - 25) +
-                    " " +
-                    (node.x + 44) +
-                    "," +
-                    (node.y - 20) +
-                    " " +
-                    (node.x + 49) +
-                    "," +
-                    (node.y - 20) +
-                    " " +
-                    (node.x + 46) +
-                    "," +
-                    (node.y - 17) +
+                    (node.y - 28) +
                     " " +
                     (node.x + 47) +
                     "," +
-                    (node.y - 11) +
+                    (node.y - 21) +
                     " " +
-                    (node.x + 42) +
+                    (node.x + 55) +
                     "," +
-                    (node.y - 14) +
+                    (node.y - 21) +
                     " " +
-                    (node.x + 37) +
+                    (node.x + 49) +
                     "," +
-                    (node.y - 11) +
+                    (node.y - 16) +
                     " " +
-                    (node.x + 38) +
+                    (node.x + 52) +
                     "," +
-                    (node.y - 17) +
+                    (node.y - 8) +
                     " " +
-                    (node.x + 35) +
+                    (node.x + 44) +
                     "," +
-                    (node.y - 20) +
+                    (node.y - 12) +
                     " " +
-                    (node.x + 40) +
+                    (node.x + 36) +
                     "," +
-                    (node.y - 20)
+                    (node.y - 8) +
+                    " " +
+                    (node.x + 39) +
+                    "," +
+                    (node.y - 16) +
+                    " " +
+                    (node.x + 33) +
+                    "," +
+                    (node.y - 21) +
+                    " " +
+                    (node.x + 41) +
+                    "," +
+                    (node.y - 21)
                   }
                   fill={
                     starColorList[
