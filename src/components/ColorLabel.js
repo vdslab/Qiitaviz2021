@@ -8,7 +8,7 @@ const ColorLabel = () => {
           points="8,10 10,15 15,15 12,18
                   13,24 8,21 3,24 4,18
                   1,15 6,15"
-          fill="rgb(255, 255, 0)"
+          fill="rgb(5, 165, 95)"
           stroke="black"
         />
         <polygon
@@ -17,7 +17,7 @@ const ColorLabel = () => {
           points="8,25 10,30 15,30 12,33
                   13,39 8,36 3,39 4,33
                   1,30 6,30"
-          fill="rgb(255, 255, 205)"
+          fill="rgb(170, 255, 195)"
           stroke="black"
         />
         <polygon

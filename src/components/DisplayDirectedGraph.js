@@ -35,8 +35,8 @@ function D3DirectedGraph() {
   // 星の色にしてほしい
   const starColorList = [
     "rgb(255, 255, 255)",
-    "rgb(255, 255, 205)",
-    "rgb(255, 255, 0)",
+    "rgb(170, 255, 195)",
+    "rgb(5, 165, 95)",
   ];
   const nodeColorList = [
     "rgb(255, 240, 130)",
@@ -137,8 +137,8 @@ function D3DirectedGraph() {
                 cy={node.y}
                 data-url={node.url}
                 data-name={node.label}
-                stroke={selectChildNodes.includes(node.id) ? "red" : "black"}
-                strokeWidth="2"
+                stroke={selectChildNodes.includes(node.id) ? "rgb(25,95,240)" : "rgb(50,55,50)"}
+                strokeWidth="2.5"
                 onClick={() => clickNode(node)}
               ></circle>
               <g>
