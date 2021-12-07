@@ -59,8 +59,6 @@ function D3DirectedGraph() {
     setSelectChildNodes(childNodes);
     localStorage["wordsData"] = JSON.stringify(wordsData);
   }
-  console.log(edgeWeight);
-  console.log(displayArticle);
   function clickStar(selectedNode) {
     const target = selectedNode.label;
 
@@ -137,7 +135,11 @@ function D3DirectedGraph() {
                 cy={node.y}
                 data-url={node.url}
                 data-name={node.label}
-                stroke={selectChildNodes.includes(node.id) ? "rgb(25,95,240)" : "rgb(50,55,50)"}
+                stroke={
+                  selectChildNodes.includes(node.id)
+                    ? "rgb(25,95,240)"
+                    : "rgb(50,55,50)"
+                }
                 strokeWidth="2.5"
                 onClick={() => clickNode(node)}
               ></circle>

@@ -41,7 +41,6 @@ const Search = () => {
     setSelectCluster(data[0]);
     setClusterDataUrl(data[1]);
     setSelectTagData([inputTag, tagUrl]);
-    console.log(inputTag, selectTagData);
     setInputTag("");
     setSearchTag(inputTag);
   };
@@ -65,8 +64,6 @@ const Search = () => {
         ]);
       }
     });
-    setClusterDataUrl(clusterCandidates);
-    setSearchTag(inputTag);
     if (clusterCandidates.length) {
       setPanelFlag(true);
     } else {
