@@ -11,7 +11,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1828
   },
   {
     "nodeName": "babel",
@@ -23,7 +24,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 672
   },
   {
     "nodeName": "gulp",
@@ -35,7 +37,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 997
   },
   {
     "nodeName": "redux",
@@ -47,7 +50,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1269
   },
   {
     "nodeName": "Vuex",
@@ -59,7 +63,8 @@
     ],
     "level": 1,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 714
   },
   {
     "nodeName": "Angular",
@@ -75,7 +80,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 2981
   },
   {
     "nodeName": "Express",
@@ -88,7 +94,8 @@
     ],
     "level": 1,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1139
   },
   {
     "nodeName": "Electron",
@@ -102,7 +109,8 @@
     "color_group": 0,
     "parentNode": [
       13
-    ]
+    ],
+    "articleCount": 989
   },
   {
     "nodeName": "nuxt.js",
@@ -114,7 +122,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 3044
   },
   {
     "nodeName": "kintone",
@@ -127,7 +136,8 @@
     "parentNode": [
       19,
       13
-    ]
+    ],
+    "articleCount": 872
   },
   {
     "nodeName": "npm",
@@ -140,7 +150,8 @@
     ],
     "level": 2,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 2081
   },
   {
     "nodeName": "Rails6",
@@ -152,7 +163,8 @@
     ],
     "level": 1,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1173
   },
   {
     "nodeName": "chrome-extension",
@@ -164,7 +176,8 @@
     ],
     "level": 1,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 674
   },
   {
     "nodeName": "scss",
@@ -177,7 +190,8 @@
     ],
     "level": 1,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 873
   },
   {
     "nodeName": "Sass",
@@ -190,7 +204,8 @@
     "parentNode": [
       28,
       13
-    ]
+    ],
+    "articleCount": 1184
   },
   {
     "nodeName": "Rails5",
@@ -202,7 +217,8 @@
     ],
     "level": 1,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1910
   },
   {
     "nodeName": "Vue.js",
@@ -216,7 +232,8 @@
     ],
     "level": 2,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 9808
   },
   {
     "nodeName": "next.js",
@@ -228,7 +245,8 @@
     "color_group": 1,
     "parentNode": [
       6
-    ]
+    ],
+    "articleCount": 773
   },
   {
     "nodeName": "reactnative",
@@ -240,7 +258,8 @@
     "color_group": 1,
     "parentNode": [
       6
-    ]
+    ],
+    "articleCount": 1774
   },
   {
     "nodeName": "GraphQL",
@@ -252,7 +271,8 @@
     "color_group": 1,
     "parentNode": [
       19
-    ]
+    ],
+    "articleCount": 891
   },
   {
     "nodeName": "Ajax",
@@ -264,7 +284,8 @@
     "color_group": 1,
     "parentNode": [
       19
-    ]
+    ],
+    "articleCount": 819
   },
   {
     "nodeName": "Rails",
@@ -281,7 +302,8 @@
     "color_group": 1,
     "parentNode": [
       14
-    ]
+    ],
+    "articleCount": 29548
   },
   {
     "nodeName": "Firestore",
@@ -294,7 +316,8 @@
     ],
     "level": 1,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 912
   },
   {
     "nodeName": "React",
@@ -311,7 +334,8 @@
     "parentNode": [
       34,
       42
-    ]
+    ],
+    "articleCount": 8934
   },
   {
     "nodeName": "フロントエンド",
@@ -323,7 +347,8 @@
     "color_group": 2,
     "parentNode": [
       13
-    ]
+    ],
+    "articleCount": 1025
   },
   {
     "nodeName": "Bootstrap",
@@ -338,7 +363,8 @@
     "parentNode": [
       51,
       36
-    ]
+    ],
+    "articleCount": 1383
   },
   {
     "nodeName": "Firebase",
@@ -353,7 +379,8 @@
     ],
     "level": 1,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 4318
   },
   {
     "nodeName": "Node.js",
@@ -369,7 +396,8 @@
     "parentNode": [
       50,
       11
-    ]
+    ],
+    "articleCount": 12083
   },
   {
     "nodeName": "TypeScript",
@@ -381,7 +409,8 @@
     ],
     "level": 2,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 7007
   },
   {
     "nodeName": "WebGL",
@@ -393,7 +422,8 @@
     "color_group": 2,
     "parentNode": [
       42
-    ]
+    ],
+    "articleCount": 854
   },
   {
     "nodeName": "es6",
@@ -407,7 +437,8 @@
     "color_group": 2,
     "parentNode": [
       13
-    ]
+    ],
+    "articleCount": 1014
   },
   {
     "nodeName": "CoffeeScript",
@@ -419,7 +450,8 @@
     ],
     "level": 2,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 904
   },
   {
     "nodeName": "JSON",
@@ -432,7 +464,8 @@
     "parentNode": [
       30,
       11
-    ]
+    ],
+    "articleCount": 2360
   },
   {
     "nodeName": "jQuery",
@@ -444,7 +477,8 @@
     ],
     "level": 1,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 5136
   },
   {
     "nodeName": "個人開発",
@@ -456,7 +490,8 @@
     ],
     "level": 2,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 789
   },
   {
     "nodeName": "CSS",
@@ -468,7 +503,8 @@
     "color_group": 3,
     "parentNode": [
       7
-    ]
+    ],
+    "articleCount": 9587
   },
   {
     "nodeName": "HTML",
@@ -484,7 +520,8 @@
     "parentNode": [
       43,
       10
-    ]
+    ],
+    "articleCount": 9016
   },
   {
     "nodeName": "CSS3",
@@ -496,7 +533,8 @@
     "color_group": 3,
     "parentNode": [
       7
-    ]
+    ],
+    "articleCount": 1778
   },
   {
     "nodeName": "Web",
@@ -509,7 +547,8 @@
     "parentNode": [
       43,
       2
-    ]
+    ],
+    "articleCount": 1901
   },
   {
     "nodeName": "Markdown",
@@ -524,7 +563,8 @@
       7,
       4,
       47
-    ]
+    ],
+    "articleCount": 1783
   },
   {
     "nodeName": "JavaScript",
@@ -540,7 +580,8 @@
       49,
       27,
       11
-    ]
+    ],
+    "articleCount": 39298
   },
   {
     "nodeName": "HTML5",
@@ -555,7 +596,8 @@
       9,
       40,
       8
-    ]
+    ],
+    "articleCount": 3191
   },
   {
     "nodeName": "Chrome",
@@ -567,7 +609,8 @@
     "color_group": 3,
     "parentNode": [
       1
-    ]
+    ],
+    "articleCount": 2441
   },
   {
     "nodeName": "AdventCalendar",
@@ -581,7 +624,8 @@
       20,
       2,
       11
-    ]
+    ],
+    "articleCount": 1317
   },
   {
     "nodeName": "プログラミング初心者",
@@ -593,7 +637,8 @@
     "color_group": 4,
     "parentNode": [
       8
-    ]
+    ],
+    "articleCount": 1118
   },
   {
     "nodeName": "UI",
@@ -605,7 +650,8 @@
     "color_group": 4,
     "parentNode": [
       31
-    ]
+    ],
+    "articleCount": 987
   },
   {
     "nodeName": "memo",
@@ -617,7 +663,8 @@
     "color_group": 4,
     "parentNode": [
       35
-    ]
+    ],
+    "articleCount": 745
   },
   {
     "nodeName": "初心者向け",
@@ -629,7 +676,8 @@
     "color_group": 4,
     "parentNode": [
       18
-    ]
+    ],
+    "articleCount": 2389
   },
   {
     "nodeName": "初心者",
@@ -641,7 +689,8 @@
     "color_group": 4,
     "parentNode": [
       4
-    ]
+    ],
+    "articleCount": 16814
   },
   {
     "nodeName": "ゲーム制作",
@@ -653,7 +702,8 @@
     "color_group": 4,
     "parentNode": [
       2
-    ]
+    ],
+    "articleCount": 964
   },
   {
     "nodeName": "プログラミング",
@@ -666,6 +716,7 @@
     "parentNode": [
       31,
       2
-    ]
+    ],
+    "articleCount": 1682
   }
 ]

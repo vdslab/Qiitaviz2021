@@ -9,7 +9,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 928
   },
   {
     "nodeName": "scikit-learn",
@@ -22,7 +23,8 @@
     ],
     "level": 1,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 883
   },
   {
     "nodeName": "Spark",
@@ -35,7 +37,8 @@
     ],
     "level": 2,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 698
   },
   {
     "nodeName": "勉強会",
@@ -47,7 +50,8 @@
     ],
     "level": 2,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 845
   },
   {
     "nodeName": "スクレイピング",
@@ -61,7 +65,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1362
   },
   {
     "nodeName": "数学",
@@ -73,7 +78,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 2008
   },
   {
     "nodeName": "自動化",
@@ -85,7 +91,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 761
   },
   {
     "nodeName": "processing",
@@ -97,7 +104,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 810
   },
   {
     "nodeName": "matlab",
@@ -109,7 +117,8 @@
     ],
     "level": 2,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 827
   },
   {
     "nodeName": "pandas",
@@ -122,7 +131,8 @@
     ],
     "level": 2,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 2373
   },
   {
     "nodeName": "ディープラーニング",
@@ -135,7 +145,8 @@
     ],
     "level": 4,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 803
   },
   {
     "nodeName": "ActiveRecord",
@@ -148,7 +159,8 @@
     ],
     "level": 1,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 743
   },
   {
     "nodeName": "SoftLayer",
@@ -160,7 +172,8 @@
     ],
     "level": 1,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 707
   },
   {
     "nodeName": "DDD",
@@ -172,7 +185,8 @@
     ],
     "level": 1,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 697
   },
   {
     "nodeName": "正規表現",
@@ -184,7 +198,8 @@
     ],
     "level": 1,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1314
   },
   {
     "nodeName": "資格",
@@ -196,7 +211,8 @@
     ],
     "level": 2,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 872
   },
   {
     "nodeName": "SSL",
@@ -208,7 +224,8 @@
     ],
     "level": 1,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1039
   },
   {
     "nodeName": "CTF",
@@ -222,7 +239,8 @@
     ],
     "level": 1,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 932
   },
   {
     "nodeName": "Excel",
@@ -240,7 +258,8 @@
     "color_group": 0,
     "parentNode": [
       132
-    ]
+    ],
+    "articleCount": 3068
   },
   {
     "nodeName": "android開発",
@@ -252,7 +271,8 @@
     ],
     "level": 3,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 780
   },
   {
     "nodeName": "numpy",
@@ -265,7 +285,8 @@
     ],
     "level": 1,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1587
   },
   {
     "nodeName": "oraclecloud",
@@ -277,7 +298,8 @@
     ],
     "level": 1,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 797
   },
   {
     "nodeName": "オブジェクト指向",
@@ -289,7 +311,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1345
   },
   {
     "nodeName": ".NETCore",
@@ -301,7 +324,8 @@
     ],
     "level": 4,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 683
   },
   {
     "nodeName": "Alexa",
@@ -313,7 +337,8 @@
     ],
     "level": 3,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 805
   },
   {
     "nodeName": "Swift4",
@@ -326,7 +351,8 @@
     ],
     "level": 2,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 718
   },
   {
     "nodeName": "oci",
@@ -338,7 +364,8 @@
     ],
     "level": 3,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 749
   },
   {
     "nodeName": "UI",
@@ -352,7 +379,8 @@
     "color_group": 0,
     "parentNode": [
       155
-    ]
+    ],
+    "articleCount": 987
   },
   {
     "nodeName": "画像処理",
@@ -367,7 +395,8 @@
     "color_group": 0,
     "parentNode": [
       121
-    ]
+    ],
+    "articleCount": 1234
   },
   {
     "nodeName": "zabbix",
@@ -379,7 +408,8 @@
     ],
     "level": 3,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 779
   },
   {
     "nodeName": "Dart",
@@ -393,7 +423,8 @@
     "color_group": 0,
     "parentNode": [
       111
-    ]
+    ],
+    "articleCount": 1596
   },
   {
     "nodeName": "spring",
@@ -407,7 +438,8 @@
     "color_group": 0,
     "parentNode": [
       43
-    ]
+    ],
+    "articleCount": 1396
   },
   {
     "nodeName": "SQLServer",
@@ -419,7 +451,8 @@
     ],
     "level": 3,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1059
   },
   {
     "nodeName": "統計学",
@@ -431,7 +464,8 @@
     ],
     "level": 0,
     "color_group": 0,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1130
   },
   {
     "nodeName": "AtCoder",
@@ -444,7 +478,8 @@
     ],
     "level": 1,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 3111
   },
   {
     "nodeName": "R",
@@ -458,7 +493,8 @@
     "color_group": 1,
     "parentNode": [
       75
-    ]
+    ],
+    "articleCount": 3702
   },
   {
     "nodeName": "SwiftUI",
@@ -470,7 +506,8 @@
     ],
     "level": 2,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 830
   },
   {
     "nodeName": "pip",
@@ -482,7 +519,8 @@
     ],
     "level": 2,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 728
   },
   {
     "nodeName": "ExcelVBA",
@@ -494,7 +532,8 @@
     ],
     "level": 4,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 730
   },
   {
     "nodeName": "CSV",
@@ -506,7 +545,8 @@
     "color_group": 1,
     "parentNode": [
       116
-    ]
+    ],
+    "articleCount": 1121
   },
   {
     "nodeName": "#migrated",
@@ -520,7 +560,8 @@
     ],
     "level": 0,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 3185
   },
   {
     "nodeName": "テスト",
@@ -532,7 +573,8 @@
     ],
     "level": 0,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1214
   },
   {
     "nodeName": "gradle",
@@ -544,7 +586,8 @@
     ],
     "level": 3,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1264
   },
   {
     "nodeName": "アルゴリズム",
@@ -556,7 +599,8 @@
     ],
     "level": 3,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 2052
   },
   {
     "nodeName": "Ethereum",
@@ -568,7 +612,8 @@
     ],
     "level": 0,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1105
   },
   {
     "nodeName": "matplotlib",
@@ -581,7 +626,8 @@
     ],
     "level": 1,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1563
   },
   {
     "nodeName": "raspbian",
@@ -595,7 +641,8 @@
     "color_group": 1,
     "parentNode": [
       133
-    ]
+    ],
+    "articleCount": 845
   },
   {
     "nodeName": "Keras",
@@ -607,7 +654,8 @@
     "color_group": 1,
     "parentNode": [
       70
-    ]
+    ],
+    "articleCount": 1793
   },
   {
     "nodeName": "自然言語処理",
@@ -621,7 +669,8 @@
     "color_group": 1,
     "parentNode": [
       117
-    ]
+    ],
+    "articleCount": 1664
   },
   {
     "nodeName": "ネットワーク",
@@ -633,7 +682,8 @@
     ],
     "level": 1,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 906
   },
   {
     "nodeName": "LaTeX",
@@ -646,7 +696,8 @@
     ],
     "level": 3,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 967
   },
   {
     "nodeName": "error",
@@ -658,7 +709,8 @@
     ],
     "level": 0,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 799
   },
   {
     "nodeName": "Julia",
@@ -670,7 +722,8 @@
     "color_group": 1,
     "parentNode": [
       27
-    ]
+    ],
+    "articleCount": 891
   },
   {
     "nodeName": "設計",
@@ -682,7 +735,8 @@
     ],
     "level": 2,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 692
   },
   {
     "nodeName": "Maven",
@@ -694,7 +748,8 @@
     "color_group": 1,
     "parentNode": [
       121
-    ]
+    ],
+    "articleCount": 710
   },
   {
     "nodeName": "Perl",
@@ -706,7 +761,8 @@
     ],
     "level": 2,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1503
   },
   {
     "nodeName": "LINEmessagingAPI",
@@ -719,7 +775,8 @@
     ],
     "level": 3,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 708
   },
   {
     "nodeName": "gcp",
@@ -733,7 +790,8 @@
     "color_group": 1,
     "parentNode": [
       80
-    ]
+    ],
+    "articleCount": 3151
   },
   {
     "nodeName": "GoogleSpreadSheet",
@@ -745,7 +803,8 @@
     "color_group": 1,
     "parentNode": [
       163
-    ]
+    ],
+    "articleCount": 1001
   },
   {
     "nodeName": "PDF",
@@ -757,7 +816,8 @@
     "color_group": 1,
     "parentNode": [
       129
-    ]
+    ],
+    "articleCount": 703
   },
   {
     "nodeName": "Elixir",
@@ -772,7 +832,8 @@
     "parentNode": [
       82,
       89
-    ]
+    ],
+    "articleCount": 2142
   },
   {
     "nodeName": "Anaconda",
@@ -784,7 +845,8 @@
     ],
     "level": 1,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1227
   },
   {
     "nodeName": "Objective-C",
@@ -796,7 +858,8 @@
     ],
     "level": 0,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 3738
   },
   {
     "nodeName": "ROS",
@@ -808,7 +871,8 @@
     ],
     "level": 0,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1191
   },
   {
     "nodeName": "NLP",
@@ -822,7 +886,8 @@
     "color_group": 1,
     "parentNode": [
       159
-    ]
+    ],
+    "articleCount": 827
   },
   {
     "nodeName": "BigQuery",
@@ -834,7 +899,8 @@
     "color_group": 1,
     "parentNode": [
       66
-    ]
+    ],
+    "articleCount": 1038
   },
   {
     "nodeName": "電子工作",
@@ -847,7 +913,8 @@
     ],
     "level": 1,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1014
   },
   {
     "nodeName": "C言語",
@@ -859,7 +926,8 @@
     ],
     "level": 0,
     "color_group": 1,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 710
   },
   {
     "nodeName": "Qiita",
@@ -871,7 +939,8 @@
     ],
     "level": 0,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 2170
   },
   {
     "nodeName": "Salesforce",
@@ -884,7 +953,8 @@
     ],
     "level": 0,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1788
   },
   {
     "nodeName": "C++",
@@ -904,7 +974,8 @@
     "parentNode": [
       128,
       86
-    ]
+    ],
+    "articleCount": 8183
   },
   {
     "nodeName": "深層学習",
@@ -916,7 +987,8 @@
     ],
     "level": 3,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1118
   },
   {
     "nodeName": "競技プログラミング",
@@ -928,7 +1000,8 @@
     ],
     "level": 3,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 2662
   },
   {
     "nodeName": "node-red",
@@ -942,7 +1015,8 @@
     "color_group": 2,
     "parentNode": [
       143
-    ]
+    ],
+    "articleCount": 950
   },
   {
     "nodeName": "bot",
@@ -954,7 +1028,8 @@
     "color_group": 2,
     "parentNode": [
       148
-    ]
+    ],
+    "articleCount": 762
   },
   {
     "nodeName": "UE4",
@@ -966,7 +1041,8 @@
     "color_group": 2,
     "parentNode": [
       11
-    ]
+    ],
+    "articleCount": 1151
   },
   {
     "nodeName": "google",
@@ -981,7 +1057,8 @@
     "parentNode": [
       87,
       103
-    ]
+    ],
+    "articleCount": 1275
   },
   {
     "nodeName": "devise",
@@ -993,7 +1070,8 @@
     ],
     "level": 1,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 915
   },
   {
     "nodeName": "Database",
@@ -1005,7 +1083,8 @@
     ],
     "level": 2,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 937
   },
   {
     "nodeName": "gas",
@@ -1017,7 +1096,8 @@
     ],
     "level": 3,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1933
   },
   {
     "nodeName": "TechEnglish",
@@ -1029,7 +1109,8 @@
     ],
     "level": 3,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 661
   },
   {
     "nodeName": "ポエム",
@@ -1042,7 +1123,8 @@
     "parentNode": [
       27,
       113
-    ]
+    ],
+    "articleCount": 2721
   },
   {
     "nodeName": "cppBuilder",
@@ -1054,7 +1136,8 @@
     ],
     "level": 4,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 820
   },
   {
     "nodeName": "デザインパターン",
@@ -1066,7 +1149,8 @@
     "color_group": 2,
     "parentNode": [
       68
-    ]
+    ],
+    "articleCount": 900
   },
   {
     "nodeName": "RPA",
@@ -1078,7 +1162,8 @@
     ],
     "level": 3,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1166
   },
   {
     "nodeName": "Redis",
@@ -1090,7 +1175,8 @@
     ],
     "level": 2,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 978
   },
   {
     "nodeName": "Blockchain",
@@ -1102,7 +1188,8 @@
     ],
     "level": 0,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1476
   },
   {
     "nodeName": "データベース",
@@ -1114,7 +1201,8 @@
     ],
     "level": 0,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 739
   },
   {
     "nodeName": "DB",
@@ -1129,7 +1217,8 @@
     "parentNode": [
       161,
       145
-    ]
+    ],
+    "articleCount": 1100
   },
   {
     "nodeName": "Selenium",
@@ -1141,7 +1230,8 @@
     ],
     "level": 3,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1691
   },
   {
     "nodeName": "ゲーム制作",
@@ -1153,7 +1243,8 @@
     ],
     "level": 1,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 964
   },
   {
     "nodeName": "Fluentd",
@@ -1165,7 +1256,8 @@
     "color_group": 2,
     "parentNode": [
       116
-    ]
+    ],
+    "articleCount": 702
   },
   {
     "nodeName": "Microsoft",
@@ -1177,7 +1269,8 @@
     ],
     "level": 0,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 778
   },
   {
     "nodeName": "Flask",
@@ -1189,7 +1282,8 @@
     "color_group": 2,
     "parentNode": [
       27
-    ]
+    ],
+    "articleCount": 1361
   },
   {
     "nodeName": "WPF",
@@ -1203,7 +1297,8 @@
     "color_group": 2,
     "parentNode": [
       151
-    ]
+    ],
+    "articleCount": 1006
   },
   {
     "nodeName": "エンジニア",
@@ -1215,7 +1310,8 @@
     "color_group": 2,
     "parentNode": [
       11
-    ]
+    ],
+    "articleCount": 766
   },
   {
     "nodeName": "mecab",
@@ -1228,7 +1324,8 @@
     ],
     "level": 3,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 708
   },
   {
     "nodeName": "Redmine",
@@ -1241,7 +1338,8 @@
     "parentNode": [
       103,
       109
-    ]
+    ],
+    "articleCount": 1058
   },
   {
     "nodeName": "java8",
@@ -1253,7 +1351,8 @@
     ],
     "level": 2,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1015
   },
   {
     "nodeName": "iPhone",
@@ -1265,7 +1364,8 @@
     ],
     "level": 3,
     "color_group": 2,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 2081
   },
   {
     "nodeName": ".NET",
@@ -1280,7 +1380,8 @@
     "parentNode": [
       43,
       135
-    ]
+    ],
+    "articleCount": 1463
   },
   {
     "nodeName": "spring-boot",
@@ -1295,7 +1396,8 @@
     "parentNode": [
       23,
       90
-    ]
+    ],
+    "articleCount": 2064
   },
   {
     "nodeName": "データ分析",
@@ -1310,7 +1412,8 @@
     "parentNode": [
       97,
       74
-    ]
+    ],
+    "articleCount": 1671
   },
   {
     "nodeName": "Flutter",
@@ -1324,7 +1427,8 @@
     "color_group": 3,
     "parentNode": [
       65
-    ]
+    ],
+    "articleCount": 3086
   },
   {
     "nodeName": "機械学習",
@@ -1336,7 +1440,8 @@
     ],
     "level": 2,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 8280
   },
   {
     "nodeName": "Unity3D",
@@ -1350,7 +1455,8 @@
     "color_group": 3,
     "parentNode": [
       162
-    ]
+    ],
+    "articleCount": 1252
   },
   {
     "nodeName": "C#",
@@ -1367,7 +1473,8 @@
       63,
       22,
       58
-    ]
+    ],
+    "articleCount": 13903
   },
   {
     "nodeName": "C",
@@ -1383,7 +1490,8 @@
     "color_group": 3,
     "parentNode": [
       11
-    ]
+    ],
+    "articleCount": 13903
   },
   {
     "nodeName": "Kaggle",
@@ -1395,7 +1503,8 @@
     ],
     "level": 3,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 942
   },
   {
     "nodeName": "GoogleCloudPlatform",
@@ -1409,7 +1518,8 @@
     "color_group": 3,
     "parentNode": [
       101
-    ]
+    ],
+    "articleCount": 1940
   },
   {
     "nodeName": "Haskell",
@@ -1423,7 +1533,8 @@
     "color_group": 3,
     "parentNode": [
       29
-    ]
+    ],
+    "articleCount": 1885
   },
   {
     "nodeName": "IntelliJ",
@@ -1435,7 +1546,8 @@
     ],
     "level": 2,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1139
   },
   {
     "nodeName": "Line",
@@ -1448,7 +1560,8 @@
     "parentNode": [
       156,
       88
-    ]
+    ],
+    "articleCount": 883
   },
   {
     "nodeName": "chef",
@@ -1461,7 +1574,8 @@
     ],
     "level": 3,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 897
   },
   {
     "nodeName": "MongoDB",
@@ -1475,7 +1589,8 @@
       162,
       107,
       91
-    ]
+    ],
+    "articleCount": 1442
   },
   {
     "nodeName": "FPGA",
@@ -1489,7 +1604,8 @@
       27,
       51,
       156
-    ]
+    ],
+    "articleCount": 860
   },
   {
     "nodeName": "ATOM",
@@ -1503,7 +1619,8 @@
     "color_group": 3,
     "parentNode": [
       30
-    ]
+    ],
+    "articleCount": 1294
   },
   {
     "nodeName": "Xamarin",
@@ -1517,7 +1634,8 @@
     "color_group": 3,
     "parentNode": [
       45
-    ]
+    ],
+    "articleCount": 815
   },
   {
     "nodeName": "VR",
@@ -1530,7 +1648,8 @@
     ],
     "level": 4,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 911
   },
   {
     "nodeName": "MachineLearning",
@@ -1545,7 +1664,8 @@
     "parentNode": [
       116,
       120
-    ]
+    ],
+    "articleCount": 2595
   },
   {
     "nodeName": "Python3",
@@ -1562,7 +1682,8 @@
       23,
       164,
       160
-    ]
+    ],
+    "articleCount": 12297
   },
   {
     "nodeName": "ibmcloud",
@@ -1574,7 +1695,8 @@
     ],
     "level": 3,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 1698
   },
   {
     "nodeName": "Chainer",
@@ -1586,7 +1708,8 @@
     ],
     "level": 2,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 732
   },
   {
     "nodeName": "Emacs",
@@ -1600,7 +1723,8 @@
     "color_group": 3,
     "parentNode": [
       47
-    ]
+    ],
+    "articleCount": 1993
   },
   {
     "nodeName": "TwitterAPI",
@@ -1612,7 +1736,8 @@
     ],
     "level": 4,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 793
   },
   {
     "nodeName": "メモ",
@@ -1627,7 +1752,8 @@
     "color_group": 3,
     "parentNode": [
       165
-    ]
+    ],
+    "articleCount": 1463
   },
   {
     "nodeName": "Scala",
@@ -1639,7 +1765,8 @@
     ],
     "level": 2,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 2903
   },
   {
     "nodeName": "Eclipse",
@@ -1654,7 +1781,8 @@
     "parentNode": [
       137,
       85
-    ]
+    ],
+    "articleCount": 1531
   },
   {
     "nodeName": "vmware",
@@ -1668,7 +1796,8 @@
     "color_group": 3,
     "parentNode": [
       26
-    ]
+    ],
+    "articleCount": 936
   },
   {
     "nodeName": "PowerShell",
@@ -1680,7 +1809,8 @@
     ],
     "level": 4,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 2685
   },
   {
     "nodeName": "GoogleAppsScript",
@@ -1696,7 +1826,8 @@
     "parentNode": [
       108,
       38
-    ]
+    ],
+    "articleCount": 2985
   },
   {
     "nodeName": "Elasticsearch",
@@ -1709,7 +1840,8 @@
     "parentNode": [
       113,
       56
-    ]
+    ],
+    "articleCount": 1766
   },
   {
     "nodeName": "ESP32",
@@ -1721,7 +1853,8 @@
     "color_group": 3,
     "parentNode": [
       112
-    ]
+    ],
+    "articleCount": 909
   },
   {
     "nodeName": "DeepLearning",
@@ -1737,7 +1870,8 @@
     "parentNode": [
       146,
       98
-    ]
+    ],
+    "articleCount": 5045
   },
   {
     "nodeName": "Kotlin",
@@ -1749,7 +1883,8 @@
     ],
     "level": 3,
     "color_group": 3,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 4594
   },
   {
     "nodeName": "Slack",
@@ -1761,7 +1896,8 @@
     "color_group": 3,
     "parentNode": [
       6
-    ]
+    ],
+    "articleCount": 3345
   },
   {
     "nodeName": "VisualStudio",
@@ -1773,7 +1909,8 @@
     "color_group": 4,
     "parentNode": [
       115
-    ]
+    ],
+    "articleCount": 1608
   },
   {
     "nodeName": "RSpec",
@@ -1790,7 +1927,8 @@
       157,
       114,
       53
-    ]
+    ],
+    "articleCount": 2048
   },
   {
     "nodeName": "Django",
@@ -1804,7 +1942,8 @@
       150,
       26,
       115
-    ]
+    ],
+    "articleCount": 3935
   },
   {
     "nodeName": "Jupyter",
@@ -1817,7 +1956,8 @@
     "parentNode": [
       80,
       95
-    ]
+    ],
+    "articleCount": 1578
   },
   {
     "nodeName": "oracle",
@@ -1831,7 +1971,8 @@
       66,
       125,
       7
-    ]
+    ],
+    "articleCount": 2344
   },
   {
     "nodeName": "TensorFlow",
@@ -1847,7 +1988,8 @@
       154,
       118,
       31
-    ]
+    ],
+    "articleCount": 3143
   },
   {
     "nodeName": "Jenkins",
@@ -1861,7 +2003,8 @@
     "color_group": 4,
     "parentNode": [
       58
-    ]
+    ],
+    "articleCount": 1421
   },
   {
     "nodeName": "SQL",
@@ -1877,7 +2020,8 @@
     "parentNode": [
       140,
       106
-    ]
+    ],
+    "articleCount": 4128
   },
   {
     "nodeName": "IoT",
@@ -1892,7 +2036,8 @@
       62,
       77,
       69
-    ]
+    ],
+    "articleCount": 2989
   },
   {
     "nodeName": "Rust",
@@ -1905,7 +2050,8 @@
     "parentNode": [
       80,
       142
-    ]
+    ],
+    "articleCount": 2529
   },
   {
     "nodeName": "kubernetes",
@@ -1920,7 +2066,8 @@
     "parentNode": [
       139,
       123
-    ]
+    ],
+    "articleCount": 4417
   },
   {
     "nodeName": "AndroidStudio",
@@ -1936,7 +2083,8 @@
       68,
       124,
       19
-    ]
+    ],
+    "articleCount": 2563
   },
   {
     "nodeName": "Unity",
@@ -1952,7 +2100,8 @@
       10,
       52,
       32
-    ]
+    ],
+    "articleCount": 10709
   },
   {
     "nodeName": "Azure",
@@ -1965,7 +2114,8 @@
     "parentNode": [
       148,
       30
-    ]
+    ],
+    "articleCount": 4233
   },
   {
     "nodeName": "Arduino",
@@ -1978,7 +2128,8 @@
     ],
     "level": 2,
     "color_group": 4,
-    "parentNode": []
+    "parentNode": [],
+    "articleCount": 2864
   },
   {
     "nodeName": "Go",
@@ -1994,7 +2145,8 @@
       134,
       71,
       99
-    ]
+    ],
+    "articleCount": 9159
   },
   {
     "nodeName": "Swift",
@@ -2011,7 +2163,8 @@
       163,
       11,
       50
-    ]
+    ],
+    "articleCount": 15893
   },
   {
     "nodeName": "linebot",
@@ -2023,7 +2176,8 @@
     "color_group": 4,
     "parentNode": [
       86
-    ]
+    ],
+    "articleCount": 1314
   },
   {
     "nodeName": "Vim",
@@ -2036,7 +2190,8 @@
     "parentNode": [
       168,
       17
-    ]
+    ],
+    "articleCount": 4072
   },
   {
     "nodeName": "iOS",
@@ -2052,7 +2207,8 @@
       37,
       14,
       25
-    ]
+    ],
+    "articleCount": 16755
   },
   {
     "nodeName": "Python",
@@ -2070,7 +2226,8 @@
       49,
       77,
       15
-    ]
+    ],
+    "articleCount": 51203
   },
   {
     "nodeName": "Android",
@@ -2087,7 +2244,8 @@
       94,
       153,
       60
-    ]
+    ],
+    "articleCount": 15009
   },
   {
     "nodeName": "VBA",
@@ -2100,7 +2258,8 @@
     "parentNode": [
       105,
       19
-    ]
+    ],
+    "articleCount": 2191
   },
   {
     "nodeName": "Xcode",
@@ -2116,7 +2275,8 @@
       72,
       8,
       9
-    ]
+    ],
+    "articleCount": 6751
   },
   {
     "nodeName": "Twitter",
@@ -2129,7 +2289,8 @@
     "parentNode": [
       14,
       5
-    ]
+    ],
+    "articleCount": 1887
   },
   {
     "nodeName": "Java",
@@ -2142,7 +2303,8 @@
     "parentNode": [
       144,
       4
-    ]
+    ],
+    "articleCount": 16530
   },
   {
     "nodeName": "PyTorch",
@@ -2156,7 +2318,8 @@
       133,
       131,
       1
-    ]
+    ],
+    "articleCount": 1197
   },
   {
     "nodeName": "AI",
@@ -2168,7 +2331,8 @@
     "color_group": 4,
     "parentNode": [
       31
-    ]
+    ],
+    "articleCount": 1617
   },
   {
     "nodeName": "SQLite3",
@@ -2181,7 +2345,8 @@
     "parentNode": [
       55,
       34
-    ]
+    ],
+    "articleCount": 706
   },
   {
     "nodeName": "OpenCV",
@@ -2197,7 +2362,8 @@
       83,
       46,
       73
-    ]
+    ],
+    "articleCount": 2825
   },
   {
     "nodeName": "RaspberryPi",
@@ -2214,7 +2380,8 @@
       39,
       34,
       35
-    ]
+    ],
+    "articleCount": 6637
   },
   {
     "nodeName": "Raspberrypi3",
@@ -2226,6 +2393,7 @@
     "color_group": 4,
     "parentNode": [
       11
-    ]
+    ],
+    "articleCount": 746
   }
 ]
