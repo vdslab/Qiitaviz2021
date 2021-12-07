@@ -44,6 +44,79 @@ function Header({ setClusterDataUrl }) {
                   また、学習内容とマッチするQiita記事にも遷移できるのも本サービスの特徴です
                 </p>
                 <h2 className="title has-text-grey-dark is-size-4 mt-2 mb-2">
+                  ノードの色について
+                </h2>
+                <p>
+                  ノードの色は、難易度を表していて以下の通りです。
+                </p>
+                <svg width={"500"} height={"100"}>
+                  <g>
+                    <circle
+                      className="node"
+                      r={30}
+                      fill="rgb(255, 240, 130)"
+                      cx={40}
+                      cy={50}
+                      stroke="rgb(80,80,80)"
+                      strokeWeight="1"
+                    ></circle>
+                    <circle
+                      className="node"
+                      r={30}
+                      fill="rgb(255, 215, 0)"
+                      cx={105}
+                      cy={50}
+                      stroke="rgb(80,80,80)"
+                      strokeWeight="1"
+                    ></circle>
+                    <circle
+                      className="node"
+                      r={30}
+                      fill="rgb(255, 165, 0)"
+                      cx={170}
+                      cy={50}
+                      stroke="rgb(80,80,80)"
+                      strokeWeight="1"
+                    ></circle>
+                    <circle
+                      className="node"
+                      r={30}
+                      fill="rgb(255, 106, 0)"
+                      cx={235}
+                      cy={50}
+                      stroke="rgb(80,80,80)"
+                      strokeWeight="1"
+                    ></circle>
+                    <circle
+                      className="node"
+                      r={30}
+                      fill="rgb(240, 60, 25)"
+                      cx={300}
+                      cy={50}
+                      stroke="rgb(80,80,80)"
+                      strokeWeight="1"
+                    ></circle>
+                    <text
+                      textAnchor="middle"
+                      fill="black"
+                      fontSize={"13px"}
+                      x={40}
+                      y={15}
+                    >
+                      低い
+                    </text>
+                    <text
+                      textAnchor="middle"
+                      fill="black"
+                      fontSize={"13px"}
+                      x={300}
+                      y={15}
+                    >
+                      高い
+                    </text>
+                  </g>
+                </svg>
+                <h2 className="title has-text-grey-dark is-size-4 mt-2 mb-2">
                   サービス構築に用いた参考文献
                 </h2>
                 <h3 className="subtitle has-text-grey-dark is-size-5 mt-2 mb-2">
