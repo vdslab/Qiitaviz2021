@@ -108,7 +108,6 @@ function D3DirectedGraph() {
         const clusterData = await clusterResponse.json();
 
         const edgeDataUrl = clusterDataUrl.replace("graph", "edge");
-        console.log(edgeDataUrl);
         const edgeResponse = await fetch(edgeDataUrl);
         const edgeData = await edgeResponse.json();
         setEdgeWeight(edgeData);
@@ -175,6 +174,7 @@ function D3DirectedGraph() {
     setSelectChildNodes([]);
     setSearchTag("");
     setPreClickNode("");
+    console.log(clusterDataUrl, searchTag, selectSystem);
   }, [clusterDataUrl, searchTag, selectSystem]);
 
   if (loading) {
