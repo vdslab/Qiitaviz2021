@@ -174,7 +174,6 @@ function D3DirectedGraph() {
     setSelectChildNodes([]);
     setSearchTag("");
     setPreClickNode("");
-    console.log(clusterDataUrl, searchTag, selectSystem);
   }, [clusterDataUrl, searchTag, selectSystem]);
 
   if (loading) {
