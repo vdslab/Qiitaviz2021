@@ -9,7 +9,8 @@
       19
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "devise",
@@ -20,7 +21,8 @@
       5
     ],
     "level": 5,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "CircleCI",
@@ -33,7 +35,8 @@
       161
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "GitHubActions",
@@ -44,7 +47,8 @@
       148
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "SQLite3",
@@ -55,7 +59,8 @@
       148
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Swift4",
@@ -66,7 +71,8 @@
       156
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Maven",
@@ -78,7 +84,8 @@
       146
     ],
     "level": 3,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "docker-compose",
@@ -90,7 +97,8 @@
       13
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "kintone",
@@ -101,7 +109,8 @@
       9
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "TechEnglish",
@@ -112,7 +121,8 @@
       28
     ],
     "level": 5,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "chef",
@@ -123,7 +133,8 @@
       13
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Django",
@@ -134,7 +145,8 @@
       6
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Railsチュートリアル",
@@ -145,7 +157,8 @@
       116
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "RSpec",
@@ -156,7 +169,8 @@
       5
     ],
     "level": 5,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Rails6",
@@ -167,7 +181,8 @@
       44
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Flask",
@@ -178,7 +193,8 @@
       47
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Ansible",
@@ -191,7 +207,8 @@
       82
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "nginx",
@@ -204,7 +221,8 @@
       169
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "rbenv",
@@ -215,7 +233,8 @@
       112
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Elasticsearch",
@@ -227,7 +246,8 @@
       119
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "gradle",
@@ -238,7 +258,8 @@
       5
     ],
     "level": 5,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "SSL",
@@ -249,7 +270,8 @@
       50
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Rails5",
@@ -261,7 +283,10 @@
       97
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": [
+      33
+    ]
   },
   {
     "nodeName": "mecab",
@@ -272,7 +297,8 @@
       189
     ],
     "level": 1,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Heroku",
@@ -286,7 +312,8 @@
       118
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "TwitterAPI",
@@ -297,7 +324,8 @@
       77
     ],
     "level": 6,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Ethereum",
@@ -308,7 +336,8 @@
       76
     ],
     "level": 3,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "serverless",
@@ -319,7 +348,8 @@
       20
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Apache",
@@ -333,7 +363,10 @@
       193
     ],
     "level": 1,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": [
+      90
+    ]
   },
   {
     "nodeName": "GitLab",
@@ -346,7 +379,8 @@
       87
     ],
     "level": 4,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Jenkins",
@@ -357,7 +391,10 @@
       13
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": [
+      30
+    ]
   },
   {
     "nodeName": "CTF",
@@ -368,7 +405,8 @@
       27
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "CI",
@@ -380,7 +418,8 @@
       34
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Rails4",
@@ -391,7 +430,8 @@
       27
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "linebot",
@@ -403,7 +443,8 @@
       162
     ],
     "level": 3,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "spring-boot",
@@ -415,7 +456,8 @@
       192
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Rails",
@@ -429,7 +471,10 @@
       26
     ],
     "level": 3,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": [
+      25
+    ]
   },
   {
     "nodeName": "GraphQL",
@@ -440,7 +485,8 @@
       106
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "ROS",
@@ -452,7 +498,8 @@
       172
     ],
     "level": 1,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Composer",
@@ -464,7 +511,10 @@
       130
     ],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      185
+    ]
   },
   {
     "nodeName": "Git",
@@ -475,7 +525,11 @@
       12
     ],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      99,
+      134
+    ]
   },
   {
     "nodeName": "SSH",
@@ -487,7 +541,8 @@
       72
     ],
     "level": 4,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "LINEmessagingAPI",
@@ -499,7 +554,8 @@
       173
     ],
     "level": 0,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "GitHub",
@@ -510,7 +566,8 @@
       1
     ],
     "level": 1,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "kubernetes",
@@ -523,7 +580,10 @@
       170
     ],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      150
+    ]
   },
   {
     "nodeName": "Twitter",
@@ -535,7 +595,8 @@
       117
     ],
     "level": 0,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "curl",
@@ -544,7 +605,10 @@
     "url": "https://qiita.com/tags/curl",
     "childNode": [],
     "level": 1,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      187
+    ]
   },
   {
     "nodeName": "Terraform",
@@ -553,7 +617,10 @@
     "url": "https://qiita.com/tags/terraform",
     "childNode": [],
     "level": 5,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      85
+    ]
   },
   {
     "nodeName": "zabbix",
@@ -564,7 +631,8 @@
       121
     ],
     "level": 2,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "Emacs",
@@ -575,7 +643,8 @@
       28
     ],
     "level": 5,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "Gem",
@@ -586,7 +655,8 @@
       27
     ],
     "level": 2,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "mariadb",
@@ -597,7 +667,8 @@
       6
     ],
     "level": 2,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "Selenium",
@@ -609,7 +680,10 @@
       137
     ],
     "level": 5,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      85
+    ]
   },
   {
     "nodeName": "MongoDB",
@@ -621,7 +695,8 @@
       192
     ],
     "level": 0,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "ECS",
@@ -632,7 +707,8 @@
       5
     ],
     "level": 5,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "Flutter",
@@ -643,7 +719,8 @@
       12
     ],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "spring",
@@ -654,7 +731,10 @@
       171
     ],
     "level": 1,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      46
+    ]
   },
   {
     "nodeName": "bot",
@@ -665,7 +745,10 @@
       174
     ],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      99
+    ]
   },
   {
     "nodeName": "processing",
@@ -677,7 +760,8 @@
       4
     ],
     "level": 1,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "正規表現",
@@ -688,7 +772,8 @@
       11
     ],
     "level": 2,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "APIGateway",
@@ -700,7 +785,8 @@
       133
     ],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "oci",
@@ -711,7 +797,8 @@
       36
     ],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "Alexa",
@@ -722,7 +809,8 @@
       137
     ],
     "level": 5,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "DDD",
@@ -735,7 +823,8 @@
       100
     ],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "Swift",
@@ -748,7 +837,11 @@
       22
     ],
     "level": 1,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      58,
+      63
+    ]
   },
   {
     "nodeName": "オブジェクト指向",
@@ -760,7 +853,8 @@
       183
     ],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "Vim",
@@ -771,7 +865,10 @@
       75
     ],
     "level": 4,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      2
+    ]
   },
   {
     "nodeName": "Laravel",
@@ -783,7 +880,11 @@
       54
     ],
     "level": 4,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      181,
+      2
+    ]
   },
   {
     "nodeName": "Rust",
@@ -792,7 +893,10 @@
     "url": "https://qiita.com/tags/rust",
     "childNode": [],
     "level": 4,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      184
+    ]
   },
   {
     "nodeName": "Kotlin",
@@ -804,7 +908,8 @@
       168
     ],
     "level": 5,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "WPF",
@@ -815,7 +920,8 @@
       38
     ],
     "level": 1,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "JSON",
@@ -826,7 +932,10 @@
       50
     ],
     "level": 2,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      47
+    ]
   },
   {
     "nodeName": "WebAPI",
@@ -837,7 +946,8 @@
       127
     ],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "Line",
@@ -846,7 +956,11 @@
     "url": "https://qiita.com/tags/line",
     "childNode": [],
     "level": 6,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      69,
+      159
+    ]
   },
   {
     "nodeName": "android開発",
@@ -855,7 +969,10 @@
     "url": "https://qiita.com/tags/android開発",
     "childNode": [],
     "level": 6,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      18
+    ]
   },
   {
     "nodeName": "api",
@@ -867,7 +984,10 @@
       66
     ],
     "level": 2,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      7
+    ]
   },
   {
     "nodeName": "lambda",
@@ -879,7 +999,12 @@
       77
     ],
     "level": 6,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      176,
+      62,
+      69
+    ]
   },
   {
     "nodeName": "AndroidStudio",
@@ -890,7 +1015,8 @@
       6
     ],
     "level": 2,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "Redmine",
@@ -902,7 +1028,10 @@
       127
     ],
     "level": 3,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      186
+    ]
   },
   {
     "nodeName": "Xcode",
@@ -913,7 +1042,10 @@
       148
     ],
     "level": 0,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      30
+    ]
   },
   {
     "nodeName": "Eclipse",
@@ -924,7 +1056,8 @@
       35
     ],
     "level": 0,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "HTTP",
@@ -933,7 +1066,10 @@
     "url": "https://qiita.com/tags/http",
     "childNode": [],
     "level": 2,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      163
+    ]
   },
   {
     "nodeName": "Elixir",
@@ -944,7 +1080,8 @@
       70
     ],
     "level": 3,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "スクレイピング",
@@ -953,7 +1090,10 @@
     "url": "https://qiita.com/tags/スクレイピング",
     "childNode": [],
     "level": 1,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      46
+    ]
   },
   {
     "nodeName": "Ruby",
@@ -967,7 +1107,10 @@
       11
     ],
     "level": 2,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      15
+    ]
   },
   {
     "nodeName": "WordPress",
@@ -978,7 +1121,11 @@
       6
     ],
     "level": 2,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      47,
+      7
+    ]
   },
   {
     "nodeName": "oraclecloud",
@@ -987,7 +1134,10 @@
     "url": "https://qiita.com/tags/oraclecloud",
     "childNode": [],
     "level": 4,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      129
+    ]
   },
   {
     "nodeName": "Redis",
@@ -996,7 +1146,11 @@
     "url": "https://qiita.com/tags/redis",
     "childNode": [],
     "level": 4,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      88,
+      156
+    ]
   },
   {
     "nodeName": "Dart",
@@ -1005,7 +1159,10 @@
     "url": "https://qiita.com/tags/dart",
     "childNode": [],
     "level": 1,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      65
+    ]
   },
   {
     "nodeName": "Slack",
@@ -1017,7 +1174,8 @@
       55
     ],
     "level": 0,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "Blockchain",
@@ -1028,7 +1186,8 @@
       86
     ],
     "level": 1,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "test",
@@ -1040,7 +1199,8 @@
       36
     ],
     "level": 3,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "SwiftUI",
@@ -1051,7 +1211,8 @@
       50
     ],
     "level": 2,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "Go",
@@ -1064,7 +1225,11 @@
       72
     ],
     "level": 4,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      9,
+      40
+    ]
   },
   {
     "nodeName": "MySQL",
@@ -1077,7 +1242,12 @@
       39
     ],
     "level": 0,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      33,
+      138,
+      78
+    ]
   },
   {
     "nodeName": "Arduino",
@@ -1088,7 +1258,8 @@
       193
     ],
     "level": 1,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "Security",
@@ -1099,7 +1270,10 @@
       19
     ],
     "level": 0,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      151
+    ]
   },
   {
     "nodeName": "ActiveRecord",
@@ -1108,7 +1282,10 @@
     "url": "https://qiita.com/tags/activerecord",
     "childNode": [],
     "level": 4,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      20
+    ]
   },
   {
     "nodeName": "勉強会",
@@ -1119,7 +1296,8 @@
       11
     ],
     "level": 2,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "Raspberrypi3",
@@ -1128,7 +1306,10 @@
     "url": "https://qiita.com/tags/raspberrypi3",
     "childNode": [],
     "level": 0,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      30
+    ]
   },
   {
     "nodeName": "ESP32",
@@ -1139,7 +1320,8 @@
       3
     ],
     "level": 2,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "RaspberryPi",
@@ -1151,7 +1333,10 @@
       123
     ],
     "level": 6,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      18
+    ]
   },
   {
     "nodeName": "GoogleSpreadSheet",
@@ -1163,7 +1348,10 @@
       45
     ],
     "level": 0,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      175
+    ]
   },
   {
     "nodeName": "LaTeX",
@@ -1174,7 +1362,8 @@
       11
     ],
     "level": 2,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "node-red",
@@ -1183,7 +1372,11 @@
     "url": "https://qiita.com/tags/node-red",
     "childNode": [],
     "level": 7,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      28,
+      17
+    ]
   },
   {
     "nodeName": "PostgreSQL",
@@ -1195,7 +1388,13 @@
       130
     ],
     "level": 3,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      132,
+      126,
+      81,
+      1
+    ]
   },
   {
     "nodeName": "Xamarin",
@@ -1204,7 +1403,10 @@
     "url": "https://qiita.com/tags/xamarin",
     "childNode": [],
     "level": 7,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      17
+    ]
   },
   {
     "nodeName": "Bluemix",
@@ -1213,7 +1415,10 @@
     "url": "https://qiita.com/tags/bluemix",
     "childNode": [],
     "level": 1,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      68
+    ]
   },
   {
     "nodeName": "セキュリティ",
@@ -1224,7 +1429,11 @@
       135
     ],
     "level": 5,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      43,
+      12
+    ]
   },
   {
     "nodeName": "aws-cli",
@@ -1233,7 +1442,11 @@
     "url": "https://qiita.com/tags/aws-cli",
     "childNode": [],
     "level": 5,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      43,
+      21
+    ]
   },
   {
     "nodeName": "CakePHP",
@@ -1246,7 +1459,10 @@
       183
     ],
     "level": 3,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      1
+    ]
   },
   {
     "nodeName": "Database",
@@ -1255,7 +1471,12 @@
     "url": "https://qiita.com/tags/database",
     "childNode": [],
     "level": 4,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      156,
+      184,
+      27
+    ]
   },
   {
     "nodeName": "CSV",
@@ -1266,7 +1487,8 @@
       31
     ],
     "level": 2,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "S3",
@@ -1277,7 +1499,10 @@
       5
     ],
     "level": 5,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      14
+    ]
   },
   {
     "nodeName": "RDS",
@@ -1288,7 +1513,8 @@
       11
     ],
     "level": 2,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "oracle",
@@ -1300,7 +1526,8 @@
       8
     ],
     "level": 4,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "google",
@@ -1311,7 +1538,8 @@
       64
     ],
     "level": 4,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "vmware",
@@ -1322,7 +1550,11 @@
       182
     ],
     "level": 4,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      180,
+      112
+    ]
   },
   {
     "nodeName": "Android",
@@ -1334,7 +1566,11 @@
       32
     ],
     "level": 5,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      12,
+      52
+    ]
   },
   {
     "nodeName": "cloud9",
@@ -1345,7 +1581,8 @@
       109
     ],
     "level": 2,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": []
   },
   {
     "nodeName": "Scala",
@@ -1354,7 +1591,12 @@
     "url": "https://qiita.com/tags/scala",
     "childNode": [],
     "level": 1,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      68,
+      13,
+      124
+    ]
   },
   {
     "nodeName": "資格",
@@ -1363,7 +1605,10 @@
     "url": "https://qiita.com/tags/資格",
     "childNode": [],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      25
+    ]
   },
   {
     "nodeName": "PHP7",
@@ -1372,7 +1617,10 @@
     "url": "https://qiita.com/tags/php7",
     "childNode": [],
     "level": 1,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      65
+    ]
   },
   {
     "nodeName": "error",
@@ -1383,7 +1631,8 @@
       6
     ],
     "level": 2,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": []
   },
   {
     "nodeName": "iOS",
@@ -1392,7 +1641,14 @@
     "url": "https://qiita.com/tags/ios",
     "childNode": [],
     "level": 6,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      136,
+      60,
+      94,
+      153,
+      54
+    ]
   },
   {
     "nodeName": "GoogleAppsScript",
@@ -1404,7 +1660,10 @@
       31
     ],
     "level": 2,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      120
+    ]
   },
   {
     "nodeName": "自動化",
@@ -1415,7 +1674,10 @@
       71
     ],
     "level": 4,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      161
+    ]
   },
   {
     "nodeName": "Azure",
@@ -1427,7 +1689,11 @@
       140
     ],
     "level": 0,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      175,
+      106
+    ]
   },
   {
     "nodeName": "PDF",
@@ -1438,7 +1704,8 @@
       172
     ],
     "level": 1,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": []
   },
   {
     "nodeName": "デザインパターン",
@@ -1447,7 +1714,10 @@
     "url": "https://qiita.com/tags/デザインパターン",
     "childNode": [],
     "level": 6,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      72
+    ]
   },
   {
     "nodeName": "Perl",
@@ -1456,7 +1726,11 @@
     "url": "https://qiita.com/tags/perl",
     "childNode": [],
     "level": 4,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      107,
+      91
+    ]
   },
   {
     "nodeName": "CloudFormation",
@@ -1465,7 +1739,10 @@
     "url": "https://qiita.com/tags/cloudformation",
     "childNode": [],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      99
+    ]
   },
   {
     "nodeName": "gas",
@@ -1476,7 +1753,10 @@
       104
     ],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      42
+    ]
   },
   {
     "nodeName": "SQL",
@@ -1485,7 +1765,10 @@
     "url": "https://qiita.com/tags/sql",
     "childNode": [],
     "level": 2,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      7
+    ]
   },
   {
     "nodeName": "PHP",
@@ -1498,7 +1781,11 @@
       50
     ],
     "level": 2,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      102,
+      163
+    ]
   },
   {
     "nodeName": "PowerShell",
@@ -1507,7 +1794,10 @@
     "url": "https://qiita.com/tags/powershell",
     "childNode": [],
     "level": 1,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      124
+    ]
   },
   {
     "nodeName": "Spark",
@@ -1518,7 +1808,8 @@
       36
     ],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": []
   },
   {
     "nodeName": "ATOM",
@@ -1530,7 +1821,10 @@
       11
     ],
     "level": 2,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      79
+    ]
   },
   {
     "nodeName": "ポエム",
@@ -1539,7 +1833,11 @@
     "url": "https://qiita.com/tags/ポエム",
     "childNode": [],
     "level": 1,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      105,
+      19
+    ]
   },
   {
     "nodeName": "BigQuery",
@@ -1548,7 +1846,10 @@
     "url": "https://qiita.com/tags/bigquery",
     "childNode": [],
     "level": 1,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      63
+    ]
   },
   {
     "nodeName": "cppBuilder",
@@ -1559,7 +1860,8 @@
       116
     ],
     "level": 2,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": []
   },
   {
     "nodeName": "UE4",
@@ -1568,7 +1870,10 @@
     "url": "https://qiita.com/tags/ue4",
     "childNode": [],
     "level": 4,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      66
+    ]
   },
   {
     "nodeName": ".NETCore",
@@ -1577,7 +1882,11 @@
     "url": "https://qiita.com/tags/.netcore",
     "childNode": [],
     "level": 2,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      47,
+      41
+    ]
   },
   {
     "nodeName": "Unity",
@@ -1588,7 +1897,16 @@
       26
     ],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      92,
+      1,
+      147,
+      128,
+      149,
+      4,
+      86
+    ]
   },
   {
     "nodeName": "AtCoder",
@@ -1597,7 +1915,10 @@
     "url": "https://qiita.com/tags/atcoder",
     "childNode": [],
     "level": 4,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      2
+    ]
   },
   {
     "nodeName": "DB",
@@ -1609,7 +1930,8 @@
       155
     ],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": []
   },
   {
     "nodeName": "DynamoDB",
@@ -1618,7 +1940,10 @@
     "url": "https://qiita.com/tags/dynamodb",
     "childNode": [],
     "level": 4,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      181
+    ]
   },
   {
     "nodeName": "テスト",
@@ -1627,7 +1952,10 @@
     "url": "https://qiita.com/tags/テスト",
     "childNode": [],
     "level": 5,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      52
+    ]
   },
   {
     "nodeName": "IoT",
@@ -1636,7 +1964,13 @@
     "url": "https://qiita.com/tags/iot",
     "childNode": [],
     "level": 1,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      46,
+      83,
+      73,
+      13
+    ]
   },
   {
     "nodeName": "データベース",
@@ -1647,7 +1981,11 @@
       64
     ],
     "level": 4,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      91,
+      93
+    ]
   },
   {
     "nodeName": "設計",
@@ -1658,7 +1996,10 @@
       121
     ],
     "level": 2,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      179
+    ]
   },
   {
     "nodeName": "Java",
@@ -1667,7 +2008,14 @@
     "url": "https://qiita.com/tags/java",
     "childNode": [],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      24,
+      164,
+      48,
+      23,
+      160
+    ]
   },
   {
     "nodeName": "java8",
@@ -1676,7 +2024,12 @@
     "url": "https://qiita.com/tags/java8",
     "childNode": [],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      158,
+      86,
+      189
+    ]
   },
   {
     "nodeName": "SQLServer",
@@ -1687,7 +2040,10 @@
       61
     ],
     "level": 4,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      20
+    ]
   },
   {
     "nodeName": "UI",
@@ -1696,7 +2052,10 @@
     "url": "https://qiita.com/tags/ui",
     "childNode": [],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      42
+    ]
   },
   {
     "nodeName": "競技プログラミング",
@@ -1705,7 +2064,10 @@
     "url": "https://qiita.com/tags/競技プログラミング",
     "childNode": [],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      1
+    ]
   },
   {
     "nodeName": "エンジニア",
@@ -1714,7 +2076,10 @@
     "url": "https://qiita.com/tags/エンジニア",
     "childNode": [],
     "level": 2,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      82
+    ]
   },
   {
     "nodeName": "Julia",
@@ -1725,7 +2090,8 @@
       182
     ],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": []
   },
   {
     "nodeName": "RPA",
@@ -1736,7 +2102,10 @@
       100
     ],
     "level": 3,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      143
+    ]
   },
   {
     "nodeName": "Unity3D",
@@ -1745,7 +2114,10 @@
     "url": "https://qiita.com/tags/unity3d",
     "childNode": [],
     "level": 5,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      14
+    ]
   },
   {
     "nodeName": "ネットワーク",
@@ -1754,7 +2126,10 @@
     "url": "https://qiita.com/tags/ネットワーク",
     "childNode": [],
     "level": 1,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      19
+    ]
   },
   {
     "nodeName": "EC2",
@@ -1765,7 +2140,12 @@
       67
     ],
     "level": 3,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      25,
+      108,
+      38
+    ]
   },
   {
     "nodeName": "AdventCalendar",
@@ -1774,7 +2154,10 @@
     "url": "https://qiita.com/tags/adventcalendar",
     "childNode": [],
     "level": 1,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      29
+    ]
   },
   {
     "nodeName": "Haskell",
@@ -1783,7 +2166,11 @@
     "url": "https://qiita.com/tags/haskell",
     "childNode": [],
     "level": 5,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      95,
+      183
+    ]
   },
   {
     "nodeName": "ibmcloud",
@@ -1792,7 +2179,10 @@
     "url": "https://qiita.com/tags/ibmcloud",
     "childNode": [],
     "level": 5,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      174
+    ]
   },
   {
     "nodeName": "Network",
@@ -1803,7 +2193,11 @@
       103
     ],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      184,
+      109
+    ]
   },
   {
     "nodeName": "電子工作",
@@ -1812,7 +2206,12 @@
     "url": "https://qiita.com/tags/電子工作",
     "childNode": [],
     "level": 3,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      96,
+      38,
+      152
+    ]
   },
   {
     "nodeName": ".NET",
@@ -1821,7 +2220,11 @@
     "url": "https://qiita.com/tags/.net",
     "childNode": [],
     "level": 7,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      165,
+      28
+    ]
   },
   {
     "nodeName": "IntelliJ",
@@ -1830,7 +2233,11 @@
     "url": "https://qiita.com/tags/intellij",
     "childNode": [],
     "level": 5,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      85,
+      100
+    ]
   },
   {
     "nodeName": "AWS",
@@ -1839,7 +2246,11 @@
     "url": "https://qiita.com/tags/aws",
     "childNode": [],
     "level": 3,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      144,
+      4
+    ]
   },
   {
     "nodeName": "VisualStudio",
@@ -1848,7 +2259,11 @@
     "url": "https://qiita.com/tags/visualstudio",
     "childNode": [],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      57,
+      111
+    ]
   },
   {
     "nodeName": "Excel",
@@ -1857,7 +2272,12 @@
     "url": "https://qiita.com/tags/excel",
     "childNode": [],
     "level": 1,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      166,
+      187,
+      13
+    ]
   },
   {
     "nodeName": "iPhone",
@@ -1868,7 +2288,10 @@
       56
     ],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      113
+    ]
   },
   {
     "nodeName": "gcp",
@@ -1877,7 +2300,13 @@
     "url": "https://qiita.com/tags/gcp",
     "childNode": [],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      177,
+      113,
+      27,
+      178
+    ]
   },
   {
     "nodeName": "Objective-C",
@@ -1886,7 +2315,13 @@
     "url": "https://qiita.com/tags/objective-c",
     "childNode": [],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      2,
+      20,
+      112,
+      11
+    ]
   },
   {
     "nodeName": "Microsoft",
@@ -1895,7 +2330,10 @@
     "url": "https://qiita.com/tags/microsoft",
     "childNode": [],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      88
+    ]
   },
   {
     "nodeName": "C#",
@@ -1904,7 +2342,10 @@
     "url": "https://qiita.com/tags/c#",
     "childNode": [],
     "level": 6,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      8
+    ]
   },
   {
     "nodeName": "C",
@@ -1913,7 +2354,10 @@
     "url": "https://qiita.com/tags/c",
     "childNode": [],
     "level": 6,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      8
+    ]
   },
   {
     "nodeName": "新人プログラマ応援",
@@ -1924,7 +2368,13 @@
       155
     ],
     "level": 3,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      114,
+      53,
+      157,
+      4
+    ]
   },
   {
     "nodeName": "FPGA",
@@ -1933,7 +2383,12 @@
     "url": "https://qiita.com/tags/fpga",
     "childNode": [],
     "level": 0,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      141,
+      190,
+      16
+    ]
   },
   {
     "nodeName": "SoftLayer",
@@ -1942,7 +2397,11 @@
     "url": "https://qiita.com/tags/softlayer",
     "childNode": [],
     "level": 5,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      127,
+      142
+    ]
   },
   {
     "nodeName": "C言語",
@@ -1951,7 +2410,10 @@
     "url": "https://qiita.com/tags/c言語",
     "childNode": [],
     "level": 2,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      47
+    ]
   },
   {
     "nodeName": "GoogleCloudPlatform",
@@ -1960,7 +2422,10 @@
     "url": "https://qiita.com/tags/googlecloudplatform",
     "childNode": [],
     "level": 5,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      115
+    ]
   },
   {
     "nodeName": "IAM",
@@ -1969,7 +2434,11 @@
     "url": "https://qiita.com/tags/iam",
     "childNode": [],
     "level": 1,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      58,
+      83
+    ]
   },
   {
     "nodeName": "どう書く",
@@ -1978,7 +2447,11 @@
     "url": "https://qiita.com/tags/どう書く",
     "childNode": [],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      129,
+      93
+    ]
   },
   {
     "nodeName": "ゲーム制作",
@@ -1987,7 +2460,10 @@
     "url": "https://qiita.com/tags/ゲーム制作",
     "childNode": [],
     "level": 3,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      25
+    ]
   },
   {
     "nodeName": "VR",
@@ -1996,7 +2472,10 @@
     "url": "https://qiita.com/tags/vr",
     "childNode": [],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      93
+    ]
   },
   {
     "nodeName": "Qiita",
@@ -2005,7 +2484,10 @@
     "url": "https://qiita.com/tags/qiita",
     "childNode": [],
     "level": 5,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      59
+    ]
   },
   {
     "nodeName": "ExcelVBA",
@@ -2014,7 +2496,11 @@
     "url": "https://qiita.com/tags/excelvba",
     "childNode": [],
     "level": 2,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      102,
+      191
+    ]
   },
   {
     "nodeName": "Salesforce",
@@ -2023,7 +2509,10 @@
     "url": "https://qiita.com/tags/salesforce",
     "childNode": [],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      31
+    ]
   },
   {
     "nodeName": "matlab",
@@ -2032,7 +2521,11 @@
     "url": "https://qiita.com/tags/matlab",
     "childNode": [],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      111,
+      50
+    ]
   },
   {
     "nodeName": "VBA",
@@ -2041,7 +2534,11 @@
     "url": "https://qiita.com/tags/vba",
     "childNode": [],
     "level": 1,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      166,
+      29
+    ]
   },
   {
     "nodeName": "メモ",
@@ -2050,6 +2547,9 @@
     "url": "https://qiita.com/tags/メモ",
     "childNode": [],
     "level": 5,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      12
+    ]
   }
 ]
