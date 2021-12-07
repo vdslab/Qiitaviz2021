@@ -8,7 +8,8 @@
       12
     ],
     "level": 4,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "redux",
@@ -19,7 +20,8 @@
       29
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "memo",
@@ -30,7 +32,8 @@
       35
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "CSS3",
@@ -41,7 +44,8 @@
       7
     ],
     "level": 1,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Ajax",
@@ -52,7 +56,8 @@
       19
     ],
     "level": 3,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "個人開発",
@@ -63,7 +68,8 @@
       23
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "CSS",
@@ -74,7 +80,8 @@
       7
     ],
     "level": 1,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "Web",
@@ -86,7 +93,8 @@
       43
     ],
     "level": 2,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "babel",
@@ -97,7 +105,8 @@
       27
     ],
     "level": 0,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "scss",
@@ -108,7 +117,10 @@
       8
     ],
     "level": 3,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": [
+      21
+    ]
   },
   {
     "nodeName": "Electron",
@@ -120,7 +132,8 @@
       7
     ],
     "level": 1,
-    "color_group": 0
+    "color_group": 0,
+    "parentNode": []
   },
   {
     "nodeName": "プログラミング",
@@ -132,7 +145,8 @@
       2
     ],
     "level": 2,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "UI",
@@ -143,7 +157,8 @@
       31
     ],
     "level": 2,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "React",
@@ -155,7 +170,12 @@
       23
     ],
     "level": 2,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      22,
+      5,
+      34
+    ]
   },
   {
     "nodeName": "初心者",
@@ -166,7 +186,8 @@
       4
     ],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "next.js",
@@ -177,7 +198,8 @@
       6
     ],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "Chrome",
@@ -188,7 +210,8 @@
       1
     ],
     "level": 1,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "JSON",
@@ -200,7 +223,8 @@
       11
     ],
     "level": 2,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "Angular",
@@ -214,7 +238,10 @@
       33
     ],
     "level": 2,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      34
+    ]
   },
   {
     "nodeName": "Sass",
@@ -223,7 +250,11 @@
     "url": "https://qiita.com/tags/sass",
     "childNode": [],
     "level": 3,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": [
+      28,
+      13
+    ]
   },
   {
     "nodeName": "Rails5",
@@ -234,7 +265,8 @@
       26
     ],
     "level": 1,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "TypeScript",
@@ -245,7 +277,8 @@
       12
     ],
     "level": 4,
-    "color_group": 1
+    "color_group": 1,
+    "parentNode": []
   },
   {
     "nodeName": "gulp",
@@ -256,7 +289,8 @@
       27
     ],
     "level": 0,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "Bootstrap",
@@ -267,7 +301,11 @@
       1
     ],
     "level": 1,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      51,
+      36
+    ]
   },
   {
     "nodeName": "Firestore",
@@ -278,7 +316,10 @@
       41
     ],
     "level": 3,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      7
+    ]
   },
   {
     "nodeName": "HTML",
@@ -291,7 +332,10 @@
       12
     ],
     "level": 4,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      43
+    ]
   },
   {
     "nodeName": "プログラミング初心者",
@@ -300,7 +344,10 @@
     "url": "https://qiita.com/tags/プログラミング初心者",
     "childNode": [],
     "level": 5,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      8
+    ]
   },
   {
     "nodeName": "Vuex",
@@ -311,7 +358,8 @@
       4
     ],
     "level": 3,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "es6",
@@ -320,7 +368,11 @@
     "url": "https://qiita.com/tags/es6",
     "childNode": [],
     "level": 3,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      46,
+      13
+    ]
   },
   {
     "nodeName": "フロントエンド",
@@ -329,7 +381,10 @@
     "url": "https://qiita.com/tags/フロントエンド",
     "childNode": [],
     "level": 3,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      13
+    ]
   },
   {
     "nodeName": "chrome-extension",
@@ -340,7 +395,8 @@
       1
     ],
     "level": 1,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "Rails6",
@@ -349,7 +405,10 @@
     "url": "https://qiita.com/tags/rails6",
     "childNode": [],
     "level": 3,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": [
+      16
+    ]
   },
   {
     "nodeName": "ゲーム制作",
@@ -360,7 +419,8 @@
       2
     ],
     "level": 2,
-    "color_group": 2
+    "color_group": 2,
+    "parentNode": []
   },
   {
     "nodeName": "Markdown",
@@ -372,7 +432,11 @@
       4
     ],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      47,
+      7
+    ]
   },
   {
     "nodeName": "kintone",
@@ -383,7 +447,10 @@
       19
     ],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      13
+    ]
   },
   {
     "nodeName": "JavaScript",
@@ -394,7 +461,12 @@
       11
     ],
     "level": 2,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      15,
+      27,
+      49
+    ]
   },
   {
     "nodeName": "Express",
@@ -403,7 +475,11 @@
     "url": "https://qiita.com/tags/express",
     "childNode": [],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      25,
+      38
+    ]
   },
   {
     "nodeName": "AdventCalendar",
@@ -415,7 +491,10 @@
       11
     ],
     "level": 2,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      20
+    ]
   },
   {
     "nodeName": "初心者向け",
@@ -426,7 +505,8 @@
       18
     ],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": []
   },
   {
     "nodeName": "Rails",
@@ -437,7 +517,13 @@
       14
     ],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      21,
+      25,
+      37,
+      26
+    ]
   },
   {
     "nodeName": "npm",
@@ -448,7 +534,10 @@
       12
     ],
     "level": 4,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      17
+    ]
   },
   {
     "nodeName": "webpack",
@@ -459,7 +548,11 @@
       44
     ],
     "level": 4,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      45,
+      39
+    ]
   },
   {
     "nodeName": "jQuery",
@@ -468,7 +561,10 @@
     "url": "https://qiita.com/tags/jquery",
     "childNode": [],
     "level": 5,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      8
+    ]
   },
   {
     "nodeName": "Firebase",
@@ -479,7 +575,12 @@
       4
     ],
     "level": 3,
-    "color_group": 3
+    "color_group": 3,
+    "parentNode": [
+      16,
+      1,
+      26
+    ]
   },
   {
     "nodeName": "GraphQL",
@@ -488,7 +589,10 @@
     "url": "https://qiita.com/tags/graphql",
     "childNode": [],
     "level": 5,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      19
+    ]
   },
   {
     "nodeName": "reactnative",
@@ -499,7 +603,8 @@
       6
     ],
     "level": 3,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": []
   },
   {
     "nodeName": "nuxt.js",
@@ -508,7 +613,10 @@
     "url": "https://qiita.com/tags/nuxt.js",
     "childNode": [],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      2
+    ]
   },
   {
     "nodeName": "HTML5",
@@ -517,7 +625,13 @@
     "url": "https://qiita.com/tags/html5",
     "childNode": [],
     "level": 5,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      40,
+      9,
+      8,
+      18
+    ]
   },
   {
     "nodeName": "Vue.js",
@@ -526,7 +640,12 @@
     "url": "https://qiita.com/tags/vue.js",
     "childNode": [],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      48,
+      23,
+      24
+    ]
   },
   {
     "nodeName": "Node.js",
@@ -535,7 +654,13 @@
     "url": "https://qiita.com/tags/node.js",
     "childNode": [],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      3,
+      50,
+      23,
+      11
+    ]
   },
   {
     "nodeName": "WebGL",
@@ -544,6 +669,9 @@
     "url": "https://qiita.com/tags/webgl",
     "childNode": [],
     "level": 4,
-    "color_group": 4
+    "color_group": 4,
+    "parentNode": [
+      42
+    ]
   }
 ]
