@@ -14,20 +14,19 @@ import {
   clusterDataUrlState,
   displayArticleState,
   edgeWeightDataState,
+  highlightNodesState,
   linkssState,
   nodesState,
   preClickNodeState,
   searchTagState,
-  selectedChildNodesState,
   selectSystemState,
   tagListDataState,
 } from "../atom";
 
 function D3DirectedGraph() {
   const [articleData, setArticleData] = useRecoilState(articleDataState);
-  const [selectChildNodes, setSelectChildNodes] = useRecoilState(
-    selectedChildNodesState
-  );
+  const [highlightNodes, setHighlightNodes] =
+    useRecoilState(highlightNodesState);
   const [edgeWeight, setEdgeWeight] = useRecoilState(edgeWeightDataState);
   const [selectSystem, setSelectSystem] = useRecoilState(selectSystemState);
   const [preClickNode, setPreClickNode] = useRecoilState(preClickNodeState);
@@ -51,9 +50,9 @@ function D3DirectedGraph() {
     const target = selectedNode.label;
     const data = articleData.filter((item) => item.type === target);
     setDisplayArticle(data);
-    const childNodes = selectedNode.childNodes.slice();
-    childNodes.push(selectedNode.id);
-    setSelectChildNodes(childNodes);
+    const highlightNodes = selectedNode.childNodes.slice();
+    highlightNodes.push(selectedNode.id);
+    setHighlightNodes(highlightNodes.concat(selectedNode["parentNode"]));
   }
   useEffect(() => {
     setLoading(true);
@@ -147,6 +146,7 @@ function D3DirectedGraph() {
             diff: item.diff,
             childNodes: item.childNode,
             colorGroup: item.color_group,
+            parentNode: item.parentNode,
           });
           for (const child of item.childNode) {
             links.push({
@@ -171,7 +171,7 @@ function D3DirectedGraph() {
     };
     startSetGraphData();
     setDisplayArticle([]);
-    setSelectChildNodes([]);
+    setHighlightNodes([]);
     setSearchTag("");
     setPreClickNode("");
   }, [clusterDataUrl, searchTag, selectSystem]);

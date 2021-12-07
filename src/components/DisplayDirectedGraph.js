@@ -7,19 +7,19 @@ import {
   nodesState,
   linkssState,
   articleDataState,
-  selectedChildNodesState,
   preClickNodeState,
   selectTagDataState,
   edgeWeightDataState,
+  selectParentNodeState,
+  highlightNodesState,
 } from "../atom";
 import { useState } from "react";
 
 function D3DirectedGraph() {
   const [preClickNode, setPreClickNode] = useRecoilState(preClickNodeState);
   const [articleData, setArticleData] = useRecoilState(articleDataState);
-  const [selectChildNodes, setSelectChildNodes] = useRecoilState(
-    selectedChildNodesState
-  );
+  const [highlightNodes, setHighlightNodes] =
+    useRecoilState(highlightNodesState);
   const [edgeWeight, setEdgeWeight] = useRecoilState(edgeWeightDataState);
   const [nodes, setNodes] = useRecoilState(nodesState);
   const [links, setLinks] = useRecoilState(linkssState);
@@ -54,9 +54,9 @@ function D3DirectedGraph() {
     setSelectTagData([target, selectedNode.url]);
     const data = articleData.filter((item) => item.type === target);
     setDisplayArticle(data);
-    const childNodes = selectedNode.childNodes.slice();
-    childNodes.push(selectedNode.id);
-    setSelectChildNodes(childNodes);
+    const highlightNodes = selectedNode.childNodes.slice();
+    highlightNodes.push(selectedNode.id);
+    setHighlightNodes(highlightNodes.concat(selectedNode["parentNode"]));
     localStorage["wordsData"] = JSON.stringify(wordsData);
   }
   function clickStar(selectedNode) {
@@ -136,7 +136,7 @@ function D3DirectedGraph() {
                 data-url={node.url}
                 data-name={node.label}
                 stroke={
-                  selectChildNodes.includes(node.id)
+                  highlightNodes.includes(node.id)
                     ? "rgb(25,95,240)"
                     : "rgb(50,55,50)"
                 }

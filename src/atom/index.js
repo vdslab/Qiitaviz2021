@@ -25,9 +25,9 @@ export const articleDataState = atom({
   default: [],
 });
 
-export const selectedChildNodesState = atom({
-  key: "selectedChildNodesState",
-  default: "",
+export const highlightNodesState = atom({
+  key: "highlightNodesState",
+  default: [],
 });
 
 export const searchTagState = atom({

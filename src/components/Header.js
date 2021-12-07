@@ -46,9 +46,7 @@ function Header({ setClusterDataUrl }) {
                 <h2 className="title has-text-grey-dark is-size-4 mt-2 mb-2">
                   ノードの色について
                 </h2>
-                <p>
-                  ノードの色は、難易度を表していて以下の通りです。
-                </p>
+                <p>ノードの色は、難易度を表していて以下の通りです。</p>
                 <svg width={"500"} height={"100"}>
                   <g>
                     <circle
@@ -58,7 +56,7 @@ function Header({ setClusterDataUrl }) {
                       cx={40}
                       cy={50}
                       stroke="rgb(80,80,80)"
-                      strokeWeight="1"
+                      strokeWidth="1"
                     ></circle>
                     <circle
                       className="node"
@@ -67,7 +65,7 @@ function Header({ setClusterDataUrl }) {
                       cx={105}
                       cy={50}
                       stroke="rgb(80,80,80)"
-                      strokeWeight="1"
+                      strokeWidth="1"
                     ></circle>
                     <circle
                       className="node"
@@ -76,7 +74,7 @@ function Header({ setClusterDataUrl }) {
                       cx={170}
                       cy={50}
                       stroke="rgb(80,80,80)"
-                      strokeWeight="1"
+                      strokeWidth="1"
                     ></circle>
                     <circle
                       className="node"
@@ -85,7 +83,7 @@ function Header({ setClusterDataUrl }) {
                       cx={235}
                       cy={50}
                       stroke="rgb(80,80,80)"
-                      strokeWeight="1"
+                      strokeWidth="1"
                     ></circle>
                     <circle
                       className="node"
@@ -94,7 +92,7 @@ function Header({ setClusterDataUrl }) {
                       cx={300}
                       cy={50}
                       stroke="rgb(80,80,80)"
-                      strokeWeight="1"
+                      strokeWidth="1"
                     ></circle>
                     <text
                       textAnchor="middle"
