@@ -141,7 +141,8 @@ function D3DirectedGraph() {
             id: item.ID, //nodeのindexを標準設定から変更
             label: item.nodeName,
             url: item.url,
-            r,
+            articleCount: item.articleCount,
+            r: Math.log(item.articleCount) * 4,
             level: item.level,
             diff: item.diff,
             childNodes: item.childNode,
