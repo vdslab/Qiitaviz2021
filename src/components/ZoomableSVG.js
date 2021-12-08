@@ -4,20 +4,19 @@ import { autoType } from "d3";
 
 function ZoomableSVG({ children, width, height }) {
   const svgRef = useRef();
-  const [k, setK] = useState(1);
-  const [x, setX] = useState(0);
-  const [y, setY] = useState(0);
+  const [k, setK] = useState(0.4);
+  const [x, setX] = useState(200);
+  const [y, setY] = useState(150);
   useEffect(() => {
     const zoom = d3.zoom().on("zoom", (event) => {
       const { x, y, k } = event.transform;
-      setK(k);
-      setX(x);
-      setY(y);
+      setK(0.4 + k - 1);
+      setX(200 + x);
+      setY(150 + y);
     });
-    zoom.scaleExtent([0.2, 2]);
+    zoom.scaleExtent([0.8, 2.6]);
     d3.select(svgRef.current).call(zoom);
   }, []);
-
   return (
     <svg
       ref={svgRef}
