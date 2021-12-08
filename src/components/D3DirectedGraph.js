@@ -177,9 +177,6 @@ function D3DirectedGraph() {
     setPreClickNode("");
   }, [clusterDataUrl, searchTag, selectSystem]);
 
-  if (loading) {
-    return <div>グラフ描画中...</div>;
-  }
   return (
     <div
       className="columns is-mobile is-multiline"
@@ -214,7 +211,18 @@ function D3DirectedGraph() {
               deviceWidth > 768 ? deviceHeight * 0.687 : deviceHeight * 0.4,
           }}
         >
-          <DisplayDirectedGraph />
+          {loading ? (
+            <p
+              style={{
+                textAlign: "center",
+                color: "rgb(100, 100, 100)",
+              }}
+            >
+              グラフ描画中...
+            </p>
+          ) : (
+            <DisplayDirectedGraph />
+          )}
         </div>
       </div>
       <DisplaySubView />
