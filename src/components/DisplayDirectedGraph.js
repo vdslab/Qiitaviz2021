@@ -137,7 +137,7 @@ function D3DirectedGraph() {
                 data-name={node.label}
                 stroke={
                   highlightNodes.includes(node.id)
-                    ? "rgb(25,95,240)"
+                    ? "rgb(0, 148, 255)"
                     : "rgb(50,55,50)"
                 }
                 strokeWidth="2.5"
