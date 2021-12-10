@@ -109,7 +109,7 @@ function D3DirectedGraph() {
           return (
             <line
               key={link.source.id + "-" + link.target.id}
-              stroke={"black"}
+              stroke={"#999"}
               strokeWidth={edgeWeight[link.source.label][link.target.label] * 2}
               className="link"
               markerEnd="url(#arrowhead)"

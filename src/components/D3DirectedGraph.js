@@ -82,7 +82,7 @@ function D3DirectedGraph() {
           "y",
           d3
             .forceY()
-            .y((d) => 225 * (d.level + 1))
+            .y((d) => (d.level + 1) * 150 + (d.colorGroup + 1) * 100)
             .strength(1.7)
         ); //y方向に戻る力
 
