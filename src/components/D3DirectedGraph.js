@@ -76,13 +76,13 @@ function D3DirectedGraph() {
             .id((d) => d.id)
             .distance(linkLen)
         ) //stength:linkの強さ（元に戻る力 distance: linkの長さ
-        .force("charge", d3.forceManyBody().strength(-100)) //引き合う力を設定。
+        .force("charge", d3.forceManyBody().strength(-150)) //引き合う力を設定。
         .force("center", d3.forceCenter(svgWidth / 2, svgHeight / 2)) //描画するときの中心を設定
         .force(
           "y",
           d3
             .forceY()
-            .y((d) => (d.level + 1) * 150 + (d.colorGroup + 1) * 100)
+            .y((d) => (d.level + 1) * 175 + (d.colorGroup + 1) * 100)
             .strength(1.7)
         ); //y方向に戻る力
 
@@ -171,7 +171,6 @@ function D3DirectedGraph() {
       setLoading(false);
     };
     startSetGraphData();
-    setDisplayArticle([]);
     setHighlightNodes([]);
     setSearchTag("");
     setPreClickNode("");
