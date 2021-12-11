@@ -125,6 +125,8 @@ function D3DirectedGraph() {
 
       <g className="nodes">
         {nodes.map((node) => {
+          const positionX = (32 / 35) * node.r + node.x;
+          const positionY = node.y - node.r;
           return (
             <g className="nodes" key={node.id}>
               <circle
@@ -148,46 +150,46 @@ function D3DirectedGraph() {
                   className="star"
                   strokeWidth="1"
                   points={
-                    node.x +
-                    44 +
+                    positionX +
+                    10 +
                     "," +
-                    (node.y - 28) +
+                    (positionY + 10) +
                     " " +
-                    (node.x + 47) +
+                    (positionX + 12) +
                     "," +
-                    (node.y - 21) +
+                    (positionY + 15) +
                     " " +
-                    (node.x + 55) +
+                    (positionX + 17) +
                     "," +
-                    (node.y - 21) +
+                    (positionY + 15) +
                     " " +
-                    (node.x + 49) +
+                    (positionX + 14) +
                     "," +
-                    (node.y - 16) +
+                    (positionY + 18) +
                     " " +
-                    (node.x + 52) +
+                    (positionX + 15) +
                     "," +
-                    (node.y - 8) +
+                    (positionY + 24) +
                     " " +
-                    (node.x + 44) +
+                    (positionX + 10) +
                     "," +
-                    (node.y - 12) +
+                    (positionY + 21) +
                     " " +
-                    (node.x + 36) +
+                    (positionX + 5) +
                     "," +
-                    (node.y - 8) +
+                    (positionY + 24) +
                     " " +
-                    (node.x + 39) +
+                    (positionX + 6) +
                     "," +
-                    (node.y - 16) +
+                    (positionY + 18) +
                     " " +
-                    (node.x + 33) +
+                    (positionX + 3) +
                     "," +
-                    (node.y - 21) +
+                    (positionY + 15) +
                     " " +
-                    (node.x + 41) +
+                    (positionX + 8) +
                     "," +
-                    (node.y - 21)
+                    (positionY + 15)
                   }
                   fill={
                     starColorList[
