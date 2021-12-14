@@ -63,15 +63,10 @@ function D3DirectedGraph() {
     const target = selectedNode.label;
 
     setClickCount(wordsData[target]["clickCount"]);
-    if (preClickNode !== target) {
-      setPreClickNode(target);
-      wordsData[target]["clickFlag"];
-    } else {
-      // 同じ星を二回以上連続でクリックしたときに色を変える
-      wordsData[target]["clickCount"] =
-        parseInt(wordsData[target]["clickCount"]) + 1;
-      setClickCount(wordsData[target]["clickCount"]);
-    }
+    setPreClickNode(target);
+    wordsData[target]["clickCount"] =
+      parseInt(wordsData[target]["clickCount"]) + 1;
+    setClickCount(wordsData[target]["clickCount"]);
 
     localStorage["wordsData"] = JSON.stringify(wordsData);
   }
