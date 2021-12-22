@@ -75,22 +75,22 @@ function D3DirectedGraph() {
 
     localStorage["wordsData"] = JSON.stringify(wordsData);
   }
-  const arrowEdgeX = -35;
+  const arrowEdgeX = -10;
   const arrowEdgeY = -5;
-  const arrowHeight = 10;
-  const arrowWidth = 14;
-  const arrowEdgeEnd = -25;
+  const arrowHeight = 15;
+  const arrowWidth = 15;
+  const arrowEdgeEnd = 0;
   return (
     <ZoomableSVG width={svgWidth} height={svgHeight}>
       <defs>
         <marker
           id="arrowhead"
           viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
-          refX="13"
+          refX="0"
           refY="0"
           orient="auto"
-          markerWidth="13"
-          markerHeight="13"
+          markerWidth="15"
+          markerHeight="15"
           xoverflow="visible"
           markerUnits="userSpaceOnUse"
         >
@@ -104,24 +104,7 @@ function D3DirectedGraph() {
         </marker>
       </defs>
 
-      <g className="links">
-        {links.map((link) => {
-          return (
-            <line
-              key={link.source.id + "-" + link.target.id}
-              stroke={"#999"}
-              strokeWidth={edgeWeight[link.source.label][link.target.label] * 2}
-              className="link"
-              markerEnd="url(#arrowhead)"
-              id="edgepath0"
-              x1={link.source.x}
-              y1={link.source.y}
-              x2={link.target.x}
-              y2={link.target.y}
-            ></line>
-          );
-        })}
-      </g>
+      
 
       <g className="nodes">
         {nodes.map((node) => {
@@ -211,6 +194,24 @@ function D3DirectedGraph() {
                 {node.label}
               </text>
             </g>
+          );
+        })}
+      </g>
+      <g className="links">
+        {links.map((link) => {
+          return (
+            <line
+              key={link.source.id + "-" + link.target.id}
+              stroke={"#999"}
+              strokeWidth={edgeWeight[link.source.label][link.target.label] * 2}
+              className="link"
+              markerEnd="url(#arrowhead)"
+              id="edgepath0"
+              x1={link.source.x}
+              y1={link.source.y}
+              x2={link.target.x}
+              y2={link.target.y}
+            ></line>
           );
         })}
       </g>
