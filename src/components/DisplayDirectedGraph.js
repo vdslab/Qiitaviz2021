@@ -210,7 +210,7 @@ function D3DirectedGraph() {
               x1={link.source.x}
               y1={link.source.y}
               x2={link.target.x}
-              y2={link.target.y}
+              y2={link.target.y-link.r}
             ></line>
           );
         })}
