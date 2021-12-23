@@ -153,6 +153,7 @@ function D3DirectedGraph() {
             links.push({
               source: item.ID,
               target: child,
+              r: Math.log(item.articleCount) * 4,
             });
           }
         });
