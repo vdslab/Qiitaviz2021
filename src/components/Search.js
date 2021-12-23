@@ -51,9 +51,10 @@ const Search = () => {
     "開発環境",
   ];
   const handleClick = (inputTag) => {
+    const newClusterCandidates = [];
     tagListData.map((data, i) => {
       if (data.includes(inputTag) && Object.isExtensible(clusterCandidates)) {
-        clusterCandidates.push([
+        newClusterCandidates.push([
           areaName[i],
           process.env.PUBLIC_URL +
             "/data/" +
@@ -64,13 +65,13 @@ const Search = () => {
         ]);
       }
     });
-    if (clusterCandidates.length) {
+    setClusterCandidates(newClusterCandidates);
+    if (newClusterCandidates.length) {
       setPanelFlag(true);
     } else {
       setErrorMessage("該当なし");
     }
   };
-
   return (
     <div className="column is-4">
       <div className="field has-addons">

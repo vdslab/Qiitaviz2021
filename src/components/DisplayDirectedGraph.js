@@ -63,15 +63,10 @@ function D3DirectedGraph() {
     const target = selectedNode.label;
 
     setClickCount(wordsData[target]["clickCount"]);
-    if (preClickNode !== target) {
-      setPreClickNode(target);
-      wordsData[target]["clickFlag"];
-    } else {
-      // 同じ星を二回以上連続でクリックしたときに色を変える
-      wordsData[target]["clickCount"] =
-        parseInt(wordsData[target]["clickCount"]) + 1;
-      setClickCount(wordsData[target]["clickCount"]);
-    }
+    setPreClickNode(target);
+    wordsData[target]["clickCount"] =
+      parseInt(wordsData[target]["clickCount"]) + 1;
+    setClickCount(wordsData[target]["clickCount"]);
 
     localStorage["wordsData"] = JSON.stringify(wordsData);
   }
@@ -86,7 +81,7 @@ function D3DirectedGraph() {
         <marker
           id="arrowhead"
           viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
-          refX="0"
+          refX="-1.6"
           refY="0"
           orient="auto"
           markerWidth="15"
@@ -98,14 +93,33 @@ function D3DirectedGraph() {
             d={`M -10 -5 L 0 0 L -10 ${
               -1 * -5
             }`}
-            fill="#999"
+            fill="#808080"
             style={{ stroke: "none" }}
           ></path>
         </marker>
       </defs>
-
-      
-
+      <g className="links">
+        {links.map((link) => {
+          const theta = Math.atan2(
+            link.source.y - link.target.y,
+            link.source.x - link.target.x
+          );
+          return (
+            <line
+              key={link.source.id + "-" + link.target.id}
+              stroke={"#999"}
+              strokeWidth={edgeWeight[link.source.label][link.target.label] * 2}
+              className="link"
+              markerEnd="url(#arrowhead)"
+              id="edgepath0"
+              x1={link.source.x}
+              y1={link.source.y}
+              x2={link.target.x + link.r * Math.cos(theta)}
+              y2={link.target.y + link.r * Math.sin(theta)-3}
+            ></line>
+          );
+        })}
+      </g>
       <g className="nodes">
         {nodes.map((node) => {
           const positionX = (32 / 35) * node.r + node.x;
@@ -197,24 +211,7 @@ function D3DirectedGraph() {
           );
         })}
       </g>
-      <g className="links">
-        {links.map((link) => {
-          return (
-            <line
-              key={link.source.id + "-" + link.target.id}
-              stroke={"#999"}
-              strokeWidth={edgeWeight[link.source.label][link.target.label] * 2}
-              className="link"
-              markerEnd="url(#arrowhead)"
-              id="edgepath0"
-              x1={link.source.x}
-              y1={link.source.y}
-              x2={link.target.x}
-              y2={link.target.y}
-            ></line>
-          );
-        })}
-      </g>
+      
     </ZoomableSVG>
   );
 }
