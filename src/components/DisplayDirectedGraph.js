@@ -95,8 +95,8 @@ function D3DirectedGraph() {
           markerUnits="userSpaceOnUse"
         >
           <path
-            d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
-              -1 * arrowEdgeY
+            d={`M -10 -5 L 0 0 L -10 ${
+              -1 * -5
             }`}
             fill="#999"
             style={{ stroke: "none" }}
@@ -210,7 +210,7 @@ function D3DirectedGraph() {
               x1={link.source.x}
               y1={link.source.y}
               x2={link.target.x}
-              y2={link.target.y-link.r}
+              y2={link.target.y}
             ></line>
           );
         })}
