@@ -70,37 +70,40 @@ function D3DirectedGraph() {
 
     localStorage["wordsData"] = JSON.stringify(wordsData);
   }
-  const arrowEdgeX = -35;
+  const arrowEdgeX = -10;
   const arrowEdgeY = -5;
-  const arrowHeight = 10;
-  const arrowWidth = 14;
-  const arrowEdgeEnd = -25;
+  const arrowHeight = 15;
+  const arrowWidth = 15;
+  const arrowEdgeEnd = 0;
   return (
     <ZoomableSVG width={svgWidth} height={svgHeight}>
       <defs>
         <marker
           id="arrowhead"
           viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
-          refX="13"
+          refX="-1.6"
           refY="0"
           orient="auto"
-          markerWidth="13"
-          markerHeight="13"
+          markerWidth="15"
+          markerHeight="15"
           xoverflow="visible"
           markerUnits="userSpaceOnUse"
         >
           <path
-            d={`M ${arrowEdgeX} ${arrowEdgeY} L ${arrowEdgeEnd} 0 L ${arrowEdgeX} ${
-              -1 * arrowEdgeY
+            d={`M -10 -5 L 0 0 L -10 ${
+              -1 * -5
             }`}
-            fill="#999"
+            fill="#808080"
             style={{ stroke: "none" }}
           ></path>
         </marker>
       </defs>
-
       <g className="links">
         {links.map((link) => {
+          const theta = Math.atan2(
+            link.source.y - link.target.y,
+            link.source.x - link.target.x
+          );
           return (
             <line
               key={link.source.id + "-" + link.target.id}
@@ -111,13 +114,12 @@ function D3DirectedGraph() {
               id="edgepath0"
               x1={link.source.x}
               y1={link.source.y}
-              x2={link.target.x}
-              y2={link.target.y}
+              x2={link.target.x + link.r * Math.cos(theta)}
+              y2={link.target.y + link.r * Math.sin(theta)-3}
             ></line>
           );
         })}
       </g>
-
       <g className="nodes">
         {nodes.map((node) => {
           const positionX = (32 / 35) * node.r + node.x;
@@ -209,6 +211,7 @@ function D3DirectedGraph() {
           );
         })}
       </g>
+      
     </ZoomableSVG>
   );
 }

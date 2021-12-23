@@ -136,6 +136,12 @@ function D3DirectedGraph() {
         const links = Array();
 
         const r = 35;
+
+        let nodeSize = Array(clusterData.length);
+        clusterData.map((item) => {
+          nodeSize[item.ID - 1] = Math.log(item.articleCount) * 4;
+        });
+
         clusterData.map((item) => {
           nodes.push({
             id: item.ID, //nodeのindexを標準設定から変更
@@ -153,6 +159,7 @@ function D3DirectedGraph() {
             links.push({
               source: item.ID,
               target: child,
+              r: nodeSize[child - 1],
             });
           }
         });

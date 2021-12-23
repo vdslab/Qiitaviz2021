@@ -72,7 +72,6 @@ const Search = () => {
       setErrorMessage("該当なし");
     }
   };
-  console.log(clusterCandidates);
   return (
     <div className="column is-4">
       <div className="field has-addons">
