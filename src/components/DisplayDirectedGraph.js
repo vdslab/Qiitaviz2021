@@ -195,9 +195,6 @@ function D3DirectedGraph() {
             link.source.y - link.target.y,
             link.source.x - link.target.x
           );
-          if (theta < 0) {
-            console.log(theta);
-          }
           return (
             <line
               key={link.source.id + "-" + link.target.id}
