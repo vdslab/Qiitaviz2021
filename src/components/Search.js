@@ -74,22 +74,26 @@ const Search = () => {
   };
   return (
     <div className="column is-4">
-      <div className="field has-addons">
-        <input
-          className="input"
-          type="text"
-          name="search"
-          placeholder="タグを検索"
-          value={inputTag}
-          onChange={(e) => handleChange(e)}
-        />
-        <a
-          className="button is-success"
-          list="search"
-          onClick={() => handleClick(inputTag)}
-        >
-          <i className="fa fa-search"></i>検索
-        </a>
+      <div className="field is-grouped">
+        <p className="control is-expanded">
+          <input
+            className="input"
+            type="text"
+            name="search"
+            placeholder="タグを検索"
+            value={inputTag}
+            onChange={(e) => handleChange(e)}
+          />
+        </p>
+        <p className="control">
+          <a
+            className="button is-success"
+            list="search"
+            onClick={() => handleClick(inputTag)}
+          >
+            <i className="fa fa-search"></i>検索
+          </a>
+        </p>
       </div>
       <div className="dropdown is-active">
         <div className="dropdown-menu" id="dropdown-menu" role="menu">
