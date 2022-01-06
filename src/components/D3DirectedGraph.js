@@ -231,7 +231,9 @@ function D3DirectedGraph() {
           )}
         </div>
       </div>
-      <DisplaySubView />
+      <div className="column is-4-desktop is-12-mobile box">
+        <DisplaySubView />
+      </div>
     </div>
   );
 }
