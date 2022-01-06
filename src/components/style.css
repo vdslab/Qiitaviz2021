@@ -1,0 +1,20 @@
+h1 {
+  font-size: 30px;
+  font-weight: 200;
+  padding: 0.3em; /*文字周りの余白*/
+  /*線の種類（実線） 太さ 色*/
+  border-bottom: solid 4px  #5FCEB3;
+}
+h2 {
+  padding: 0.5em; /*文字周りの余白*/
+  color: #010101; /*文字色*/
+  background: #EFF8F2; /*背景色*/
+  border-left: solid 4px #5FCEB3; /*左線*/
+}
+li{
+  color: #5FCEB3;
+}
+li span {
+  font-size: 20px;
+  color: #010101;
+}
