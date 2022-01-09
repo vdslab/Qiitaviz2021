@@ -73,7 +73,7 @@ const Search = () => {
     }
   };
   return (
-    <div className="column is-5">
+    <div className="column is-4">
       <div className="field is-grouped">
         <p className="control is-expanded">
           <input
