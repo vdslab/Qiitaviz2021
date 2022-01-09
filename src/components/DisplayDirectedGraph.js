@@ -90,9 +90,7 @@ function D3DirectedGraph() {
           markerUnits="userSpaceOnUse"
         >
           <path
-            d={`M -10 -5 L 0 0 L -10 ${
-              -1 * -5
-            }`}
+            d={`M -10 -5 L 0 0 L -10 ${-1 * -5}`}
             fill="#808080"
             style={{ stroke: "none" }}
           ></path>
@@ -115,7 +113,7 @@ function D3DirectedGraph() {
               x1={link.source.x}
               y1={link.source.y}
               x2={link.target.x + link.r * Math.cos(theta)}
-              y2={link.target.y + link.r * Math.sin(theta)-3}
+              y2={link.target.y + link.r * Math.sin(theta) - 3}
             ></line>
           );
         })}
@@ -211,7 +209,6 @@ function D3DirectedGraph() {
           );
         })}
       </g>
-      
     </ZoomableSVG>
   );
 }

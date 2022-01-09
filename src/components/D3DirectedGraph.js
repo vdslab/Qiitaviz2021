@@ -185,7 +185,7 @@ function D3DirectedGraph() {
 
   return (
     <div
-      className="columns is-mobile is-multiline"
+      className="tile is-ancestor"
       style={{
         marginRight: "20px",
         marginLeft: "20px",
@@ -193,15 +193,11 @@ function D3DirectedGraph() {
       }}
     >
       <div
-        className="column is-8-desktop is-12-mobile box"
-        style={
-          deviceWidth > 768
-            ? { height: "84vh", position: "relative" }
-            : { height: "60vh", position: "relative" }
-        }
+        className="tile is-8 is-parent"
+        style={deviceWidth > 768 ? { height: "106.5vh" } : { height: "60vh" }}
       >
-        <div className="columns mt-2" style={{ marginBottom: "0" }}>
-          <div className="column">
+        <div class="tile is-child box" style={{ position: "relative" }}>
+          <div className="columns mt-2">
             <DescriptionModal />
             <div className="columns is-centered is-multiline">
               <SelectedSystemTab />
@@ -210,28 +206,28 @@ function D3DirectedGraph() {
               <ColorLabel />
             </div>
           </div>
-        </div>
-        <div
-          style={{
-            height:
-              deviceWidth > 768 ? deviceHeight * 0.687 : deviceHeight * 0.4,
-          }}
-        >
-          {loading ? (
-            <p
-              style={{
-                textAlign: "center",
-                color: "rgb(100, 100, 100)",
-              }}
-            >
-              グラフ描画中...
-            </p>
-          ) : (
-            <DisplayDirectedGraph />
-          )}
+          <div
+            style={{
+              height:
+                deviceWidth > 768 ? deviceHeight * 0.87 : deviceHeight * 0.4,
+            }}
+          >
+            {loading ? (
+              <p
+                style={{
+                  textAlign: "center",
+                  color: "rgb(100, 100, 100)",
+                }}
+              >
+                グラフ描画中...
+              </p>
+            ) : (
+              <DisplayDirectedGraph />
+            )}
+          </div>
         </div>
       </div>
-      <div className="column is-4-desktop is-12-mobile box">
+      <div className="tile is-4 is-vertical">
         <DisplaySubView />
       </div>
     </div>
