@@ -194,7 +194,7 @@ function D3DirectedGraph() {
     >
       <div
         className="tile is-8 is-parent"
-        style={deviceWidth > 768 ? { height: "108vh" } : { height: "60vh" }}
+        style={deviceWidth > 768 ? { height: "106.5vh" } : { height: "60vh" }}
       >
         <div class="tile is-child box" style={{ position: "relative" }}>
           <div className="columns mt-2">
@@ -209,7 +209,7 @@ function D3DirectedGraph() {
           <div
             style={{
               height:
-                deviceWidth > 768 ? deviceHeight * 0.687 : deviceHeight * 0.4,
+                deviceWidth > 768 ? deviceHeight * 0.87 : deviceHeight * 0.4,
             }}
           >
             {loading ? (
@@ -227,7 +227,7 @@ function D3DirectedGraph() {
           </div>
         </div>
       </div>
-      <div className="tile is-4 is-vertical is-parent">
+      <div className="tile is-4 is-vertical">
         <DisplaySubView />
       </div>
     </div>
