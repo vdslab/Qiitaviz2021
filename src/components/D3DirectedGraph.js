@@ -194,22 +194,16 @@ function D3DirectedGraph() {
     >
       <div
         className="tile is-8 is-parent"
-        style={
-          deviceWidth > 768
-            ? { height: "98vh", position: "relative" }
-            : { height: "60vh", position: "relative" }
-        }
+        style={deviceWidth > 768 ? { height: "108vh" } : { height: "60vh" }}
       >
-        <div class="tile is-child box">
-          <div className="columns mt-2" style={{ marginBottom: "0" }}>
-            <div className="column">
-              <DescriptionModal />
-              <div className="columns is-centered is-multiline">
-                <SelectedSystemTab />
-                <AreaTab />
-                <Search />
-                <ColorLabel />
-              </div>
+        <div class="tile is-child box" style={{ position: "relative" }}>
+          <div className="columns mt-2">
+            <DescriptionModal />
+            <div className="columns is-centered is-multiline">
+              <SelectedSystemTab />
+              <AreaTab />
+              <Search />
+              <ColorLabel />
             </div>
           </div>
           <div
