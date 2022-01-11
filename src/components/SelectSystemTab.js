@@ -26,8 +26,9 @@ function SelectedSystemTab() {
         selectClusterFile
     );
   };
+  const columnNum = selectSystem === "手法を選択" ? "3" : "2";
   return (
-    <div className="column is-3">
+    <div className={"column is-" + columnNum}>
       <div
         className={dropdownActive ? "dropdown is-active" : "dropdown"}
         onClick={() => {

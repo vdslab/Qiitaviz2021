@@ -30,8 +30,9 @@ function AreaTab() {
     setSelectCluster(selectedCluster);
   };
 
+  const columnNum = selectCluster === "領域を選択" ? "3" : "4";
   return (
-    <div className="column is-3">
+    <div className={"column is-" + columnNum}>
       <div
         className={dropdownActive ? "dropdown is-active" : "dropdown"}
         onClick={() => {

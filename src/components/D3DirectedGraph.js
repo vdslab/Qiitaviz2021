@@ -124,7 +124,6 @@ function D3DirectedGraph() {
           const edgeResponse = await fetch(edgeDataUrl);
           const edgeData = await edgeResponse.json();
           setEdgeWeight(edgeData);
-          console.log("OK2");
 
           const tagResponse = await fetch(
             process.env.PUBLIC_URL + "/data/tag_list_data.json"
@@ -189,8 +188,9 @@ function D3DirectedGraph() {
           );
           return [nodes, links];
         })();
-        setLoading(false);
+        console.log(edgeWeight);
         startSimulation(nodes, links);
+        setLoading(false);
       }
     };
     startSetGraphData();
