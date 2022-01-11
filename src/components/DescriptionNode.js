@@ -4,11 +4,12 @@ const DescriptionNode = () => {
   return (
     <div>
       <h2 className="title has-text-grey-dark is-size-4">ノードの色について</h2>
-      <p>ノードの色は、タグの難易度を表していて以下の通り、赤みが強いほど難易度が高いことを表しています。</p>
+      <p>
+        ノードの色は、タグの難易度を表していて以下の通り、赤みが強いほど難易度が高いことを表しています。
+      </p>
       <svg width={"400"} height={"81"}>
         <g>
           <circle
-            className="node"
             r={22}
             fill="rgb(255, 240, 130)"
             cx={40}
@@ -73,7 +74,9 @@ const DescriptionNode = () => {
         </g>
       </svg>
 
-      <h2 className="title has-text-grey-dark is-size-4">ノードの大きさについて</h2>
+      <h2 className="title has-text-grey-dark is-size-4">
+        ノードの大きさについて
+      </h2>
       <p>ノードの大きさは、投稿数を表していて以下の通りです。</p>
       <svg width={"400"} height={"81"}>
         <g>

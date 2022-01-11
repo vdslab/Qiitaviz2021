@@ -1,4 +1,5 @@
 import "bulma/css/bulma.css";
+import { cluster } from "d3";
 import { useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
@@ -16,14 +17,17 @@ function SelectedSystemTab() {
     selectClusterFileState
   );
 
-  const setDataUrl = (selectedSystem) => {
-    setSelectSystem(selectedSystem);
+  const setDataUrl = (selectedSystemNumber) => {
+    setSelectSystem("手法" + selectedSystemNumber);
     setClusterDataUrl(
-      process.env.PUBLIC_URL + "/data/" + selectedSystem + selectClusterFile
+      process.env.PUBLIC_URL +
+        "/data/system" +
+        selectedSystemNumber +
+        selectClusterFile
     );
   };
   return (
-    <div className="column is-2">
+    <div className="column is-3">
       <div
         className={dropdownActive ? "dropdown is-active" : "dropdown"}
         onClick={() => {
@@ -45,11 +49,11 @@ function SelectedSystemTab() {
         </div>
         <div className="dropdown-menu" id="dropdown-menu" role="menu">
           <div className="dropdown-content">
-            <a className="dropdown-item" onClick={() => setDataUrl("system1")}>
-              システム1
+            <a className="dropdown-item" onClick={() => setDataUrl("1")}>
+              手法1
             </a>
-            <a className="dropdown-item" onClick={() => setDataUrl("system2")}>
-              システム2
+            <a className="dropdown-item" onClick={() => setDataUrl("2")}>
+              手法2
             </a>
           </div>
         </div>

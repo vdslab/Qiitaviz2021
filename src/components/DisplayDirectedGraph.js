@@ -75,6 +75,7 @@ function D3DirectedGraph() {
   const arrowHeight = 15;
   const arrowWidth = 15;
   const arrowEdgeEnd = 0;
+  console.log(edgeWeight);
   return (
     <ZoomableSVG width={svgWidth} height={svgHeight}>
       <defs>

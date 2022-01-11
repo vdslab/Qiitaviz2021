@@ -19,6 +19,7 @@ import {
   nodesState,
   preClickNodeState,
   searchTagState,
+  selectClusterState,
   selectSystemState,
   tagListDataState,
 } from "../atom";
@@ -27,6 +28,10 @@ function D3DirectedGraph() {
   const [articleData, setArticleData] = useRecoilState(articleDataState);
   const [highlightNodes, setHighlightNodes] =
     useRecoilState(highlightNodesState);
+  const [loadMessage, setLoadMessage] = useState(
+    "難易度推定手法と調べたい領域を選択してください。"
+  );
+  const [selectCluster, setSelectCluster] = useRecoilState(selectClusterState);
   const [edgeWeight, setEdgeWeight] = useRecoilState(edgeWeightDataState);
   const [selectSystem, setSelectSystem] = useRecoilState(selectSystemState);
   const [preClickNode, setPreClickNode] = useRecoilState(preClickNodeState);
@@ -102,87 +107,98 @@ function D3DirectedGraph() {
       });
     };
     const startSetGraphData = async () => {
-      const [nodes, links] = await (async () => {
-        const clusterResponse = await fetch(clusterDataUrl);
-        const clusterData = await clusterResponse.json();
+      if (selectSystem === "手法を選択" && selectCluster === "領域を選択") {
+        setLoadMessage("難易度推定手法と調べたい領域を選択してください。");
+      } else if (selectSystem === "手法を選択") {
+        setLoadMessage("難易度計算手法を選択してください");
+      } else if (selectCluster === "領域を選択") {
+        setLoadMessage("調べたい手法を選択してください");
+      } else {
+        setLoading(true);
+        const [nodes, links] = await (async () => {
+          setLoadMessage("グラフ描画中...");
+          const clusterResponse = await fetch(clusterDataUrl);
+          const clusterData = await clusterResponse.json();
 
-        const edgeDataUrl = clusterDataUrl.replace("graph", "edge");
-        const edgeResponse = await fetch(edgeDataUrl);
-        const edgeData = await edgeResponse.json();
-        setEdgeWeight(edgeData);
+          const edgeDataUrl = clusterDataUrl.replace("graph", "edge");
+          const edgeResponse = await fetch(edgeDataUrl);
+          const edgeData = await edgeResponse.json();
+          setEdgeWeight(edgeData);
+          console.log("OK2");
 
-        const tagResponse = await fetch(
-          process.env.PUBLIC_URL + "/data/tag_list_data.json"
-        );
-        const tagData = await tagResponse.json();
-        setTagListData(tagData);
+          const tagResponse = await fetch(
+            process.env.PUBLIC_URL + "/data/tag_list_data.json"
+          );
+          const tagData = await tagResponse.json();
+          setTagListData(tagData);
 
-        const wordsData =
-          localStorage["wordsData"] === undefined
-            ? {}
-            : JSON.parse(localStorage["wordsData"]);
-        tagData.map((tags) => {
-          tags.map((tag) => {
-            wordsData[tag] =
-              wordsData[tag] !== undefined
-                ? wordsData[tag]
-                : { clickCount: 0, clickFlag: false };
-          });
-        });
-
-        localStorage["wordsData"] = JSON.stringify(wordsData);
-
-        const nodes = Array();
-        const links = Array();
-
-        const r = 35;
-
-        let nodeSize = Array(clusterData.length);
-        clusterData.map((item) => {
-          nodeSize[item.ID - 1] = Math.log(item.articleCount) * 4;
-        });
-
-        clusterData.map((item) => {
-          nodes.push({
-            id: item.ID, //nodeのindexを標準設定から変更
-            label: item.nodeName,
-            url: item.url,
-            articleCount: item.articleCount,
-            r: Math.log(item.articleCount) * 4,
-            level: item.level,
-            diff: item.diff,
-            childNodes: item.childNode,
-            colorGroup: item.color_group,
-            parentNode: item.parentNode,
-          });
-          for (const child of item.childNode) {
-            links.push({
-              source: item.ID,
-              target: child,
-              r: nodeSize[child - 1],
+          const wordsData =
+            localStorage["wordsData"] === undefined
+              ? {}
+              : JSON.parse(localStorage["wordsData"]);
+          tagData.map((tags) => {
+            tags.map((tag) => {
+              wordsData[tag] =
+                wordsData[tag] !== undefined
+                  ? wordsData[tag]
+                  : { clickCount: 0, clickFlag: false };
             });
-          }
-        });
-        setArticleData(
-          await (async () => {
-            const articleResponse = await fetch(
-              process.env.PUBLIC_URL + "/data/recommend_data.json"
-            );
-            const articleData = await articleResponse.json();
-            return articleData;
-          })()
-        );
-        return [nodes, links];
-      })();
-      startSimulation(nodes, links);
-      setLoading(false);
+          });
+
+          localStorage["wordsData"] = JSON.stringify(wordsData);
+
+          const nodes = Array();
+          const links = Array();
+
+          const r = 35;
+
+          let nodeSize = Array(clusterData.length);
+          clusterData.map((item) => {
+            nodeSize[item.ID - 1] = Math.log(item.articleCount) * 4;
+          });
+
+          clusterData.map((item) => {
+            nodes.push({
+              id: item.ID, //nodeのindexを標準設定から変更
+              label: item.nodeName,
+              url: item.url,
+              articleCount: item.articleCount,
+              r: Math.log(item.articleCount) * 4,
+              level: item.level,
+              diff: item.diff,
+              childNodes: item.childNode,
+              colorGroup: item.color_group,
+              parentNode: item.parentNode,
+            });
+            for (const child of item.childNode) {
+              links.push({
+                source: item.ID,
+                target: child,
+                r: nodeSize[child - 1],
+              });
+            }
+          });
+          setArticleData(
+            await (async () => {
+              const articleResponse = await fetch(
+                process.env.PUBLIC_URL + "/data/recommend_data.json"
+              );
+              const articleData = await articleResponse.json();
+              return articleData;
+            })()
+          );
+          return [nodes, links];
+        })();
+        setLoading(false);
+        startSimulation(nodes, links);
+      }
     };
     startSetGraphData();
     setHighlightNodes([]);
     setSearchTag("");
     setPreClickNode("");
-  }, [clusterDataUrl, searchTag, selectSystem]);
-
+  }, [clusterDataUrl, searchTag, selectSystem, selectCluster]);
+  console.log(selectCluster, selectSystem);
   return (
     <div
       className="tile is-ancestor"
@@ -196,7 +212,7 @@ function D3DirectedGraph() {
         className="tile is-8 is-parent"
         style={deviceWidth > 768 ? { height: "106.5vh" } : { height: "60vh" }}
       >
-        <div class="tile is-child box" style={{ position: "relative" }}>
+        <div className="tile is-child box" style={{ position: "relative" }}>
           <div className="columns mt-2">
             <DescriptionModal />
             <div className="columns is-centered is-multiline">
@@ -219,7 +235,7 @@ function D3DirectedGraph() {
                   color: "rgb(100, 100, 100)",
                 }}
               >
-                グラフ描画中...
+                {loadMessage}
               </p>
             ) : (
               <DisplayDirectedGraph />

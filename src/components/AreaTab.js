@@ -22,13 +22,16 @@ function AreaTab() {
   const setDataUrl = (filePath, selectedCluster) => {
     setSelectClusterFile(filePath);
     setClusterDataUrl(
-      process.env.PUBLIC_URL + "/data/" + selectSystem + filePath
+      process.env.PUBLIC_URL +
+        "/data/system" +
+        selectSystem.substring(2) +
+        filePath
     );
     setSelectCluster(selectedCluster);
   };
 
   return (
-    <div className="column is-4">
+    <div className="column is-3">
       <div
         className={dropdownActive ? "dropdown is-active" : "dropdown"}
         onClick={() => {

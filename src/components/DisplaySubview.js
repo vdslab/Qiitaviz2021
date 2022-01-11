@@ -9,7 +9,6 @@ const DisplaySubview = () => {
     useRecoilState(displayArticleState);
   const [selectTagData, setSelectTagData] = useRecoilState(selectTagDataState);
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
-  console.log(displayArticle);
   return (
     <div>
       <div className="tile is-parent">

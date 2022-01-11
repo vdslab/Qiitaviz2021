@@ -37,7 +37,7 @@ export const searchTagState = atom({
 
 export const selectClusterState = atom({
   key: "selectClusterState",
-  default: "アプリケーション開発",
+  default: "領域を選択",
 });
 
 export const displayArticleState = atom({
@@ -52,7 +52,7 @@ export const preClickNodeState = atom({
 
 export const selectSystemState = atom({
   key: "selectSystemState",
-  default: "system1",
+  default: "手法を選択",
 });
 
 export const selectClusterFileState = atom({
