@@ -112,7 +112,7 @@ function D3DirectedGraph() {
       } else if (selectSystem === "手法を選択") {
         setLoadMessage("難易度計算手法を選択してください");
       } else if (selectCluster === "領域を選択") {
-        setLoadMessage("調べたい手法を選択してください");
+        setLoadMessage("調べたい領域を選択してください");
       } else {
         setLoading(true);
         const [nodes, links] = await (async () => {

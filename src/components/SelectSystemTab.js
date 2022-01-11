@@ -5,6 +5,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import {
   clusterDataUrlState,
   selectClusterFileState,
+  selectClusterState,
   selectSystemState,
 } from "../atom";
 
@@ -13,6 +14,7 @@ function SelectedSystemTab() {
   const [selectSystem, setSelectSystem] = useRecoilState(selectSystemState);
   const [clusterDataUrl, setClusterDataUrl] =
     useRecoilState(clusterDataUrlState);
+  const [selectCluster, setSelectCluster] = useRecoilState(selectClusterState);
   const [selectClusterFile, setSelectClusterFile] = useRecoilState(
     selectClusterFileState
   );
@@ -26,7 +28,7 @@ function SelectedSystemTab() {
         selectClusterFile
     );
   };
-  const columnNum = selectSystem === "手法を選択" ? "3" : "2";
+  const columnNum = selectCluster === "領域を選択" ? "3" : "2";
   return (
     <div className={"column is-" + columnNum}>
       <div

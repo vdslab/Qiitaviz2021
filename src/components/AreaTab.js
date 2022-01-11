@@ -30,7 +30,7 @@ function AreaTab() {
     setSelectCluster(selectedCluster);
   };
 
-  const columnNum = selectCluster === "領域を選択" ? "3" : "4";
+  const columnNum = selectCluster === "アプリケーション開発" ? "4" : "3";
   return (
     <div className={"column is-" + columnNum}>
       <div
