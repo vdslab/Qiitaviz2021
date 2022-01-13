@@ -39,7 +39,7 @@ const Search = () => {
     setPanelFlag(false);
     setClusterCandidates([]);
     setSelectCluster(data[0]);
-    setClusterDataUrl(data[1]);
+    setClusterDataUrl(data[1].replace("手法", "system"));
     setSelectTagData([inputTag, tagUrl]);
     setInputTag("");
     setSearchTag(inputTag);

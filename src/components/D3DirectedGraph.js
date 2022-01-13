@@ -198,7 +198,7 @@ function D3DirectedGraph() {
     setSearchTag("");
     setPreClickNode("");
   }, [clusterDataUrl, searchTag, selectSystem, selectCluster]);
-  console.log(selectCluster, selectSystem);
+  console.log(clusterDataUrl);
   return (
     <div
       className="tile is-ancestor"
