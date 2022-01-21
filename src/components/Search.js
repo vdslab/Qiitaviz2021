@@ -6,7 +6,6 @@ import {
   clusterDataUrlState,
   searchTagState,
   selectClusterState,
-  selectSystemState,
   selectTagDataState,
   tagListDataState,
 } from "../atom";
@@ -22,7 +21,6 @@ const Search = () => {
   const [panelFlag, setPanelFlag] = useState(false);
   const [errorMessage, setErrorMessage] = useState("　");
   const [inputTag, setInputTag] = useState("");
-  const [selectSystem, setSelectSystem] = useRecoilState(selectSystemState);
 
   const handleChange = (e) => {
     setClusterCandidates([]);
@@ -57,8 +55,7 @@ const Search = () => {
         newClusterCandidates.push([
           areaName[i],
           process.env.PUBLIC_URL +
-            "/data/" +
-            selectSystem +
+            "/data/cluster" +
             "/cluster" +
             (i + 1) +
             "_graph_data.json",
@@ -73,7 +70,7 @@ const Search = () => {
     }
   };
   return (
-    <div className="column is-4">
+    <div className="column is-5">
       <div className="field is-grouped">
         <p className="control is-expanded">
           <input

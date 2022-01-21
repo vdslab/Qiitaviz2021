@@ -7,7 +7,6 @@ import AreaTab from "./AreaTab";
 import Search from "./Search";
 import ColorLabel from "./ColorLabel";
 import DescriptionModal from "./DescriptionModal";
-import SelectedSystemTab from "./SelectSystemTab";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
   articleDataState,
@@ -28,12 +27,10 @@ function D3DirectedGraph() {
   const [articleData, setArticleData] = useRecoilState(articleDataState);
   const [highlightNodes, setHighlightNodes] =
     useRecoilState(highlightNodesState);
-  const [loadMessage, setLoadMessage] = useState(
-    "難易度推定手法と調べたい領域を選択してください。"
-  );
+  const [loadMessage, setLoadMessage] =
+    useState("調べたい領域を選択してください。");
   const [selectCluster, setSelectCluster] = useRecoilState(selectClusterState);
   const [edgeWeight, setEdgeWeight] = useRecoilState(edgeWeightDataState);
-  const [selectSystem, setSelectSystem] = useRecoilState(selectSystemState);
   const [preClickNode, setPreClickNode] = useRecoilState(preClickNodeState);
   const [loading, setLoading] = useState(true);
 
@@ -107,13 +104,7 @@ function D3DirectedGraph() {
       });
     };
     const startSetGraphData = async () => {
-      if (selectSystem === "手法を選択" && selectCluster === "領域を選択") {
-        setLoadMessage("難易度推定手法と調べたい領域を選択してください。");
-      } else if (selectSystem === "手法を選択") {
-        setLoadMessage("難易度計算手法を選択してください");
-      } else if (selectCluster === "領域を選択") {
-        setLoadMessage("調べたい領域を選択してください");
-      } else {
+      if (selectCluster !== "領域を選択") {
         setLoading(true);
         const [nodes, links] = await (async () => {
           setLoadMessage("グラフ描画中...");
@@ -197,7 +188,7 @@ function D3DirectedGraph() {
     setHighlightNodes([]);
     setSearchTag("");
     setPreClickNode("");
-  }, [clusterDataUrl, searchTag, selectSystem, selectCluster]);
+  }, [clusterDataUrl, searchTag, selectCluster]);
   console.log(clusterDataUrl);
   return (
     <div
@@ -213,10 +204,9 @@ function D3DirectedGraph() {
         style={deviceWidth > 768 ? { height: "106.5vh" } : { height: "60vh" }}
       >
         <div className="tile is-child box" style={{ position: "relative" }}>
-          <div className="columns mt-2">
+          <div className="columns mt-2 is-centered is-variable is-3">
             <DescriptionModal />
-            <div className="columns is-centered is-multiline">
-              <SelectedSystemTab />
+            <div className="columns is-multiline ">
               <AreaTab />
               <Search />
               <ColorLabel />
