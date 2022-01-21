@@ -2,7 +2,7 @@ import { atom } from "recoil";
 
 export const clusterDataUrlState = atom({
   key: "clusterDataUrlState",
-  default: process.env.PUBLIC_URL + "/data/system1/cluster1_graph_data.json",
+  default: process.env.PUBLIC_URL + "/data/clusters/cluster1_graph_data.json",
 });
 
 export const tagListDataState = atom({
@@ -49,12 +49,6 @@ export const preClickNodeState = atom({
   key: "preClickNodeState",
   default: "",
 });
-
-export const selectSystemState = atom({
-  key: "selectSystemState",
-  default: "手法を選択",
-});
-
 export const selectClusterFileState = atom({
   key: "selectClusterFileState",
   default: "/cluster1_graph_data.json",

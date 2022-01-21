@@ -6,7 +6,6 @@ import {
   clusterDataUrlState,
   selectClusterFileState,
   selectClusterState,
-  selectSystemState,
 } from "../atom";
 
 function AreaTab() {
@@ -14,25 +13,18 @@ function AreaTab() {
   const [selectCluster, setSelectCluster] = useRecoilState(selectClusterState);
   const [clusterDataUrl, setClusterDataUrl] =
     useRecoilState(clusterDataUrlState);
-  const [selectSystem, setSelecteSystem] = useRecoilState(selectSystemState);
   const [selectClusterFile, setSelectClusterFile] = useRecoilState(
     selectClusterFileState
   );
 
   const setDataUrl = (filePath, selectedCluster) => {
     setSelectClusterFile(filePath);
-    setClusterDataUrl(
-      process.env.PUBLIC_URL +
-        "/data/system" +
-        selectSystem.substring(2) +
-        filePath
-    );
+    setClusterDataUrl(process.env.PUBLIC_URL + "/data/cluster" + filePath);
     setSelectCluster(selectedCluster);
   };
 
-  const columnNum = selectCluster === "アプリケーション開発" ? "4" : "3";
   return (
-    <div className={"column is-" + columnNum}>
+    <div className="column is-5">
       <div
         className={dropdownActive ? "dropdown is-active" : "dropdown"}
         onClick={() => {
