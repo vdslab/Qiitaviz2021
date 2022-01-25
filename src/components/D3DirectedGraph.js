@@ -47,7 +47,8 @@ function D3DirectedGraph() {
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
   const svgWidth = deviceWidth > 768 ? deviceWidth * 0.66 : deviceWidth * 0.9;
   const svgHeight = deviceWidth > 768 ? deviceHeight * 0.7 : deviceHeight * 0.3;
-
+  const maxItemCount = 51203;
+  const minItemCount = 666;
   function searchNode(selectedNode) {
     const target = selectedNode.label;
     const data = articleData.filter((item) => item.type === target);
@@ -153,7 +154,10 @@ function D3DirectedGraph() {
               label: item.nodeName,
               url: item.url,
               articleCount: item.articleCount,
-              r: Math.log(item.articleCount) * 4,
+              r:
+                ((item.articleCount - minItemCount + 1) /
+                  (maxItemCount - minItemCount)) *
+                100,
               level: item.level,
               diff: item.diff,
               childNodes: item.childNode,
