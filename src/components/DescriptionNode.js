@@ -85,7 +85,7 @@ const DescriptionNode = () => {
         <g>
           <circle
             className="node"
-            r={Math.log(666) * 2}
+            r={Math.sqrt(666 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={40}
             cy={50}
@@ -94,7 +94,7 @@ const DescriptionNode = () => {
           ></circle>
           <circle
             className="node"
-            r={15}
+            r={Math.sqrt(13300 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={105}
             cy={50}
@@ -103,7 +103,7 @@ const DescriptionNode = () => {
           ></circle>
           <circle
             className="node"
-            r={17}
+            r={Math.sqrt(25934 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={170}
             cy={50}
@@ -112,7 +112,7 @@ const DescriptionNode = () => {
           ></circle>
           <circle
             className="node"
-            r={19}
+            r={Math.sqrt(38568 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={235}
             cy={50}
@@ -121,7 +121,7 @@ const DescriptionNode = () => {
           ></circle>
           <circle
             className="node"
-            r={Math.log(51203) * 2}
+            r={Math.sqrt(51203 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={300}
             cy={50}

@@ -70,10 +70,10 @@ function D3DirectedGraph() {
 
     localStorage["wordsData"] = JSON.stringify(wordsData);
   }
-  const arrowEdgeX = -10;
+  const arrowEdgeX = -15;
   const arrowEdgeY = -5;
-  const arrowHeight = 15;
-  const arrowWidth = 15;
+  const arrowHeight = 12;
+  const arrowWidth = 22;
   const arrowEdgeEnd = 0;
   //console.log(edgeWeight);
   return (
@@ -91,7 +91,7 @@ function D3DirectedGraph() {
           markerUnits="userSpaceOnUse"
         >
           <path
-            d={`M -10 -5 L 0 0 L -10 ${-1 * -5}`}
+            d={`M -13 -7 L 10 0 L -13 ${-1 * -7}`}
             fill="#808080"
             style={{ stroke: "none" }}
           ></path>
@@ -106,15 +106,15 @@ function D3DirectedGraph() {
           return (
             <line
               key={link.source.id + "-" + link.target.id}
-              stroke={"#999"}
-              strokeWidth={edgeWeight[link.source.label][link.target.label] * 2}
+              stroke={"#808080"}
+              strokeWidth={edgeWeight[link.source.label][link.target.label] * 5}
               className="link"
               markerEnd="url(#arrowhead)"
               id="edgepath0"
               x1={link.source.x}
               y1={link.source.y}
-              x2={link.target.x + link.r * Math.cos(theta)}
-              y2={link.target.y + link.r * Math.sin(theta) - 3}
+              x2={link.target.x + (link.r + 5.5) * Math.cos(theta)}
+              y2={link.target.y + (link.r + 5.5) * Math.sin(theta) - 2}
             ></line>
           );
         })}

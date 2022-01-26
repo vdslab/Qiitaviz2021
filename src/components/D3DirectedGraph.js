@@ -68,7 +68,7 @@ function D3DirectedGraph() {
           d3
             .forceCollide()
             .radius(function (d) {
-              return d.r * 1.5;
+              return d.r * 2;
             })
             .iterations(64)
         ) //衝突値の設定
@@ -145,7 +145,8 @@ function D3DirectedGraph() {
 
           let nodeSize = Array(clusterData.length);
           clusterData.map((item) => {
-            nodeSize[item.ID - 1] = Math.log(item.articleCount) * 4;
+            nodeSize[item.ID - 1] =
+              Math.sqrt(item.articleCount / Math.PI) * 0.5 + 10;
           });
 
           clusterData.map((item) => {
@@ -154,10 +155,7 @@ function D3DirectedGraph() {
               label: item.nodeName,
               url: item.url,
               articleCount: item.articleCount,
-              r:
-                ((item.articleCount - minItemCount + 1) /
-                  (maxItemCount - minItemCount)) *
-                100,
+              r: Math.sqrt(item.articleCount / Math.PI) * 0.5 + 10,
               level: item.level,
               diff: item.diff,
               childNodes: item.childNode,
