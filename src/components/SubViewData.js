@@ -14,7 +14,7 @@ function SubViewData() {
             return item.url.map((url, j) => {
               return (
                 <p key={j}>
-                  <a href={url} terget="_blank">
+                  <a href={url} target="_blank">
                     {item["title"][j]}
                   </a>
                   <br />
@@ -34,7 +34,9 @@ function SubViewData() {
             style={{
               visibility: "hidden",
             }}
-          >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</p>
+          >
+            　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+          </p>
         </div>
       </div>
     );
