@@ -85,13 +85,13 @@ function D3DirectedGraph() {
           refX="-1.6"
           refY="0"
           orient="auto"
-          markerWidth="15"
-          markerHeight="15"
+          markerWidth="17"
+          markerHeight="17"
           xoverflow="visible"
           markerUnits="userSpaceOnUse"
         >
           <path
-            d={`M -13 -7 L 10 0 L -13 ${-1 * -7}`}
+            d={`M -13 -7 L 8 0 L -13 ${-1 * -7}`}
             fill="#808080"
             style={{ stroke: "none" }}
           ></path>
@@ -113,8 +113,8 @@ function D3DirectedGraph() {
               id="edgepath0"
               x1={link.source.x}
               y1={link.source.y}
-              x2={link.target.x + (link.r + 5.5) * Math.cos(theta)}
-              y2={link.target.y + (link.r + 5.5) * Math.sin(theta) - 2}
+              x2={link.target.x + (link.r + 7) * Math.cos(theta)}
+              y2={link.target.y + (link.r + 7) * Math.sin(theta) - 2}
             ></line>
           );
         })}
