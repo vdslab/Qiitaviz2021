@@ -5,7 +5,8 @@ const DescriptionNode = () => {
     <div>
       <h2 className="title has-text-grey-dark is-size-4">ノードの色について</h2>
       <p>
-        ノードの色は、タグの難易度を表していて以下の通り、赤みが強いほど難易度が高いことを表しています。
+        ノードの色は、タグの難易度を表していています。5段階にグルーピングしており,
+        赤みが強いほど難易度が高いことを表しています。
       </p>
       <svg width={"400"} height={"81"}>
         <g>
@@ -60,7 +61,7 @@ const DescriptionNode = () => {
             x={40}
             y={15}
           >
-            低い
+            1
           </text>
           <text
             textAnchor="middle"
@@ -69,7 +70,7 @@ const DescriptionNode = () => {
             x={300}
             y={15}
           >
-            高い
+            5
           </text>
         </g>
       </svg>
@@ -77,12 +78,14 @@ const DescriptionNode = () => {
       <h2 className="title has-text-grey-dark is-size-4">
         ノードの大きさについて
       </h2>
-      <p>ノードの大きさは、投稿数を表していて以下の通りです。</p>
+      <p>
+        ノードの大きさは、ノードが表すタグが付与された記事の投稿数を表しており、ノードが大きいほど記事の数も多くなります。
+      </p>
       <svg width={"400"} height={"81"}>
         <g>
           <circle
             className="node"
-            r={12}
+            r={Math.sqrt(666 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={40}
             cy={50}
@@ -91,7 +94,7 @@ const DescriptionNode = () => {
           ></circle>
           <circle
             className="node"
-            r={15}
+            r={Math.sqrt(13300 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={105}
             cy={50}
@@ -100,7 +103,7 @@ const DescriptionNode = () => {
           ></circle>
           <circle
             className="node"
-            r={17}
+            r={Math.sqrt(25934 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={170}
             cy={50}
@@ -109,7 +112,7 @@ const DescriptionNode = () => {
           ></circle>
           <circle
             className="node"
-            r={19}
+            r={Math.sqrt(38568 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={235}
             cy={50}
@@ -118,7 +121,7 @@ const DescriptionNode = () => {
           ></circle>
           <circle
             className="node"
-            r={22}
+            r={Math.sqrt(51203 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={300}
             cy={50}
@@ -132,7 +135,7 @@ const DescriptionNode = () => {
             x={40}
             y={15}
           >
-            低い
+            666
           </text>
           <text
             textAnchor="middle"
@@ -141,7 +144,7 @@ const DescriptionNode = () => {
             x={300}
             y={15}
           >
-            高い
+            51203
           </text>
         </g>
       </svg>
