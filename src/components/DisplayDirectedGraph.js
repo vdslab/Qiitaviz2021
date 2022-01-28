@@ -96,6 +96,23 @@ function D3DirectedGraph() {
             style={{ stroke: "none" }}
           ></path>
         </marker>
+        <marker
+          id="selectedArrowhead"
+          viewBox={`${arrowEdgeX} ${arrowEdgeY} ${arrowWidth} ${arrowHeight}`}
+          refX="-1.6"
+          refY="0"
+          orient="auto"
+          markerWidth="17"
+          markerHeight="17"
+          xoverflow="visible"
+          markerUnits="userSpaceOnUse"
+        >
+          <path
+            d={`M -13 -7 L 8 0 L -13 ${-1 * -7}`}
+            fill="rgb(0, 148, 255)"
+            style={{ stroke: "none" }}
+          ></path>
+        </marker>
       </defs>
       <g className="links">
         {links.map((link) => {
@@ -106,10 +123,20 @@ function D3DirectedGraph() {
           return (
             <line
               key={link.source.id + "-" + link.target.id}
-              stroke={"#808080"}
+              stroke={
+                highlightNodes.includes(link.target.id) &&
+                highlightNodes.includes(link.source.id)
+                  ? "rgb(0, 148, 255)"
+                  : "#808080"
+              }
               strokeWidth={edgeWeight[link.source.label][link.target.label] * 5}
               className="link"
-              markerEnd="url(#arrowhead)"
+              markerEnd={
+                highlightNodes.includes(link.target.id) &&
+                highlightNodes.includes(link.source.id)
+                  ? "url(#selectedArrowhead)"
+                  : "url(#arrowhead)"
+              }
               id="edgepath0"
               x1={link.source.x}
               y1={link.source.y}
