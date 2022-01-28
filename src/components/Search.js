@@ -96,6 +96,9 @@ const Search = () => {
         <div className="dropdown-menu" id="dropdown-menu" role="menu">
           {clusterCandidates.length >= 1 && (
             <div className="dropdown-content">
+              <div className="dropdown-item">
+                "{inputTag}"は{clusterCandidates.length}つの領域に含まれています
+              </div>
               {clusterCandidates.map((data) => {
                 return (
                   <a
