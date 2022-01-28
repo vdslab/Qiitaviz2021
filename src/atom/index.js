@@ -63,3 +63,8 @@ export const edgeWeightDataState = atom({
   key: "edgeWeightDataState",
   default: [],
 });
+
+export const errorMessageState = atom({
+  key: "errorMessageState",
+  default: "　",
+});

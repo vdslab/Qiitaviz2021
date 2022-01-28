@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
   clusterDataUrlState,
+  errorMessageState,
   searchTagState,
   selectClusterState,
   selectTagDataState,
@@ -19,7 +20,7 @@ const Search = () => {
   const [searchTag, setSearchTag] = useRecoilState(searchTagState);
   const [clusterCandidates, setClusterCandidates] = useState([]);
   const [panelFlag, setPanelFlag] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("　");
+  const [errorMessage, setErrorMessage] = useRecoilState(errorMessageState);
   const [inputTag, setInputTag] = useState("");
 
   const handleChange = (e) => {
@@ -37,9 +38,8 @@ const Search = () => {
     setPanelFlag(false);
     setClusterCandidates([]);
     setSelectCluster(data[0]);
-    setClusterDataUrl(data[1].replace("手法", "system"));
+    setClusterDataUrl(data[1]);
     setSelectTagData([inputTag, tagUrl]);
-    setInputTag("");
     setSearchTag(inputTag);
   };
   const areaName = [
@@ -96,6 +96,9 @@ const Search = () => {
         <div className="dropdown-menu" id="dropdown-menu" role="menu">
           {clusterCandidates.length >= 1 && (
             <div className="dropdown-content">
+              <div className="dropdown-item">
+                "{inputTag}"は{clusterCandidates.length}つの領域に含まれています
+              </div>
               {clusterCandidates.map((data) => {
                 return (
                   <a
