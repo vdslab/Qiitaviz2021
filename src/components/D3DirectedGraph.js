@@ -13,6 +13,7 @@ import {
   clusterDataUrlState,
   displayArticleState,
   edgeWeightDataState,
+  errorMessageState,
   highlightNodesState,
   linkssState,
   nodesState,
@@ -42,6 +43,7 @@ function D3DirectedGraph() {
     useRecoilState(clusterDataUrlState);
   const [displayArticle, setDisplayArticle] =
     useRecoilState(displayArticleState);
+  const [errorMessage, setErrorMessage] = useRecoilState(errorMessageState);
 
   // デバイスの横幅を取得
   const { innerWidth: deviceWidth, innerHeight: deviceHeight } = window;
@@ -104,7 +106,13 @@ function D3DirectedGraph() {
         }
       });
     };
+
     const startSetGraphData = async () => {
+      const tagResponse = await fetch(
+        process.env.PUBLIC_URL + "/data/tag_list_data.json"
+      );
+      const tagData = await tagResponse.json();
+      setTagListData(tagData);
       if (selectCluster !== "領域を選択") {
         setLoading(true);
         const [nodes, links] = await (async () => {
@@ -116,12 +124,6 @@ function D3DirectedGraph() {
           const edgeResponse = await fetch(edgeDataUrl);
           const edgeData = await edgeResponse.json();
           setEdgeWeight(edgeData);
-
-          const tagResponse = await fetch(
-            process.env.PUBLIC_URL + "/data/tag_list_data.json"
-          );
-          const tagData = await tagResponse.json();
-          setTagListData(tagData);
 
           const wordsData =
             localStorage["wordsData"] === undefined
@@ -181,7 +183,6 @@ function D3DirectedGraph() {
           );
           return [nodes, links];
         })();
-        console.log(edgeWeight);
         startSimulation(nodes, links);
         setLoading(false);
       }
@@ -190,7 +191,9 @@ function D3DirectedGraph() {
     setHighlightNodes([]);
     setSearchTag("");
     setPreClickNode("");
+    setErrorMessage("　");
   }, [clusterDataUrl, searchTag, selectCluster]);
+
   console.log(clusterDataUrl);
   return (
     <div
