@@ -19,7 +19,6 @@ const DescriptionNode = () => {
             strokeWidth="1"
           ></circle>
           <circle
-            className="node"
             r={22}
             fill="rgb(255, 215, 0)"
             cx={105}
@@ -28,7 +27,6 @@ const DescriptionNode = () => {
             strokeWidth="1"
           ></circle>
           <circle
-            className="node"
             r={22}
             fill="rgb(255, 165, 0)"
             cx={170}
@@ -37,7 +35,6 @@ const DescriptionNode = () => {
             strokeWidth="1"
           ></circle>
           <circle
-            className="node"
             r={22}
             fill="rgb(255, 106, 0)"
             cx={235}
@@ -46,7 +43,6 @@ const DescriptionNode = () => {
             strokeWidth="1"
           ></circle>
           <circle
-            className="node"
             r={22}
             fill="rgb(240, 60, 25)"
             cx={300}
@@ -84,7 +80,6 @@ const DescriptionNode = () => {
       <svg width={"400"} height={"81"}>
         <g>
           <circle
-            className="node"
             r={Math.sqrt(666 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={40}
@@ -93,7 +88,6 @@ const DescriptionNode = () => {
             strokeWidth="1"
           ></circle>
           <circle
-            className="node"
             r={Math.sqrt(13300 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={105}
@@ -102,7 +96,6 @@ const DescriptionNode = () => {
             strokeWidth="1"
           ></circle>
           <circle
-            className="node"
             r={Math.sqrt(25934 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={170}
@@ -111,7 +104,6 @@ const DescriptionNode = () => {
             strokeWidth="1"
           ></circle>
           <circle
-            className="node"
             r={Math.sqrt(38568 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={235}
@@ -120,7 +112,6 @@ const DescriptionNode = () => {
             strokeWidth="1"
           ></circle>
           <circle
-            className="node"
             r={Math.sqrt(51203 / Math.PI) * 0.2 + 4}
             fill="rgb(255, 240, 130)"
             cx={300}
