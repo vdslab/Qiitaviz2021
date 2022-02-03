@@ -15,12 +15,12 @@ import {
   edgeWeightDataState,
   errorMessageState,
   highlightNodesState,
+  inputTagState,
   linkssState,
   nodesState,
   preClickNodeState,
   searchTagState,
   selectClusterState,
-  selectSystemState,
   tagListDataState,
 } from "../atom";
 
@@ -34,6 +34,7 @@ function D3DirectedGraph() {
   const [edgeWeight, setEdgeWeight] = useRecoilState(edgeWeightDataState);
   const [preClickNode, setPreClickNode] = useRecoilState(preClickNodeState);
   const [loading, setLoading] = useState(true);
+  const [inputTag, setInputTag] = useRecoilState(inputTagState);
 
   const [nodes, setNodes] = useRecoilState(nodesState);
   const [links, setLinks] = useRecoilState(linkssState);
@@ -51,6 +52,7 @@ function D3DirectedGraph() {
   const svgHeight = deviceWidth > 768 ? deviceHeight * 0.7 : deviceHeight * 0.3;
   const maxItemCount = 51203;
   const minItemCount = 666;
+
   function searchNode(selectedNode) {
     const target = selectedNode.label;
     const data = articleData.filter((item) => item.type === target);
@@ -59,6 +61,7 @@ function D3DirectedGraph() {
     highlightNodes.push(selectedNode.id);
     setHighlightNodes(highlightNodes.concat(selectedNode["parentNode"]));
   }
+
   useEffect(() => {
     setLoading(true);
     const startSimulation = (nodes, links) => {
@@ -101,7 +104,7 @@ function D3DirectedGraph() {
       setNodes(nodes);
       setLinks(links);
       nodes.map((node) => {
-        if (node.label === searchTag) {
+        if (node.label === inputTag) {
           searchNode(node);
         }
       });
@@ -113,7 +116,17 @@ function D3DirectedGraph() {
       );
       const tagData = await tagResponse.json();
       setTagListData(tagData);
-      if (selectCluster !== "領域を選択") {
+      setArticleData(
+        await (async () => {
+          const articleResponse = await fetch(
+            process.env.PUBLIC_URL + "/data/recommend_data.json"
+          );
+          const articleData = await articleResponse.json();
+          return articleData;
+        })()
+      );
+
+      if (selectCluster !== "領域を選択" || inputTag !== "") {
         setLoading(true);
         const [nodes, links] = await (async () => {
           setLoadMessage("グラフ描画中...");
@@ -172,15 +185,6 @@ function D3DirectedGraph() {
               });
             }
           });
-          setArticleData(
-            await (async () => {
-              const articleResponse = await fetch(
-                process.env.PUBLIC_URL + "/data/recommend_data.json"
-              );
-              const articleData = await articleResponse.json();
-              return articleData;
-            })()
-          );
           return [nodes, links];
         })();
         startSimulation(nodes, links);
@@ -194,7 +198,6 @@ function D3DirectedGraph() {
     setErrorMessage("　");
   }, [clusterDataUrl, searchTag, selectCluster]);
 
-  console.log(clusterDataUrl);
   return (
     <div
       className="tile is-ancestor"

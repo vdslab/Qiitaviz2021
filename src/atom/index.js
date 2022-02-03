@@ -68,3 +68,8 @@ export const errorMessageState = atom({
   key: "errorMessageState",
   default: "　",
 });
+
+export const inputTagState = atom({
+  key: "inputTagState",
+  default: "",
+});

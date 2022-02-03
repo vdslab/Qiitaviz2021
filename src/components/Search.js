@@ -3,13 +3,17 @@ import { cluster } from "d3-hierarchy";
 import { useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
+  articleDataState,
   clusterDataUrlState,
+  displayArticleState,
   errorMessageState,
+  inputTagState,
   searchTagState,
   selectClusterState,
   selectTagDataState,
   tagListDataState,
 } from "../atom";
+import DisplayRecommendArticles from "./DisplayRecommendArticles";
 
 const Search = () => {
   const [selectCluster, setSelectCluster] = useRecoilState(selectClusterState);
@@ -21,8 +25,10 @@ const Search = () => {
   const [clusterCandidates, setClusterCandidates] = useState([]);
   const [panelFlag, setPanelFlag] = useState(false);
   const [errorMessage, setErrorMessage] = useRecoilState(errorMessageState);
-  const [inputTag, setInputTag] = useState("");
-
+  const [inputTag, setInputTag] = useRecoilState(inputTagState);
+  const [articleData, setArticleData] = useRecoilState(articleDataState);
+  const [displayArticle, setDisplayArticle] =
+    useRecoilState(displayArticleState);
   const handleChange = (e) => {
     setClusterCandidates([]);
     setPanelFlag(false);
@@ -30,17 +36,19 @@ const Search = () => {
     setInputTag(e.target.value);
   };
 
-  const clickClusterInfomation = (data) => {
+  const clickClusterInfomation = (selectedData) => {
     const tagUrl =
       inputTag[0] === "#"
         ? "https://qiita.com/tags/%23" + inputTag.substr(1).toLowerCase()
         : "https://qiita.com/tags/" + inputTag.toLowerCase();
     setPanelFlag(false);
     setClusterCandidates([]);
-    setSelectCluster(data[0]);
-    setClusterDataUrl(data[1]);
+    setSelectCluster(selectedData[0]);
+    setClusterDataUrl(selectedData[1]);
     setSelectTagData([inputTag, tagUrl]);
     setSearchTag(inputTag);
+    const data = articleData.filter((item) => item.type === inputTag);
+    setDisplayArticle(data);
   };
   const areaName = [
     "アプリケーション開発",
